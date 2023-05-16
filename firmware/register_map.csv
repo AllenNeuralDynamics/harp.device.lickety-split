@@ -1,0 +1,2 @@
+Register, Size, Read-Only, Name, Description
+0x32, U8, , DETECTION_THRESHOLD, voltage threshold for detecting a lick. Values measured below this threshold will count as a lick.
