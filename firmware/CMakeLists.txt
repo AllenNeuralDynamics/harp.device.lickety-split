@@ -1,8 +1,10 @@
 cmake_minimum_required(VERSION 3.13)
 
-include(../../lib/pico-sdk/pico_sdk_init.cmake)
+include(lib/pico-sdk/pico_sdk_init.cmake)
 
-project(as8579_example)
+project(lick_detector)
+
+set(CMAKE_CXX_STANDARD 17)
 
 # Enable try/catch exception interface.
 #set(PICO_CXX_ENABLE_EXCEPTIONS 1)
@@ -25,7 +27,7 @@ include_directories(inc)
 
 # Link libraries to the targets that need them.
 
-#target_link_libraries(as8579 pico_stdlib hardware_spi)
+target_link_libraries(as9833 pico_stdlib hardware_spi)
 target_link_libraries(${PROJECT_NAME} pico_stdlib as9833)
 
 # create map/bin/hex/uf2 file in addition to ELF.

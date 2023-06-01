@@ -1,4 +1,4 @@
-#include <as8579.h>
+#include <as9833.h>
 
 AS9833::AS9833(spi_inst_t* spi_hw,
                uint8_t spi_tx_pin, uint8_t spi_rx_pin, uint8_t spi_sck_pin,
@@ -44,7 +44,7 @@ void AS9833::spi_write16(uint16_t word)
     gpio_put(cs_pin_, 0);
     asm volatile("nop \n nop \n nop");
     // Send the data.
-    spi_write_blocking(spi_inst_, &word, 2);
+    spi_write_blocking(spi_inst_, (uint8_t*)&word, 2);
     // CS HIGH
     asm volatile("nop \n nop \n nop");
     gpio_put(cs_pin_, 1);
@@ -59,10 +59,44 @@ void AS9833::write_to_reg(RegName reg, uint16_t value)
 
 void AS9833::reset()
 {
-    spi_write16(0x0100); // Write 1 to D8.
+    write_to_reg(CONTROL, 0x0100); // Write 1 to D8.
 }
 
-void AS9833::set_frequency_hz(uin32_t freq)
+void AS9833::clear_reset()
 {
+    write_to_reg(CONTROL, 0x0000); // Write 0 to D8.
+}
+
+void AS9833::set_waveform(waveform_t waveform)
+{
+
+    write_to_reg(CONTROL, waveform);
+}
+
+void AS9833::set_frequency_hz(uint32_t freq)
+{
+    // Enable two consecutive writes to FREQ0. {D15, D14, D13} = 0b001.
+    spi_write16(0b0010'0000'0000'0000);
+    // Write LSBs to FREQ0.
+    write_to_reg(FREQ_0, uint16_t(freq)); // truncate
+    // Write MSBs to FREQ0.
+    write_to_reg(FREQ_0, uint16_t(freq >> 16)); // truncate
+}
+
+void AS9833::set_phase(float offset)
+{
+    // TODO: wrap value between 0-2pi.
+    float pi = atan(1) * 4;
+    uint32_t phase_bits = (2 * pi / offset) * (2<<28);
+    set_phase_raw(phase_bits);
+}
+
+void AS9833::set_phase_raw(uint32_t phase_bits)
+{
+    // Set the control register B28 = 1 (i.e: D13 = 1) to set the phase in
+    // two consecutive writes.
+    // Write lower 14; write upper 14.
+    write_to_reg(PHASE_0, uint16_t(0x00003fff & phase_bits));
+    write_to_reg(PHASE_1, 0x03fff & uint16_t(phase_bits >> 18));
 }
 

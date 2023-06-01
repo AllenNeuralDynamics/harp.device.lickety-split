@@ -4,6 +4,7 @@
 #include <stdint.h>
 #include <pico/stdlib.h>
 #include <hardware/spi.h>
+#include <math.h> // for atan.
 
 class AS9833
 {
@@ -24,7 +25,7 @@ public:
         SQUARE =   0b10000,
         SINE =     0b10010,
         TRIANGLE = 0b00010
-    }
+    };
 
 /**
  * \brief Constructor that will also initialize spi hardware and pins
@@ -47,9 +48,43 @@ public:
  */
     void reset();
 
+    void disable_output() {reset();}
+
+/**
+ * \brief clear reset bit in control register.
+ */
+    void clear_reset();
+
+    void enable_output() {clear_reset();}
+
+/**
+ * \brief
+ */
+    void set_waveform(waveform_t waveform);
+
+
+/**
+ * \brief
+ */
+    void select_frequency_reg(uint8_t reg);
+
+/**
+ * \brief
+ */
+    void set_frequency_hz(uint32_t hz);
+
+/**
+ * \brief set the phase as a floating point valve from 0-2pi.
+ */
+    void set_phase(float offset);
+
+/**
+ * \brief set the phase registers.
+ */
+    void set_phase_raw(uint32_t phase_bits);
 
 private:
-    void spi_write16(uint8_t word);
+    void spi_write16(uint16_t word);
 
 
     uint8_t cs_pin_;

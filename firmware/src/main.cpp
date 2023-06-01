@@ -21,11 +21,11 @@ int main()
     // Setup device.
     sleep_ms(100);
     printf("Initializing device... ");
-    as9833.reset();
+    as9833.disable_output();
     as9833.set_waveform(AS9833::waveform_t::SINE);
     as9833.set_frequency_hz(100000); // uint32_t
-    as9833.set_phase_offset(0);
-    as9833.clear_reset(); // output enabled with the above settings.
+    as9833.set_phase(0);
+    as9833.enable_output(); // output enabled with the above settings.
     sleep_ms(100);
     printf("Done.\r\n");
 
