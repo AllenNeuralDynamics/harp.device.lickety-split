@@ -328,6 +328,10 @@
     [
       "68ba3686-54f3-42b1-847b-d7576a207bac",
       "RP2040 + USBC + Harp Sync"
+    ],
+    [
+      "faa455ea-93b0-4a12-9af2-c32e7eee6d37",
+      "100[Khz], 20[uVpp] Sine Wave Source1"
     ]
   ],
   "text_variables": {}
