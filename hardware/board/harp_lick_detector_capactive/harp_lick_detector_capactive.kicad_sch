@@ -2546,7 +2546,7 @@
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid 93915aa3-ef06-472d-90f9-66eca04a6462)
   )
-  (polyline (pts (xy 12.7 109.22) (xy 284.48 109.22))
+  (polyline (pts (xy 12.7 104.14) (xy 284.48 104.14))
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid 94a905ab-116b-48da-90b7-003074ab056d)
   )
@@ -2559,7 +2559,7 @@
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid 96b32e1a-9d73-467a-9184-3afe1c957d61)
   )
-  (polyline (pts (xy 35.56 68.58) (xy 44.45 68.58))
+  (polyline (pts (xy 35.56 68.58) (xy 48.26 68.58))
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid 97340439-d115-48ec-9f6a-075d58386f2c)
   )
@@ -2890,11 +2890,6 @@
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid cb04d15b-2773-4f58-9f32-d627d830f030)
   )
-  (polyline (pts (xy 44.45 72.39) (xy 44.45 68.58))
-    (stroke (width 0) (type default) (color 0 0 0 0))
-    (uuid cbbf70ed-7bff-47f1-96e0-d27c8f090127)
-  )
-
   (wire (pts (xy 71.12 132.08) (xy 71.12 134.62))
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid cbc8186b-d4c4-46f4-87e9-14d768bfada4)
@@ -3024,6 +3019,11 @@
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid dc2ad2e9-148b-416b-9845-21f90699ff5f)
   )
+  (polyline (pts (xy 44.45 68.58) (xy 44.45 72.39))
+    (stroke (width 0) (type default) (color 0 0 0 0))
+    (uuid dc9f3904-3a8f-49a0-8fa4-3ada3320688a)
+  )
+
   (wire (pts (xy 252.73 73.66) (xy 252.73 76.2))
     (stroke (width 0) (type default) (color 0 0 0 0))
     (uuid dcd03757-019f-4f77-aa28-0aff4913e051)
@@ -3443,7 +3443,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid cfad1f35-f936-4a0c-bf71-8f9b0b2e4cbe)
   )
-  (text "Power" (at 140.97 114.3 0)
+  (text "Power" (at 142.24 111.76 0)
     (effects (font (size 2.54 2.54)) (justify left bottom))
     (uuid d66544de-72c3-4934-a062-9a32ab29260d)
   )
@@ -3843,6 +3843,28 @@
     (pin "14" (uuid b748f219-0f44-41d7-bcf2-9a96e7f8b594))
     (pin "11" (uuid dcff1695-539e-442e-afee-9485378ce13a))
     (pin "4" (uuid 99a76074-fcd3-4150-83c8-79f76bdad1c5))
+  )
+
+  (symbol (lib_id "Device:R") (at 115.57 71.12 0) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid 25e90fc2-2043-4b38-8b65-f06b7c8f4547)
+    (property "Reference" "R?" (id 0) (at 110.49 71.12 0)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "10K" (id 1) (at 115.57 73.66 90)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (id 2) (at 113.792 71.12 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (id 3) (at 115.57 71.12 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Link" "https://www.digikey.com/en/products/detail/koa-speer-electronics-inc/SG73P1EWTTP1002F/14316756" (id 4) (at 115.57 71.12 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid fd204012-b184-4c31-aaac-f365b6c0b6a3))
+    (pin "2" (uuid 13200aa2-638f-4c25-94ed-191e12d4200b))
   )
 
   (symbol (lib_id "Amplifier_Operational:ADA4807-4") (at 85.09 -146.05 0) (unit 1)
@@ -4374,6 +4396,9 @@
     (property "Datasheet" "~" (id 3) (at 157.48 134.62 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "Link" "https://www.digikey.com/en/products/detail/koa-speer-electronics-inc/SG73P1EWTTP1002F/14316756" (id 4) (at 157.48 134.62 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid efbdf968-798b-4bab-8a9b-f1bf63d90117))
     (pin "2" (uuid 600f2cb4-e1b3-41c1-8425-de458c93f13a))
   )
@@ -4668,6 +4693,28 @@
     (pin "1" (uuid d4cdb3fb-b506-4945-a14b-7c5d340efa50))
   )
 
+  (symbol (lib_id "Device:R") (at 184.15 66.04 90) (unit 1)
+    (in_bom yes) (on_board yes)
+    (uuid 801e737d-a6ec-42dc-9e12-e17448e40355)
+    (property "Reference" "R?" (id 0) (at 184.15 63.5 90)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Value" "10K" (id 1) (at 185.42 66.04 90)
+      (effects (font (size 1.27 1.27)) (justify left))
+    )
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder" (id 2) (at 184.15 67.818 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (id 3) (at 184.15 66.04 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Link" "https://www.digikey.com/en/products/detail/koa-speer-electronics-inc/SG73P1EWTTP1002F/14316756" (id 4) (at 184.15 66.04 90)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 2cea630a-b9a9-462c-b06d-8143b97a2a2f))
+    (pin "2" (uuid 4376b798-c37f-47e3-b8ff-17db6c5f78d0))
+  )
+
   (symbol (lib_id "Device:R") (at 77.47 -78.74 180) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid 80b73b53-9a54-48d4-82a8-c8c2ddc8a4d6)
@@ -4941,25 +4988,6 @@
     (pin "2" (uuid c04ba63d-2c14-4ca2-a4e2-815aa687d079))
   )
 
-  (symbol (lib_id "Device:R") (at 184.15 66.04 270) (unit 1)
-    (in_bom yes) (on_board yes)
-    (uuid 9e84c6ce-a087-442d-b201-08200292c790)
-    (property "Reference" "R?" (id 0) (at 181.61 63.5 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "" (id 1) (at 181.61 66.04 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "" (id 2) (at 184.15 64.262 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (id 3) (at 184.15 66.04 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 0d7a0ecd-69ce-4436-8628-a701f078ed99))
-    (pin "2" (uuid 4e0bffba-6fbd-4a2a-bfd7-1671336653d7))
-  )
-
   (symbol (lib_id "Device:C") (at 83.82 -72.39 90) (unit 1)
     (in_bom yes) (on_board yes)
     (uuid a0fe904f-7ad2-48ad-8469-75a22564fbfd)
@@ -5118,25 +5146,6 @@
     )
     (pin "1" (uuid aa9bce18-b7b1-4a65-8b70-d800e501fa6f))
     (pin "2" (uuid 2e1245e0-23b9-49e8-9d5d-e0f99476bbc2))
-  )
-
-  (symbol (lib_id "Device:R") (at 115.57 71.12 180) (unit 1)
-    (in_bom yes) (on_board yes)
-    (uuid b05bc7c8-c777-46cb-992c-675a01f2ec86)
-    (property "Reference" "R?" (id 0) (at 114.3 68.58 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "10K" (id 1) (at 114.3 72.39 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "" (id 2) (at 117.348 71.12 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "~" (id 3) (at 115.57 71.12 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid db8d6a05-f70e-480e-9940-340484e3d966))
-    (pin "2" (uuid 7f40c856-382c-4bbd-93d8-6fb835f56b9c))
   )
 
   (symbol (lib_id "Device:R_Pack04_Split") (at 71.12 60.96 180) (unit 4)
@@ -5735,11 +5744,14 @@
     (in_bom yes) (on_board yes)
     (uuid e2c0a2c0-b17e-457c-9dc9-d4d991c9a1d2)
     (property "Reference" "U?" (id 0) (at 88.9 59.69 0))
-    (property "Value" "INA849" (id 1) (at 97.79 63.5 0))
+    (property "Value" "" (id 1) (at 97.79 63.5 0))
     (property "Footprint" "" (id 2) (at 92.71 67.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "https://www.ti.com/lit/ds/symlink/ina849.pdf?ts=1686139929376&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FINA849" (id 3) (at 92.71 67.31 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Link" "https://www.digikey.com/en/products/detail/texas-instruments/INA849DR/13627195" (id 4) (at 92.71 67.31 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid d58e5d15-0230-4fc5-ba06-3c3699e5d7ae))
@@ -5834,10 +5846,10 @@
   )
 
   (symbol (lib_id "Device:R") (at 214.63 68.58 90) (unit 1)
-    (in_bom yes) (on_board yes) (fields_autoplaced)
+    (in_bom yes) (on_board yes)
     (uuid e97c869c-0221-4c78-802f-694981c6ad71)
-    (property "Reference" "R?" (id 0) (at 214.63 62.23 90))
-    (property "Value" "" (id 1) (at 214.63 64.77 90))
+    (property "Reference" "R?" (id 0) (at 213.36 66.04 90))
+    (property "Value" "" (id 1) (at 214.63 68.58 90))
     (property "Footprint" "" (id 2) (at 214.63 70.358 90)
       (effects (font (size 1.27 1.27)) hide)
     )
@@ -6047,10 +6059,10 @@
     (path "/11f79677-348a-43b5-8af7-ac3467da2ca1"
       (reference "#PWR?") (unit 1) (value "GNDA") (footprint "")
     )
-    (path "/69f75991-c8c0-49a9-aed8-daa6ca9a5d73/120e1897-71e0-44fe-b2d0-f8d97d72f442"
+    (path "/faa455ea-93b0-4a12-9af2-c32e7eee6d37/120e1897-71e0-44fe-b2d0-f8d97d72f442"
       (reference "#PWR?") (unit 1) (value "+5V") (footprint "")
     )
-    (path "/faa455ea-93b0-4a12-9af2-c32e7eee6d37/120e1897-71e0-44fe-b2d0-f8d97d72f442"
+    (path "/69f75991-c8c0-49a9-aed8-daa6ca9a5d73/120e1897-71e0-44fe-b2d0-f8d97d72f442"
       (reference "#PWR?") (unit 1) (value "+5V") (footprint "")
     )
     (path "/1335e085-9929-4c2a-bce9-81331398acfe"
@@ -6074,19 +6086,19 @@
     (path "/46bf2ce1-315b-4eab-888d-0c57051708e5"
       (reference "#PWR?") (unit 1) (value "GNDA") (footprint "")
     )
-    (path "/faa455ea-93b0-4a12-9af2-c32e7eee6d37/4d4a369d-6d93-4de1-bf9f-9fa3cc2339c7"
+    (path "/69f75991-c8c0-49a9-aed8-daa6ca9a5d73/4d4a369d-6d93-4de1-bf9f-9fa3cc2339c7"
       (reference "#PWR?") (unit 1) (value "+5V") (footprint "")
     )
-    (path "/69f75991-c8c0-49a9-aed8-daa6ca9a5d73/4d4a369d-6d93-4de1-bf9f-9fa3cc2339c7"
+    (path "/faa455ea-93b0-4a12-9af2-c32e7eee6d37/4d4a369d-6d93-4de1-bf9f-9fa3cc2339c7"
       (reference "#PWR?") (unit 1) (value "+5V") (footprint "")
     )
     (path "/4da2d0b1-8070-4994-b51f-3f1e9945b7fc"
       (reference "#PWR?") (unit 1) (value "GND") (footprint "")
     )
-    (path "/69f75991-c8c0-49a9-aed8-daa6ca9a5d73/647e764a-2812-4470-a9a2-62513d3d17e7"
+    (path "/faa455ea-93b0-4a12-9af2-c32e7eee6d37/647e764a-2812-4470-a9a2-62513d3d17e7"
       (reference "#PWR?") (unit 1) (value "GND") (footprint "")
     )
-    (path "/faa455ea-93b0-4a12-9af2-c32e7eee6d37/647e764a-2812-4470-a9a2-62513d3d17e7"
+    (path "/69f75991-c8c0-49a9-aed8-daa6ca9a5d73/647e764a-2812-4470-a9a2-62513d3d17e7"
       (reference "#PWR?") (unit 1) (value "GND") (footprint "")
     )
     (path "/66bd6e5a-6a78-49e6-8dfc-5afb3c68e14a"
@@ -6107,6 +6119,12 @@
     (path "/7327f3b9-b107-44d7-bb91-90f50e623dfd"
       (reference "#PWR?") (unit 1) (value "+3.3V") (footprint "")
     )
+    (path "/69f75991-c8c0-49a9-aed8-daa6ca9a5d73/7822c195-e3de-45a9-ab77-0d310897c143"
+      (reference "#PWR?") (unit 1) (value "-5V") (footprint "")
+    )
+    (path "/faa455ea-93b0-4a12-9af2-c32e7eee6d37/7822c195-e3de-45a9-ab77-0d310897c143"
+      (reference "#PWR?") (unit 1) (value "-5V") (footprint "")
+    )
     (path "/78486e6b-1e55-4355-86b6-022761a64ac1"
       (reference "#PWR?") (unit 1) (value "GNDA") (footprint "")
     )
@@ -6120,6 +6138,12 @@
       (reference "#PWR?") (unit 1) (value "GNDA") (footprint "")
     )
     (path "/828856c6-9105-437f-86a1-cd1dbfbb0736"
+      (reference "#PWR?") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/69f75991-c8c0-49a9-aed8-daa6ca9a5d73/84ba4ab7-7c3e-4a07-982a-f81601d41d50"
+      (reference "#PWR?") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/faa455ea-93b0-4a12-9af2-c32e7eee6d37/84ba4ab7-7c3e-4a07-982a-f81601d41d50"
       (reference "#PWR?") (unit 1) (value "+5V") (footprint "")
     )
     (path "/87fd8d37-36c3-453f-9ec6-e25cb5e443b0"
@@ -6148,6 +6172,12 @@
     )
     (path "/b30b7ed9-4731-402d-84df-b47fd2f01922"
       (reference "#PWR?") (unit 1) (value "GNDA") (footprint "")
+    )
+    (path "/faa455ea-93b0-4a12-9af2-c32e7eee6d37/b3ab4084-9eee-48be-8543-963fc023d6e2"
+      (reference "#PWR?") (unit 1) (value "+5V") (footprint "")
+    )
+    (path "/69f75991-c8c0-49a9-aed8-daa6ca9a5d73/b3ab4084-9eee-48be-8543-963fc023d6e2"
+      (reference "#PWR?") (unit 1) (value "+5V") (footprint "")
     )
     (path "/be71ad09-9a4b-4c8c-82e8-f7b23c4374f5"
       (reference "#PWR?") (unit 1) (value "GNDA") (footprint "")
@@ -6212,17 +6242,11 @@
     (path "/fcb23687-79e7-494b-b78d-610b9b788477"
       (reference "#PWR?") (unit 1) (value "GNDA") (footprint "")
     )
-    (path "/69f75991-c8c0-49a9-aed8-daa6ca9a5d73/ff457465-6b78-4b04-a13d-ea083e722481"
-      (reference "#PWR?") (unit 1) (value "GNDA") (footprint "")
-    )
     (path "/faa455ea-93b0-4a12-9af2-c32e7eee6d37/ff457465-6b78-4b04-a13d-ea083e722481"
       (reference "#PWR?") (unit 1) (value "GNDA") (footprint "")
     )
-    (path "/69f75991-c8c0-49a9-aed8-daa6ca9a5d73/6598ca22-b6cf-4aae-8d21-9a76b6d92dca"
-      (reference "51.1K") (unit 1) (value "~") (footprint "")
-    )
-    (path "/faa455ea-93b0-4a12-9af2-c32e7eee6d37/6598ca22-b6cf-4aae-8d21-9a76b6d92dca"
-      (reference "51.1K?") (unit 1) (value "~") (footprint "")
+    (path "/69f75991-c8c0-49a9-aed8-daa6ca9a5d73/ff457465-6b78-4b04-a13d-ea083e722481"
+      (reference "#PWR?") (unit 1) (value "GNDA") (footprint "")
     )
     (path "/07237256-bac8-4714-9cee-cf5182adad04"
       (reference "C?") (unit 1) (value "1uF") (footprint "")
@@ -6242,10 +6266,10 @@
     (path "/658ce690-6c9f-41d9-8898-795178553f10"
       (reference "C?") (unit 1) (value "1nF") (footprint "")
     )
-    (path "/faa455ea-93b0-4a12-9af2-c32e7eee6d37/67a92bfc-d287-42b8-9a92-107baa759573"
+    (path "/69f75991-c8c0-49a9-aed8-daa6ca9a5d73/67a92bfc-d287-42b8-9a92-107baa759573"
       (reference "C?") (unit 1) (value "10nF") (footprint "")
     )
-    (path "/69f75991-c8c0-49a9-aed8-daa6ca9a5d73/67a92bfc-d287-42b8-9a92-107baa759573"
+    (path "/faa455ea-93b0-4a12-9af2-c32e7eee6d37/67a92bfc-d287-42b8-9a92-107baa759573"
       (reference "C?") (unit 1) (value "10nF") (footprint "")
     )
     (path "/730ac6c5-d6b0-488e-b7bb-20450f1158e1"
@@ -6279,10 +6303,10 @@
       (reference "C?") (unit 1) (value "4.7uF") (footprint "")
     )
     (path "/69f75991-c8c0-49a9-aed8-daa6ca9a5d73/a8629a95-90a3-485b-a2b5-c585b7411ae2"
-      (reference "C?") (unit 1) (value "10nF") (footprint "")
+      (reference "C?") (unit 1) (value "1nF") (footprint "")
     )
     (path "/faa455ea-93b0-4a12-9af2-c32e7eee6d37/a8629a95-90a3-485b-a2b5-c585b7411ae2"
-      (reference "C?") (unit 1) (value "10nF") (footprint "")
+      (reference "C?") (unit 1) (value "1nF") (footprint "")
     )
     (path "/abc73922-114c-4c26-84cb-a94e4a50c887"
       (reference "C?") (unit 1) (value "100pF") (footprint "")
@@ -6338,6 +6362,9 @@
     (path "/0b3ea835-be83-43cf-9894-5881b03e1e3d"
       (reference "R?") (unit 1) (value "1M13") (footprint "")
     )
+    (path "/25e90fc2-2043-4b38-8b65-f06b7c8f4547"
+      (reference "R?") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder")
+    )
     (path "/68ba3686-54f3-42b1-847b-d7576a207bac/26a1323f-fc06-4597-8b7a-48f097806ee7"
       (reference "R?") (unit 1) (value "5K1") (footprint "")
     )
@@ -6366,10 +6393,19 @@
       (reference "R?") (unit 1) (value "300K") (footprint "")
     )
     (path "/631fccd5-5f59-4c03-8d5f-b57213e41c21"
-      (reference "R?") (unit 1) (value "10K") (footprint "")
+      (reference "R?") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder")
+    )
+    (path "/69f75991-c8c0-49a9-aed8-daa6ca9a5d73/7ce5bfe7-2981-4ab0-a2d9-3db18e3843f9"
+      (reference "R?") (unit 1) (value "65K") (footprint "")
+    )
+    (path "/faa455ea-93b0-4a12-9af2-c32e7eee6d37/7ce5bfe7-2981-4ab0-a2d9-3db18e3843f9"
+      (reference "R?") (unit 1) (value "65K") (footprint "")
     )
     (path "/7e41274f-b946-48d5-91eb-9c65c6713585"
       (reference "R?") (unit 1) (value "9K76") (footprint "")
+    )
+    (path "/801e737d-a6ec-42dc-9e12-e17448e40355"
+      (reference "R?") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder")
     )
     (path "/80b73b53-9a54-48d4-82a8-c8c2ddc8a4d6"
       (reference "R?") (unit 1) (value "402") (footprint "")
@@ -6386,35 +6422,29 @@
     (path "/982fd2f6-51d7-4b30-b7e0-9550b2a276df"
       (reference "R?") (unit 1) (value "1M") (footprint "")
     )
-    (path "/9e84c6ce-a087-442d-b201-08200292c790"
-      (reference "R?") (unit 1) (value "10K") (footprint "")
-    )
     (path "/a5fad891-f441-49f5-a022-123545f017e5"
       (reference "R?") (unit 1) (value "4K7") (footprint "")
     )
     (path "/a954babd-0fe9-4b52-a7fc-4c109f62e41d"
       (reference "R?") (unit 1) (value "4K7") (footprint "")
     )
-    (path "/faa455ea-93b0-4a12-9af2-c32e7eee6d37/aee972bc-0ec0-4fe0-97ee-d80312acb42d"
-      (reference "R?") (unit 1) (value "15K") (footprint "")
-    )
     (path "/69f75991-c8c0-49a9-aed8-daa6ca9a5d73/aee972bc-0ec0-4fe0-97ee-d80312acb42d"
-      (reference "R?") (unit 1) (value "15K") (footprint "")
+      (reference "R?") (unit 1) (value "150K") (footprint "")
+    )
+    (path "/faa455ea-93b0-4a12-9af2-c32e7eee6d37/aee972bc-0ec0-4fe0-97ee-d80312acb42d"
+      (reference "R?") (unit 1) (value "150K") (footprint "")
     )
     (path "/af363c4a-5e7d-4ca6-b608-98054f539592"
       (reference "R?") (unit 1) (value "4K7") (footprint "")
     )
-    (path "/b05bc7c8-c777-46cb-992c-675a01f2ec86"
-      (reference "R?") (unit 1) (value "10K") (footprint "")
-    )
     (path "/b70f61a2-1425-4395-bc23-a204dd9507f7"
       (reference "R?") (unit 1) (value "60.4") (footprint "")
     )
-    (path "/faa455ea-93b0-4a12-9af2-c32e7eee6d37/ba8fbee5-4b7d-4129-8b40-a6635bf7962c"
-      (reference "R?") (unit 1) (value "10K") (footprint "")
-    )
     (path "/69f75991-c8c0-49a9-aed8-daa6ca9a5d73/ba8fbee5-4b7d-4129-8b40-a6635bf7962c"
-      (reference "R?") (unit 1) (value "10K") (footprint "")
+      (reference "R?") (unit 1) (value "5") (footprint "")
+    )
+    (path "/faa455ea-93b0-4a12-9af2-c32e7eee6d37/ba8fbee5-4b7d-4129-8b40-a6635bf7962c"
+      (reference "R?") (unit 1) (value "5") (footprint "")
     )
     (path "/d3bb9bd5-891b-4093-a351-3ab95fa2587b"
       (reference "R?") (unit 1) (value "634K") (footprint "")
@@ -6439,6 +6469,12 @@
     )
     (path "/ece95fa8-335d-4ab9-a108-8b053643b313"
       (reference "R?") (unit 1) (value "???") (footprint "")
+    )
+    (path "/69f75991-c8c0-49a9-aed8-daa6ca9a5d73/f8725be3-28c1-4c24-8dfc-4d9052ed25d5"
+      (reference "R?") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder")
+    )
+    (path "/faa455ea-93b0-4a12-9af2-c32e7eee6d37/f8725be3-28c1-4c24-8dfc-4d9052ed25d5"
+      (reference "R?") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder")
     )
     (path "/fa439e06-cc14-4376-b165-866123bd9d83"
       (reference "R?") (unit 1) (value "6K19") (footprint "")
@@ -6498,7 +6534,7 @@
       (reference "U?") (unit 1) (value "ADA4807-1") (footprint "")
     )
     (path "/e2c0a2c0-b17e-457c-9dc9-d4d991c9a1d2"
-      (reference "U?") (unit 1) (value "INA849") (footprint "")
+      (reference "U?") (unit 1) (value "INA849") (footprint "Package_SO:SOIC-8-1EP_3.9x4.9mm_P1.27mm_EP2.29x3mm")
     )
     (path "/59094759-9e33-4851-86df-6ad755238ca4"
       (reference "U?") (unit 2) (value "ADA4807-4") (footprint "")
