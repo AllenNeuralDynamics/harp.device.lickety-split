@@ -3355,7 +3355,19 @@
     (property "Footprint" "" (id 2) (at 140.97 62.992 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (id 3) (at 140.97 64.77 0)
+    (property "Datasheet" "https://www.vishay.com/docs/20065/rcse3.pdf" (id 3) (at 140.97 64.77 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Link" "https://www.digikey.com/en/products/detail/vishay-dale/RCS06036K19FKEA/5868569" (id 4) (at 140.97 64.77 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Manufacturer" "Vishay Dale" (id 5) (at 140.97 64.77 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Manufacturer Number" "RCS06036K19FKEA" (id 6) (at 140.97 64.77 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Tolerance" "1%" (id 7) (at 140.97 64.77 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 28dee6f1-32ef-493b-82d5-982b8b3fbdc5))
@@ -3458,7 +3470,19 @@
     (property "Footprint" "" (id 2) (at 151.13 62.992 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Datasheet" "~" (id 3) (at 151.13 64.77 0)
+    (property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf" (id 3) (at 151.13 64.77 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Link" "https://www.digikey.com/en/products/detail/yageo/RC0603FR-079K76L/727422" (id 4) (at 151.13 64.77 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Manufacturer" "Yageo" (id 5) (at 151.13 64.77 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Manufacturer Number" "RC0603FR-079K76L" (id 6) (at 151.13 64.77 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Tolerance" "1%" (id 7) (at 151.13 64.77 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid faae9d2c-d2ec-4876-a54c-b7f99c6f960b))
@@ -5426,7 +5450,7 @@
       (reference "J1") (unit 1) (value "3-Pin Connector Socket") (footprint "Connector_Phoenix_MC:PhoenixContact_MC_1,5_3-G-3.5_1x03_P3.50mm_Horizontal")
     )
     (path "/68ba3686-54f3-42b1-847b-d7576a207bac/de90e053-997b-4c00-9ded-500b48b5298c"
-      (reference "J2") (unit 1) (value "USB_C_Receptacle_USB2.0") (footprint "Connector_USB:USB_C_Receptacle_Amphenol_12401610E4-2A_CircularHoles")
+      (reference "J2") (unit 1) (value "USB_C_Receptacle_USB2.0") (footprint "")
     )
     (path "/e4a7aee0-dcfb-4235-9742-83dd7c58f1df"
       (reference "J3") (unit 1) (value "Conn_Coaxial") (footprint "Connector_Coaxial:SMA_Amphenol_901-143_Horizontal")
@@ -5474,10 +5498,10 @@
       (reference "R?") (unit 1) (value "5K1") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
     (path "/32f9365a-e60e-47d3-bd67-aeb1f7f06f62"
-      (reference "R?") (unit 1) (value "6K19") (footprint "")
+      (reference "R?") (unit 1) (value "6K19") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
     (path "/44108556-aea5-45b3-9fd6-96c6349a5776"
-      (reference "R?") (unit 1) (value "9K76") (footprint "")
+      (reference "R?") (unit 1) (value "9K76") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
     (path "/631fccd5-5f59-4c03-8d5f-b57213e41c21"
       (reference "R?") (unit 1) (value "10K") (footprint "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder")
@@ -5507,7 +5531,7 @@
       (reference "R?") (unit 1) (value "60.4") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
     (path "/faa455ea-93b0-4a12-9af2-c32e7eee6d37/ba8fbee5-4b7d-4129-8b40-a6635bf7962c"
-      (reference "R?") (unit 1) (value "5.1") (footprint "")
+      (reference "R?") (unit 1) (value "5.1") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
     )
     (path "/68ba3686-54f3-42b1-847b-d7576a207bac/e076d21d-ef49-470c-8b00-c8bbf7e83a74"
       (reference "R?") (unit 1) (value "5K1") (footprint "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder")
@@ -5552,16 +5576,16 @@
       (reference "U2") (unit 5) (value "ADA4807-4") (footprint "Package_SO:TSSOP-14_4.4x5mm_P0.65mm")
     )
     (path "/faa455ea-93b0-4a12-9af2-c32e7eee6d37/8754c8ad-8208-4779-a399-e236a119fdb3"
-      (reference "U3") (unit 1) (value "ADA4807-2ARM") (footprint "")
+      (reference "U3") (unit 1) (value "ADA4807-2ARM") (footprint "Package_SO:MSOP-8_3x3mm_P0.65mm")
     )
     (path "/faa455ea-93b0-4a12-9af2-c32e7eee6d37/5409cc31-4322-4031-ade5-4014b3199ad7"
-      (reference "U3") (unit 2) (value "ADA4807-2ARM") (footprint "")
+      (reference "U3") (unit 2) (value "ADA4807-2ARM") (footprint "Package_SO:MSOP-8_3x3mm_P0.65mm")
     )
     (path "/faa455ea-93b0-4a12-9af2-c32e7eee6d37/710a902c-a359-4d20-89a3-7c2b1217c470"
-      (reference "U3") (unit 3) (value "ADA4807-2ARM") (footprint "")
+      (reference "U3") (unit 3) (value "ADA4807-2ARM") (footprint "Package_SO:MSOP-8_3x3mm_P0.65mm")
     )
     (path "/faa455ea-93b0-4a12-9af2-c32e7eee6d37/246dc4eb-2f40-436e-9de0-58f0d1dabd22"
-      (reference "U4") (unit 1) (value "AD9833xRM") (footprint "")
+      (reference "U4") (unit 1) (value "AD9833xRM") (footprint "Package_SO:MSOP-10_3x3mm_P0.5mm")
     )
     (path "/899e7de8-aee4-403a-b9d1-10a87b85205e"
       (reference "U5") (unit 1) (value "LT3030") (footprint "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm")
@@ -5570,7 +5594,7 @@
       (reference "U6") (unit 1) (value "LM27762") (footprint "Package_SON:WSON-12-1EP_3x2mm_P0.5mm_EP1x2.65_ThermalVias")
     )
     (path "/68ba3686-54f3-42b1-847b-d7576a207bac/a9f1a520-788a-4900-a012-44a537e52ba3"
-      (reference "U7") (unit 1) (value "W25Q128JVS") (footprint "")
+      (reference "U7") (unit 1) (value "W25Q128JVS") (footprint "Package_SO:SOIC-8_5.23x5.23mm_P1.27mm")
     )
     (path "/68ba3686-54f3-42b1-847b-d7576a207bac/43250aa1-3e53-4e19-90f2-2c7939b02062"
       (reference "U8") (unit 1) (value "RP2040") (footprint "pi_pico:RP2040-QFN-56")
