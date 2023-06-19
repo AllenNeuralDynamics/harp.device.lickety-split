@@ -327,7 +327,15 @@
     ],
     [
       "faa455ea-93b0-4a12-9af2-c32e7eee6d37",
-      "100[Khz], 50[uVpp] Sine Wave Source1"
+      "100[Khz], 50[uVpp] Sine Wave"
+    ],
+    [
+      "8ca25f6d-cadc-4d60-beba-2de6b7c14b93",
+      "Sensing Front End"
+    ],
+    [
+      "cba1eb29-d383-4f0c-b2c4-1a4a89fdd640",
+      "TTL Output"
     ]
   ],
   "text_variables": {}
