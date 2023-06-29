@@ -2571,6 +2571,15 @@
     (path "/8ca25f6d-cadc-4d60-beba-2de6b7c14b93/b6c0e29a-7a1b-4d84-952d-3cce6574f399"
       (reference "#PWR0187") (unit 1) (value "+2V5") (footprint "")
     )
+    (path "/8ca25f6d-cadc-4d60-beba-2de6b7c14b93/2c3646b5-67e5-4cc0-8b54-293136b3b3f0"
+      (reference "#PWR?") (unit 1) (value "+2V5") (footprint "")
+    )
+    (path "/8ca25f6d-cadc-4d60-beba-2de6b7c14b93/628fcd04-d267-4392-9217-6d9a2a35faa2"
+      (reference "#PWR?") (unit 1) (value "GNDA") (footprint "")
+    )
+    (path "/8ca25f6d-cadc-4d60-beba-2de6b7c14b93/ea59430d-245c-46f6-9550-275508975b99"
+      (reference "#PWR?") (unit 1) (value "-2V5") (footprint "")
+    )
     (path "/08a4df9e-21eb-4281-8712-e128e191f2dc"
       (reference "C1") (unit 1) (value "3.3uF") (footprint "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder")
     )
@@ -2618,6 +2627,9 @@
     )
     (path "/8ca25f6d-cadc-4d60-beba-2de6b7c14b93/fa1fdad1-408f-4a26-9f39-e36ec82d2922"
       (reference "C44") (unit 1) (value "160pF") (footprint "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder")
+    )
+    (path "/8ca25f6d-cadc-4d60-beba-2de6b7c14b93/a0eeafa1-50dc-40e0-8eb9-d644850f9c24"
+      (reference "J1") (unit 1) (value "Conn_01x03_Female") (footprint "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical")
     )
     (path "/5e157f9a-97b6-4885-a6f2-73948d46b9eb"
       (reference "J5") (unit 1) (value "Barrel_Jack_Switch") (footprint "Connector_BarrelJack:BarrelJack_CUI_PJ-036AH-SMT_Horizontal")
