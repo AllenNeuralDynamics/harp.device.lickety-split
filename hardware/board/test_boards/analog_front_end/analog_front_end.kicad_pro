@@ -33,9 +33,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 0.762,
-          "height": 1.524,
-          "width": 1.524
+          "drill": 1.7,
+          "height": 2.5,
+          "width": 2.5
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -45,7 +45,7 @@
         "silk_text_upright": false,
         "zones": {
           "45_degree_only": false,
-          "min_clearance": 0.254
+          "min_clearance": 0.0
         }
       },
       "diff_pair_dimensions": [
@@ -55,7 +55,11 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "courtyards_overlap|208080001|93500001|0f0d2089-7eab-467c-85b8-272bb3c58b99|4f381791-c1a2-4662-9fd8-2ca3a9f5cdf4",
+        "courtyards_overlap|214620001|107957501|1f7fbd96-a2a7-4cb6-8cf8-70d6dfc233e5|a6166a73-fcdd-416f-8dc4-1c04ae655167",
+        "courtyards_overlap|228266168|113699999|1f7fbd96-a2a7-4cb6-8cf8-70d6dfc233e5|6b8c1fec-f8a0-41a3-b20a-41b391367135"
+      ],
       "meta": {
         "version": 2
       },
@@ -137,11 +141,7 @@
     "equivalence_files": []
   },
   "erc": {
-    "erc_exclusions": [
-      "pin_to_pin|1524000|1028700|05daf450-ff9d-44bd-978c-963e1bb2fbb3|468fe81c-5bb2-4b16-a2d5-0d960536c0a4",
-      "pin_to_pin|1524000|914400|395aa616-09e3-47ea-b700-6255ae3540b4|05daf450-ff9d-44bd-978c-963e1bb2fbb3",
-      "pin_to_pin|1524000|914400|395aa616-09e3-47ea-b700-6255ae3540b4|468fe81c-5bb2-4b16-a2d5-0d960536c0a4"
-    ],
+    "erc_exclusions": [],
     "meta": {
       "version": 0
     },
@@ -350,7 +350,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "harp_lick_detector_capactive.kicad_pro",
+    "filename": "analog_front_end.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -374,7 +374,7 @@
       },
       {
         "bus_width": 12.0,
-        "clearance": 0.254,
+        "clearance": 0.127,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -383,8 +383,7 @@
         "microvia_drill": 0.254,
         "name": "Power",
         "nets": [
-          "+12V",
-          "+5V"
+          "+12V"
         ],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
@@ -454,20 +453,8 @@
       ""
     ],
     [
-      "68ba3686-54f3-42b1-847b-d7576a207bac",
-      "MCU"
-    ],
-    [
-      "faa455ea-93b0-4a12-9af2-c32e7eee6d37",
-      "100[Khz], 50[uVpp] Sine Wave"
-    ],
-    [
       "8ca25f6d-cadc-4d60-beba-2de6b7c14b93",
       "Sensing Front End"
-    ],
-    [
-      "cba1eb29-d383-4f0c-b2c4-1a4a89fdd640",
-      "TTL Output"
     ]
   ],
   "text_variables": {}
