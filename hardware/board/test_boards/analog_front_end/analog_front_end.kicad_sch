@@ -2451,10 +2451,6 @@
     (property "Sheet file" "sensing_front_end.kicad_sch" (id 1) (at 119.38 76.7846 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
-    (pin "VSIN" input (at 119.38 71.12 180)
-      (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 0b1baae9-db38-4a9a-ab57-f74669856623)
-    )
   )
 
   (sheet_instances

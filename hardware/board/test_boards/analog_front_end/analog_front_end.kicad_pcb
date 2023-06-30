@@ -4321,12 +4321,6 @@
   (gr_text "A" (at 190.1 89.5) (layer "F.SilkS") (tstamp f5af6e0b-bc04-4c16-b0cc-a9f59f4387da)
     (effects (font (size 1 1) (thickness 0.15)))
   )
-  (gr_text "TODO: add the RP2040 package" (at 205.9 130.1) (layer "Cmts.User") (tstamp 32cb4271-da6b-4a90-8430-4183fc89b838)
-    (effects (font (size 1.5 1.5) (thickness 0.3)))
-  )
-  (gr_text "TODO: Consider top mounting SMA connectors that can be hidden/DNPed in the final design." (at 205.9 125.1) (layer "Cmts.User") (tstamp f1fb27da-3da6-4c8d-a02d-06ad8b9cb790)
-    (effects (font (size 1.5 1.5) (thickness 0.3)))
-  )
 
   (segment (start 206.8 112.0375) (end 206.8 114.24854) (width 0.254) (layer "F.Cu") (net 1) (tstamp 0a59bf14-ec6d-4121-a50a-b095c779ebe0))
   (segment (start 209.4 114.2375) (end 209.4 112.2375) (width 0.254) (layer "F.Cu") (net 1) (tstamp 12f97e70-d9fb-40c5-a5a2-d46987fcca8c))
