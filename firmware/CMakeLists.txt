@@ -16,8 +16,8 @@ add_executable(${PROJECT_NAME}
     src/main.cpp
 )
 
-add_library(as9833
-    src/as9833
+add_library(ad9833
+    src/ad9833
 )
 
 # Specify where to look for header files if they're not all in the same place.
@@ -27,8 +27,8 @@ include_directories(inc)
 
 # Link libraries to the targets that need them.
 
-target_link_libraries(as9833 pico_stdlib hardware_spi)
-target_link_libraries(${PROJECT_NAME} pico_stdlib as9833)
+target_link_libraries(ad9833 pico_stdlib hardware_spi)
+target_link_libraries(${PROJECT_NAME} pico_stdlib ad9833)
 
 # create map/bin/hex/uf2 file in addition to ELF.
 pico_add_extra_outputs(${PROJECT_NAME})

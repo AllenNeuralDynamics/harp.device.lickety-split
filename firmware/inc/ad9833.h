@@ -1,12 +1,13 @@
-#ifndef AS9833_H
-#define AS9833_H
+#ifndef AD9833_H
+#define AD9833_H
 
 #include <stdint.h>
 #include <pico/stdlib.h>
 #include <hardware/spi.h>
 #include <math.h> // for atan.
 
-class AS9833
+
+class AD9833
 {
 public:
 // Enums are used as bitmasks.
@@ -22,22 +23,22 @@ public:
 
     enum waveform_t: uint16_t
     {
-        SQUARE =   0b10000,
-        SINE =     0b10010,
-        TRIANGLE = 0b00010
+        SQUARE =   0b101000,
+        SINE =     0b000000,
+        TRIANGLE = 0b000010
     };
 
 /**
  * \brief Constructor that will also initialize spi hardware and pins
  */
-    AS9833(spi_inst_t* spi_hw, uint8_t spi_tx_pin, uint8_t spi_rx_pin,
+    AD9833(spi_inst_t* spi_hw, uint8_t spi_tx_pin, uint8_t spi_rx_pin,
            uint8_t spi_sck_pin, uint8_t cs_pin, bool init_spi_hardware = true);
 /**
  * \brief Convenience constructor that's more useful if the SPI peripheral
  *      and pins were already initialized.
  */
-    AS9833(spi_inst_t* spi_hw, uint8_t cs_pin);
-    ~AS9833();
+    AD9833(spi_inst_t* spi_hw, uint8_t cs_pin);
+    ~AD9833();
 
     static void init_spi(spi_inst_t* spi);
 
@@ -58,9 +59,9 @@ public:
     void enable_output() {clear_reset();}
 
 /**
- * \brief
+ * \brief enable output
  */
-    void set_waveform(waveform_t waveform);
+    void enable_with_waveform(waveform_t waveform);
 
 
 /**
@@ -86,8 +87,10 @@ public:
 private:
     void spi_write16(uint16_t word);
 
+    // bool tracking whether the device has been put into a reset state.
+    bool device_is_reset_;
 
     uint8_t cs_pin_;
     spi_inst_t* spi_inst_;
 };
-#endif // AS9833_H
+#endif // AD9833_H
