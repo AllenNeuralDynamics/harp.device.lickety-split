@@ -10,7 +10,7 @@
 
 // Create AS9833 instance and init underlying SPI hardware (default behavior).
 // Note: device is set to SPI mode 2, 32[MHz]
-AD9833 ad9833(spi0, SPI_TX_PIN, SPI_RX_PIN, SPI_SCK_PIN, CS_PIN);
+AD9833 ad9833(25e6, spi0, SPI_TX_PIN, SPI_RX_PIN, SPI_SCK_PIN, CS_PIN);
 
 int main()
 {
@@ -23,8 +23,8 @@ int main()
     //printf("Initializing device... ");
     ad9833.disable_output();
     ad9833.set_frequency_hz(100000); // uint32_t
-    ad9833.enable_with_waveform(AD9833::waveform_t::SINE);
     //ad9833.set_phase(0);
+    ad9833.enable_with_waveform(AD9833::waveform_t::SINE);
     //printf("Done.\r\n");
 
     while(true)

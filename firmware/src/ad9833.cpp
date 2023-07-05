@@ -1,9 +1,9 @@
 #include <ad9833.h>
 
-AD9833::AD9833(spi_inst_t* spi_hw,
+AD9833::AD9833(uint32_t mclk_frequency_hz, spi_inst_t* spi_hw,
                uint8_t spi_tx_pin, uint8_t spi_rx_pin, uint8_t spi_sck_pin,
                uint8_t cs_pin, bool init_spi_hardware)
-:AD9833(spi_hw, cs_pin)
+:AD9833(mclk_frequency_hz, spi_hw, cs_pin)
 {
     // init spi if specified to do so.
     if (init_spi_hardware)
@@ -20,8 +20,9 @@ AD9833::AD9833(spi_inst_t* spi_hw,
     spi_write_blocking(spi_inst_, (uint8_t*)&word, 1);
 }
 
-AD9833::AD9833(spi_inst_t* spi_hw, uint8_t cs_pin)
-:spi_inst_{spi_hw}, cs_pin_{cs_pin}, device_is_reset_{false}
+AD9833::AD9833(uint32_t mclk_frequency_hz, spi_inst_t* spi_hw, uint8_t cs_pin)
+:mclk_frequency_hz_{mclk_frequency_hz_}, spi_inst_{spi_hw}, cs_pin_{cs_pin},
+ device_is_reset_{false}
 {
     // Setup chip select.
     gpio_init(cs_pin_);
@@ -87,7 +88,7 @@ void AD9833::enable_with_waveform(waveform_t waveform)
 
 void AD9833::set_frequency_hz(uint32_t freq)
 {
-    uint64_t freq_word = (uint64_t(freq) * 1<<28) / 25e6;
+    uint64_t freq_word = (uint64_t(freq) * 1<<28) / mclk_frequency_hz_;
     // Enable two consecutive writes to FREQ0 (D13 = 1).
     write_to_reg(CONTROL, (1<<13));
     // Write LSBs to FREQ0 (14 lower bits).

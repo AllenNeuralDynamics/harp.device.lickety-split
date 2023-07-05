@@ -31,13 +31,14 @@ public:
 /**
  * \brief Constructor that will also initialize spi hardware and pins
  */
-    AD9833(spi_inst_t* spi_hw, uint8_t spi_tx_pin, uint8_t spi_rx_pin,
-           uint8_t spi_sck_pin, uint8_t cs_pin, bool init_spi_hardware = true);
+    AD9833(uint32_t mclk_frequency_hz, spi_inst_t* spi_hw,
+           uint8_t spi_tx_pin, uint8_t spi_rx_pin, uint8_t spi_sck_pin,
+           uint8_t cs_pin, bool init_spi_hardware = true);
 /**
  * \brief Convenience constructor that's more useful if the SPI peripheral
  *      and pins were already initialized.
  */
-    AD9833(spi_inst_t* spi_hw, uint8_t cs_pin);
+    AD9833(uint32_t mclk_frequency_hz, spi_inst_t* spi_hw, uint8_t cs_pin);
     ~AD9833();
 
     static void init_spi(spi_inst_t* spi);
@@ -89,6 +90,8 @@ private:
 
     // bool tracking whether the device has been put into a reset state.
     bool device_is_reset_;
+    // device input oscillator frequency.
+    uint32_t mclk_frequency_hz_;
 
     uint8_t cs_pin_;
     spi_inst_t* spi_inst_;
