@@ -1391,7 +1391,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 0fb4527c-9ef1-4b10-960a-0f0935bae2ea)
   )
-  (text "Tests:\n1. Option A, B, C with coax cable\n2. Option A, B, C with braided shield https://www.amazon.com/Shielding-Tinned-Copper-Protection-Flexible/dp/B09ZY6QSWK"
+  (text "Tests:\n1. Option A, B, C with coax cable\n2. Option A, B, C with braided shield on coax cable"
     (at 156.21 162.56 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 13ec50dc-4127-42ec-b401-61966d85a121)
@@ -1426,8 +1426,8 @@
     (effects (font (size 1.27 1.27)) (justify right bottom))
     (uuid 46726200-6002-43e8-bd7f-6d26f96e2cf5)
   )
-  (text "U9 Pin3 to J6 Pin1 might require a guard ring trace to\nU9 Pin4. (Both sides, no soldermask, no ground plane.)"
-    (at 113.03 143.51 0)
+  (text "U9 Pin3 might require a guard ring trace with \na buffered version of the value at Pin4.\n(Both sides, no soldermask, no ground plane.)"
+    (at 113.03 144.78 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 4aaa162a-fdc6-4d9d-82f6-13bbb7b08ecf)
   )

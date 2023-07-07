@@ -7724,7 +7724,7 @@
   )
 
   (gr_rect (start 169.9 119.1) (end 232.4 58.6) (layer "Edge.Cuts") (width 0.1) (fill none) (tstamp a99accae-5f9c-47a1-a1eb-5bc8c8d97fcc))
-  (gr_text "TODO: consider a (uh-oh) GND1 cutout of \nthe ground plane or (better!) power plane." (at 260.6 82.6) (layer "Cmts.User") (tstamp 14077a4a-f1b7-4bf0-aa92-0a387c43fbda)
+  (gr_text "TODO: move TVS diode in-between D+/D- pair" (at 260.6 82.6) (layer "Cmts.User") (tstamp 14077a4a-f1b7-4bf0-aa92-0a387c43fbda)
     (effects (font (size 1.5 1.5) (thickness 0.3)))
   )
   (gr_text "TODO: add the RP2040 package" (at 183.4 150.6) (layer "Cmts.User") (tstamp 32cb4271-da6b-4a90-8430-4183fc89b838)
