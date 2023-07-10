@@ -1358,6 +1358,10 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 97bf30ae-baf9-4e6f-a70a-7dfeeafab0e5)
   )
+  (text "TODO: raw signal out for debugging." (at 115.57 83.82 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 9b43fb95-e64f-4883-81b7-f74720872524)
+  )
   (text "Low Noise Positive/Negative \nPower Supply" (at 172.72 119.38 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 9d26c770-b3be-4a9b-817e-5a74ec6c94ee)
@@ -2781,9 +2785,6 @@
     )
     (path "/faa455ea-93b0-4a12-9af2-c32e7eee6d37/a849a07c-23c8-438e-8719-61a32bce8a80"
       (reference "#PWR0145") (unit 1) (value "GNDA") (footprint "")
-    )
-    (path "/faa455ea-93b0-4a12-9af2-c32e7eee6d37/647e764a-2812-4470-a9a2-62513d3d17e7"
-      (reference "#PWR0146") (unit 1) (value "GND") (footprint "")
     )
     (path "/faa455ea-93b0-4a12-9af2-c32e7eee6d37/9cf01063-f90b-432e-9e9a-422c494cd3c3"
       (reference "#PWR0147") (unit 1) (value "GNDA") (footprint "")
