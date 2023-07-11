@@ -54,7 +54,7 @@ This entire setup can be accomplished practically with triaxial cable ([example 
 Here the inner braid carries of low-impedance copy of the signal, and the outer braid is connected to ground at one end.
 
 
-## Refereneces
+## References
 * [AN-347](https://www.analog.com/media/en/technical-documentation/application-notes/41727248AN_347.pdf)
 * [Capacitor Impedance Calculator](https://www.allaboutcircuits.com/tools/capacitor-impedance-calculator/)
 * [Pi Pico Pinout](https://www.raspberrypi-spy.co.uk/wp-content/uploads/2021/01/raspberry_pi_pico_pinout.png)
