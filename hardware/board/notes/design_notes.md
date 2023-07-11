@@ -32,7 +32,6 @@ Because the bandpass filter introduces a 180-deg phase shift, the buffer inverts
 
 ## Guarding
 
-
 # Appendix
 
 ## Guarding and Shielding Basics
@@ -55,8 +54,8 @@ This entire setup can be accomplished practically with triaxial cable ([example 
 Here the inner braid carries of low-impedance copy of the signal, and the outer braid is connected to ground at one end.
 
 
-
-
 ## Refereneces
 * [AN-347](https://www.analog.com/media/en/technical-documentation/application-notes/41727248AN_347.pdf)
 * [Capacitor Impedance Calculator](https://www.allaboutcircuits.com/tools/capacitor-impedance-calculator/)
+* [Pi Pico Pinout](https://www.raspberrypi-spy.co.uk/wp-content/uploads/2021/01/raspberry_pi_pico_pinout.png)
+* [Reduced Printed Circuit Board Emissions with Low-Noise Design Practices](https://ntrs.nasa.gov/api/citations/20120009353/downloads/20120009353.pdf)
