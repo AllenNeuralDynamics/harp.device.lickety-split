@@ -34,7 +34,7 @@ AD9833::AD9833(uint32_t mclk_frequency_hz, spi_inst_t* spi_hw, uint8_t cs_pin)
 void AD9833::init_spi(spi_inst_t* spi_hw)
 {
     // Setup SPI mode 2 (CPOL=1, CPHA=0), SPI clock speed to <=40[MHz].
-    spi_init(spi_hw, 8000000U); // defaults to controller mode.
+    spi_init(spi_hw, 4000000U); // defaults to controller mode.
     spi_set_format(spi_hw,
                    8, // data bits
                    SPI_CPOL_1, // CPOL
@@ -56,6 +56,7 @@ void AD9833::spi_write16(uint16_t word)
     asm volatile("nop \n nop \n nop");
     gpio_put(cs_pin_, 1);
     asm volatile("nop \n nop \n nop");
+    printf("Writing 0x%04x\n", word);
 }
 
 void AD9833::write_to_reg(RegName reg, uint16_t value)
@@ -88,7 +89,11 @@ void AD9833::enable_with_waveform(waveform_t waveform)
 
 void AD9833::set_frequency_hz(uint32_t freq)
 {
-    uint64_t freq_word = (uint64_t(freq) * 1<<28) / mclk_frequency_hz_;
+    //uint32_t freq_word = uint32_t((uint64_t(freq) * uint64_t(1<<28)) / uint64_t(mclk_frequency_hz_));
+    // FIXME: this should not be hardcoded.
+    uint32_t freq_word = 0x222222;
+    //uint32_t freq_word = 0x10624d;
+    printf("(Raw freq word is: 0x%08x)\n", freq_word);
     // Enable two consecutive writes to FREQ0 (D13 = 1).
     write_to_reg(CONTROL, (1<<13));
     // Write LSBs to FREQ0 (14 lower bits).
@@ -100,6 +105,7 @@ void AD9833::set_frequency_hz(uint32_t freq)
 
 void AD9833::set_phase(float offset)
 {
+    // FIXME: divide-by-zero error.
     // TODO: wrap value between 0-2pi.
     float pi = atan(1) * 4;
     uint32_t phase_bits = (2 * pi / offset) * (2<<28);
@@ -111,7 +117,9 @@ void AD9833::set_phase_raw(uint32_t phase_bits)
     // Set the control register B28 = 1 (i.e: D13 = 1) to set the phase in
     // two consecutive writes.
     // Write lower 14; write upper 14.
+    // Enable two consecutive writes to PHASE0 (D13 = 1).
+    write_to_reg(CONTROL, (1<<13));
     write_to_reg(PHASE_0, 0x03FFF & uint16_t(phase_bits));
-    write_to_reg(PHASE_1, 0x03FFF & uint16_t(phase_bits >> 14));
+    write_to_reg(PHASE_0, 0x03FFF & uint16_t(phase_bits >> 14));
 }
 
