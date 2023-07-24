@@ -1373,7 +1373,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 0fb4527c-9ef1-4b10-960a-0f0935bae2ea)
   )
-  (text "Tests:\n1. Check input/output phase lag with no cable.\n2. Test with coax cable.\n3. Test with unshielded with braided shield on coax cable\n4. Test with triax cable."
+  (text "Tests:\n1. Check input/output phase lag with no cable. --> Looks OK!\n2. Test with coax cable.\n3. Test with unshielded with braided shield on coax cable\n4. Test with triax cable."
     (at 177.8 163.83 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 13ec50dc-4127-42ec-b401-61966d85a121)
@@ -1461,8 +1461,8 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid adcc89be-85cc-42f6-b21e-aaee0c620093)
   )
-  (text "Testing Note:\n\nNote: R23: currently set to ~51Kohm.\nWhen using 1Mohm, the signal is 25% of what it was supposed to be. \nThe SMB connector may be the culprit.\n\nConsider using the SOIC8 package on the LTC6268 to use the NC pins for a guard trace.\n\nNote: Floating coax cable yields best results at 1m length."
-    (at 13.97 33.02 0)
+  (text "Testing Note:\n\nNote: R23: currently set to ~51Kohm.\nWhen using 1Mohm, the signal is 25% of what it was supposed to be. \nThe SMB connector may be the culprit.\n\nConsider using the SOIC8 package on the LTC6268 to use the NC pins for a guard trace.\n\nNote: Floating coax cable yields best results at 1m length.\n\nQuestion: does SMB connector increase capacitance? (test with 1Mohm resistor and with/without smb cable.)"
+    (at 15.24 38.1 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid b4832bec-cee0-4007-85c7-ba416296063e)
   )

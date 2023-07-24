@@ -59,3 +59,6 @@ Here the inner braid carries of low-impedance copy of the signal, and the outer 
 * [Capacitor Impedance Calculator](https://www.allaboutcircuits.com/tools/capacitor-impedance-calculator/)
 * [Pi Pico Pinout](https://www.raspberrypi-spy.co.uk/wp-content/uploads/2021/01/raspberry_pi_pico_pinout.png)
 * [Reduced Printed Circuit Board Emissions with Low-Noise Design Practices](https://ntrs.nasa.gov/api/citations/20120009353/downloads/20120009353.pdf)
+* [PCB Plane Capacitance](https://www.intel.com/content/www/us/en/docs/programmable/683073/current/plane-capacitance.html)
+* [ADA4530 Datasheet](https://www.analog.com/media/en/technical-documentation/data-sheets/ADA4530-1.pdf)
+  * contains useful info on guarding ring/plane pcb layout for high impedance signals.
