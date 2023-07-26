@@ -33,9 +33,9 @@
         "other_text_thickness": 0.15,
         "other_text_upright": false,
         "pads": {
-          "drill": 1.0,
-          "height": 1.7,
-          "width": 1.7
+          "drill": 0.0,
+          "height": 0.5,
+          "width": 1.0
         },
         "silk_line_width": 0.15,
         "silk_text_italic": false,
@@ -56,11 +56,23 @@
         }
       ],
       "drc_exclusions": [
+        "clearance|125000000|93925000|a21b1432-5e32-4838-a1b3-1e3bec3e0dd9|a91947f5-a15c-48e7-8465-9730ef96c765",
+        "clearance|125000000|94925000|822d0e9e-ee24-4e97-82e0-7e4f0e8dccfa|334bd034-b5c6-4761-8dee-0103350979ba",
         "copper_edge_clearance|107900000|90400000|946a37c1-8a26-488d-98f9-7001896ef716|1b0858ba-8de3-4889-a53a-46c90c8bffad",
         "copper_edge_clearance|107900000|90400000|946a37c1-8a26-488d-98f9-7001896ef716|a5b6c45a-9601-47ca-acad-da58caf2f425",
+        "copper_edge_clearance|107900000|92100000|946a37c1-8a26-488d-98f9-7001896ef716|03c52831-5dc5-43c5-a442-8d23643b46fb",
+        "copper_edge_clearance|107900000|92100000|946a37c1-8a26-488d-98f9-7001896ef716|d57dcfee-5058-4fc2-a68b-05f9a48f685b",
+        "copper_edge_clearance|107900000|94300000|946a37c1-8a26-488d-98f9-7001896ef716|50d96b72-5d63-4722-a542-ed6c6c44e165",
         "copper_edge_clearance|107900000|94650000|946a37c1-8a26-488d-98f9-7001896ef716|afa5bd44-8e54-407b-b513-56c18abee356",
+        "copper_edge_clearance|107900000|96900000|946a37c1-8a26-488d-98f9-7001896ef716|961cf310-8a2f-4ca6-a781-7a7d1eef4ae3",
+        "copper_edge_clearance|107900000|96905000|946a37c1-8a26-488d-98f9-7001896ef716|961cf310-8a2f-4ca6-a781-7a7d1eef4ae3",
+        "copper_edge_clearance|107900000|97750000|946a37c1-8a26-488d-98f9-7001896ef716|0b21a65d-d20b-411e-920a-75c343ac5136",
+        "copper_edge_clearance|107900000|97750000|946a37c1-8a26-488d-98f9-7001896ef716|3cd1bda0-18db-417d-b581-a0c50623df68",
         "copper_edge_clearance|107900000|98900000|946a37c1-8a26-488d-98f9-7001896ef716|80ce8e22-f18f-482c-9710-42cc68a9d3f4",
         "copper_edge_clearance|107900000|98900000|946a37c1-8a26-488d-98f9-7001896ef716|8697c508-d97e-43ce-8dcf-b04544e67d43",
+        "copper_edge_clearance|108000000|94965000|946a37c1-8a26-488d-98f9-7001896ef716|fe8d9267-7834-48d6-a191-c8724b2ee78d",
+        "copper_edge_clearance|108382120|96905000|946a37c1-8a26-488d-98f9-7001896ef716|177c7c9f-58e9-44bd-aaf9-9920752b711c",
+        "copper_edge_clearance|108382120|96905000|946a37c1-8a26-488d-98f9-7001896ef716|8f32cfe7-006d-4591-90a4-ea2a6624d378",
         "courtyards_overlap|108100001|99200001|1436d63a-f847-402a-bbaa-7ac6d808c44f|7d661e4d-0a9d-47b2-b834-6a724ad6368d",
         "courtyards_overlap|112099999|102690001|1436d63a-f847-402a-bbaa-7ac6d808c44f|a6c27cfc-44bc-4599-b4af-e08a048d39b4",
         "courtyards_overlap|113439999|88509999|7d661e4d-0a9d-47b2-b834-6a724ad6368d|a748dea4-2744-4e48-8c9a-b870658ae97a",
@@ -372,7 +384,7 @@
     "classes": [
       {
         "bus_width": 12.0,
-        "clearance": 0.127,
+        "clearance": 0.1524,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.2,
@@ -382,7 +394,27 @@
         "name": "Default",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.127,
+        "track_width": 0.1524,
+        "via_diameter": 0.4572,
+        "via_drill": 0.254,
+        "wire_width": 6.0
+      },
+      {
+        "bus_width": 12.0,
+        "clearance": 0.2032,
+        "diff_pair_gap": 0.25,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.2,
+        "line_style": 0,
+        "microvia_diameter": 0.4572,
+        "microvia_drill": 0.254,
+        "name": "Guard",
+        "nets": [
+          "/Sensing Front End/guard"
+        ],
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.2032,
         "via_diameter": 0.4572,
         "via_drill": 0.254,
         "wire_width": 6.0
@@ -398,7 +430,8 @@
         "microvia_drill": 0.254,
         "name": "Power",
         "nets": [
-          "+3V3"
+          "+3V3",
+          "+5V"
         ],
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",

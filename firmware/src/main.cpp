@@ -20,6 +20,12 @@ AD9833 ad9833(12e6L, spi0, SPI_TX_PIN, SPI_RX_PIN, SPI_SCK_PIN, CS_PIN);
 
 int main()
 {
+    // Force onboard regulator into PWM mode for reduced ripple but lower
+    // efficiency.
+    gpio_init(23);
+    gpio_set_dir(23, GPIO_OUT);
+    gpio_put(23, 1);
+
     stdio_usb_init();
     //stdio_set_translate_crlf(&stdio_usb, false); // Don't replace outgoing chars.
     //while (!stdio_usb_connected()){} // Block until connection to serial port.
