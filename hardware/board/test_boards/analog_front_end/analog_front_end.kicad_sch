@@ -3656,7 +3656,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid c040fca7-83ca-4963-98a1-edcfa0a6d8d9)
   )
-  (text "Next Test:\n* 51Kohm series resistor\n* 25mV signal\n* 50x amplification\n* better voltage reference for pi pico\n* grounded coax\n* Pico AGND for output signal\n\nHow fast can we detect a lick with this setup?\n25mV/51KOhm = 490nA"
+  (text "Next Test:\n* 50Kohm series resistor (or 100K)\n* 25mV signal\n* 50x amplification\n* better voltage reference for pi pico\n* grounded coax\n* Pico AGND for output signal\n\nHow fast can we detect a lick with this setup?\n25mV/51KOhm = 490nA\n25mV/100KOhm = 250nA"
     (at 184.15 73.66 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid ca4b2a77-5a71-40ab-b178-0276e8dd2714)
@@ -4883,7 +4883,7 @@
       (reference "R19") (unit 1) (value "3K2") (footprint "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder")
     )
     (path "/8ca25f6d-cadc-4d60-beba-2de6b7c14b93/bd724835-3e3e-41a0-bd03-a1c31e2ef475"
-      (reference "R23") (unit 1) (value "50K") (footprint "Resistor_SMD:R_1206_3216Metric")
+      (reference "R23") (unit 1) (value "100K") (footprint "Resistor_SMD:R_1206_3216Metric")
     )
     (path "/82c6d2bc-a975-44eb-8d35-610dba9024de/5e7ff8f9-784d-4070-ab43-581307fcfb6d"
       (reference "R34") (unit 1) (value "49K9") (footprint "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder")

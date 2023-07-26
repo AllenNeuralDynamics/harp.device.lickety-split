@@ -62,3 +62,8 @@ Here the inner braid carries of low-impedance copy of the signal, and the outer 
 * [PCB Plane Capacitance](https://www.intel.com/content/www/us/en/docs/programmable/683073/current/plane-capacitance.html)
 * [ADA4530 Datasheet](https://www.analog.com/media/en/technical-documentation/data-sheets/ADA4530-1.pdf)
   * contains useful info on guarding ring/plane pcb layout for high impedance signals.
+* [ADA4530-1R-EBZ User Guide](https://www.analog.com/media/en/technical-documentation/user-guides/ADA4530-1R-EBZ_UG-865.pdf)
+* Design femptoampere circuits with low leakage [Part 1](https://www.edn.com/design-femtoampere-circuits-with-low-leakage-part-one/), [Part 2](https://www.edn.com/design-femtoampere-circuits-with-low-leakage-part-2-component-selection/), [Part 3](https://www.edn.com/design-femtoampere-circuits-with-low-leakage-part-3-low-current-design-techniques/)
+* [Tektronix Low Level Measurements Handbook](https://www.tek.com/en/documents/product-article/keithley-low-level-measurements-handbook---7th-edition#C2section0)
+* [Demo Manual DC2414A](https://www.analog.com/media/en/technical-documentation/user-guides/DC2414AF.PDF)
+  * LTC6268 evaluation board
