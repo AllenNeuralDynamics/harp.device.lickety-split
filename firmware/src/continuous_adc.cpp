@@ -1,6 +1,5 @@
 #include <continuous_adc.h>
 
-#define ADC_INPUT_PIN (26) // FIXME: move this to some sort of config file.
 
 // Setup function for the ADC and two DMA channels to
 // continuously collect 1 period of ADC samples (5 samples @ 500KHz) from the
@@ -15,7 +14,7 @@
 //  Otherwise, "If READ_ADDR and WRITE_ADDR are not reprogrammed, the DMA will
 //  use the current values as start addresses for the next transfer."
 
-//uint8_t adc_vals[5] = {0, 1, 2, 3, 4};
+int samp_chan;
 
 /**
  * \brief init continuous sampling to a specified memory location.
@@ -25,7 +24,7 @@ void init_continuous_adc_sampling(uint8_t adc_pin_mask,
                                   uint8_t sample_count)
 {
     // Setup ADC.
-    // Init adc pins specified in the pin mask.
+    // Init the ADC input pins specified in the pin mask.
     for (uint8_t adc_pin_index = 0; adc_pin_index < 5; ++adc_pin_index)
     {
         bool enable_pin = adc_pin_mask >> adc_pin_index;
@@ -33,6 +32,7 @@ void init_continuous_adc_sampling(uint8_t adc_pin_mask,
             adc_gpio_init(adc_pin_index);
     }
     adc_init();
+    // TODO: only enable temp sensor if the corresponding adc channel is set.
     adc_set_temp_sensor_enabled(true); // Enable internal temperature sensor.
     adc_set_clkdiv(0); // Run at max speed.
     adc_set_round_robin(adc_pin_mask); // Enable round-robin sampling of the
@@ -62,7 +62,7 @@ void init_continuous_adc_sampling(uint8_t adc_pin_mask,
     // Get two open DMA channels.
     // samp_chan will sample the adc, paced by DREQ_ADC and chain to ctrl_chan.
     // ctrl_chan will reconfigure & retrigger samp_chan when samp_chan finishes.
-    int samp_chan = dma_claim_unused_channel(true);
+    samp_chan = dma_claim_unused_channel(true); // samp_chan declared in header.
     int ctrl_chan = dma_claim_unused_channel(true);
     dma_channel_config samp_conf = dma_channel_get_default_config(samp_chan);
     dma_channel_config ctrl_conf = dma_channel_get_default_config(ctrl_chan);

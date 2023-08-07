@@ -14,6 +14,7 @@ pico_sdk_init()
 
 add_executable(${PROJECT_NAME}
     src/main.cpp
+    src/core1_lick_detection.cpp
 )
 
 add_library(ad9833
@@ -33,7 +34,8 @@ include_directories(inc)
 
 target_link_libraries(ad9833 pico_stdlib hardware_spi)
 target_link_libraries(continuous_adc hardware_adc hardware_dma pico_stdlib)
-target_link_libraries(${PROJECT_NAME} pico_stdlib ad9833 continuous_adc)
+target_link_libraries(${PROJECT_NAME} pico_stdlib ad9833 continuous_adc
+                      pico_multicore hardware_irq)
 
 # create map/bin/hex/uf2 file in addition to ELF.
 pico_add_extra_outputs(${PROJECT_NAME})

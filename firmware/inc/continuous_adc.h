@@ -13,6 +13,9 @@ extern "C" {
 
 
 extern uint8_t adc_vals[];
+extern int samp_chan; // The DMA channel for sampling. Must be exposed across
+                      // files such that we can attach interrupts setup by this
+                      // channel.
 
 /**
  * \brief setup continuous adc sampling of the adc pins specified in the mask to
