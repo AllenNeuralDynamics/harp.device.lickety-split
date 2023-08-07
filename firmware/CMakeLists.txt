@@ -17,7 +17,11 @@ add_executable(${PROJECT_NAME}
 )
 
 add_library(ad9833
-    src/ad9833
+    src/ad9833.cpp
+)
+
+add_library(continuous_adc
+    src/continuous_adc.cpp
 )
 
 # Specify where to look for header files if they're not all in the same place.
@@ -28,7 +32,8 @@ include_directories(inc)
 # Link libraries to the targets that need them.
 
 target_link_libraries(ad9833 pico_stdlib hardware_spi)
-target_link_libraries(${PROJECT_NAME} pico_stdlib ad9833)
+target_link_libraries(continuous_adc hardware_adc hardware_dma pico_stdlib)
+target_link_libraries(${PROJECT_NAME} pico_stdlib ad9833 continuous_adc)
 
 # create map/bin/hex/uf2 file in addition to ELF.
 pico_add_extra_outputs(${PROJECT_NAME})
@@ -36,4 +41,5 @@ pico_add_extra_outputs(${PROJECT_NAME})
 # USB serial. Enable this for every library/executable that uses it.
 pico_enable_stdio_usb(${PROJECT_NAME} 1)
 pico_enable_stdio_usb(ad9833 1)
+pico_enable_stdio_usb(continuous_adc 1)
 pico_enable_stdio_uart(${PROJECT_NAME} 0)
