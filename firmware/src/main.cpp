@@ -17,7 +17,7 @@
 //#define SPI_RX_PIN (16)
 
 // Location to write one period of ADC samples to.
-uint8_t adc_vals[5];
+uint8_t adc_vals[5] = {0, 0, 0, 0, 0};
 
 // General strategy:
 // Configure ADC to write to memory continuously. (See prev example code.)
@@ -41,10 +41,8 @@ int main()
 
     stdio_usb_init();
     //stdio_set_translate_crlf(&stdio_usb, false); // Don't replace outgoing chars.
-    //while (!stdio_usb_connected()){} // Block until connection to serial port.
+    while (!stdio_usb_connected()){} // Block until connection to serial port.
 
-    // Provision pin 26 only.
-    init_continuous_adc_sampling(0x01, adc_vals, count_of(adc_vals));
 
     // Setup Sine wave generator.
     sleep_ms(100);
@@ -53,18 +51,23 @@ int main()
     ad9833.set_phase_raw(0); // uint32_t
     ad9833.enable_with_waveform(AD9833::waveform_t::SINE);
 
-    // Launch Core1, which will process our adc samples and detect licks.
+    // Provision pin 26 only.
+    init_continuous_adc_sampling(0x01, adc_vals, count_of(adc_vals), true);
+    printf("&adc_vals[0] = 0x%x\r\n", &adc_vals[0]);
+
+    // Launch Core1, which will process incoming adc samples and detect licks.
+    // TODO: uncomment this.
     multicore_launch_core1(core1_main);
     // TODO: figure out if we can trigger an interrupt on DMA completion
     //  in addition to chaining to another DMA.
     // Test: increment a uint16_t every time the interrupt fires and print it.
-    // TODO: core1 must enable the dma interrupt such that it fires on core1.
 
     while(true)
     {
+/*
         printf("ADC vals: %03d | %03d | %03d | %03d | %03d \r",
                adc_vals[0], adc_vals[1], adc_vals[2], adc_vals[3], adc_vals[4]);
         sleep_ms(17); // ~60[Hz] refresh rate.
-
+*/
     }
 }

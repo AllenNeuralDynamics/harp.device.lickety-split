@@ -23,10 +23,13 @@ extern int samp_chan; // The DMA channel for sampling. Must be exposed across
  * \param[in] adc_pin_mask a 5-bit value representing the adc pins to sample.
  * \param[in] adc_samples_dest a pointer to an 8-bit array in memory
  * \param[in] sample_count the length of \p adc_samples_dest
+ * \param[in] fire_interrupt if true, fire an interrupt upon completion of
+ *  collecting \p sample_count samples.
  */
 void init_continuous_adc_sampling(uint8_t adc_pin_mask,
                                   uint8_t* adc_samples_dest,
-                                  uint8_t sample_count);
+                                  uint8_t sample_count,
+                                  bool fire_interrupt);
 
 #ifdef __cplusplus
 }
