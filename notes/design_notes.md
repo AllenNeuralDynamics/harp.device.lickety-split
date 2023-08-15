@@ -71,3 +71,4 @@ Here the inner braid carries of low-impedance copy of the signal, and the outer 
   * LTC6268 evaluation board
 * [Measuring Feline Capacitance Stack Exchange Question](https://electronics.stackexchange.com/questions/152090/measuring-feline-capacitance)
 * [Measuring Capacitance and ESR](https://meettechniek.info/passive/capacitance.html)
+* Texas Instruments Video for OpAmps Driving [Capacitive Loads](https://www.youtube.com/watch?v=ER2x0djZ7oU)

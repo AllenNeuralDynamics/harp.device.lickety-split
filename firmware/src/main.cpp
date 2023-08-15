@@ -41,7 +41,7 @@ int main()
 
     stdio_usb_init();
     //stdio_set_translate_crlf(&stdio_usb, false); // Don't replace outgoing chars.
-    while (!stdio_usb_connected()){} // Block until connection to serial port.
+    //while (!stdio_usb_connected()){} // Block until connection to serial port.
 
 
     // Setup Sine wave generator.
