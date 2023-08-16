@@ -1505,11 +1505,6 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 704795b8-02a2-4d4d-9fb4-fad2f3cf9e36)
   )
-  (text "Rev3 Notes:\n* R23 = 100K ohm Resistor works, 1Mohm resistor introduces too much high frequency (~5MHz, antenna?) noise.\n* active guard doesnt work. Likely LTC6263 cannot keep up with LTC6268 (GBW 30MHz vs 500MHz)\n  (Bypassing the driven guard was the only way to get the LTC6268 buffer to work.)\n\nBringup Notes:\n* Cold solder joints (?) prevented the filters from working until reworking the resistors.\n  Consider moving to leaded solderpaste.\n* Earth Grounding the human test subject yields less noise on the input.\n\nTODO: \n* Does grounding the setup to the rig yield less noise?"
-    (at 122.555 102.235 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 7adf8d8b-c933-45e1-9673-e386443294a9)
-  )
   (text "GP3" (at 36.83 41.91 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 82726a0d-3e55-45cc-afaf-5cfe2f4094a8)
@@ -1553,11 +1548,6 @@
   (text "22" (at 54.61 78.74 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid e8276d7a-599d-4ddf-b976-d27fd2070882)
-  )
-  (text "Note: earth grounding may be necessary for triax shield to work."
-    (at 102.235 31.115 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid f2bc2893-16b5-4be6-9a6b-0af395f5f883)
   )
 
   (label "VSIG" (at 173.99 55.88 0) (fields_autoplaced)

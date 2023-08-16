@@ -1,12 +1,13 @@
 #include <core1_lick_detection.h>
 
-#define BASELINE_SAMPLE_INTERVAL (50) // number of periods between updating the
-                                      // baseline threshold.
+#define BASELINE_SAMPLE_INTERVAL (1000ul) // number of periods between
+                                          // updating the baseline threshold.
+                                          // 100KHz/1000 periods = 100Hz update rate.
 #define UPSCALE_FACTOR (128) // Factor by which to multiply incoming
 #define MOVING_AVG_WINDOW (16) // This should be:
                                // a.) <=64 or the data will arrive late.
                                // b.) a power of 2.
-#define BASELINE_AVG_WINDOW (128)
+#define BASELINE_AVG_WINDOW (512)
 
 #define LOOP_INTERVAL_MS (16)
 
@@ -59,6 +60,12 @@ uint32_t get_amplitude()
 void core1_main()
 {
     printf("Hello from core1.\r\n");
+    // Compute constants:
+    uint32_t log2_upscale_factor = log2(UPSCALE_FACTOR);
+    uint32_t log2_baseline_window = log2(BASELINE_AVG_WINDOW);
+    uint32_t log2_moving_avg_window = log2(MOVING_AVG_WINDOW);
+
+    // Compute starting loop time values.
     uint32_t curr_time_ms = to_ms_since_boot(get_absolute_time());
     uint32_t prev_time_ms = curr_time_ms;
 
@@ -66,20 +73,20 @@ void core1_main()
     new_data = false;
     sample_count = 0;
 
-    // Init baseline sample of "Not Licking" (slow moving average).
-    // TODO.
     // Attach core1 to handle ADC streaming DMA interrupt.
-    irq_set_exclusive_handler(DMA_IRQ_0, dma_sample_chan_handler); // FIXME: DMA_IRQ_0 is hardcoded for now.
+    // FIXME: DMA_IRQ_0 is hardcoded for now.
+    irq_set_exclusive_handler(DMA_IRQ_0, dma_sample_chan_handler);
     irq_set_enabled(DMA_IRQ_0, true);
 
-    // Collect reasonable starting values.
     while (!new_data); // Wait until new data arrives.
+
+    // Collect reasonable starting values for
+    // baseline "Not Licking" signal (super slow moving average w/ big window) &
+    // current sample signal (fast moving average w/ small window).
     new_data = false;
-    curr_upscaled_amplitude = UPSCALE_FACTOR * get_amplitude();
+    curr_upscaled_amplitude = get_amplitude() << log2_upscale_factor;
     upscaled_sample_avg = curr_upscaled_amplitude;
     upscaled_baseline_avg = curr_upscaled_amplitude;
-
-    printf("Core1 entering main loop.\r\n");
 
     // Main loop.
     while (true)
@@ -87,28 +94,25 @@ void core1_main()
         // Wait for new data (as specified on interrupt).
         if (!new_data)
             continue;
-        new_data = false;
+        new_data = false; // clear new_data flag.
         // Get latest data.
-        curr_upscaled_amplitude = UPSCALE_FACTOR * get_amplitude();
+        curr_upscaled_amplitude = get_amplitude() << log2_upscale_factor;
         // Update moving average.
         // Note: moving average is basically an IIR filter.
         //  Example for window size of 16:
         //      avg[i] = 15/16 * avg[i-1] + 1/16 * sample[i]
-        // Note: compiler will optimize this to bitshifts.
-        upscaled_sample_avg = (MOVING_AVG_WINDOW-1)/MOVING_AVG_WINDOW
-                              * upscaled_sample_avg
-                              + (1/MOVING_AVG_WINDOW)
-                              * curr_upscaled_amplitude;
+        upscaled_sample_avg = (((MOVING_AVG_WINDOW-1) * upscaled_sample_avg) >> log2_moving_avg_window)
+                              +
+                              (curr_upscaled_amplitude >> log2_moving_avg_window);
         // Update baseline on a slower timescale (also upscaled and averaged).
         if (sample_count == 0)
         {
-            upscaled_baseline_avg = (BASELINE_AVG_WINDOW-1)/BASELINE_AVG_WINDOW
-                                    * upscaled_baseline_avg
-                                    + (1/BASELINE_AVG_WINDOW)
-                                    * curr_upscaled_amplitude;
+            upscaled_baseline_avg = (((BASELINE_AVG_WINDOW-1) * upscaled_baseline_avg) >> log2_baseline_window)
+                                    +
+                                    (curr_upscaled_amplitude >> log2_baseline_window);
         }
         // Decide if we've seen a lick.
-        if (upscaled_sample_avg < 95/100*upscaled_baseline_avg)
+        if (upscaled_sample_avg < (95*upscaled_baseline_avg)/100)
         {
             lick_detected = true;
             // TODO: Do we raise a core0 interrupt here? Do we push to a queue?
@@ -116,20 +120,23 @@ void core1_main()
             //  1. ?? milliseconds to elapse
             //  2. Signal to untrip threshold limit + some schmitt fudge factor.
         }
+
+        // update period_count for baseline measurement.
+        sample_count = (sample_count == BASELINE_SAMPLE_INTERVAL)?
+                        0: sample_count + 1;
+
         // Debugging
         curr_time_ms = to_ms_since_boot(get_absolute_time());
         if (curr_time_ms - prev_time_ms >= LOOP_INTERVAL_MS)
         {
             prev_time_ms = curr_time_ms;
+            printf("Curr amplitude (avg): %06d || curr baseline (avg): %06d || adc_vals: [%03d, %03d, %03d, %03d, %03d]\r",
+                   upscaled_sample_avg, upscaled_baseline_avg,
+                   adc_vals[0], adc_vals[1], adc_vals[2], adc_vals[3], adc_vals[4]);
 /*
-            printf("amplitudes. current: %05d | baseline: %05d\r",
-                   upscaled_sample_avg, upscaled_baseline_avg);
+            printf("curr adc vals: [%03d, %03d, %03d, %03d, %03d]\r",
+                   adc_vals[0], adc_vals[1], adc_vals[2], adc_vals[3], adc_vals[4]);
 */
-            printf("Curr upscaled amplitude: %05d\r", curr_upscaled_amplitude);
         }
-
-        // update period_count for baseline measurement.
-        sample_count = (sample_count == BASELINE_SAMPLE_INTERVAL)?
-                        0: sample_count + 1;
     }
 }

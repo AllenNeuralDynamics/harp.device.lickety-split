@@ -1540,7 +1540,7 @@
     (uuid 4d5c3957-9f4c-4bc0-862c-0b11c15bbd1a)
   )
   (text "Input Capacitance Summary:\n* D1 TVS Diode: 0.2pF\n* U9 LTC6268 input capacitance: 0.1pF\n* Triax Cable: ~19pF per ft (cancelled via active guard)"
-    (at 83.82 67.945 0)
+    (at 85.09 66.675 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 4dfc23fd-9b3a-4496-889d-a0516bf363ad)
   )
@@ -1561,9 +1561,9 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 7178f6ae-9dc8-471a-8bb7-a3a2cebe9291)
   )
-  (text "Note: this setup must be grounded to the rig\nthrough the GND connection of the triaxial cable."
-    (at 19.685 45.72 0)
-    (effects (font (size 1.27 1.27) (thickness 0.254) bold) (justify left bottom))
+  (text "Note: this setup must be grounded to the rig through the GND connection of the triaxial cable."
+    (at 13.97 27.94 0)
+    (effects (font (size 1.5 1.5) (thickness 0.254) bold) (justify left bottom))
     (uuid 79407d72-32aa-4bad-830f-7c3f85e4a89b)
   )
   (text "R4 bias resistor might be able to be DNPed.\n" (at 50.8 125.73 0)
@@ -1578,6 +1578,11 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 94c3c8ce-6be1-403d-852c-6c906065ae38)
   )
+  (text "TODO: consider common mode choke for connector inputs.\n3-line: EXC-16CT350U"
+    (at 50.8 136.525 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 9b9b53ef-4b27-470e-9d38-6d556defc1e0)
+  )
   (text "R23 = 100K, Ctotal = 0.1pF, Vout = 99%Vin\nR23 = 100K, Ctotal = 1pF, Vout = 94%Vin\nR23 = 100K, Ctotal = 5pF, Vout = 76%Vin\nR23 = 100K, Ctotal = 10pF, Vout = 61%Vin\nR23 = 100K, Ctotal = 50pF, Vout = 24%Vin\n\n"
     (at 146.685 71.755 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -1587,11 +1592,6 @@
     (at 243.84 20.32 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid a3f477db-a9fc-4c17-b307-c425837b3c17)
-  )
-  (text "Testing Note:\n\nNote: R23: currently set to ~51Kohm.\nWhen using 1Mohm, the signal is 25% of what it was supposed to be--without the cable attached.\n5pF stray capacitance would explain this behavior. \nThe unguarded SMB connector may be the culprit.\n\nConsider using the SOIC8 package on the LTC6268 to use the NC pins for a guard trace."
-    (at 15.24 38.1 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid b4832bec-cee0-4007-85c7-ba416296063e)
   )
   (text "Sensing Front End" (at 121.92 20.32 0)
     (effects (font (size 2.54 2.54)) (justify left bottom))

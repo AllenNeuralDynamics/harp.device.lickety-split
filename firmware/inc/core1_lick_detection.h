@@ -1,6 +1,7 @@
 #ifndef CORE1_LICK_DETECTION_H
 #define CORE1_LICK_DETECTION_H
 
+#include <tgmath.h>
 #include <pico/stdlib.h>
 #include <hardware/adc.h>
 #include <hardware/dma.h>
