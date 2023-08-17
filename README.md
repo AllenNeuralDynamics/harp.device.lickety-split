@@ -1,7 +1,7 @@
 An Ephys-compliant Lick Detector based on measured change in capacitance.
 
 ## Features
-* High Frequency (100 [KHz]), low current (100[nA]) excitation signal makes this device invisible to Neuropixel Probes used in electrophysiology recordings.
+* High Frequency (100 [KHz]), low current (200[nA]) excitation signal makes this device invisible to Neuropixel Probes used in electrophysiology recordings.
 * <1[ms] response time.
 * Contact-based. Device triggers when mouse tongue contacts either the dispensing tube *or* dangling reward liquid.
 * TTL output when a lick is detected.
