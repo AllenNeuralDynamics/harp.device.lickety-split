@@ -91,8 +91,8 @@ void AD9833::set_frequency_hz(uint32_t freq)
 {
     //uint32_t freq_word = uint32_t((uint64_t(freq) * uint64_t(1<<28)) / uint64_t(mclk_frequency_hz_));
     // FIXME: this should not be hardcoded.
-    //uint32_t freq_word = 0x222222;
-    uint32_t freq_word = 0x10624d;
+    uint32_t freq_word = 0x222222;
+    //uint32_t freq_word = 0x10624d;
     printf("(Raw freq word is: 0x%08x)\n", freq_word);
     // Enable two consecutive writes to FREQ0 (D13 = 1).
     write_to_reg(CONTROL, (1<<13));

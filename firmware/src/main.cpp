@@ -6,16 +6,16 @@
 #include <core1_lick_detection.h>
 #include <pico/multicore.h>
 
-//#define SPI_SCK_PIN (2) //(18)
-//#define SPI_TX_PIN (3) //(19)
-//#define CS_PIN (1) //(17)
-//#define SPI_RX_PIN (4) //(16)
+#define SPI_SCK_PIN (2) //(18)
+#define SPI_TX_PIN (3) //(19)
+#define CS_PIN (1) //(17)
+#define SPI_RX_PIN (4) //(16)
 
 // FIXME: if using breadboard setup, then the sine wave setting needs to be rewritten.
-#define SPI_SCK_PIN (18)
-#define SPI_TX_PIN (19)
-#define CS_PIN (17)
-#define SPI_RX_PIN (16)
+//#define SPI_SCK_PIN (18)
+//#define SPI_TX_PIN (19)
+//#define CS_PIN (17)
+//#define SPI_RX_PIN (16)
 
 // Location to write one period of ADC samples to.
 uint8_t adc_vals[5] = {0, 0, 0, 0, 0};
