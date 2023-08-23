@@ -12,17 +12,17 @@ An example layout is provided in the datasheet.
 ## USB Isolator
 To disconnect the host PC's ground from this device's ground, I added a Full-Speed capable USB isolator.
 
-The downside is that this device requires external power before it will communicate with the host pc.
+The downside is that this device cannot be powered via USB from the host pc.
 
 
 ## Analog Front-End
 The analog front end consists of a buffer followed by a bandpass filter, an amplification stage, and a positive voltage offset.
-Because the signal has 1MOhm impedance, the buffer op-amp was chosen to have low input capacitance since any capacitance will effectively form a voltage divider at 100KHz, reducing the input signal amplitude.
+Because the excitation signal has high input impedance, the buffer op-amp was chosen to have low input capacitance since any capacitance will effectively form a voltage divider at 100KHz, reducing the input signal amplitude.
 The bandpass filter removes unwanted signals (esp. DC and 50-or-60Hz noise).
 
 The amplification stage puts the signal in the range readable by a 3.3V ADC, and the final voltage divider produces an offset to put the signal in the all-positive range.
 
-Additionally, a copy of the signal from the output of the bandpass filter is fed through a buffer and sent back along the cable shield to guard the signal.
+Additionally, a low-impedance copy of the signal from the output of the bandpass filter is fed through a buffer and sent back along the cable shield to guard the signal.
 (See the section below on signal guarding for the rationale.)
 Because the bandpass filter introduces a 180-deg phase shift, the buffer inverts the signal again, such that the input signal and guard signal are both in phase.
 
@@ -69,6 +69,8 @@ Here the inner braid carries of low-impedance copy of the signal, and the outer 
 * [Tektronix Low Level Measurements Handbook](https://www.tek.com/en/documents/product-article/keithley-low-level-measurements-handbook---7th-edition#C2section0)
 * [Demo Manual DC2414A](https://www.analog.com/media/en/technical-documentation/user-guides/DC2414AF.PDF)
   * LTC6268 evaluation board
-* [Measuring Feline Capacitance Stack Exchange Question](https://electronics.stackexchange.com/questions/152090/measuring-feline-capacitance)
 * [Measuring Capacitance and ESR](https://meettechniek.info/passive/capacitance.html)
 * Texas Instruments Video for OpAmps Driving [Capacitive Loads](https://www.youtube.com/watch?v=ER2x0djZ7oU)
+* [Stack Exchange: Measuring Feline Capacitance](https://electronics.stackexchange.com/questions/152090/measuring-feline-capacitance)
+* [Stack Exchange: Explanation about OpAmp Bias Resistor and Bootstrapping](https://electronics.stackexchange.com/questions/586839/explanation-about-op-amp-bias-resistor-and-bootstrapping)
+  * contains info on how to bias an AC input signal to ground without reducing input impedance.
