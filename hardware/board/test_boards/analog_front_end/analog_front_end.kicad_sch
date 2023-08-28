@@ -1500,6 +1500,11 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 59332924-97fe-4de7-928a-ded255bd9d41)
   )
+  (text "Todo: consider ADS7029-Q1 for SPI sampling.\nSPI sampling lets you double-up the circuit more easily.\n\nTODO: restore rev3 ground scheme, and remove common mode choke.\n\nTODO: add a grounding lug."
+    (at 113.03 85.725 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 5c79b83a-5c47-4874-8a99-932554f2c0e8)
+  )
   (text "Layout Notes:\n* C8, C9 return paths should go through thermal pad of U6.\n* C6 needs short, wide traces.\n* CIN, CCPOUT should have a short wide traces.\n* the returns for both CIN and CCPOUT must come together at one point, as close as possible to the GND pin."
     (at 13.97 195.58 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
