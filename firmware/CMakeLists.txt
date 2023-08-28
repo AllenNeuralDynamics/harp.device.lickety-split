@@ -28,12 +28,12 @@ add_library(continuous_adc
     src/continuous_adc.cpp
 )
 
-add_library(pio_ads7029
-    src/pio_ads7029.cpp
+add_library(pio_ads70x9
+    src/pio_ads70x9.cpp
 )
 
-pico_generate_pio_header(pio_ads7029
-    ${CMAKE_CURRENT_LIST_DIR}/src/pio_ads7029.pio
+pico_generate_pio_header(pio_ads70x9
+    ${CMAKE_CURRENT_LIST_DIR}/src/pio_ads70x9.pio
 )
 
 # Specify where to look for header files if they're not all in the same place.
@@ -47,9 +47,10 @@ target_link_libraries(ad9833 pico_stdlib hardware_spi)
 target_link_libraries(continuous_adc hardware_adc hardware_dma pico_stdlib)
 target_link_libraries(core1_lick_detection pico_stdlib hardware_irq
                       hardware_dma pico_multicore)
-target_link_libraries(pio_ads7029 pico_stdlib hardware_pio)
+target_link_libraries(pio_ads70x9 pico_stdlib hardware_pio hardware_irq
+                      hardware_dma)
 target_link_libraries(${PROJECT_NAME} pico_stdlib ad9833 continuous_adc
-                      core1_lick_detection pico_multicore pio_ads7029)
+                      core1_lick_detection pico_multicore pio_ads70x9)
 
 # create map/bin/hex/uf2 file in addition to ELF.
 pico_add_extra_outputs(${PROJECT_NAME})

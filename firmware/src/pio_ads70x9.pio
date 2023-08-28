@@ -1,35 +1,31 @@
 .program ads7029
-.side_set 1 ; dedicate one side-set pin for SCK.
+.side_set 1 opt ; dedicate one side-set pin for SCK.
 
 ; Note: autopush must be enabled with the bit resolution value.
 
 .wrap_target
 setup:
-    out pins, 0 [1]     ; CS LOW +1 clock cycle delay
-    nop, side_set 1 [1] ; SCK HIGH +1 clock cycle delay
-    nop, side_set 0 [1] ; SCK LOW +1 clock cycle delay
-    nop, side_set 1 [1] ; SCK HIGH +1 clock cycle delay
-    nop, side_set 0     ; SCK LOW
-    set x, y            ; Setup number of bits to transfer.
+    set pins, 0 [1]     ; CS LOW +1 clock cycle delay
+    nop side_set 1 [1]  ; SCK HIGH +1 clock cycle delay
+    nop side_set 0 [1]  ; SCK LOW +1 clock cycle delay
+    nop side_set 1 [1]  ; SCK HIGH +1 clock cycle delay
+    nop side_set 0      ; SCK LOW
+    set x, 8            ; Setup number of bits to transfer.
 data_transfer:
-    nop, side_set 1 [1]
-    in pins, 1, side_set 0  ; left shift in POCI pin.
+    nop side_set 1 [1]
+    in pins, 1 side_set 0  ; left shift in POCI pin.
     jmp x--, data_transfer  ;
 cleanup:    ; autopush should transfer data.
-    out pins, 1 ; CS HIGH + 1 clock cycle delay
-    nop [16]    ; nop to put us on a 2MHz schedule.
-    nop [16]
+    set pins, 1 ; CS HIGH + 1 clock cycle delay
+    nop [7]    ; nop to put us on a 2MHz schedule.
+    nop [7]
 .wrap
 
 ;; TODO: .program ads7039 and ads7049
 
 .program ads7039
-.wrap_target
-.wrap
 
 .program ads7049
-.wrap_target
-.wrap
 
 % c-sdk {
 #include "hardware/gpio.h"
@@ -37,16 +33,16 @@ static inline void setup_pio_ads70x9(PIO pio, uint sm, uint program_offset,
                                      uint data_bits, uint cs_pin, uint sck_pin,
                                      uint poci_pin)
 {
-    // Determine which program to run based on n_bits.
+    // Determine which program to run based on data_bits.
     pio_sm_config c =
-        (n_bits == 8) ?  ads7029_program_get_default_config(program_offset) :
-        (n_bits == 10) ? ads7039_program_get_default_config(program_offset) :
+        (data_bits == 8) ?  ads7029_program_get_default_config(program_offset) :
+        (data_bits == 10) ? ads7039_program_get_default_config(program_offset) :
                          ads7049_program_get_default_config(program_offset);
     sm_config_set_out_pins(&c, cs_pin, 1);
     sm_config_set_in_pins(&c, poci_pin);
     sm_config_set_sideset_pins(&c, sck_pin);
     // Setup for MSb-first (shift left), enable auto push, autopush threshold = nbits)
-    sm_config_set_in_shift(&c, false, true, n_bits);
+    sm_config_set_in_shift(&c, false, true, data_bits);
     sm_config_set_clkdiv(&c, 1.0f); // No clock division.
 
     // Set output pin starting states.
@@ -68,7 +64,7 @@ static inline void setup_pio_ads70x9(PIO pio, uint sm, uint program_offset,
     pio_sm_init(pio, sm, program_offset, &c);
 }
 
-static inline void pio_ads70x9_start()
+static inline void pio_ads70x9_start(PIO pio, uint sm)
 {
     // Start state machine.
     pio_sm_set_enabled(pio, sm, true);

@@ -6883,7 +6883,7 @@
 
   (footprint "LOGO" (layer "F.Cu")
     (tstamp e30dddcd-4ab6-4d44-823d-003bdac5f6e1)
-    (at 128.4 112.1)
+    (at 129.4 113.1)
     (attr board_only exclude_from_pos_files exclude_from_bom)
     (fp_text reference "G***" (at 0 0) (layer "F.SilkS") hide
         (effects (font (size 1.5 1.5) (thickness 0.3)))
