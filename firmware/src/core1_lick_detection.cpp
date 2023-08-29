@@ -14,7 +14,7 @@ bool lick_detected;
 void dma_sample_chan_handler()
 {
     // Clear interrupt request.
-    dma_hw->ints0 = 1u << ads7029.samp_chan_;
+    dma_hw->ints0 = 1u << ads7049.samp_chan_;
     // Flag new data.
     new_data = true;
 }

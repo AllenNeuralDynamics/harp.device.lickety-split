@@ -51,7 +51,7 @@
 //extern int samp_chan; // DMA channel that collects ADC samples and triggers an
 //                      // interrupt.
 extern uint16_t adc_vals[];
-extern PIO_ADS70x9 ads7029;
+extern PIO_ADS70x9 ads7049;
 
 
 /**

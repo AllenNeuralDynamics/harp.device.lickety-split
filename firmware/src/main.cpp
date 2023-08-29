@@ -8,9 +8,9 @@
 #include <pico/multicore.h>
 #include <hardware/pio.h>
 
-#define ADS7029_CS_PIN (18)
-#define ADS7029_SCK_PIN (19)
-#define ADS7029_POCI_PIN (20)
+#define ADS7049_CS_PIN (18)
+#define ADS7049_SCK_PIN (19)
+#define ADS7049_POCI_PIN (20)
 
 #define AD9833_SPI_SCK_PIN (2) //(18)
 #define AD9833_SPI_TX_PIN (3) //(19)
@@ -39,10 +39,10 @@ uint16_t adc_vals[20] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 AD9833 ad9833(12e6L, spi0, AD9833_SPI_TX_PIN, AD9833_SPI_RX_PIN,
               AD9833_SPI_SCK_PIN, AD9833_CS_PIN);
 // Create ADS70x9 instance for the ADS7049.
-PIO_ADS70x9 ads7029(pio0,   // pio instance // FIXME: rename instance to *49
+PIO_ADS70x9 ads7049(pio0,   // pio instance // FIXME: rename instance to *49
                     0,      // program offset
                     12,     // data bits
-                    ADS7029_CS_PIN, ADS7029_SCK_PIN, ADS7029_POCI_PIN);
+                    ADS7049_CS_PIN, ADS7049_SCK_PIN, ADS7049_POCI_PIN);
 
 
 int main()
@@ -67,7 +67,7 @@ int main()
     ad9833.enable_with_waveform(AD9833::waveform_t::SINE);
 
     // Setup ADS7029 periodic sampling and writing to memory.
-    ads7029.setup_dma_stream_to_memory(adc_vals, 20, true);
+    ads7049.setup_dma_stream_to_memory(adc_vals, 20, true);
 
     // Provision pin 26 only.
     //init_continuous_adc_sampling(0x01, adc_vals, count_of(adc_vals), true);
@@ -77,7 +77,7 @@ int main()
     multicore_launch_core1(core1_main);
 
     // Launch periodic ADC sampling.
-    ads7029.start();
+    ads7049.start();
 
     uint32_t i = 0;
     while(true)
