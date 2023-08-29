@@ -1,30 +1,95 @@
+; Each of these PIO programs
+; 1. Initializes the chip with a calibration sequence (16 sck pulses).
+; 2. Periodically (2MHz) polls the chip at the max sensor rate
+;    and pushes the result into the RX FIFO. SPI clock frequency is 32MHz.
+;
+; Note: The ADS7029, ADS7039, and ADS7049 differ only in that they have
+;   different bit resolutions, which results in a different number of clock
+;   pulses and idle time between sensor reads. Programs are basically identical
+;   otherwise.
+
+
 .program ads7029
 .side_set 1 opt ; dedicate one side-set pin for SCK.
 
-; Note: autopush must be enabled with the bit resolution value.
+; Note: autopush must be enabled with the bit resolution value (8).
+; Note: clock division must be 2.5f (assuming a 125MHz clock) for the ADS7029.
 
+calibrate:
+    set pins, 0         ; CS LOW
+    set x, 15           ; Setup number of bits to transfer.
+calibrate_sck_pulses:
+    nop side_set 1 [3]  ; Sample data on the rising edge.
+    nop side_set 0 [2]
+    jmp x--, calibrate_sck_pulses
+calibrate_cleanup:
+    set pins, 1    [7]  ; CS HIGH
+    nop[7]
+    nop[4]
 .wrap_target
-setup:
-    set pins, 0 [1]     ; CS LOW +1 clock cycle delay
-    nop side_set 1 [1]  ; SCK HIGH +1 clock cycle delay
-    nop side_set 0 [1]  ; SCK LOW +1 clock cycle delay
-    nop side_set 1 [1]  ; SCK HIGH +1 clock cycle delay
+data_transfer_setup:
+    set pins, 0         ; CS LOW
+    nop side_set 1   ; SCK HIGH
+    nop side_set 0   ; SCK LOW
+    nop side_set 1   ; SCK HIGH
     nop side_set 0      ; SCK LOW
-    set x, 7            ; Setup number of bits to transfer.
 data_transfer:
-    nop side_set 1 [1]
-    in pins, 1 side_set 0  ; left shift in POCI pin.
-    jmp x--, data_transfer  ;
+    in pins, 1 side_set 1   ; Sample data on the rising edge.
+    nop side_set 0
+    in pins, 1 side_set 1   ; Sample data on the rising edge.
+    nop side_set 0
+    in pins, 1 side_set 1   ; Sample data on the rising edge.
+    nop side_set 0
+    in pins, 1 side_set 1   ; Sample data on the rising edge.
+    nop side_set 0
+    in pins, 1 side_set 1   ; Sample data on the rising edge.
+    nop side_set 0
+    in pins, 1 side_set 1   ; Sample data on the rising edge.
+    nop side_set 0
+    in pins, 1 side_set 1   ; Sample data on the rising edge.
+    nop side_set 0
+    in pins, 1 side_set 1   ; Sample data on the rising edge.
+    nop side_set 0
 cleanup:    ; autopush should transfer data.
-    set pins, 1 [7]; CS HIGH + 1 clock cycle delay
-    nop [7]    ; nop to put us on a 2MHz schedule.
+    set pins, 1 [5]; CS HIGH + 1 clock cycle delay
 .wrap
 
-;; TODO: program ads7039 and ads7049
 
 .program ads7039
 
 .program ads7049
+.side_set 1 opt ; dedicate one side-set pin for SCK.
+
+; Note: autopush must be enabled with the bit resolution value (12).
+; Note: clock division must be 1.0f (assuming a 125MHz clock) for the ADS7049.
+
+calibrate:
+    set pins, 0         ; CS LOW
+    set x, 15           ; Setup number of bits to transfer.
+calibrate_sck_pulses:
+    nop side_set 1 [3]  ; Sample data on the rising edge.
+    nop side_set 0 [2]
+    jmp x--, calibrate_sck_pulses
+calibrate_cleanup:
+    set pins, 1    [7]  ; CS HIGH
+    nop[7]
+    nop[4]
+.wrap_target
+data_transfer_setup:
+    set pins, 0    [1]  ; CS LOW +1 clock cycle delay
+    nop side_set 1 [1]  ; SCK HIGH +1 clock cycle delay
+    nop side_set 0 [1]  ; SCK LOW +1 clock cycle delay
+    nop side_set 1 [1]  ; SCK HIGH +1 clock cycle delay
+    nop side_set 0      ; SCK LOW
+    set x 11
+data_transfer:
+    in pins, 1 side_set 1 [1]  ; Sample data on the rising edge.
+    nop side_set 0
+    jmp x-- data_transfer   ;
+cleanup:    ; autopush should transfer data.
+    set pins, 1 [3]; CS HIGH + 1 clock cycle delay
+.wrap
+
 
 % c-sdk {
 #include "hardware/gpio.h"
@@ -43,7 +108,8 @@ static inline void setup_pio_ads70x9(PIO pio, uint sm, uint program_offset,
     sm_config_set_sideset_pins(&c, sck_pin); // SCK pin controlled with SIDESET cmds.
     // Setup for MSb-first (shift left), enable auto push, autopush threshold = nbits)
     sm_config_set_in_shift(&c, false, true, data_bits);
-    sm_config_set_clkdiv(&c, 1.0f); // No clock division.
+    float clk_div = (data_bits == 8) ? 2.5f : 1.0f;
+    sm_config_set_clkdiv(&c, clk_div); // No clock division.
 
     // Set specific GPIO pins to be controlled by pio.
     pio_gpio_init(pio, sck_pin);

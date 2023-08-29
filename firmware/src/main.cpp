@@ -38,10 +38,10 @@ uint16_t adc_vals[20] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 // TODO: remove need for RX pin input as parameter.
 AD9833 ad9833(12e6L, spi0, AD9833_SPI_TX_PIN, AD9833_SPI_RX_PIN,
               AD9833_SPI_SCK_PIN, AD9833_CS_PIN);
-// Create ADS70x9 instance for the ADS7029.
-PIO_ADS70x9 ads7029(pio0,   // pio instance
+// Create ADS70x9 instance for the ADS7049.
+PIO_ADS70x9 ads7029(pio0,   // pio instance // FIXME: rename instance to *49
                     0,      // program offset
-                    8,      // data bits
+                    12,     // data bits
                     ADS7029_CS_PIN, ADS7029_SCK_PIN, ADS7029_POCI_PIN);
 
 
