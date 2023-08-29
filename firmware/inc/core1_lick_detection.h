@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <hardware/irq.h>
+#include <pio_ads70x9.h>
 
 #define PROFILE_CPU (1) // uncomment for print output debugging.
 
@@ -46,9 +47,11 @@
 // Note: average baseline and trigger value are upscaled by UPSCALE_FACTOR, so
 //  we don't lose precision while averaging them over time.
 
-extern uint8_t adc_vals[];
-extern int samp_chan; // DMA channel that collects ADC samples and triggers an
-                      // interrupt.
+//extern uint8_t adc_vals[];
+//extern int samp_chan; // DMA channel that collects ADC samples and triggers an
+//                      // interrupt.
+extern uint16_t adc_vals[];
+extern PIO_ADS70x9 ads7029;
 
 
 /**

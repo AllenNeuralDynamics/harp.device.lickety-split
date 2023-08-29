@@ -14,7 +14,7 @@ bool lick_detected;
 void dma_sample_chan_handler()
 {
     // Clear interrupt request.
-    dma_hw->ints0 = 1u << samp_chan;
+    dma_hw->ints0 = 1u << ads7029.samp_chan_;
     // Flag new data.
     new_data = true;
 }
@@ -161,6 +161,7 @@ void core1_main()
 #ifdef PROFILE_CPU
         // Debugging. Print currentm measurements, raw adc values, and
         // cycles per loop iteration.
+/*
         if (curr_time_ms - prev_time_ms >= PRINT_LOOP_INTERVAL_MS)
         {
             prev_time_ms = curr_time_ms;
@@ -171,6 +172,7 @@ void core1_main()
                    adc_vals[0], adc_vals[1], adc_vals[2], adc_vals[3],
                    adc_vals[4], cpu_cycles);
         }
+*/
 #endif
     }
 }

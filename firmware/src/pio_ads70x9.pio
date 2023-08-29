@@ -10,18 +10,17 @@ setup:
     nop side_set 0 [1]  ; SCK LOW +1 clock cycle delay
     nop side_set 1 [1]  ; SCK HIGH +1 clock cycle delay
     nop side_set 0      ; SCK LOW
-    set x, 8            ; Setup number of bits to transfer.
+    set x, 7            ; Setup number of bits to transfer.
 data_transfer:
     nop side_set 1 [1]
     in pins, 1 side_set 0  ; left shift in POCI pin.
     jmp x--, data_transfer  ;
 cleanup:    ; autopush should transfer data.
-    set pins, 1 ; CS HIGH + 1 clock cycle delay
+    set pins, 1 [7]; CS HIGH + 1 clock cycle delay
     nop [7]    ; nop to put us on a 2MHz schedule.
-    nop [7]
 .wrap
 
-;; TODO: .program ads7039 and ads7049
+;; TODO: program ads7039 and ads7049
 
 .program ads7039
 
@@ -37,28 +36,31 @@ static inline void setup_pio_ads70x9(PIO pio, uint sm, uint program_offset,
     pio_sm_config c =
         (data_bits == 8) ?  ads7029_program_get_default_config(program_offset) :
         (data_bits == 10) ? ads7039_program_get_default_config(program_offset) :
-                         ads7049_program_get_default_config(program_offset);
-    sm_config_set_out_pins(&c, cs_pin, 1);
-    sm_config_set_in_pins(&c, poci_pin);
-    sm_config_set_sideset_pins(&c, sck_pin);
+                            ads7049_program_get_default_config(program_offset);
+    // Setup which commands apply to which pins.
+    sm_config_set_set_pins(&c, cs_pin, 1);   // CS pin controlled with SET cmds.
+    sm_config_set_in_pins(&c, poci_pin);     // POCI pin read by IN cmd.
+    sm_config_set_sideset_pins(&c, sck_pin); // SCK pin controlled with SIDESET cmds.
     // Setup for MSb-first (shift left), enable auto push, autopush threshold = nbits)
     sm_config_set_in_shift(&c, false, true, data_bits);
     sm_config_set_clkdiv(&c, 1.0f); // No clock division.
 
-    // Set output pin starting states.
-    pio_sm_set_pins_with_mask(pio, sm,
-        (1u << cs_pin) | (0u << sck_pin), // starting values
-        (1u << cs_pin) | (1u << sck_pin)); // pin mask.
+    // Set specific GPIO pins to be controlled by pio.
+    pio_gpio_init(pio, sck_pin);
+    pio_gpio_init(pio, poci_pin);
+    pio_gpio_init(pio, cs_pin);
+
     // Set pin directions (1 = output; 0 = input)
     pio_sm_set_pindirs_with_mask(pio, sm,
         (1u << cs_pin) | (1u << sck_pin) | (0u << poci_pin),
         (1u << cs_pin) | (1u << sck_pin) | (1u << poci_pin)
     );
-    pio_gpio_init(pio, sck_pin);
-    pio_gpio_init(pio, poci_pin);
-    pio_gpio_init(pio, cs_pin);
+    // Set output pin starting states.
+    pio_sm_set_pins_with_mask(pio, sm,
+        (1u << cs_pin) | (0u << sck_pin), // starting values
+        (1u << cs_pin) | (1u << sck_pin)); // pin mask.
 
-    // SPI is synchronous, so bypass input synchroniser to reduce input delay.
+    // We provide the clock, so bypass input synchroniser to reduce input delay.
     hw_set_bits(&pio->input_sync_bypass, 1u << poci_pin);
 
     pio_sm_init(pio, sm, program_offset, &c);

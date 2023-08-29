@@ -46,11 +46,11 @@ include_directories(inc)
 target_link_libraries(ad9833 pico_stdlib hardware_spi)
 target_link_libraries(continuous_adc hardware_adc hardware_dma pico_stdlib)
 target_link_libraries(core1_lick_detection pico_stdlib hardware_irq
-                      hardware_dma pico_multicore)
+                      hardware_dma pico_multicore pio_ads70x9)
 target_link_libraries(pio_ads70x9 pico_stdlib hardware_pio hardware_irq
                       hardware_dma)
 target_link_libraries(${PROJECT_NAME} pico_stdlib ad9833 continuous_adc
-                      core1_lick_detection pico_multicore pio_ads70x9)
+                      core1_lick_detection pico_multicore pio_ads70x9 hardware_pio)
 
 # create map/bin/hex/uf2 file in addition to ELF.
 pico_add_extra_outputs(${PROJECT_NAME})
