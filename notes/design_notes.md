@@ -5,6 +5,9 @@ The RP2040 accepts either a crystal or CMOS-level clock input
 I opted for a precision oscillator instead of a vanilla crystal.
 To preserve USB Boot functionality (useful!), I kept the frequency at 12MHz (datasheet pg 12).
 
+This [oscillator is shared](https://electronics.stackexchange.com/questions/27989/sharing-an-oscillator-between-two-ics) with the AD9833, and traces on the board are deliberately kept short.
+(It would also have been valid to produce a 12-25MHz signal from the RP2040 to drive the AD9833.)
+
 This oscillator requires a 0.01-0.1uF bypass capacitor placed very close to the pins.
 An example layout is provided in the datasheet.
 
@@ -67,10 +70,12 @@ Here the inner braid carries of low-impedance copy of the signal, and the outer 
 * [ADA4530-1R-EBZ User Guide](https://www.analog.com/media/en/technical-documentation/user-guides/ADA4530-1R-EBZ_UG-865.pdf)
 * Design femptoampere circuits with low leakage [Part 1](https://www.edn.com/design-femtoampere-circuits-with-low-leakage-part-one/), [Part 2](https://www.edn.com/design-femtoampere-circuits-with-low-leakage-part-2-component-selection/), [Part 3](https://www.edn.com/design-femtoampere-circuits-with-low-leakage-part-3-low-current-design-techniques/)
 * [Tektronix Low Level Measurements Handbook](https://www.tek.com/en/documents/product-article/keithley-low-level-measurements-handbook---7th-edition#C2section0)
-* [Demo Manual DC2414A](https://www.analog.com/media/en/technical-documentation/user-guides/DC2414AF.PDF)
-  * LTC6268 evaluation board
 * [Measuring Capacitance and ESR](https://meettechniek.info/passive/capacitance.html)
 * Texas Instruments Video for OpAmps Driving [Capacitive Loads](https://www.youtube.com/watch?v=ER2x0djZ7oU)
 * [Stack Exchange: Measuring Feline Capacitance](https://electronics.stackexchange.com/questions/152090/measuring-feline-capacitance)
 * [Stack Exchange: Explanation about OpAmp Bias Resistor and Bootstrapping](https://electronics.stackexchange.com/questions/586839/explanation-about-op-amp-bias-resistor-and-bootstrapping)
   * contains info on how to bias an AC input signal to ground without reducing input impedance.
+### Reference Designs
+* [ADS7049 Evaluation Module](https://www.ti.com/lit/ug/sbau382a/sbau382a.pdf?ts=1693010385528&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FADS7029-Q1) Reference Design
+* * [Demo Manual DC2414A](https://www.analog.com/media/en/technical-documentation/user-guides/DC2414AF.PDF)
+  * LTC6268 evaluation board
