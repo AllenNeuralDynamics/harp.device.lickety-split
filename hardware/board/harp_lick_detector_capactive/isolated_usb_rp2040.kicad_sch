@@ -10839,8 +10839,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 5b3915e6-60d4-4b24-87a9-12b6ea21a280)
   )
-  (text "TODO: CDDFN2-T5.0LC on VBUS, CC1, CC2\nTODO: consider connecting shield to GND1 or leaving it disconnected. (This is connected to the PC.)"
-    (at 27.94 -3.175 0)
+  (text "TODO: consider CDDFN2-T5.0LC on VBUS, CC1, CC2\n" (at 27.94 -3.175 0)
     (effects (font (size 2.54 2.54) (thickness 0.508) bold) (justify left bottom))
     (uuid 61ed33d4-335b-43fc-ae95-7779176c89c4)
   )
@@ -10876,6 +10875,10 @@
   (text "12MHz, ±2.5ppm" (at 149.86 102.235 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid cbc6d4e4-d6de-41e0-83ce-2417bb94d50e)
+  )
+  (text "Note: Shield is connected to GND1 on PC side." (at 17.78 76.835 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid d88aa7ad-0957-4d59-b148-f36b14e2b897)
   )
   (text "RP2040 IOVDD, USB_VDD, & ADC_AVDD Bypass Caps, \none per pin, close to each pin."
     (at 106.68 172.085 0)

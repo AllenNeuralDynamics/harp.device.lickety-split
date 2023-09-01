@@ -59,6 +59,9 @@ Here the inner braid carries of low-impedance copy of the signal, and the outer 
 
 ## References
 * [All About USBC: Example Circuits](https://hackaday.com/2023/08/07/all-about-usb-c-example-circuits/)
+  * contains schematic for a device to display itself as a full speed USB device.
+* [Raspberry Pi Pico Datasheet](https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf)
+  * contains schematic for minimal board design.
 * [AN-347](https://www.analog.com/media/en/technical-documentation/application-notes/41727248AN_347.pdf)
 * [Capacitor Impedance Calculator](https://www.allaboutcircuits.com/tools/capacitor-impedance-calculator/)
 * [Pi Pico Pinout](https://www.raspberrypi-spy.co.uk/wp-content/uploads/2021/01/raspberry_pi_pico_pinout.png)
@@ -73,6 +76,7 @@ Here the inner braid carries of low-impedance copy of the signal, and the outer 
 * [Tektronix Low Level Measurements Handbook](https://www.tek.com/en/documents/product-article/keithley-low-level-measurements-handbook---7th-edition#C2section0)
 * [Measuring Capacitance and ESR](https://meettechniek.info/passive/capacitance.html)
 * Texas Instruments Video for OpAmps Driving [Capacitive Loads](https://www.youtube.com/watch?v=ER2x0djZ7oU)
+* [Stack Exchange: How to Connect USB Connector Shield](https://electronics.stackexchange.com/questions/4515/how-to-connect-usb-connector-shield)
 * [Stack Exchange: Measuring Feline Capacitance](https://electronics.stackexchange.com/questions/152090/measuring-feline-capacitance)
 * [Stack Exchange: Explanation about OpAmp Bias Resistor and Bootstrapping](https://electronics.stackexchange.com/questions/586839/explanation-about-op-amp-bias-resistor-and-bootstrapping)
   * contains info on how to bias an AC input signal to ground without reducing input impedance.
