@@ -45,11 +45,6 @@
     (uuid f104f70c-612d-4723-b39f-d3f1a0f88a41)
   )
 
-  (text "FIXME: connect PIO pins" (at 130.175 135.89 0)
-    (effects (font (size 2 2) (thickness 0.4) bold) (justify left bottom))
-    (uuid a84b0698-48be-462b-909e-09daf087801b)
-  )
-
   (sheet (at 207.645 86.36) (size 13.97 14.605) (fields_autoplaced)
     (stroke (width 0.1524) (type solid))
     (fill (color 0 0 0 0.0000))
@@ -97,9 +92,9 @@
       (effects (font (size 1.27 1.27)) (justify right))
       (uuid 174b2624-3254-4a43-b64a-0fbf38550173)
     )
-    (pin "xtal_out" input (at 118.745 91.44 0)
+    (pin "xtal_in" input (at 118.745 91.44 0)
       (effects (font (size 1.27 1.27)) (justify right))
-      (uuid 8d8d0540-0951-4d70-bc30-b9811ef08c75)
+      (uuid 2b425ca7-1f56-4995-82c7-1729b076f1e5)
     )
     (instances
       (project "harp_lick_detector_capactive"
