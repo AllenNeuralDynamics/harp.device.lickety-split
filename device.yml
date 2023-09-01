@@ -1,0 +1,12 @@
+%YAML 1.1
+---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/harp-tech/reflex-generator/main/schema/device.json
+device: LickDetector
+whoAmI: 0000 # we should reserve this ASAP
+firmwareVersion: "0.1"
+hardwareTargets: "0.0"
+registers:
+  DetectionThreshold:
+    address: 32
+    type: U8
+    access: Write
