@@ -19,3 +19,13 @@ desktop.ini
 *.egg-info
 # Python generated
 __pycache__/
+
+# Visual studio files
+.vs
+.suo
+.nuget
+bin
+obj
+Debug
+packages
+*.componentinfo.xml
