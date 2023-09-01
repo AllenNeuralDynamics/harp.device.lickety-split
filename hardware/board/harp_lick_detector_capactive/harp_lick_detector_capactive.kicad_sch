@@ -136,14 +136,14 @@
     )
   )
 
-  (sheet (at 46.99 78.74) (size 18.415 27.94) (fields_autoplaced)
+  (sheet (at 73.025 81.28) (size 18.415 26.035) (fields_autoplaced)
     (stroke (width 0.1524) (type solid))
     (fill (color 0 0 0 0.0000))
     (uuid b51b21ef-b374-4f9f-a058-7db9b64fdf4a)
-    (property "Sheetname" "Power Supplies" (at 46.99 78.0284 0)
+    (property "Sheetname" "Power Supplies" (at 73.025 80.5684 0)
       (effects (font (size 1.27 1.27)) (justify left bottom))
     )
-    (property "Sheetfile" "board_power.kicad_sch" (at 46.99 107.2646 0)
+    (property "Sheetfile" "board_power.kicad_sch" (at 73.025 107.8996 0)
       (effects (font (size 1.27 1.27)) (justify left top) hide)
     )
     (instances

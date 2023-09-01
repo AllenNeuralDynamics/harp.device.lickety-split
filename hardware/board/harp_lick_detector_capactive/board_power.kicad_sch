@@ -1548,9 +1548,6 @@
     (property "Vendor Number" "" (at 115.57 132.715 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "Field11" "" (at 115.57 132.715 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
     (pin "1" (uuid 42d671be-6c28-435c-af39-36b2b139371a))
     (pin "2" (uuid 3f84e5b8-a745-4666-bea6-6fdc5284e749))
     (instances
