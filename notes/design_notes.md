@@ -58,6 +58,7 @@ Here the inner braid carries of low-impedance copy of the signal, and the outer 
 
 
 ## References
+* [All About USBC: Example Circuits](https://hackaday.com/2023/08/07/all-about-usb-c-example-circuits/)
 * [AN-347](https://www.analog.com/media/en/technical-documentation/application-notes/41727248AN_347.pdf)
 * [Capacitor Impedance Calculator](https://www.allaboutcircuits.com/tools/capacitor-impedance-calculator/)
 * [Pi Pico Pinout](https://www.raspberrypi-spy.co.uk/wp-content/uploads/2021/01/raspberry_pi_pico_pinout.png)
