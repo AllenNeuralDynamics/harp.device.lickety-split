@@ -79,3 +79,4 @@ Here the inner braid carries of low-impedance copy of the signal, and the outer 
 * [ADS7049 Evaluation Module](https://www.ti.com/lit/ug/sbau382a/sbau382a.pdf?ts=1693010385528&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FADS7029-Q1) Reference Design
 * * [Demo Manual DC2414A](https://www.analog.com/media/en/technical-documentation/user-guides/DC2414AF.PDF)
   * LTC6268 evaluation board
+* [LT3030 Demo Circtuit](https://www.analog.com/media/en/technical-documentation/eval-board-schematic/DC1855A-2-SCH.pdf)

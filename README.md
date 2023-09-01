@@ -7,6 +7,11 @@ An ephys-compliant lick detector based on measured change in capacitance.
 * TTL output triggers when a lick is detected.
 * Harp-protocol compliant. Also dispatches timestamped Harp messages when a lick is detected.
 
+## Extra Features
+* 6-20VDC input (2.1 x 5.5mm barrel jack, positive center)
+* reverse-polarity protected
+* isolated USB to prevent ground loops with the PC.
+
 ## Wiring Diagram
 
 ### Device Pinout
