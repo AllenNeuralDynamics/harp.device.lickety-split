@@ -4,6 +4,13 @@
 
   (paper "A4")
 
+  (title_block
+    (title "Lickety Split Capacitive Lick Detector")
+    (date "2023-09-01")
+    (rev "0.5")
+    (company "The Allen Institute for Neural Dynamics")
+  )
+
   (lib_symbols
   )
 

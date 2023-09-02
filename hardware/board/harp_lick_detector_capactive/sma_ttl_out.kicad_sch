@@ -4,6 +4,13 @@
 
   (paper "A4")
 
+  (title_block
+    (title "Lickety Split Capacitive Lick Detector")
+    (date "2023-09-01")
+    (rev "0.5")
+    (company "The Allen Institute for Neural Dynamics")
+  )
+
   (lib_symbols
     (symbol "74xx:74AHC04" (in_bom yes) (on_board yes)
       (property "Reference" "U" (at 0 1.27 0)
@@ -525,9 +532,12 @@
     (uuid f8bca25f-3544-427f-8e44-5cb69a7d776a)
   )
 
-  (text "Ref: https://www.sciencedirect.com/science/article/pii/S2405844021017771#fig10"
-    (at 177.165 163.195 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
+  (text "TODO: ESD protection." (at 209.55 120.015 0)
+    (effects (font (size 2 2) (thickness 0.4) bold) (justify left bottom))
+    (uuid bc871739-2018-44e5-be7e-d0939443838b)
+  )
+  (text "TTL Signal Buffering Reference." (at 177.165 163.195 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom) (href "https://www.sciencedirect.com/science/article/pii/S2405844021017771#fig10"))
     (uuid f2fbb6a5-16b0-4443-a0db-36d882af1afc)
   )
 
