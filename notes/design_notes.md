@@ -62,6 +62,8 @@ Here the inner braid carries of low-impedance copy of the signal, and the outer 
   * contains schematic for a device to display itself as a full speed USB device.
 * [Raspberry Pi Pico Datasheet](https://datasheets.raspberrypi.com/pico/pico-datasheet.pdf)
   * contains schematic for minimal board design.
+* [AD9833 Signal Generator First Steps Part 1](https://daumemo.com/diy-ad9833-signal-generator-first-steps-part-1/)
+  * Contains effect of load resistance on output voltage.
 * [Hardware Design with the RP2040](https://datasheets.raspberrypi.com/rp2040/hardware-design-with-rp2040.pdf)
 * [AN-347](https://www.analog.com/media/en/technical-documentation/application-notes/41727248AN_347.pdf)
 * [Capacitor Impedance Calculator](https://www.allaboutcircuits.com/tools/capacitor-impedance-calculator/)
