@@ -21,7 +21,7 @@ AD9833::AD9833(uint32_t mclk_frequency_hz, spi_inst_t* spi_hw,
 }
 
 AD9833::AD9833(uint32_t mclk_frequency_hz, spi_inst_t* spi_hw, uint8_t cs_pin)
-:mclk_frequency_hz_{mclk_frequency_hz_}, spi_inst_{spi_hw}, cs_pin_{cs_pin},
+:mclk_frequency_hz_{mclk_frequency_hz}, spi_inst_{spi_hw}, cs_pin_{cs_pin},
  device_is_reset_{false}
 {
     // Setup chip select.
@@ -89,11 +89,9 @@ void AD9833::enable_with_waveform(waveform_t waveform)
 
 void AD9833::set_frequency_hz(uint32_t freq)
 {
-    //uint32_t freq_word = uint32_t((uint64_t(freq) * uint64_t(1<<28)) / uint64_t(mclk_frequency_hz_));
-    // FIXME: this should not be hardcoded.
-    uint32_t freq_word = 0x222222;
-    //uint32_t freq_word = 0x10624d;
-    printf("(Raw freq word is: 0x%08x)\n", freq_word);
+    uint32_t freq_word = uint32_t((uint64_t(freq) << 28)
+                                  /uint64_t(mclk_frequency_hz_));
+    //printf("(Raw freq word is: 0x%08lx)\n", freq_word);
     // Enable two consecutive writes to FREQ0 (D13 = 1).
     write_to_reg(CONTROL, (1<<13));
     // Write LSBs to FREQ0 (14 lower bits).

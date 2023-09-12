@@ -39,7 +39,7 @@ uint16_t adc_vals[20] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 AD9833 ad9833(12e6L, spi0, AD9833_SPI_TX_PIN, AD9833_SPI_RX_PIN,
               AD9833_SPI_SCK_PIN, AD9833_CS_PIN);
 // Create ADS70x9 instance for the ADS7049.
-PIO_ADS70x9 ads7049(pio0,   // pio instance // FIXME: rename instance to *49
+PIO_ADS70x9 ads7049(pio0,   // pio instance
                     0,      // program offset
                     12,     // data bits
                     ADS7049_CS_PIN, ADS7049_SCK_PIN, ADS7049_POCI_PIN);
@@ -62,8 +62,8 @@ int main()
     // Setup Sine wave generator.
     sleep_ms(100);
     ad9833.disable_output();
-    ad9833.set_frequency_hz(100e3); //FIXME. Hardcoded for now.
-    ad9833.set_phase_raw(0); // uint32_t
+    ad9833.set_frequency_hz(100e3);
+    ad9833.set_phase_raw(0);
     ad9833.enable_with_waveform(AD9833::waveform_t::SINE);
 
     // Setup ADS7029 periodic sampling and writing to memory.
