@@ -9,20 +9,13 @@
 #include <hardware/pio.h>
 
 #define ADS7049_CS_PIN (18)
-#define ADS7049_SCK_PIN (19)
-#define ADS7049_POCI_PIN (20)
+#define ADS7049_POCI_PIN (19)
+#define ADS7049_SCK_PIN (20)
 
 #define AD9833_SPI_SCK_PIN (2) //(18)
 #define AD9833_SPI_TX_PIN (3) //(19)
 #define AD9833_CS_PIN (1) //(17)
 #define AD9833_SPI_RX_PIN (4) //(16)
-
-// FIXME: if using breadboard setup, then the sine wave setting needs to be rewritten.
-//#define AD9833_SPI_SCK_PIN (18)
-//#define AD9833_SPI_TX_PIN (19)
-//#define AD9833_CS_PIN (17)
-//#define AD9833_SPI_RX_PIN (16)
-
 
 // Location to write one period of ADC samples to.
 //uint8_t adc_vals[5] = {0, 0, 0, 0, 0};
@@ -30,7 +23,7 @@ uint16_t adc_vals[20] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
 
 // General strategy:
 // Configure ADC to write to memory continuously. (See prev example code.)
-// Every waveform period (5 samples @ 500KHz), compute sampled amplitude.
+// Every waveform period (20 samples @ 1MHz), compute sampled amplitude.
 // If lower than nominal amplitude for N consecutive cycles, lick detected.
 
 // Create AS9833 instance and init underlying SPI hardware (default behavior).
@@ -82,15 +75,15 @@ int main()
     uint32_t i = 0;
     while(true)
     {
-        printf("ADC vals: %03d | %03d | %03d | %03d | %03d | %d\r",
+        printf("ADC vals: %04d | %04d | %04d | %04d | %04d | %d\r",
                adc_vals[0], adc_vals[1], adc_vals[2], adc_vals[3], adc_vals[4], i);
         ++i;
         sleep_ms(17); // ~60[Hz] refresh rate.
 /*
-        printf("ADC vals: %03d | %03d | %03d | %03d | %03d | "
-               "%03d | %03d | %03d | %03d | %03d | "
-               "%03d | %03d | %03d | %03d | %03d | "
-               "%03d | %03d | %03d | %03d | %03d\r",
+        printf("ADC vals: %04d | %04d | %04d | %04d | %04d | "
+               "%04d | %04d | %04d | %04d | %04d | "
+               "%04d | %04d | %04d | %04d | %04d | "
+               "%04d | %04d | %04d | %04d | %04d\r",
                adc_vals[0], adc_vals[1], adc_vals[2], adc_vals[3], adc_vals[4],
                adc_vals[5], adc_vals[6], adc_vals[7], adc_vals[8], adcs_vals[9],
                adc_vals[10], adc_vals[11], adc_vals[12], adc_vals[13],
