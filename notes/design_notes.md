@@ -83,6 +83,7 @@ Here the inner braid carries of low-impedance copy of the signal, and the outer 
 * [Stack Exchange: Measuring Feline Capacitance](https://electronics.stackexchange.com/questions/152090/measuring-feline-capacitance)
 * [Stack Exchange: Explanation about OpAmp Bias Resistor and Bootstrapping](https://electronics.stackexchange.com/questions/586839/explanation-about-op-amp-bias-resistor-and-bootstrapping)
   * contains info on how to bias an AC input signal to ground without reducing input impedance.
+* [How to make arbitrary shape footprints in KiCAD](https://imgur.com/a/cwRWZnW)
 ### Reference Designs
 * [ADS7049 Evaluation Module](https://www.ti.com/lit/ug/sbau382a/sbau382a.pdf?ts=1693010385528&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FADS7029-Q1) Reference Design
 * * [Demo Manual DC2414A](https://www.analog.com/media/en/technical-documentation/user-guides/DC2414AF.PDF)
