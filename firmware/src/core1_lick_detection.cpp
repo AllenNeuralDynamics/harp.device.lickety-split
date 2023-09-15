@@ -1,178 +1,75 @@
 #include <core1_lick_detection.h>
+#include <config.h>
 
-volatile bool new_data; // flag indicating new data (updated in interrupt).
-uint32_t upscaled_baseline_avg; // Upscaled moving average.
-uint32_t upscaled_sample_avg; // Upscaled moving average.
-uint32_t upscaled_amplitude;
-uint32_t log2_upscale_factor;
-uint32_t log2_baseline_window;
-uint32_t log2_moving_avg_window;
-uint32_t sample_count;
-bool lick_detected;
+volatile bool update_due; // flag indicating lick detector fsm must update.
+                          // (Value changed inside an interrupt handler.)
+// List of lick detectors. (Just 1 for now.)
+LickDetector lick_detectors[1]
+    {{adc_vals, 20, TTL_PIN}}; // FIXME: unhardcode 20.
 
-
-void dma_sample_chan_handler()
+void flag_update()
 {
     // Clear interrupt request.
-    dma_hw->ints0 = 1u << ads7049.samp_chan_;
-    // Flag new data.
-    new_data = true;
+    dma_hw->ints0 = 1u << ads7049_0.samp_chan_; // ads7049.get_interrupting_dma_channel();
+    update_due = true;
 }
-
-void wait_for_new_data()
-{
-    while (!new_data){}
-    new_data = false;
-}
-
-uint32_t get_raw_amplitude()
-{
-    // Compute amplitude.
-    uint32_t max = adc_vals[0];
-    uint32_t min = adc_vals[0];
-    for (uint8_t i = 0; i < 5; ++i) // FIXME: should be count_of(adc_vals)
-    {
-        if (adc_vals[i] < min)
-            min = adc_vals[i];
-        if (adc_vals[i] > max)
-            max = adc_vals[i];
-    }
-    return max - min;
-}
-
-void get_upscaled_measurement()
-{
-    upscaled_amplitude = get_raw_amplitude() << log2_upscale_factor;
-}
-
-void update_measurement_moving_avg()
-{
-    // Moving average is basically an IIR filter.
-    // Example for window size of 16:
-    // avg[i] = 15/16 * avg[i-1] + 1/16 * sample[i]
-    upscaled_sample_avg = (((MOVING_AVG_WINDOW-1) * upscaled_sample_avg)
-                           >> log2_moving_avg_window)
-                          + (upscaled_amplitude >> log2_moving_avg_window);
-}
-
-void update_baseline_moving_avg()
-{
-    upscaled_baseline_avg = (((BASELINE_AVG_WINDOW-1) * upscaled_baseline_avg)
-                             >> log2_baseline_window)
-                            + (upscaled_amplitude >> log2_baseline_window);
-}
-
 
 void core1_main()
 {
 #ifdef PROFILE_CPU
-    uint32_t loop_start_cpu_cycle;
-    uint32_t cpu_cycles;
     // Configure SYSTICK register to tick with cpu clock (125MHz) and enable it.
     SYST_CSR |= (1 << 2) | (1 << 0);
-    printf("Hello from core1.\r\n");
+    // init variable with valid states for periodic status printing.
+    curr_time_ms = to_ms_since_boot(get_absolute_time());
+    prev_print_time_ms = curr_time_ms;
 #endif
-    // Internal variables.
-    uint32_t lick_detected_on_threshold;
-    uint32_t lick_detected_off_threshold;
-    uint32_t detection_start_time_ms;
-
-    // Compute constants:
-    log2_upscale_factor = log2(UPSCALE_FACTOR);
-    log2_baseline_window = log2(BASELINE_AVG_WINDOW);
-    log2_moving_avg_window = log2(MOVING_AVG_WINDOW);
-
-    // Compute starting loop time values.
-    uint32_t curr_time_ms = to_ms_since_boot(get_absolute_time());
-    uint32_t prev_time_ms = curr_time_ms;
-
     // Setup starting state.
-    new_data = false;
-    sample_count = 0;
-    lick_detected = false;
-
-    // Setup CPU interrupts and GPIO.
-    // Attach core1 to handle ADC streaming DMA interrupt.
-    // FIXME: DMA_IRQ_0 is hardcoded for now.
-    irq_set_exclusive_handler(DMA_IRQ_0, dma_sample_chan_handler);
-    irq_set_enabled(DMA_IRQ_0, true);
-    //gpio_init(GPIO_NUM?, OUTPUT);
-    //gpio_set_dir(GPIO_NUM?, true);  // true for output.
-
-    wait_for_new_data();
-    // Collect reasonable starting values for
-    // baseline "Not Licking" signal (super slow moving average w/ big window) &
-    // current sample signal (fast moving average w/ small window).
-    upscaled_amplitude = get_raw_amplitude() << log2_upscale_factor;
-    upscaled_sample_avg = upscaled_amplitude;
-    upscaled_baseline_avg = upscaled_amplitude;
-
-    for (uint32_t i = 0 ; i < FILTER_WARMUP_ITERATIONS; ++i)
-    {
-        wait_for_new_data();
-        get_upscaled_measurement();
-        update_measurement_moving_avg();
-        update_baseline_moving_avg();
-    }
+    update_due = false;
+    // Note: the core that attaches interrupt is the core that will handle it.
+    // Connect ads7049 dma stream interrupt handler to lick detector.
+    ads7049_0.setup_dma_stream_to_memory_with_interrupt(
+        adc_vals, 20, DMA_IRQ_0, flag_update); // FIXME: unhardcode 20.
+    //ads7049_1.setup_dma_stream_to_memory(adc_vals, count_of(adc_vals));
 
     // Main loop.
-    // Must execute within 1250 cpu cycles with a 125MHz clock (100KHz).
     while (true)
     {
-        wait_for_new_data();
 #ifdef PROFILE_CPU
-        loop_start_cpu_cycle = SYST_CVR;
-        curr_time_ms = to_ms_since_boot(get_absolute_time());
+    loop_start_cpu_cycle = SYST_CVR;
+    curr_time_ms = to_ms_since_boot(get_absolute_time());
 #endif
-
-        // Get latest data.
-        get_upscaled_measurement();
-        update_measurement_moving_avg();
-        // Update baseline on a slower timescale (also upscaled and averaged).
-        if (sample_count == 0)
-            update_baseline_moving_avg();
-        // Decide if we've seen a lick.
-        if ((upscaled_sample_avg < lick_detected_on_threshold) &
-            (lick_detected == false))
+        // Check if any licks were detected.
+        // Timestamp them and queue a harp message.
+        if (update_due) // All detectors due for update on the same schedule.
         {
-            lick_detected = true;
-            detection_start_time_ms = curr_time_ms;
+            update_due = false; // Clear update flag.
+            // Update lick detector finite state machine.
+            for (uint8_t i = 0; i < count_of(lick_detectors); ++i)
+            {
+                lick_detectors[i].update();
+                if (lick_detectors[i].lick_start_detected())
+                    lick_detectors[i].clear_lick_detection_start_flag();
+                else if (lick_detectors[i].lick_stop_detected())
+                    lick_detectors[i].clear_lick_detection_stop_flag();
+            }
+            // If previous lick detection state differs from the new one,
+            // queue a harp message and send it.
         }
-        else if ((upscaled_sample_avg > lick_detected_off_threshold) &
-                 (lick_detected == true) &
-                 (curr_time_ms - detection_start_time_ms > LICK_HOLD_TIME_MS))
-        {
-            lick_detected = false;
-        }
-
-        // Update internal state tracking logic and outputs.
-        // Update period_count for baseline measurement.
-        sample_count = (sample_count == BASELINE_SAMPLE_INTERVAL)?
-                        0:
-                        ++sample_count;
-        lick_detected_on_threshold = (93*upscaled_baseline_avg)/100;
-        lick_detected_off_threshold = (98*upscaled_baseline_avg)/100;
-
-        // Update output logic.
-        // TODO.
-        // gpio_put(LICK_OUTPUT, lick_detected);
-
-        cpu_cycles = loop_start_cpu_cycle - SYST_CVR;
 #ifdef PROFILE_CPU
-        // Debugging. Print currentm measurements, raw adc values, and
-        // cycles per loop iteration.
-/*
-        if (curr_time_ms - prev_time_ms >= PRINT_LOOP_INTERVAL_MS)
+        cpu_cycles = loop_start_cpu_cycle - SYST_CVR;
+        // For debugging. Periodically print current measurements,
+        // adc values, and cycles per loop.
+        if (curr_time_ms - prev_print_time_ms >= PRINT_LOOP_INTERVAL_MS)
         {
-            prev_time_ms = curr_time_ms;
+            prev_print_time_ms = curr_time_ms;
             printf("amplitude (avg): %06d || baseline (avg): %06d || "
-                   "adc: [%03d, %03d, %03d, %03d, %03d] || ",
+                   "adc: [%04d, %04d, %04d, %04d, %04d] || ",
                    "cpu_cycles/loop: %d\r",
-                   upscaled_sample_avg, upscaled_baseline_avg,
+                   lick_detector_0.upscaled_sample_avg_,
+                   lick_detector_0.upscaled_baseline_avg_,
                    adc_vals[0], adc_vals[1], adc_vals[2], adc_vals[3],
                    adc_vals[4], cpu_cycles);
         }
-*/
 #endif
     }
 }

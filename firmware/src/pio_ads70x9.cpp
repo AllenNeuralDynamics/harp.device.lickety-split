@@ -22,9 +22,26 @@ PIO_ADS70x9::~PIO_ADS70x9()
 }
 
 void PIO_ADS70x9::setup_dma_stream_to_memory(uint16_t* starting_address,
-                                             size_t sample_count,
-                                             bool trigger_interrupt)
+                                                    size_t sample_count)
 {
+    _setup_dma_stream_to_memory(starting_address, sample_count, false,
+                                0, nullptr);
+}
+
+void PIO_ADS70x9::setup_dma_stream_to_memory_with_interrupt(
+    uint16_t* starting_address, size_t sample_count, int dma_irq_source,
+    irq_handler_t handler_func)
+{
+    _setup_dma_stream_to_memory(starting_address, sample_count, true,
+        dma_irq_source, handler_func);
+}
+
+void PIO_ADS70x9::_setup_dma_stream_to_memory(
+    uint16_t* starting_address, size_t sample_count, bool trigger_interrupt,
+    int dma_irq_source, irq_handler_t handler_func)
+{
+    // FIXME: check that dma_irq_source is either DMA_IRQ_0 or DMA_IRQ_1.
+    // FIXME: if trigger_interrupt, handler_func cannot be nullptr.
 // Setup inspired by logic analyzer example:
 // https://github.com/raspberrypi/pico-examples/blob/master/pio/logic_analyser/logic_analyser.c#L65
 
@@ -35,8 +52,9 @@ void PIO_ADS70x9::setup_dma_stream_to_memory(uint16_t* starting_address,
     // Get two open DMA channels.
     // samp_chan_ will sample the adc, paced by DREQ_ADC and chain to ctrl_chan.
     // ctrl_chan will reconfigure & retrigger samp_chan_ when samp_chan finishes.
-    // samp_chan_ is a data member since it needs to be exposed elsewhere
-    // where we can manipulate it in an interrupt handler.
+    // samp_chan_ may also trigger an interrupt if configured to do so.
+    // samp_chan_ is a data member since it's value needs to be known, so it can
+    // be cleared in an interrupt handler.
     samp_chan_ = dma_claim_unused_channel(true);
     int ctrl_chan = dma_claim_unused_channel(true);
     //printf("Sample channel: %d\r\n", samp_chan_);
@@ -62,7 +80,19 @@ void PIO_ADS70x9::setup_dma_stream_to_memory(uint16_t* starting_address,
         sample_count,   // Number of word transfers i.e: count_of(adc_samples_dest).
         false           // Don't Start immediately.
     );
-    dma_channel_set_irq0_enabled(samp_chan_, trigger_interrupt);
+
+    // Enable interrupt request for the particular IRQ number if
+    // trigger_interrupt is true.
+    if (dma_irq_source == DMA_IRQ_0)
+        dma_channel_set_irq0_enabled(samp_chan_, trigger_interrupt);
+    else if (dma_irq_source == DMA_IRQ_1)
+        dma_channel_set_irq1_enabled(samp_chan_, trigger_interrupt);
+    // Connnect handler function and enable interrupt.
+    if (trigger_interrupt)
+    {
+        irq_set_exclusive_handler(dma_irq_source, handler_func);
+        irq_set_enabled(dma_irq_source, true);
+    }
     //printf("Configured DMA sample channel.\r\n");
 
     // Setup Reconfiguration Channel

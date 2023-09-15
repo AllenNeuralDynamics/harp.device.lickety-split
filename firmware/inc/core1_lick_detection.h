@@ -9,69 +9,36 @@
 #include <stdint.h>
 #include <hardware/irq.h>
 #include <pio_ads70x9.h>
+#include <lick_detector.h>
 
-#define PROFILE_CPU (1) // uncomment for print output debugging.
-
-
-#define BASELINE_SAMPLE_INTERVAL (1000ul) // number of periods between
-                                          // updating the baseline threshold.
-                                          // 100KHz/1000 periods = 100Hz update rate.
-#define UPSCALE_FACTOR (128) // Factor by which to multiply incoming
-#define MOVING_AVG_WINDOW (16) // This should be:
-                               // a.) <=64 or the data will arrive late.
-                               // b.) a power of 2.
-#define BASELINE_AVG_WINDOW (512)
-
-#define FILTER_WARMUP_ITERATIONS (300)
-
-#define LICK_HOLD_TIME_MS (10) // minimum amount of time lick detection trigger
-                               // will be asserted.
-
-#define PRINT_LOOP_INTERVAL_MS (16)
+// PROFILE_CPU compiler flag can be defined to compute and dump
+// statistics to the serial port. Stats include (1) raw adc values, (2) how
+// many CPU cycles the update loop is taking.
 
 #ifdef PROFILE_CPU
+#define PRINT_LOOP_INTERVAL_MS (16)
+
 #define SYST_CSR (*(volatile uint32_t*)(PPB_BASE + 0xe010))
 #define SYST_CVR (*(volatile uint32_t*)(PPB_BASE + 0xe018))
+
+uint32_t prev_print_time_ms;
+uint32_t curr_time_ms;
+uint32_t loop_start_cpu_cycle;
+uint32_t cpu_cycles;
 #endif
-
-// General strategy:
-// ADC writes a period's worth of 100KHz data (8-bit) sampled at 500KHz
-// continuously. Every waveform period (5 samples @ 500KHz), compute sampled
-// amplitude.
-// Push sampled amplitude into a moving average of the last MOVING_AVG_WINDOW
-// samples.
-// Every BASELINE_SAMPLE_INTERVAL samples, we update the baseline "no-lick"
-// measurement.
-// If lower than threshold amplitude, lick detected.
-
-// Note: average baseline and trigger value are upscaled by UPSCALE_FACTOR, so
-//  we don't lose precision while averaging them over time.
 
 //extern uint8_t adc_vals[];
 //extern int samp_chan; // DMA channel that collects ADC samples and triggers an
 //                      // interrupt.
 extern uint16_t adc_vals[];
-extern PIO_ADS70x9 ads7049;
+extern PIO_ADS70x9 ads7049_0;
 
 
 /**
- * \brief Interrupt handler. Triggered when 5 new samples (1 period) have been
- *  written to memory.
+ * \brief Interrupt handler. Connect to ad7049 DMA interrupt request to trigger
+ *  when 1 period's worth of samples have been written to memory.
  */
-void dma_sample_chan_handler();
-
-/**
- * \brief block until new data arrive via interrupt. Clear the new_data flag.
- */
-void wait_for_new_data();
-
-/**
- * \brief compute the raw amplitude from the 5 samples in memory.
- */
-uint32_t get_raw_amplitude();
-void get_upscaled_measurement();
-void update_measurement_moving_avg();
-void update_baseline_moving_avg();
+void flag_update();
 
 void core1_main();
 #endif // CORE1_LICK_DETECTION_H
