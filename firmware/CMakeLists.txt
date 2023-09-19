@@ -12,7 +12,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 # Compile for profiling/debugging/etc. Default: none enabled.
 #add_definitions(-DDEBUG)
-#add_definitions(-DPROFILE_CPU)
+add_definitions(-DPROFILE_CPU)
 
 # initialize the Raspberry Pi Pico SDK
 pico_sdk_init()

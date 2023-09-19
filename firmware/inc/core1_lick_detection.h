@@ -20,11 +20,6 @@
 
 #define SYST_CSR (*(volatile uint32_t*)(PPB_BASE + 0xe010))
 #define SYST_CVR (*(volatile uint32_t*)(PPB_BASE + 0xe018))
-
-uint32_t prev_print_time_ms;
-uint32_t curr_time_ms;
-uint32_t loop_start_cpu_cycle;
-uint32_t cpu_cycles;
 #endif
 
 //extern uint8_t adc_vals[];

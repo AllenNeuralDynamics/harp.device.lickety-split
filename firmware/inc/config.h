@@ -3,6 +3,7 @@
 
 
 #define TTL_PIN (23)
+#define LED_PIN (24)
 
 #define ADS7049_CS_PIN (18)
 #define ADS7049_POCI_PIN (19)

@@ -1,12 +1,12 @@
 #include <lick_detector.h>
 
 LickDetector::LickDetector(uint16_t* adc_vals, size_t samples_per_period,
-                           uint ttl_pin, uint32_t on_threshold_percent,
+                           uint ttl_pin, uint led_pin, uint32_t on_threshold_percent,
                            uint32_t off_threshold_percent)
 :adc_vals_{adc_vals},
  samples_per_period_{samples_per_period},
  state_{RESET},
- ttl_pin_{ttl_pin},
+ ttl_pin_{ttl_pin}, led_pin_{led_pin},
  on_threshold_percent_{on_threshold_percent},
  off_threshold_percent_{off_threshold_percent}
 {
@@ -14,6 +14,10 @@ LickDetector::LickDetector(uint16_t* adc_vals, size_t samples_per_period,
     gpio_init(ttl_pin_);
     gpio_set_dir(ttl_pin_, true);  // true for output.
     gpio_put(ttl_pin_, 0); // init output LOW.
+    // Init LED pin for lick state.
+    gpio_init(led_pin_);
+    gpio_set_dir(led_pin_, true);  // true for output.
+    gpio_put(led_pin_, 0); // init output LOW.
     // Pre-compute constants used in update loop.
     // We will speed up multiplication-by-2 by converting it to bitshifts.
     log2_upscale_factor_ = log2(UPSCALE_FACTOR);
@@ -64,9 +68,6 @@ void LickDetector::update()
     // Note: this function cannot block.
     //Update state-agnostic internal update logic.
     curr_time_ms_ = to_ms_since_boot(get_absolute_time());
-    // Update baseline setpoint on a slow timescale (also upscaled and averaged).
-    if (sample_count_ == 0)
-        update_baseline_moving_avg();
     // Update counter for baseline measurement.
     sample_count_ = (sample_count_ == BASELINE_SAMPLE_INTERVAL)?
                     0:
@@ -78,7 +79,11 @@ void LickDetector::update()
     if (state_ != RESET)
     {
         update_measurement_moving_avg();
-        update_baseline_moving_avg();
+        // Update baseline setpoint on slow timescale (also upscale & average).
+        // Lock the baseline if triggered, so that the baseline doesn't
+        // accumulate erroneous baseline measurements after warmup.
+        if (sample_count_ == 0 & state_ != TRIGGERED)
+            update_baseline_moving_avg();
     }
     else // Reset state conditions. We only land in the RESET state for 1 cycle.
     {
@@ -148,14 +153,15 @@ void LickDetector::update()
     // Handle state-change-driven internal/output logic.
     if (state_ == UNTRIGGERED && next_state == TRIGGERED)
     {
-        gpio_put(ttl_pin_, 1);
+        gpio_put_masked((1u << ttl_pin_) | (1u << led_pin_),
+                        (1u << ttl_pin_) | (1u << led_pin_));
         lick_start_detected_ = true;
         detection_start_time_ms_ = curr_time_ms_;
     }
     if (state_ == TRIGGERED && next_state == UNTRIGGERED)
     {
         lick_stop_detected_ = true;
-        gpio_put(ttl_pin_, 0);
+        gpio_put_masked((1u << ttl_pin_) | (1u << led_pin_), 0);
     }
     // Apply state transition.
     state_ = next_state;

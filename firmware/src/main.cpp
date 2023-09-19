@@ -32,17 +32,9 @@ PIO_ADS70x9 ads7049_0(pio0,   // pio instance
 
 int main()
 {
-    // Force RP2040 onboard regulator into PWM mode for reduced ripple but
-    // lower efficiency. (Empirically, this reduces noise for the opamp dual
-    // power supply.)
-    gpio_init(23);
-    gpio_set_dir(23, GPIO_OUT);
-    gpio_put(23, 1);
-
     stdio_usb_init();
     //stdio_set_translate_crlf(&stdio_usb, false); // Don't replace outgoing chars.
     //while (!stdio_usb_connected()){} // Block until connection to serial port.
-
 
     // Setup Sine wave generator.
     sleep_ms(100);
@@ -51,9 +43,7 @@ int main()
     ad9833.set_phase_raw(0);
     ad9833.enable_with_waveform(AD9833::waveform_t::SINE);
 
-    // Setup ADS7029 periodic sampling and writing to memory.
-    // Do this on core1
-    //ads7049_0.setup_dma_stream_to_memory(adc_vals, 20, true);
+    // Core1 will setup periodic ADC sampling and writing to memory.
 
     // Provision pin 26 only.
     //init_continuous_adc_sampling(0x01, adc_vals, count_of(adc_vals), true);
@@ -68,9 +58,9 @@ int main()
     uint32_t i = 0;
     while(true)
     {
-        printf("ADC vals: %04d | %04d | %04d | %04d | %04d | %d\r",
-               adc_vals[0], adc_vals[1], adc_vals[2], adc_vals[3], adc_vals[4], i);
-        ++i;
-        sleep_ms(17); // ~60[Hz] refresh rate.
+        // Run Harp Core.
+        // Check multicore queue for new lick state and timestamp.
+        // Update core registers with new lick state.
+        // Issue harp reply.
     }
 }
