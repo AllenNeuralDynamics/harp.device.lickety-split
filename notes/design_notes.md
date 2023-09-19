@@ -75,6 +75,7 @@ Here the inner braid carries of low-impedance copy of the signal, and the outer 
 * [Application Note 241 Working with High Impedance Op Amps](https://ti.com/lit/an/snoa664/snoa664.pdf?ts=1689978784221&ref_url=https%253A%252F%252Fwww.ti.com%252https://meettechniek.info/passive/capacitance.htmlFproduct%252FLM3900)
 * [INA116 Datasheet: Ultra-Low Input Bias Current Instrumentation Amplifier](https://www.ti.com/lit/ds/symlink/ina116.pdf)
 * [ADA4530-1R-EBZ User Guide](https://www.analog.com/media/en/technical-documentation/user-guides/ADA4530-1R-EBZ_UG-865.pdf)
+* [Designing Gain and Offset in Thirty Seconds](https://www.ti.com/lit/an/sloa097/sloa097.pdf?ts=1693767373611)
 * Design femptoampere circuits with low leakage [Part 1](https://www.edn.com/design-femtoampere-circuits-with-low-leakage-part-one/), [Part 2](https://www.edn.com/design-femtoampere-circuits-with-low-leakage-part-2-component-selection/), [Part 3](https://www.edn.com/design-femtoampere-circuits-with-low-leakage-part-3-low-current-design-techniques/)
 * [Tektronix Low Level Measurements Handbook](https://www.tek.com/en/documents/product-article/keithley-low-level-measurements-handbook---7th-edition#C2section0)
 * [Measuring Capacitance and ESR](https://meettechniek.info/passive/capacitance.html)
@@ -83,6 +84,7 @@ Here the inner braid carries of low-impedance copy of the signal, and the outer 
 * [Stack Exchange: Measuring Feline Capacitance](https://electronics.stackexchange.com/questions/152090/measuring-feline-capacitance)
 * [Stack Exchange: Explanation about OpAmp Bias Resistor and Bootstrapping](https://electronics.stackexchange.com/questions/586839/explanation-about-op-amp-bias-resistor-and-bootstrapping)
   * contains info on how to bias an AC input signal to ground without reducing input impedance.
+* [How to make arbitrary shape footprints in KiCAD](https://imgur.com/a/cwRWZnW)
 ### Reference Designs
 * [ADS7049 Evaluation Module](https://www.ti.com/lit/ug/sbau382a/sbau382a.pdf?ts=1693010385528&ref_url=https%253A%252F%252Fwww.ti.com%252Fproduct%252FADS7029-Q1) Reference Design
 * * [Demo Manual DC2414A](https://www.analog.com/media/en/technical-documentation/user-guides/DC2414AF.PDF)
