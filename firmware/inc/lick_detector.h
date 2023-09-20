@@ -100,11 +100,6 @@ private:
 /**
  * \brief
  */
-    inline void update_upscaled_raw_measurement();
-
-/**
- * \brief
- */
     inline void update_measurement_moving_avg();
 
 /**
@@ -128,6 +123,7 @@ public:
 #ifdef PROFILE_CPU
 private:
 #endif
+    uint32_t raw_amplitude_;
     uint32_t upscaled_amplitude_;
     uint32_t log2_upscale_factor_;
     uint32_t log2_baseline_window_;

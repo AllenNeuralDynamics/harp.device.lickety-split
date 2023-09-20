@@ -94,13 +94,13 @@ void core1_main()
             {
                 prev_print_time_ms = curr_time_ms;
                 // Print CPU cycles per loop.
-                printf("cpu_cycles/loop: %u\r\n", cpu_cycles);
+                //printf("cpu_cycles/loop: %u\r\n", cpu_cycles);
                 // Print baseline and current amplitudes (both upscaled).
-                //printf("amplitude (avg): %06d || baseline (avg): %06d || "
-                //       "cpu_cycles/loop: %u\r",
-                //       lick_detectors[0].upscaled_amplitude_avg_,
-                //       lick_detectors[0].upscaled_baseline_avg_,
-                //       cpu_cycles);
+                printf("avg amplitude: %06d || avg baseline: %06d || "
+                       "cpu_cycles/loop: %u\r\n",
+                       lick_detectors[0].upscaled_amplitude_avg_,
+                       lick_detectors[0].upscaled_baseline_avg_,
+                       cpu_cycles);
                 // Print the sampled period.
                 //printf("adc: [%04d, %04d, %04d, %04d, %04d,"
                 //       "%04d, %04d, %04d, %04d, %04d,"
