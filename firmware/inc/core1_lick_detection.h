@@ -27,6 +27,8 @@
 //                      // interrupt.
 extern uint16_t adc_vals[];
 extern PIO_ADS70x9 ads7049_0;
+extern uint16_t adc2_vals[];
+extern PIO_ADS70x9 ads7049_1;
 
 
 /**

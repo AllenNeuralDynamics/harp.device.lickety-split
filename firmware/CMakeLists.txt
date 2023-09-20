@@ -4,6 +4,7 @@ include(lib/pico-sdk/pico_sdk_init.cmake)
 
 project(lickety_split)
 
+
 set(CMAKE_CXX_STANDARD 17)
 
 # Enable try/catch exception interface.
@@ -16,6 +17,9 @@ add_definitions(-DPROFILE_CPU)
 
 # initialize the Raspberry Pi Pico SDK
 pico_sdk_init()
+
+# Add Harp Core as separate library.
+#add_subdirectory(lib/harp-core-rp2040/firmware)
 
 add_executable(${PROJECT_NAME}
     src/main.cpp
@@ -50,6 +54,8 @@ pico_generate_pio_header(pio_ads70x9
 # Specify where to look for header files if they're all in one place.
 include_directories(inc)
 
+#add_compile_options(-O3)
+
 # Link libraries to the targets that need them.
 
 target_link_libraries(ad9833 pico_stdlib hardware_spi)
@@ -61,7 +67,7 @@ target_link_libraries(pio_ads70x9 pico_stdlib hardware_pio hardware_irq
                       hardware_dma)
 target_link_libraries(${PROJECT_NAME} pico_stdlib ad9833 #continuous_adc
                       core1_lick_detection pico_multicore
-                      pio_ads70x9 hardware_pio)
+                      pio_ads70x9 hardware_pio)# harp_core harp_sync)
 
 # create map/bin/hex/uf2 file in addition to ELF.
 pico_add_extra_outputs(${PROJECT_NAME})

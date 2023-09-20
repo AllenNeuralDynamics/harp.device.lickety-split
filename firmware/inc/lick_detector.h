@@ -100,17 +100,17 @@ private:
 /**
  * \brief
  */
-    void update_upscaled_raw_measurement();
+    inline void update_upscaled_raw_measurement();
 
 /**
  * \brief
  */
-    void update_measurement_moving_avg();
+    inline void update_measurement_moving_avg();
 
 /**
  * \brief
  */
-    void update_baseline_moving_avg();
+    inline void update_baseline_moving_avg();
 
 
 
@@ -124,7 +124,7 @@ private:
 public:
 #endif
     uint32_t upscaled_baseline_avg_; // "baseline x scalar"
-    uint32_t upscaled_sample_avg_; // "setpoint x scalar"
+    uint32_t upscaled_amplitude_avg_; // "setpoint x scalar"
 #ifdef PROFILE_CPU
 private:
 #endif
@@ -145,5 +145,6 @@ private:
     uint32_t on_threshold_percent_;
     uint32_t off_threshold_percent_;
     uint32_t detection_start_time_ms_;
+    uint32_t detection_stop_time_ms_;
 };
 #endif // LICK_DETECTOR_H

@@ -65,6 +65,7 @@ Here the inner braid carries of low-impedance copy of the signal, and the outer 
 * [AD9833 Signal Generator First Steps Part 1](https://daumemo.com/diy-ad9833-signal-generator-first-steps-part-1/)
   * Contains effect of load resistance on output voltage.
 * [Hardware Design with the RP2040](https://datasheets.raspberrypi.com/rp2040/hardware-design-with-rp2040.pdf)
+* [pico-examples: multicore\_runner\_queue.c](https://github.com/raspberrypi/pico-examples/blob/develop/multicore/multicore_runner_queue/multicore_runner_queue.c)
 * [AN-347](https://www.analog.com/media/en/technical-documentation/application-notes/41727248AN_347.pdf)
 * [Capacitor Impedance Calculator](https://www.allaboutcircuits.com/tools/capacitor-impedance-calculator/)
 * [Pi Pico Pinout](https://www.raspberrypi-spy.co.uk/wp-content/uploads/2021/01/raspberry_pi_pico_pinout.png)
