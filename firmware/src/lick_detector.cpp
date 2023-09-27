@@ -45,15 +45,19 @@ void LickDetector::update_measurement_moving_avg()
     // Moving average is basically an IIR filter.
     // Example for window size of 16:
     // avg[i] = 15/16 * avg[i-1] + 1/16 * sample[i]
-    upscaled_amplitude_avg_ = (((MOVING_AVG_WINDOW-1) * upscaled_amplitude_avg_)
-                           >> log2_moving_avg_window_)
+    //upscaled_amplitude_avg_ = (((MOVING_AVG_WINDOW-1) * upscaled_amplitude_avg_)
+    upscaled_amplitude_avg_ = (__mul_instruction((MOVING_AVG_WINDOW-1),
+                                                 upscaled_amplitude_avg_)
+                               >> log2_moving_avg_window_)
                           + (upscaled_amplitude_ >> log2_moving_avg_window_);
 }
 
 void LickDetector::update_baseline_moving_avg()
 {
-    upscaled_baseline_avg_ = (((BASELINE_AVG_WINDOW-1) * upscaled_baseline_avg_)
-                             >> log2_baseline_window_)
+    //upscaled_baseline_avg_ = (((BASELINE_AVG_WINDOW-1) * upscaled_baseline_avg_)
+    upscaled_baseline_avg_ = (__mul_instruction((BASELINE_AVG_WINDOW-1),
+                                                upscaled_baseline_avg_)
+                              >> log2_baseline_window_)
                             + (upscaled_amplitude_ >> log2_baseline_window_);
 }
 
@@ -81,7 +85,8 @@ void LickDetector::update()
     {
         update_measurement_moving_avg();
         // Update baseline setpoint on slow timescale (also upscale & average).
-        if (sample_count_ == 0)
+        // TODO: possibly remove the state check.
+        if (sample_count_ == 0 && state_ != TRIGGERED)
             update_baseline_moving_avg();
     }
     else // Reset state conditions. We only land in the RESET state for 1 cycle.
@@ -118,8 +123,10 @@ void LickDetector::update()
     }
     // Recompute trigger thresholds based on current baseline measurement and
     // current threshold percentage settings.
-    uint32_t on_threshold = (on_threshold_percent_ * upscaled_baseline_avg_) / 100;
-    uint32_t off_threshold = (off_threshold_percent_ * upscaled_baseline_avg_) / 100;
+    uint32_t on_threshold = __mul_instruction(on_threshold_percent_,
+                                              upscaled_baseline_avg_) / 100;
+    uint32_t off_threshold = __mul_instruction(off_threshold_percent_,
+                                               upscaled_baseline_avg_) / 100;
 
     // Outputs happen on state transition edges.
     State next_state{state_};  // next state candidate initialized to curr state.

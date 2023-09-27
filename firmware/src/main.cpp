@@ -3,14 +3,13 @@
 #include <stdint.h>
 #include <ad9833.h>
 #include <pio_ads70x9.h>
-//#include <continuous_adc.h>
 #include <core1_lick_detection.h>
 #include <pico/multicore.h>
 #include <hardware/pio.h>
 #include <lick_queue.h>
 #include <config.h>
 //#include <harp_core.h>
-//#include <harp_synchronizer.h>
+#include <harp_synchronizer.h>
 
 // Create device name array.
 const uint16_t who_am_i = 1234;
@@ -63,7 +62,7 @@ PIO_ADS70x9 ads7049_0(pio0,   // pio instance
 int main()
 {
     // Init Synchronizer
-    //HarpSynchronizer& sync = HarpSynchronizer::init(uart0, 17);
+    HarpSynchronizer& sync = HarpSynchronizer::init(uart0, 17);
 
     stdio_usb_init();
     //stdio_set_translate_crlf(&stdio_usb, false); // Don't replace outgoing chars.
@@ -100,8 +99,9 @@ int main()
         // Update core registers with new lick state.
         // TODO.
         // Issue harp reply.
-        printf("state: %02b || time: %u ",
-               new_lick_state.state, new_lick_state.pico_timestamp);
+        printf("%02b  ", new_lick_state.state);
+        //printf("state: %02b || time: %u ",
+        //       new_lick_state.state, new_lick_state.pico_timestamp);
     }
     // No need to free the queue since we loop forever.
 }

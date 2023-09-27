@@ -19,7 +19,7 @@ add_definitions(-DPROFILE_CPU)
 pico_sdk_init()
 
 # Add Harp Core as separate library.
-#add_subdirectory(lib/harp-core-rp2040/firmware)
+add_subdirectory(lib/harp-core-rp2040/firmware)
 
 add_executable(${PROJECT_NAME}
     src/main.cpp
@@ -67,7 +67,7 @@ target_link_libraries(pio_ads70x9 pico_stdlib hardware_pio hardware_irq
                       hardware_dma)
 target_link_libraries(${PROJECT_NAME} pico_stdlib ad9833 #continuous_adc
                       core1_lick_detection pico_multicore
-                      pio_ads70x9 hardware_pio)# harp_core harp_sync)
+                      pio_ads70x9 hardware_pio harp_sync) #harp_core)
 
 # create map/bin/hex/uf2 file in addition to ELF.
 pico_add_extra_outputs(${PROJECT_NAME})

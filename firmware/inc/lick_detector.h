@@ -13,10 +13,10 @@
                                           // updating the baseline threshold.
                                           // 100KHz/1000 periods = 100Hz update rate.
 #define UPSCALE_FACTOR (128) // Factor by which to multiply incoming
-#define MOVING_AVG_WINDOW (32) // This should be:
-                               // a.) <=64 or the data will arrive late.
-                               // b.) a power of 2.
-#define BASELINE_AVG_WINDOW (512)
+#define MOVING_AVG_WINDOW (32ul) // This should be:
+                                 // a.) <=64 or the data will arrive late.
+                                 // b.) a power of 2.
+#define BASELINE_AVG_WINDOW (128)
 
 #define FILTER_WARMUP_ITERATION_COUNT (300)
 
@@ -50,8 +50,8 @@ public:
     };
 
     LickDetector(uint16_t* adc_vals, size_t samples_per_period,
-                 uint ttl_pin, uint led_pin, uint32_t on_threshold_percent = 94,
-                 uint32_t off_threshold_percent = 98);
+                 uint ttl_pin, uint led_pin, uint32_t on_threshold_percent = 80,
+                 uint32_t off_threshold_percent = 95);
     ~LickDetector();
 
 /**

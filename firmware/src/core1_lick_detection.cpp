@@ -16,11 +16,11 @@ uint8_t lick_states; // bit fields represent the lick state of each detector.
 uint8_t new_lick_states;
 lick_event_t lick_event; // data to push into the queue upon detecting a lick
                          // state change.
-LickDetector lick_detectors[1] // List of lick detectors (just 1 for now).
+LickDetector __not_in_flash("instances")lick_detectors[1] // List of lick detectors (just 1 for now).
     {{adc_vals, SAMPLES_PER_PERIOD, TTL_PIN, LED_PIN}};
     // {adc2_vals, SAMPLES_PER_PERIOD, 13, 14}};
 
-void flag_update()
+void  __time_critical_func(flag_update)()
 {
     // Clear interrupt request.
     dma_hw->ints0 = 1u << ads7049_0.samp_chan_; // ads7049.get_interrupting_dma_channel();
