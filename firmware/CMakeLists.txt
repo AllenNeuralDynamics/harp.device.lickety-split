@@ -13,7 +13,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 # Compile for profiling/debugging/etc. Default: none enabled.
 #add_definitions(-DDEBUG)
-add_definitions(-DPROFILE_CPU)
+#add_definitions(-DPROFILE_CPU)
 
 # initialize the Raspberry Pi Pico SDK
 pico_sdk_init()
@@ -61,13 +61,13 @@ include_directories(inc)
 target_link_libraries(ad9833 pico_stdlib hardware_spi)
 #target_link_libraries(continuous_adc hardware_adc hardware_dma pico_stdlib)
 target_link_libraries(lick_detector hardware_dma pico_stdlib)
-target_link_libraries(core1_lick_detection pico_stdlib hardware_irq
-                      lick_detector hardware_dma pico_multicore pio_ads70x9)
 target_link_libraries(pio_ads70x9 pico_stdlib hardware_pio hardware_irq
                       hardware_dma)
-target_link_libraries(${PROJECT_NAME} pico_stdlib ad9833 #continuous_adc
-                      core1_lick_detection pico_multicore
-                      pio_ads70x9 hardware_pio harp_sync) #harp_core)
+target_link_libraries(core1_lick_detection pico_stdlib hardware_irq
+                      lick_detector hardware_dma pico_multicore pio_ads70x9
+                      hardware_pio)
+target_link_libraries(${PROJECT_NAME} pico_stdlib ad9833
+                      core1_lick_detection pico_multicore harp_sync harp_c_app)
 
 # create map/bin/hex/uf2 file in addition to ELF.
 pico_add_extra_outputs(${PROJECT_NAME})
@@ -79,4 +79,8 @@ pico_enable_stdio_usb(ad9833 1)
 pico_enable_stdio_usb(lick_detector 1)
 pico_enable_stdio_usb(core1_lick_detection 1)
 
-pico_enable_stdio_uart(${PROJECT_NAME} 0)
+if(DEBUG)
+    message(WARNING "Debug printf() messages enabled from harp core to UART \
+            with baud rate 921600.")
+    pico_enable_stdio_uart(${PROJECT_NAME} 1)
+endif()

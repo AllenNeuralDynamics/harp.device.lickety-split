@@ -75,7 +75,8 @@ void LickDetector::update()
     uint32_t raw_amplitude = get_raw_amplitude();
     // 4x Noise check. Reject spurious noise that instantaneously makes the
     // signal much larger.
-    if (raw_amplitude < (4*raw_amplitude_) || (state_ == RESET) || (state_ == WARMUP))
+    //if (raw_amplitude < (4*raw_amplitude_) || (state_ == RESET) || (state_ == WARMUP))
+    // FIXME: amplitude jump was suppressed.
         raw_amplitude_ = raw_amplitude;
     // Update primary amplitude measurement.
     upscaled_amplitude_ = raw_amplitude_ << log2_upscale_factor_;
@@ -86,7 +87,7 @@ void LickDetector::update()
         update_measurement_moving_avg();
         // Update baseline setpoint on slow timescale (also upscale & average).
         // TODO: possibly remove the state check.
-        if (sample_count_ == 0 && state_ != TRIGGERED)
+        if (sample_count_ == 0)/// && state_ != TRIGGERED)
             update_baseline_moving_avg();
     }
     else // Reset state conditions. We only land in the RESET state for 1 cycle.

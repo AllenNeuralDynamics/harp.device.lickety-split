@@ -10,6 +10,8 @@
 #include <hardware/irq.h>
 #include <pio_ads70x9.h>
 #include <lick_detector.h>
+#include <lick_queue.h>
+#include <config.h>
 
 // PROFILE_CPU compiler flag can be defined to compute and dump
 // statistics to the serial port. Stats include (1) raw adc values, (2) how
@@ -25,11 +27,6 @@
 //extern uint8_t adc_vals[];
 //extern int samp_chan; // DMA channel that collects ADC samples and triggers an
 //                      // interrupt.
-extern uint16_t adc_vals[];
-extern PIO_ADS70x9 ads7049_0;
-extern uint16_t adc2_vals[];
-extern PIO_ADS70x9 ads7049_1;
-
 
 /**
  * \brief Interrupt handler. Connect to ad7049 DMA interrupt request to trigger

@@ -1,6 +1,4 @@
 #include <core1_lick_detection.h>
-#include <config.h>
-#include <lick_queue.h>
 
 #ifdef PROFILE_CPU
 uint32_t prev_print_time_ms;
@@ -9,6 +7,9 @@ uint32_t loop_start_cpu_cycle;
 uint32_t cpu_cycles;
 #endif
 
+// Location to write one period of the ADC samples to.
+uint16_t adc_vals[20] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+
 volatile bool update_due; // flag indicating lick detector fsm must update.
                           // (Value changed inside an interrupt handler.)
 uint8_t lick_states; // bit fields represent the lick state of each detector.
@@ -16,7 +17,16 @@ uint8_t lick_states; // bit fields represent the lick state of each detector.
 uint8_t new_lick_states;
 lick_event_t lick_event; // data to push into the queue upon detecting a lick
                          // state change.
-LickDetector __not_in_flash("instances")lick_detectors[1] // List of lick detectors (just 1 for now).
+
+// Create ADS70x9 instance for the ADS7049.
+PIO_ADS70x9 ads7049_0(pio0,   // pio instance
+                      0,      // program offset
+                      12,     // data bits
+                      ADS7049_CS_PIN, ADS7049_SCK_PIN, ADS7049_POCI_PIN);
+
+// List of lick detectors (just 1 for now).
+//LickDetector __not_in_flash("instances")lick_detectors[1]
+LickDetector lick_detectors[1]
     {{adc_vals, SAMPLES_PER_PERIOD, TTL_PIN, LED_PIN}};
     // {adc2_vals, SAMPLES_PER_PERIOD, 13, 14}};
 
@@ -46,7 +56,9 @@ void core1_main()
         adc_vals, SAMPLES_PER_PERIOD, DMA_IRQ_0, flag_update);
     // Setup other ads7049 instances here if they exist, but don't
     // enable interrupt since they all interrupt at once.
-    //ads7049_1.setup_dma_stream_to_memory(adc2_vals, SAMPLES_PER_PERIOD);
+
+    // Launch periodic ADC sampling after core1 lick detectors are ready.
+    ads7049_0.start();
 
     // Main loop. Periodically update lick detectors, and dispatch any change
     // in lick states as a timestamped harp message.
@@ -78,13 +90,15 @@ void core1_main()
                 }
             }
             // If previous lick detection state differs from the new one,
-            // queue a harp message and send it.
+            // push the new state into the queue.
             if (new_lick_states != lick_states)
             {
                 lick_states = new_lick_states;
                 lick_event.state = lick_states;
                 lick_event.pico_timestamp = to_ms_since_boot(get_absolute_time());
-                queue_add_blocking(&lick_event_queue, &lick_event);
+                // Don't block if core0 is not responding, so TTL always works.
+                // FIXME: throw some sort of error if we fill up the queue.
+                queue_try_add(&lick_event_queue, &lick_event);
             }
 #ifdef PROFILE_CPU
             cpu_cycles = loop_start_cpu_cycle - SYST_CVR; // SYSTICK counts down.
@@ -96,21 +110,21 @@ void core1_main()
                 // Print CPU cycles per loop.
                 //printf("cpu_cycles/loop: %u\r\n", cpu_cycles);
                 // Print baseline and current amplitudes (both upscaled).
-                printf("avg amplitude: %06d || avg baseline: %06d || "
-                       "cpu_cycles/loop: %u\r\n",
-                       lick_detectors[0].upscaled_amplitude_avg_,
-                       lick_detectors[0].upscaled_baseline_avg_,
-                       cpu_cycles);
+                //printf("amplitude: %08d || baseline: %08d || "
+                //       "cpu_cycles/loop: %u\r\n",
+                //       lick_detectors[0].upscaled_amplitude_avg_,
+                //       lick_detectors[0].upscaled_baseline_avg_,
+                //       cpu_cycles);
                 // Print the sampled period.
-                //printf("adc: [%04d, %04d, %04d, %04d, %04d,"
-                //       "%04d, %04d, %04d, %04d, %04d,"
-                //       "%04d, %04d, %04d, %04d, %04d,"
-                //       "%04d, %04d, %04d, %04d, %04d] \r",
-                //       adc_vals[0], adc_vals[1], adc_vals[2], adc_vals[3],
-                //       adc_vals[4], adc_vals[5], adc_vals[6], adc_vals[7],
-                //       adc_vals[8], adc_vals[9], adc_vals[10], adc_vals[11],
-                //       adc_vals[12], adc_vals[13], adc_vals[14], adc_vals[15],
-                //       adc_vals[16], adc_vals[17], adc_vals[18], adc_vals[19]);
+                printf("adc: [%04d, %04d, %04d, %04d, %04d,"
+                       "%04d, %04d, %04d, %04d, %04d,"
+                       "%04d, %04d, %04d, %04d, %04d,"
+                       "%04d, %04d, %04d, %04d, %04d] \r\n",
+                       adc_vals[0], adc_vals[1], adc_vals[2], adc_vals[3],
+                       adc_vals[4], adc_vals[5], adc_vals[6], adc_vals[7],
+                       adc_vals[8], adc_vals[9], adc_vals[10], adc_vals[11],
+                       adc_vals[12], adc_vals[13], adc_vals[14], adc_vals[15],
+                       adc_vals[16], adc_vals[17], adc_vals[18], adc_vals[19]);
             }
 #endif
         }

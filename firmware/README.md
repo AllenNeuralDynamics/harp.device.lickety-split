@@ -16,7 +16,7 @@ git clone git clone git@github.com:raspberrypi/pico-sdk.git
 git submodule update --init
 ````
 
-### Point-to Pico SDK
+### Point to Pico SDK
 Recommended, but optional: define the `PICO_SDK_PATH` environment variable to point to the location where the pico-sdk was downloaded. i.e:
 ````
 PICO_SDK_PATH=/home/username/projects/pico-sdk

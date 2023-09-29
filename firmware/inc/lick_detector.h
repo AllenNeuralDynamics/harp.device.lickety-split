@@ -18,7 +18,7 @@
                                  // b.) a power of 2.
 #define BASELINE_AVG_WINDOW (128)
 
-#define FILTER_WARMUP_ITERATION_COUNT (300)
+#define FILTER_WARMUP_ITERATION_COUNT (300ul)
 
 #define LICK_HOLD_TIME_MS (10) // minimum amount of time lick detection trigger
                                // will be asserted.
