@@ -8,16 +8,22 @@ AD9833::AD9833(uint32_t mclk_frequency_hz, spi_inst_t* spi_hw,
     // init spi if specified to do so.
     if (init_spi_hardware)
         init_spi(spi_inst_);
+
+    gpio_init(spi_sck_pin);
+    gpio_set_dir(spi_sck_pin, GPIO_OUT);
+    // Set chip select HIGH at the beginning.
+    gpio_put(spi_sck_pin, 1);
+
     // Delegate cs_pin setup to another constructor.
     // Setup pin modes for SPI.
     gpio_set_function(spi_tx_pin, GPIO_FUNC_SPI);
     gpio_set_function(spi_rx_pin, GPIO_FUNC_SPI);
     gpio_set_function(spi_sck_pin, GPIO_FUNC_SPI);
 
-    // RP2040 Bug workaround.
-    // In CPOL=1, RP2040 requires a dummy transfer to get SCK to idle high.
-    uint8_t word = 0;
-    spi_write_blocking(spi_inst_, (uint8_t*)&word, 1);
+    //// RP2040 Bug workaround.
+    //// In CPOL=1, RP2040 requires a dummy transfer to get SCK to idle high.
+    //uint16_t word = 0xFFFF;
+    //spi_write16_blocking(spi_inst_, &word, 1);
 }
 
 AD9833::AD9833(uint32_t mclk_frequency_hz, spi_inst_t* spi_hw, uint8_t cs_pin)
@@ -34,9 +40,9 @@ AD9833::AD9833(uint32_t mclk_frequency_hz, spi_inst_t* spi_hw, uint8_t cs_pin)
 void AD9833::init_spi(spi_inst_t* spi_hw)
 {
     // Setup SPI mode 2 (CPOL=1, CPHA=0), SPI clock speed to <=40[MHz].
-    spi_init(spi_hw, 4000000U); // defaults to controller mode.
+    spi_init(spi_hw, 1000000U); // defaults to controller mode.
     spi_set_format(spi_hw,
-                   8, // data bits
+                   16, // data bits
                    SPI_CPOL_1, // CPOL
                    SPI_CPHA_0, // CPHA
                    SPI_MSB_FIRST);
@@ -46,16 +52,17 @@ void AD9833::init_spi(spi_inst_t* spi_hw)
 void AD9833::spi_write16(uint16_t word)
 {
     // CS LOW
-    asm volatile("nop \n nop \n nop");
+    asm volatile("nop");
     gpio_put(cs_pin_, 0);
-    asm volatile("nop \n nop \n nop");
+    asm volatile("nop");
     // Send the data MSB first. (Note: RP2040 is little-endian.)
-    spi_write_blocking(spi_inst_, ((uint8_t*)&word + 1), 1);
-    spi_write_blocking(spi_inst_, (uint8_t*)&word, 1);
+    spi_write16_blocking(spi_inst_, &word, 1);
+    //spi_write_blocking(spi_inst_, ((uint8_t*)&word + 1), 1);
+    //spi_write_blocking(spi_inst_, (uint8_t*)&word, 1);
     // CS HIGH
-    asm volatile("nop \n nop \n nop");
+    //asm volatile("nop \n nop \n nop");
     gpio_put(cs_pin_, 1);
-    asm volatile("nop \n nop \n nop");
+    //asm volatile("nop \n nop \n nop");
     printf("Writing 0x%04x\n", word);
 }
 

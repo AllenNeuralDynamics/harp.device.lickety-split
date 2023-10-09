@@ -12,14 +12,14 @@ set(CMAKE_CXX_STANDARD 17)
 
 
 # Compile for profiling/debugging/etc. Default: none enabled.
-#add_definitions(-DDEBUG)
+add_definitions(-DDEBUG)
 #add_definitions(-DPROFILE_CPU)
 
 # initialize the Raspberry Pi Pico SDK
 pico_sdk_init()
 
 # Add Harp Core as separate library.
-add_subdirectory(lib/harp-core-rp2040/firmware)
+add_subdirectory(lib/harp.core.rp2040/firmware)
 
 add_executable(${PROJECT_NAME}
     src/main.cpp
@@ -59,7 +59,6 @@ include_directories(inc)
 # Link libraries to the targets that need them.
 
 target_link_libraries(ad9833 pico_stdlib hardware_spi)
-#target_link_libraries(continuous_adc hardware_adc hardware_dma pico_stdlib)
 target_link_libraries(lick_detector hardware_dma pico_stdlib)
 target_link_libraries(pio_ads70x9 pico_stdlib hardware_pio hardware_irq
                       hardware_dma)
@@ -75,7 +74,6 @@ pico_add_extra_outputs(${PROJECT_NAME})
 # USB serial. Enable this for every library/executable that uses it.
 pico_enable_stdio_usb(${PROJECT_NAME} 1)
 pico_enable_stdio_usb(ad9833 1)
-#pico_enable_stdio_usb(continuous_adc 1)
 pico_enable_stdio_usb(lick_detector 1)
 pico_enable_stdio_usb(core1_lick_detection 1)
 

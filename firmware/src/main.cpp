@@ -29,17 +29,20 @@ lick_event_t new_lick_state;
 
 void update_on_threshold(msg_t& msg)
 {
-    // TODO
+    // TODO: actually update the lick detector threshold.
+    // use a queue for this.
+    HarpCore::write_reg_generic(msg);
 }
 
 void update_off_threshold(msg_t& msg)
 {
-    // TODO
+    // TODO: actually update the lick detector threshold.
+    // use a queue for this.
+    HarpCore::write_reg_generic(msg);
 }
 
 // Setup for Harp App
-//const size_t reg_count = 3;
-const size_t reg_count = 4;
+const size_t reg_count = 3;
 
 // Define Harp app registers.
 #pragma pack(push, 1)
@@ -48,7 +51,6 @@ struct app_regs_t
     volatile uint8_t lick_state;  // app register 0
     volatile uint8_t on_threshold;  // app register 1
     volatile uint8_t off_threshold;  // app register 2
-    volatile uint8_t test;  // app register 2
 } app_regs;
 #pragma pack(pop)
 
@@ -57,8 +59,7 @@ RegSpecs app_reg_specs[reg_count]
 {
     {(uint8_t*)&app_regs.lick_state, sizeof(app_regs.lick_state), U8},
     {(uint8_t*)&app_regs.on_threshold, sizeof(app_regs.on_threshold), U8},
-    {(uint8_t*)&app_regs.off_threshold, sizeof(app_regs.off_threshold), U8},
-    {(uint8_t*)&app_regs.test, sizeof(app_regs.test), U8}
+    {(uint8_t*)&app_regs.off_threshold, sizeof(app_regs.off_threshold), U8}
 };
 
 // Define register read-and-write handler functions.
@@ -66,8 +67,7 @@ RegFnPair reg_handler_fns[reg_count]
 {
     {&HarpCore::read_reg_generic, &HarpCore::write_to_read_only_reg_error},
     {&HarpCore::read_reg_generic, &update_on_threshold},
-    {&HarpCore::read_reg_generic, &update_off_threshold},
-    {&HarpCore::read_reg_generic, &HarpCore::write_reg_generic}
+    {&HarpCore::read_reg_generic, &update_off_threshold}
 };
 
 void update_app_state()
@@ -91,6 +91,7 @@ void update_app_state()
 void reset_app()
 {
     // TODO: reset lick detectors.
+    // use a queue for this.
 }
 
 // Create Harp "App."
@@ -105,8 +106,8 @@ HarpCApp& app = HarpCApp::init(who_am_i, hw_version_major, hw_version_minor,
 
 // General strategy:
 // Configure SPI ADC to write to memory continuously.
-// Every waveform period (20 samples @ 1MHz), compute sampled amplitude.
-// If lower than nominal amplitude for N consecutive cycles, lick detected.
+// Every waveform period (20 samples @ 2MHz), compute sampled amplitude.
+// If lower than nominal amplitude, lick detected.
 
 // Create AS9833 instance and init underlying SPI hardware (default behavior).
 // Note: device is set to SPI mode 2, 32[MHz]
@@ -124,10 +125,12 @@ int main()
     HarpSynchronizer& sync = HarpSynchronizer::init(uart1, 5);
 
     // Setup Sine wave generator.
-    sleep_ms(100);
-    ad9833.disable_output();
+    ad9833.disable_output(); // aka: reset.
+    sleep_ms(50);
     ad9833.set_frequency_hz(100e3);
+    sleep_us(10);
     ad9833.set_phase_raw(0);
+    sleep_us(10);
     ad9833.enable_with_waveform(AD9833::waveform_t::SINE);
 
     // Init queues for communication of lick state across cores.
