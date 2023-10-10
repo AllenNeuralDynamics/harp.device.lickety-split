@@ -1,0 +1,29 @@
+%YAML 1.1
+---
+# yaml-language-server: $schema=https://raw.githubusercontent.com/harp-tech/reflex-generator/main/schema/device.json
+device: LicketySplitLickDetector
+whoAmI: 1400
+firmwareVersion: "0.0"
+hardwareTargets: "0.5"
+registers:
+  LickState:
+    address: 32
+    type: U8
+    access: Event
+    maskType: LickChannels
+    description: Emits an event when the state of any lick detector changes. Value will be High when lick detected and Low otherwise.
+  Channel0TriggerThreshold: &thresholdreg
+    address: 33
+    type: U8
+    access: Write
+    description: Threshold value to detect the lick. Values below this threshold will be considered a detected lick.
+  Channel0UntriggerThreshold:
+    <<: *thresholdreg
+    address: 34
+    description: Threshold value to release the lick detection state. Values above this threshold will untrigger a detected lick.
+bitMasks:
+  LickChannels:
+    description: The channel of the lick detector.
+    bits:
+      Channel0: 0x1
+      Channel1: 0x2

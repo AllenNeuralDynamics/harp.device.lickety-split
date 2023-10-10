@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <CopyLocalLockFileAssemblies>true</CopyLocalLockFileAssemblies>
-    <RootNamespace>Aind.LickDetector</RootNamespace>
+    <RootNamespace>AllenNeuralDynamics.LicketySplitLickDetector</RootNamespace>
     <TargetFramework>net6.0</TargetFramework>
     <LangVersion>latest</LangVersion>
     <OutputPath>bin</OutputPath>
@@ -11,8 +11,8 @@
     <IOMetadata>..\ios.yml</IOMetadata>
   </PropertyGroup>
   <PropertyGroup>
-    <InterfacePath>..\Interface\Aind.LickDetector</InterfacePath>
-    <FirmwarePath>..\Firmware\Aind.LickDetector</FirmwarePath>
+    <InterfacePath>..\Interface\AllenNeuralDynamics.LicketySplitLickDetector</InterfacePath>
+    <FirmwarePath>..\Firmware\AllenNeuralDynamics.LicketySplitLickDetector</FirmwarePath>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Harp.Generators" Version="0.1.0" GeneratePathProperty="true" />
