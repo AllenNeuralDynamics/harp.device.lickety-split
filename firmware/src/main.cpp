@@ -125,13 +125,17 @@ int main()
     HarpSynchronizer& sync = HarpSynchronizer::init(uart1, 5);
 
     // Setup Sine wave generator.
-    ad9833.disable_output(); // aka: reset.
-    sleep_ms(50);
-    ad9833.set_frequency_hz(100e3);
-    sleep_us(10);
-    ad9833.set_phase_raw(0);
-    sleep_us(10);
-    ad9833.enable_with_waveform(AD9833::waveform_t::SINE);
+    for (uint8_t i = 0; i < 10; ++i)
+    {
+        ad9833.disable_output(); // aka: reset.
+        sleep_ms(50);
+        ad9833.set_frequency_hz(100e3);
+        sleep_us(10);
+        ad9833.set_phase_raw(0);
+        sleep_us(10);
+        ad9833.enable_with_waveform(AD9833::waveform_t::SINE);
+        sleep_ms(100);
+    }
 
     // Init queues for communication of lick state across cores.
     // Queue needs to be much larger than expected such that device enumerates
