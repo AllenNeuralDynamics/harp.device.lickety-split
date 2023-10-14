@@ -65,7 +65,7 @@ target_link_libraries(pio_ads70x9 pico_stdlib hardware_pio hardware_irq
 target_link_libraries(core1_lick_detection pico_stdlib hardware_irq
                       lick_detector hardware_dma pico_multicore pio_ads70x9
                       hardware_pio)
-target_link_libraries(${PROJECT_NAME} pico_stdlib ad9833
+target_link_libraries(${PROJECT_NAME} pico_stdlib hardware_pwm ad9833
                       core1_lick_detection pico_multicore harp_sync harp_c_app)
 
 # create map/bin/hex/uf2 file in addition to ELF.

@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <ad9833.h>
+#include <hardware/pwm.h>
 #include <core1_lick_detection.h>
 #include <pico/multicore.h>
 #include <lick_queue.h>
@@ -112,8 +113,10 @@ HarpCApp& app = HarpCApp::init(who_am_i, hw_version_major, hw_version_minor,
 // Create AS9833 instance and init underlying SPI hardware (default behavior).
 // Note: device is set to SPI mode 2, 32[MHz]
 // TODO: remove need for RX pin input as parameter.
+/*
 AD9833 ad9833(12e6L, spi0, AD9833_SPI_TX_PIN, AD9833_SPI_RX_PIN,
               AD9833_SPI_SCK_PIN, AD9833_SPI_CS_PIN);
+*/
 
 int main()
 {
@@ -125,6 +128,7 @@ int main()
     HarpSynchronizer& sync = HarpSynchronizer::init(uart1, 5);
 
     // Setup Sine wave generator.
+/*
     for (uint8_t i = 0; i < 10; ++i)
     {
         ad9833.disable_output(); // aka: reset.
@@ -136,6 +140,16 @@ int main()
         ad9833.enable_with_waveform(AD9833::waveform_t::SINE);
         sleep_ms(100);
     }
+*/
+    // Setup 100KHz square wave output.
+    gpio_set_function(SQUARE_WAVE_PIN, GPIO_FUNC_PWM);
+    uint pwm_slice_num = pwm_gpio_to_slice_num(SQUARE_WAVE_PIN);
+    uint gpio_channel = pwm_gpio_to_channel(SQUARE_WAVE_PIN);
+    // Set period of 10 cycles (0 through 9).
+    pwm_set_clkdiv(pwm_slice_num, 125ul); // Tick at 1 MHz
+    pwm_set_wrap(pwm_slice_num, 9);
+    pwm_set_chan_level(pwm_slice_num, gpio_channel, 5); // 50% duty cycle.
+    pwm_set_enabled(pwm_slice_num, true);
 
     // Init queues for communication of lick state across cores.
     // Queue needs to be much larger than expected such that device enumerates

@@ -17,6 +17,8 @@
 #define AD9833_SPI_TX_PIN (3)
 #define AD9833_SPI_RX_PIN (4)
 
+#define SQUARE_WAVE_PIN (2)
+
 #define LICKETY_SPLIT_HARP_DEVICE_ID (0x0578)
 
 #endif // CONFIG_H
