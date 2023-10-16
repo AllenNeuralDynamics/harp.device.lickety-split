@@ -15,7 +15,7 @@
     <PackageProjectUrl>https://github.com/AllenNeuralDynamics/harp.device.lickety-split</PackageProjectUrl>
     <PackageLicenseExpression></PackageLicenseExpression>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
-    <PackageIcon></PackageIcon>
+    <PackageIcon>icon.png</PackageIcon>
     <PackageOutputPath></PackageOutputPath>
     <TargetFrameworks>net462;netstandard2.0</TargetFrameworks>
     <VersionPrefix>0.1.0-preview20231010001</VersionPrefix>
@@ -27,7 +27,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="icon.png" PackagePath="/"/>
     <Content Include="LICENSE" PackagePath="/" />
   </ItemGroup>
+
 
 </Project>
