@@ -1,0 +1,25 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{6869C4D8-4F72-44F7-A6D3-C84E983A0897}") = "AllenNeuralDynamics.LicketySplitLickDetector", "AllenNeuralDynamics.LicketySplitLickDetector\AllenNeuralDynamics.LicketySplitLickDetector.csproj", "{B48D04AD-1FDE-4F83-A6C0-811BC19CD9C1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B48D04AD-1FDE-4F83-A6C0-811BC19CD9C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B48D04AD-1FDE-4F83-A6C0-811BC19CD9C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B48D04AD-1FDE-4F83-A6C0-811BC19CD9C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B48D04AD-1FDE-4F83-A6C0-811BC19CD9C1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {926E6F11-FEDE-4B50-B795-92A0A0594699}
+	EndGlobalSection
+EndGlobal
