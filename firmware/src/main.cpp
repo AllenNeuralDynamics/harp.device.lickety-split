@@ -1,7 +1,7 @@
 #include <pico/stdlib.h>
 #include <stdio.h>
 #include <stdint.h>
-#include <ad9833.h>
+//#include <ad9833.h>
 #include <hardware/pwm.h>
 #include <core1_lick_detection.h>
 #include <pico/multicore.h>
@@ -125,7 +125,7 @@ int main()
     printf("Hello, from an RP2040!\r\n");
 #endif
     // Init Synchronizer
-    HarpSynchronizer& sync = HarpSynchronizer::init(uart1, 5);
+    HarpSynchronizer& sync = HarpSynchronizer::init(uart1, HARP_SYNC_RX_PIN);
 
     // Setup Sine wave generator.
 /*

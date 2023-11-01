@@ -12,6 +12,8 @@
 #define SAMPLES_PER_PERIOD (20) // Samples per period of 100KHz signal when
                                 // sampled @ 2MHz.
 
+#define HARP_SYNC_RX_PIN (5)
+
 #define AD9833_SPI_CS_PIN (1)
 #define AD9833_SPI_SCK_PIN (2)
 #define AD9833_SPI_TX_PIN (3)
