@@ -1803,6 +1803,11 @@
     (effects (font (size 2 2) (thickness 0.254) bold) (justify left bottom))
     (uuid 8e65abed-da88-4900-b2de-336aeadbfa6b)
   )
+  (text "TODO: consider REF2025\nso we don't get clipping\nfrom the +/-2.5V supply of the\nLTC6263."
+    (at 201.295 36.83 0)
+    (effects (font (size 1.27 1.27) (thickness 0.254) bold) (justify left bottom))
+    (uuid 8fb817eb-9d82-4eb9-bd97-3e8bb2d183ae)
+  )
   (text "Note: LTC6268 and LTC6263 inputs are ESD protected."
     (at 99.695 140.335 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
@@ -3005,6 +3010,9 @@
     (property "Tolerance" "" (at 32.385 172.72 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "Alternate" "CL21B106KOQNNNE" (at 32.385 172.72 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid 8d7aef3b-70aa-4d3e-99ee-babbf9fd7cd3))
     (pin "2" (uuid 5c055222-45f0-4af4-9262-6534d08f8026))
     (instances
@@ -3281,6 +3289,9 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Tolerance" "" (at 32.385 184.15 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Alternate" "CL21B106KOQNNNE" (at 32.385 184.15 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 859c626c-5f64-4f39-a3c7-a8859b40ce15))

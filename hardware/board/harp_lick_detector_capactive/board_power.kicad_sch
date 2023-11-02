@@ -1752,6 +1752,9 @@
     (property "Manufacturer" "Murata Electronics" (at 186.055 71.12 0)
       (effects (font (size 1.27 1.27)) hide)
     )
+    (property "Alternate" "CL21B106KOQNNNE" (at 186.055 71.12 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
     (pin "1" (uuid 1e73788a-4a6b-4c4c-8922-7b846f63e817))
     (pin "2" (uuid 85064fdb-633b-45e9-a1a1-458e5a183719))
     (instances
