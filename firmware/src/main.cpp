@@ -1,7 +1,7 @@
 #include <pico/stdlib.h>
 #include <stdio.h>
 #include <stdint.h>
-//#include <ad9833.h>
+#include <ad9833.h>
 #include <hardware/pwm.h>
 #include <core1_lick_detection.h>
 #include <pico/multicore.h>
@@ -113,10 +113,8 @@ HarpCApp& app = HarpCApp::init(who_am_i, hw_version_major, hw_version_minor,
 // Create AS9833 instance and init underlying SPI hardware (default behavior).
 // Note: device is set to SPI mode 2, 32[MHz]
 // TODO: remove need for RX pin input as parameter.
-/*
 AD9833 ad9833(12e6L, spi0, AD9833_SPI_TX_PIN, AD9833_SPI_RX_PIN,
               AD9833_SPI_SCK_PIN, AD9833_SPI_CS_PIN);
-*/
 
 int main()
 {
@@ -128,7 +126,6 @@ int main()
     HarpSynchronizer& sync = HarpSynchronizer::init(uart1, HARP_SYNC_RX_PIN);
 
     // Setup Sine wave generator.
-/*
     for (uint8_t i = 0; i < 10; ++i)
     {
         ad9833.disable_output(); // aka: reset.
@@ -140,7 +137,6 @@ int main()
         ad9833.enable_with_waveform(AD9833::waveform_t::SINE);
         sleep_ms(100);
     }
-*/
     // Setup 100KHz square wave output.
     gpio_set_function(SQUARE_WAVE_PIN, GPIO_FUNC_PWM);
     uint pwm_slice_num = pwm_gpio_to_slice_num(SQUARE_WAVE_PIN);
@@ -161,10 +157,22 @@ int main()
     // handle DMA-triggered interrupts.
     multicore_launch_core1(core1_main);
 
+    bool pwm_state = true;
+    uint32_t prev_time = time_us_32();
+    uint32_t curr_time = prev_time;
     while(true)
     {
         // Run Harp app.
         app.run();
+/*
+        curr_time = time_us_32();
+        if ((curr_time - prev_time) < 100)
+            continue;
+        // Toggle timer.
+        prev_time = curr_time;
+        pwm_state = !pwm_state;
+        pwm_set_enabled(pwm_slice_num, pwm_state);
+*/
     }
     // No need to free the queue since we loop forever.
 }

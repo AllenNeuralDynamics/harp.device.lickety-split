@@ -50,7 +50,7 @@ public:
     };
 
     LickDetector(uint16_t* adc_vals, size_t samples_per_period,
-                 uint ttl_pin, uint led_pin, uint32_t on_threshold_percent = 80,
+                 uint ttl_pin, uint led_pin, uint32_t on_threshold_percent = 90,
                  uint32_t off_threshold_percent = 95);
     ~LickDetector();
 
@@ -137,6 +137,8 @@ private:
     bool lick_start_detected_;
     bool lick_stop_detected_;
     bool hysteresis_elapsed_;
+
+    uint8_t lick_history_; // threshold history.
 
     uint32_t on_threshold_percent_;
     uint32_t off_threshold_percent_;

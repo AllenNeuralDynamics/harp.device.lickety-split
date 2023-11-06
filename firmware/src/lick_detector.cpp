@@ -103,6 +103,7 @@ void LickDetector::update()
         // Reset outputs and internal state logic.
         gpio_put(ttl_pin_, 0);
         sample_count_ = 0;
+        lick_history_ = 0;
         lick_start_detected_ = false;
         lick_stop_detected_ = false;
         warmup_iterations_ = 0;
@@ -163,17 +164,34 @@ void LickDetector::update()
     // Handle state-change-driven internal/output logic.
     if (state_ == UNTRIGGERED && next_state == TRIGGERED)
     {
+        //lick_history_ = (lick_history_ << 1) + 1; // push a 1.
+        detection_start_time_ms_ = curr_time_ms_;
         lick_start_detected_ = true;
         gpio_put_masked((1u << ttl_pin_) | (1u << led_pin_),
                         (1u << ttl_pin_) | (1u << led_pin_));
-        detection_start_time_ms_ = curr_time_ms_;
     }
     if (state_ == TRIGGERED && next_state == UNTRIGGERED)
     {
+        //lick_history_ = (lick_history_ << 1); // push a 0.
+        detection_stop_time_ms_ = curr_time_ms_;
         lick_stop_detected_ = true;
         gpio_put_masked((1u << ttl_pin_) | (1u << led_pin_), 0);
-        detection_stop_time_ms_ = curr_time_ms_;
     }
+
+/*
+    if (lick_history_ == 0xFF)
+    {
+        lick_start_detected_ = true;
+        gpio_put_masked((1u << ttl_pin_) | (1u << led_pin_),
+                        (1u << ttl_pin_) | (1u << led_pin_));
+    }
+    else if (lick_history_ == 0x00)
+    {
+        lick_stop_detected_ = true;
+        gpio_put_masked((1u << ttl_pin_) | (1u << led_pin_), 0);
+    }
+*/
+
     // Apply state transition.
     state_ = next_state;
 }
