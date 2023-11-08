@@ -108,6 +108,7 @@ void LickDetector::update()
         lick_stop_detected_ = false;
         warmup_iterations_ = 0;
         hysteresis_elapsed_ = false;
+        lick_history_.reset();
     }
     if (state_ == WARMUP)
     {
@@ -148,13 +149,15 @@ void LickDetector::update()
         }
         case UNTRIGGERED:
         {
-            if (hysteresis_elapsed_ && (upscaled_amplitude_avg_ < on_threshold))
+            //if (hysteresis_elapsed_ && (upscaled_amplitude_avg_ < on_threshold))
+            if (upscaled_amplitude_avg_ < on_threshold)
                 next_state = TRIGGERED;
             break;
         }
         case TRIGGERED:
         {
-            if (hysteresis_elapsed_ && (upscaled_amplitude_avg_ > off_threshold))
+            //if (hysteresis_elapsed_ && (upscaled_amplitude_avg_ > off_threshold))
+            if (upscaled_amplitude_avg_ > off_threshold)
                 next_state = UNTRIGGERED;
             break;
         }
@@ -164,33 +167,32 @@ void LickDetector::update()
     // Handle state-change-driven internal/output logic.
     if (state_ == UNTRIGGERED && next_state == TRIGGERED)
     {
-        //lick_history_ = (lick_history_ << 1) + 1; // push a 1.
         detection_start_time_ms_ = curr_time_ms_;
-        lick_start_detected_ = true;
-        gpio_put_masked((1u << ttl_pin_) | (1u << led_pin_),
-                        (1u << ttl_pin_) | (1u << led_pin_));
     }
     if (state_ == TRIGGERED && next_state == UNTRIGGERED)
     {
-        //lick_history_ = (lick_history_ << 1); // push a 0.
         detection_stop_time_ms_ = curr_time_ms_;
-        lick_stop_detected_ = true;
-        gpio_put_masked((1u << ttl_pin_) | (1u << led_pin_), 0);
     }
-
-/*
-    if (lick_history_ == 0xFF)
+    // Update Lick Trigger History.
+    if (next_state == TRIGGERED)
     {
-        lick_start_detected_ = true;
+        lick_history_ <<= 1;
+        lick_history_[0] = 1; // push a 1.
+    }
+    else if (next_state == UNTRIGGERED)
+        lick_history_ <<= 1; // push a 0.
+    // Update output based on consensus of last N lick trigger events.
+    if (lick_history_.all())
+    {
+        lick_start_detected_ = true; // This flag must be cleared externally.
         gpio_put_masked((1u << ttl_pin_) | (1u << led_pin_),
                         (1u << ttl_pin_) | (1u << led_pin_));
     }
-    else if (lick_history_ == 0x00)
+    if (lick_history_.none())
     {
-        lick_stop_detected_ = true;
+        lick_stop_detected_ = true; // This flag must be cleared externally.
         gpio_put_masked((1u << ttl_pin_) | (1u << led_pin_), 0);
     }
-*/
 
     // Apply state transition.
     state_ = next_state;

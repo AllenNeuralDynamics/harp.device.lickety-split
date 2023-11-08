@@ -99,6 +99,8 @@ void core1_main()
                 // Don't block if core0 is not responding, so TTL always works.
                 // FIXME: throw some sort of error if we fill up the queue.
                 queue_try_add(&lick_event_queue, &lick_event);
+                //printf("lick hist: %s\r\n",
+                //       lick_detectors[0].lick_history_.to_string().c_str());
             }
 #ifdef PROFILE_CPU
             cpu_cycles = loop_start_cpu_cycle - SYST_CVR; // SYSTICK counts down.

@@ -9,11 +9,13 @@
 #include <stdint.h>
 #include <hardware/irq.h>
 
+#include <bitset>
+
 #define BASELINE_SAMPLE_INTERVAL (1000ul) // number of periods between
                                           // updating the baseline threshold.
                                           // 100KHz/1000 periods = 100Hz update rate.
 #define UPSCALE_FACTOR (128) // Factor by which to multiply incoming
-#define MOVING_AVG_WINDOW (32ul) // This should be:
+#define MOVING_AVG_WINDOW (8ul) // This should be:
                                  // a.) <=64 or the data will arrive late.
                                  // b.) a power of 2.
 #define BASELINE_AVG_WINDOW (128)
@@ -50,7 +52,7 @@ public:
     };
 
     LickDetector(uint16_t* adc_vals, size_t samples_per_period,
-                 uint ttl_pin, uint led_pin, uint32_t on_threshold_percent = 90,
+                 uint ttl_pin, uint led_pin, uint32_t on_threshold_percent = 80,
                  uint32_t off_threshold_percent = 95);
     ~LickDetector();
 
@@ -110,6 +112,7 @@ private:
 
 
 // Data members.
+private:
     uint ttl_pin_;
     uint led_pin_;
     uint16_t* adc_vals_;
@@ -120,6 +123,7 @@ public:
 #endif
     uint32_t upscaled_baseline_avg_; // "baseline x scalar"
     uint32_t upscaled_amplitude_avg_; // "setpoint x scalar"
+    std::bitset<64> lick_history_; // trigger threshold history.
 #ifdef PROFILE_CPU
 private:
 #endif
@@ -138,7 +142,6 @@ private:
     bool lick_stop_detected_;
     bool hysteresis_elapsed_;
 
-    uint8_t lick_history_; // threshold history.
 
     uint32_t on_threshold_percent_;
     uint32_t off_threshold_percent_;
