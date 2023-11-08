@@ -65,22 +65,19 @@ void LickDetector::update()
 {
     // Note: this function must only work with integer math!
     // Note: this function cannot block.
-    //Update state-agnostic internal update logic.
-    curr_time_ms_ = to_ms_since_boot(get_absolute_time());
+    // Update state-agnostic logic.
+    uint32_t curr_time_ms = to_ms_since_boot(get_absolute_time());
     // Update counter for baseline measurement.
     sample_count_ = (sample_count_ == BASELINE_SAMPLE_INTERVAL)?
                     0:
                     ++sample_count_;
     // Take raw measurement.
-    uint32_t raw_amplitude = get_raw_amplitude();
-    // 4x Noise check. Reject spurious noise that instantaneously makes the
-    // signal much larger.
-    //if (raw_amplitude < (4*raw_amplitude_) || (state_ == RESET) || (state_ == WARMUP))
-    // FIXME: amplitude jump was suppressed.
-        raw_amplitude_ = raw_amplitude;
+    // If we want to reject spurious noise that is 3-4x larger than the original
+    // signal, we could do that here.
+    raw_amplitude_ = get_raw_amplitude();
     // Update primary amplitude measurement.
     upscaled_amplitude_ = raw_amplitude_ << log2_upscale_factor_;
-    // Handle state-dependent internal/output logic.
+    // Update state-dependent internal/output logic.
     // Update latest measurements (as long as fsm was not freshly reset).
     if (state_ != RESET)
     {
@@ -103,12 +100,13 @@ void LickDetector::update()
         // Reset outputs and internal state logic.
         gpio_put(ttl_pin_, 0);
         sample_count_ = 0;
-        lick_history_ = 0;
         lick_start_detected_ = false;
         lick_stop_detected_ = false;
         warmup_iterations_ = 0;
         hysteresis_elapsed_ = false;
-        lick_history_.reset();
+        trigger_history_.reset();
+        detection_start_time_ms_ = curr_time_ms;
+        detection_stop_time_ms_ = curr_time_ms;
     }
     if (state_ == WARMUP)
     {
@@ -116,12 +114,12 @@ void LickDetector::update()
     }
     if (state_ == TRIGGERED)
     {
-        hysteresis_elapsed_ = (curr_time_ms_ - detection_start_time_ms_)
+        hysteresis_elapsed_ = (curr_time_ms - detection_start_time_ms_)
                               > LICK_HOLD_TIME_MS;
     }
     if (state_ == UNTRIGGERED)
     {
-        hysteresis_elapsed_ = (curr_time_ms_ - detection_stop_time_ms_)
+        hysteresis_elapsed_ = (curr_time_ms - detection_stop_time_ms_)
                               > LICK_HOLD_TIME_MS;
     }
     // Recompute trigger thresholds based on current baseline measurement and
@@ -130,10 +128,18 @@ void LickDetector::update()
                                               upscaled_baseline_avg_) / 100;
     uint32_t off_threshold = __mul_instruction(off_threshold_percent_,
                                                upscaled_baseline_avg_) / 100;
-
-    // Outputs happen on state transition edges.
-    State next_state{state_};  // next state candidate initialized to curr state.
+    if (state_ & ~(RESET | WARMUP))
+    {
+        // The current on/off threshold must be computed first.
+        // Update lick history.
+        trigger_history_ <<= 1;
+        if (upscaled_amplitude_avg_ < on_threshold)
+            trigger_history_[0] = 1;
+        else if (upscaled_amplitude_avg_ > off_threshold)
+            trigger_history_[0] = 0;
+    }
     // Compute next-state logic.
+    State next_state{state_};  // Next state candidate initialized to curr state.
     switch (state_)
     {
         case RESET:
@@ -149,15 +155,13 @@ void LickDetector::update()
         }
         case UNTRIGGERED:
         {
-            //if (hysteresis_elapsed_ && (upscaled_amplitude_avg_ < on_threshold))
-            if (upscaled_amplitude_avg_ < on_threshold)
+            if (trigger_history_.all() && hysteresis_elapsed_)
                 next_state = TRIGGERED;
             break;
         }
         case TRIGGERED:
         {
-            //if (hysteresis_elapsed_ && (upscaled_amplitude_avg_ > off_threshold))
-            if (upscaled_amplitude_avg_ > off_threshold)
+            if (trigger_history_.none() && hysteresis_elapsed_)
                 next_state = UNTRIGGERED;
             break;
         }
@@ -165,35 +169,20 @@ void LickDetector::update()
             break;
     }
     // Handle state-change-driven internal/output logic.
+    // state-transition outputs:
     if (state_ == UNTRIGGERED && next_state == TRIGGERED)
     {
-        detection_start_time_ms_ = curr_time_ms_;
-    }
-    if (state_ == TRIGGERED && next_state == UNTRIGGERED)
-    {
-        detection_stop_time_ms_ = curr_time_ms_;
-    }
-    // Update Lick Trigger History.
-    if (next_state == TRIGGERED)
-    {
-        lick_history_ <<= 1;
-        lick_history_[0] = 1; // push a 1.
-    }
-    else if (next_state == UNTRIGGERED)
-        lick_history_ <<= 1; // push a 0.
-    // Update output based on consensus of last N lick trigger events.
-    if (lick_history_.all())
-    {
+        detection_start_time_ms_ = curr_time_ms;
         lick_start_detected_ = true; // This flag must be cleared externally.
         gpio_put_masked((1u << ttl_pin_) | (1u << led_pin_),
                         (1u << ttl_pin_) | (1u << led_pin_));
     }
-    if (lick_history_.none())
+    if (state_ == TRIGGERED && next_state == UNTRIGGERED)
     {
+        detection_stop_time_ms_ = curr_time_ms;
         lick_stop_detected_ = true; // This flag must be cleared externally.
         gpio_put_masked((1u << ttl_pin_) | (1u << led_pin_), 0);
     }
-
     // Apply state transition.
     state_ = next_state;
 }

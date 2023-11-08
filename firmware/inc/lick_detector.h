@@ -45,10 +45,10 @@ public:
     // Finite State Machine states.
     enum State
     {
-        RESET,
-        WARMUP,
-        UNTRIGGERED,
-        TRIGGERED
+        RESET = 0b0001,
+        WARMUP = 0b0010,
+        UNTRIGGERED = 0b0100,
+        TRIGGERED = 0b1000
     };
 
     LickDetector(uint16_t* adc_vals, size_t samples_per_period,
@@ -123,7 +123,7 @@ public:
 #endif
     uint32_t upscaled_baseline_avg_; // "baseline x scalar"
     uint32_t upscaled_amplitude_avg_; // "setpoint x scalar"
-    std::bitset<64> lick_history_; // trigger threshold history.
+    std::bitset<64> trigger_history_; // trigger threshold history.
 #ifdef PROFILE_CPU
 private:
 #endif
@@ -132,8 +132,6 @@ private:
     uint32_t log2_upscale_factor_;
     uint32_t log2_baseline_window_;
     uint32_t log2_moving_avg_window_;
-
-    uint32_t curr_time_ms_;
 
     size_t sample_count_;
     size_t warmup_iterations_;
