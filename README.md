@@ -13,8 +13,9 @@ An ephys-compliant lick detector based on measured change in capacitance.
 * isolated USB to prevent ground loops with the PC.
 
 ## Wiring Diagram
-It is critical that the device is grounded to the rig correctly.
-Otherwise, the device will be sensitive to spurious licks; or, worse, it will introduce noise onto the Neuropixel probes.
+It is critical that (1) both the device and mouse under test are grounded to a common ground and
+(2) the rig is earth-grounded (i.e: any exposed metal components are connected to earth ground).
+Otherwise, the device may introduce noise on the Neuropixel probes or produce spurious licks from outside electromagnetic interference.
 
 ### Device Pinout
 TODO
@@ -22,11 +23,58 @@ TODO
 ### Wiring Diagram
 TODO
 
-This device
+## Warnings
+### Electrical Setup
+It is critical that (1) both the device and mouse under test are grounded to a common ground and
+(2) the rig is earth-grounded (i.e: any exposed metal components are connected to earth ground).
+Otherwise, the device may introduce noise on the Neuropixel probes or produce spurious licks from outside electromagnetic interference.
 
+###Crosstalk
+Multiple lick detectors can be used in the same setup provided that (1) they are grounded correctly (see *Electrical Setup*), and (2) the spacing between exposed lick tubes exceeds 4mm.
+If the spacing between exposed metal lick tubes is less than 4mm, then the antenna noise from one lick detector may affect the other.
+This phenomenon is called *crosstalk*, and it can appear in 2 ways.
+
+  1. Lick signals that appear on one detector may show up on both detectors. The system is useable in this case, but the data may need to be cleaned up in post-processing where the shorter "simultaneously" detected lick is thrown out.
+  1. The amplitudes of the two AC signals will constructively interfere with each other, causing the excitation signals to saturate to their maximum values. The system cannot be used to detect licks this way.
+
+To fix this issue,
+  1. Space the lick detection tubes farther apart.
+  1. Reduce the length of exposed metal on the lick tube.
 
 ## Theory of Operation
-TODO: awesome diagram {here}
+This device detects a threshold change in capacitance.
+A 100KHz, 10mVpp AC sine wave is played on the tip of a conductive lick spout,
+(such as McMaster-Carr part number [89875K271](https://www.mcmaster.com/catalog/129/184/89875K271)), and the amplitude of this waveform is measured every period.
+
+A mouse sharing a ground with this device presents itself as a series resitive and capacitive load.
+When the mouse's tongue touches the metal tube (or water on the tip of the metal tube), the AC signal passes through the mouse to ground, lowering the amplitude of the measured sine wave below its trigger value, which triggers a lick to be detected.
+
+The detection signal is AC such that repeated contact with the lick tube does not slowly charge the mouse.
+
+## Tuning Parameters
+**Warning:** changing the values of these tuning parameters may produce a detection signal that exceeds the <1\[ms\] detection time guarantee.
+We suggest ensuring that your setup is electrically grounded correctly first before changing these values.
+
+There are three parameters that can be adjusted related to tuning the lick detection sensitivity.
+While the starting values should be sufficient for almost all setups, it is (unlikely but) possible that these knobs may need to be adjusted for a particular setup.
+The four parameters are:
+
+  * "fast moving average" window size
+    * the last *N* raw signal amplitude values are averaged and sent to the consensus filter.
+    * This filter smooths out high frequency amplitude changes by averaging the last few values together.
+    * constraint: *N* must be a power of 2 (i.e: 2, 4, 8, 16, ...).
+  * "consensus" filter window size
+    * the last *N* values must all be below the *lick-detection start* threshold to trigger a detected lick.
+    * This filter increases the system's ability to reject intermittent (most likely inductive) noise sources that shrink the signal amplitude for a small period of time and may appear as a lick. Noise sources include fans, valves, and other lick detection tubes placed closer than 10mm apart.
+    * Increasing this value will improve the system's ability to reject outside inductive noise, but will slow down the detection time.
+    * constraint: *N* must be a power of 2.
+  * lick-detection "start" threshold
+    * a signal value below this threshold will trigger a detected lick (i.e: the output signal will be set to 5V.)
+    * constraint: "start" < "stop" threshold
+  * lick-detection "stop" threshold
+    * a signal value above threshold will untrigger a detected lick (i.e: the output signal will be set to 0V.)
+    * constraint: "start" < "stop" threshold
+
 
 ## Harp Register Map
 [List of Registers](./firmware/docs/register_map.csv)
