@@ -29,7 +29,7 @@ It is critical that (1) both the device and mouse under test are grounded to a c
 (2) the rig is earth-grounded (i.e: any exposed metal components are connected to earth ground).
 Otherwise, the device may introduce noise on the Neuropixel probes or produce spurious licks from outside electromagnetic interference.
 
-###Crosstalk
+### Multiple-Lick-Detector Crosstalk
 Multiple lick detectors can be used in the same setup provided that (1) they are grounded correctly (see *Electrical Setup*), and (2) the spacing between exposed lick tubes exceeds 4mm.
 If the spacing between exposed metal lick tubes is less than 4mm, then the antenna noise from one lick detector may affect the other.
 This phenomenon is called *crosstalk*, and it can appear in 2 ways.
@@ -44,10 +44,12 @@ To fix this issue,
 ## Theory of Operation
 This device detects a threshold change in capacitance.
 A 100KHz, 10mVpp AC sine wave is played on the tip of a conductive lick spout,
-(such as McMaster-Carr part number [89875K271](https://www.mcmaster.com/catalog/129/184/89875K271)), and the amplitude of this waveform is measured every period.
+(such as McMaster-Carr pn: [89875K271](https://www.mcmaster.com/catalog/129/184/89875K271)), and the amplitude of the returned waveform is measured every period.
 
 A mouse sharing a ground with this device presents itself as a series resitive and capacitive load.
-When the mouse's tongue touches the metal tube (or water on the tip of the metal tube), the AC signal passes through the mouse to ground, lowering the amplitude of the measured sine wave below its trigger value, which triggers a lick to be detected.
+When the mouse's tongue touches the metal tube (or water on the tip of the metal tube), the AC signal passes through the mouse to ground, lowering the amplitude of the returned sine wave below its trigger value, which triggers a lick to be detected.
+This detection signal is bandpassed in hardware (4th order Butterworth) and the resulting detection signal is lowpassed and compared against a threshold value in firmware to produce a lick/no-lick external trigger output. 
+Overall propagation time through the entire signal chain is less than 1 millisecond.
 
 The detection signal is AC such that repeated contact with the lick tube does not slowly charge the mouse.
 
@@ -65,7 +67,7 @@ The four parameters are:
     * constraint: *N* must be a power of 2 (i.e: 2, 4, 8, 16, ...).
   * "consensus" filter window size
     * the last *N* values must all be below the *lick-detection start* threshold to trigger a detected lick.
-    * This filter increases the system's ability to reject intermittent (most likely inductive) noise sources that shrink the signal amplitude for a small period of time and may appear as a lick. Noise sources include fans, valves, and other lick detection tubes placed closer than 10mm apart.
+    * This filter increases the system's ability to reject intermittent (most likely inductive) noise sources that shrink the signal amplitude for a small period of time and may appear as a lick. Noise sources include fans, valves, and other lick detection tubes placed closer than 4mm apart.
     * Increasing this value will improve the system's ability to reject outside inductive noise, but will slow down the detection time.
     * constraint: *N* must be a power of 2.
   * lick-detection "start" threshold
