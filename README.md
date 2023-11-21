@@ -6,7 +6,7 @@ An ephys-compliant lick detector based on measured change in capacitance.
 * Contact-based. Device triggers when mouse tongue contacts either the dispensing tube *or* dangling reward liquid.
 * TTL output triggers when a lick is detected.
 * Harp-protocol compliant (serial num: 0x0578). Also dispatches timestamped Harp messages when lick state change has changed.
-* Fully supported in Bonsai with a dedicated [Bonsai package](https://www.nuget.org/packages/AllenNeuralDynamics.LicketySplitLickDetector/0.1.0-preview20231016)
+* Fully supported in Bonsai with a dedicated [Bonsai package](https://www.nuget.org/packages/AllenNeuralDynamics.LicketySplitLickDetector)
 
 ## Extra Features
 * 6-20VDC input (2.1 x 5.5mm barrel jack, positive center)
