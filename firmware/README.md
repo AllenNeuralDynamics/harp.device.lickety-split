@@ -4,7 +4,7 @@
 This project uses the [Harp Core RP2040](https://github.com/AllenNeuralDynamics/harp.core.rp2040) library as a submodule.
 Install it with:
 ````
-git submodule update --init --recursive
+git submodule update --init
 ````
 
 ### Install Pico SDK
