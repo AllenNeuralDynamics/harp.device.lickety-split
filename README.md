@@ -24,6 +24,10 @@ TODO
 ### Wiring Diagram
 TODO
 
+### Cables
+This system uses a Triax cable and will work with cable lengths up to .8 meters (2.5 ft) long.
+Triax cables can be purchased mostly-assembled from this eBay seller [here](https://www.ebay.com/itm/225796046481) and then modified slightly to connect to your lick port.
+
 ## Warnings
 ### Electrical Setup
 It is critical that (1) both the device and mouse under test are grounded to a common ground and
