@@ -19,6 +19,7 @@
                                  // a.) <=64 or the data will arrive late.
                                  // b.) a power of 2.
 #define BASELINE_AVG_WINDOW (128)
+#define CONSENSUS_WINDOW (64)
 
 #define FILTER_WARMUP_ITERATION_COUNT (300ul)
 
@@ -123,7 +124,7 @@ public:
 #endif
     uint32_t upscaled_baseline_avg_; // "baseline x scalar"
     uint32_t upscaled_amplitude_avg_; // "setpoint x scalar"
-    std::bitset<64> trigger_history_; // trigger threshold history.
+    std::bitset<CONSENSUS_WINDOW> trigger_history_; // trigger threshold history.
 #ifdef PROFILE_CPU
 private:
 #endif

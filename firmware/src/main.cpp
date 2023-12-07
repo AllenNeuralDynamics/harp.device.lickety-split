@@ -28,18 +28,34 @@ const uint16_t serial_number = 0;
 queue_t lick_event_queue;
 lick_event_t new_lick_state;
 
+void set_led_state(bool enabled)
+{
+    if (enabled)
+    {
+        gpio_init(LED_PIN);
+        gpio_set_dir(LED_PIN, true); // true for output
+        gpio_put(LED_PIN, 0);
+    }
+    else
+        gpio_deinit(LED_PIN);
+}
+
 void update_on_threshold(msg_t& msg)
 {
+    HarpCore::copy_msg_payload_to_register(msg);
     // TODO: actually update the lick detector threshold.
     // use a queue for this.
-    HarpCore::write_reg_generic(msg);
+    if (!HarpCore::is_muted())
+        HarpCore::send_harp_reply(WRITE, msg.header.address);
 }
 
 void update_off_threshold(msg_t& msg)
 {
+    HarpCore::copy_msg_payload_to_register(msg);
     // TODO: actually update the lick detector threshold.
     // use a queue for this.
-    HarpCore::write_reg_generic(msg);
+    if (!HarpCore::is_muted())
+        HarpCore::send_harp_reply(WRITE, msg.header.address);
 }
 
 // Setup for Harp App
@@ -81,9 +97,11 @@ void update_app_state()
     app_regs.lick_state = new_lick_state.state;
     // Issue harp EVENT reply.
 #ifdef DEBUG
-    //printf("%02b  ", new_lick_state.state);
+    printf("lick state: %02b\r\n", new_lick_state.state);
 #endif
     const RegSpecs& reg_specs = app_reg_specs[0];
+    //if (!HarpCApp::events_enabled())
+    //    return;
     HarpCApp::send_harp_reply(EVENT, APP_REG_START_ADDRESS, reg_specs.base_ptr,
                               reg_specs.num_bytes, reg_specs.payload_type);
     // FIXME: send the timestamp that was taken with the detected lick state.
@@ -119,29 +137,31 @@ AD9833 ad9833(12e6L, spi0, AD9833_SPI_TX_PIN, AD9833_SPI_RX_PIN,
 int main()
 {
 #if defined(DEBUG) || defined(PROFILE_CPU)
-    stdio_uart_init_full(uart0, 921600, 0, -1); // use uart1 tx only.
+    stdio_uart_init_full(uart0, 921600, UART_TX_PIN, -1); // use uart0 tx only.
     printf("Hello, from an RP2040!\r\n");
 #endif
     // Init Synchronizer
     HarpSynchronizer& sync = HarpSynchronizer::init(uart1, HARP_SYNC_RX_PIN);
+    // Connect optional Harp components.
+    app.set_visual_indicators_fn(set_led_state);
+    app.set_synchronizer(&sync);
 
     // Setup Sine wave generator.
-    for (uint8_t i = 0; i < 10; ++i)
-    {
-        ad9833.disable_output(); // aka: reset.
-        sleep_ms(50);
-        ad9833.set_frequency_hz(100e3);
-        sleep_us(10);
-        ad9833.set_phase_raw(0);
-        sleep_us(10);
-        ad9833.enable_with_waveform(AD9833::waveform_t::SINE);
-        sleep_ms(100);
-    }
+    ad9833.disable_output(); // aka: reset.
+    sleep_ms(50);
+    ad9833.set_frequency_hz(100e3);
+    sleep_us(10);
+    ad9833.set_phase_raw(0);
+    sleep_us(10);
+    ad9833.enable_with_waveform(AD9833::waveform_t::SINE);
+    sleep_ms(100);
     // Setup 100KHz square wave output.
+    // Old way on v0.5.0
     gpio_set_function(SQUARE_WAVE_PIN, GPIO_FUNC_PWM);
     uint pwm_slice_num = pwm_gpio_to_slice_num(SQUARE_WAVE_PIN);
     uint gpio_channel = pwm_gpio_to_channel(SQUARE_WAVE_PIN);
     // Set period of 10 cycles (0 through 9).
+    // New way on v0.6.0+
     pwm_set_clkdiv(pwm_slice_num, 125ul); // Tick at 1 MHz
     pwm_set_wrap(pwm_slice_num, 9);
     pwm_set_chan_level(pwm_slice_num, gpio_channel, 5); // 50% duty cycle.
@@ -164,15 +184,6 @@ int main()
     {
         // Run Harp app.
         app.run();
-/*
-        curr_time = time_us_32();
-        if ((curr_time - prev_time) < 100)
-            continue;
-        // Toggle timer.
-        prev_time = curr_time;
-        pwm_state = !pwm_state;
-        pwm_set_enabled(pwm_slice_num, pwm_state);
-*/
     }
     // No need to free the queue since we loop forever.
 }

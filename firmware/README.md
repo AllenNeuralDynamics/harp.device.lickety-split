@@ -4,7 +4,7 @@
 This project uses the [Harp Core RP2040](https://github.com/AllenNeuralDynamics/harp.core.rp2040) library as a submodule.
 Install it with:
 ````
-git submodule update --init --recursive
+git submodule update --init
 ````
 
 ### Install Pico SDK
@@ -13,7 +13,7 @@ The SDK needs to be downloaded and installed to a known folder on your PC.
 Note that the PICO SDK also contains submodules (including TinyUSB), so you must ensure that they are also fetched with:
 ````
 git clone git clone git@github.com:raspberrypi/pico-sdk.git
-git submodule update --init
+git submodule update --init --recursive
 ````
 
 ### Point to Pico SDK
