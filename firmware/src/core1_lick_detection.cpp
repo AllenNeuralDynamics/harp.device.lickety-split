@@ -18,6 +18,9 @@ uint8_t new_lick_states;
 lick_event_t lick_event; // data to push into the queue upon detecting a lick
                          // state change.
 
+uint8_t new_on_threshold;
+uint8_t new_off_threshold;
+
 // Create ADS70x9 instance for the ADS7049.
 PIO_ADS70x9 ads7049_0(pio0,   // pio instance
                       0,      // program offset
@@ -68,6 +71,17 @@ void core1_main()
     loop_start_cpu_cycle = SYST_CVR;
     curr_time_ms = to_ms_since_boot(get_absolute_time());
 #endif
+        // Check for new lick threshold settings.
+        if (!queue_is_empty(&on_threshold_queue))
+        {
+            queue_remove_blocking(&on_threshold_queue, &new_on_threshold);
+            lick_detectors[0].set_on_threshold_percent(new_on_threshold);
+        }
+        if (!queue_is_empty(&off_threshold_queue))
+        {
+            queue_remove_blocking(&off_threshold_queue, &new_off_threshold);
+            lick_detectors[0].set_off_threshold_percent(new_off_threshold);
+        }
         // Check if any licks were detected.
         // Timestamp them and queue a harp message.
         if (update_due) // All detectors due for update on the same schedule.

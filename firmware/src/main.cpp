@@ -28,6 +28,9 @@ const uint16_t serial_number = 0;
 queue_t lick_event_queue;
 lick_event_t new_lick_state;
 
+queue_t on_threshold_queue;
+queue_t off_threshold_queue;
+
 void set_led_state(bool enabled)
 {
     if (enabled)
@@ -38,24 +41,6 @@ void set_led_state(bool enabled)
     }
     else
         gpio_deinit(LED_PIN);
-}
-
-void update_on_threshold(msg_t& msg)
-{
-    HarpCore::copy_msg_payload_to_register(msg);
-    // TODO: actually update the lick detector threshold.
-    // use a queue for this.
-    if (!HarpCore::is_muted())
-        HarpCore::send_harp_reply(WRITE, msg.header.address);
-}
-
-void update_off_threshold(msg_t& msg)
-{
-    HarpCore::copy_msg_payload_to_register(msg);
-    // TODO: actually update the lick detector threshold.
-    // use a queue for this.
-    if (!HarpCore::is_muted())
-        HarpCore::send_harp_reply(WRITE, msg.header.address);
 }
 
 // Setup for Harp App
@@ -78,6 +63,28 @@ RegSpecs app_reg_specs[reg_count]
     {(uint8_t*)&app_regs.on_threshold, sizeof(app_regs.on_threshold), U8},
     {(uint8_t*)&app_regs.off_threshold, sizeof(app_regs.off_threshold), U8}
 };
+
+void update_on_threshold(msg_t& msg)
+{
+    HarpCore::copy_msg_payload_to_register(msg);
+    // Push new value into the queue so that core1 can apply the change.
+    uint8_t on_threshold = app_regs.on_threshold;
+    queue_try_add(&on_threshold_queue, &on_threshold);
+    // use a queue for this.
+    if (!HarpCore::is_muted())
+        HarpCore::send_harp_reply(WRITE, msg.header.address);
+}
+
+void update_off_threshold(msg_t& msg)
+{
+    HarpCore::copy_msg_payload_to_register(msg);
+    // Push new value into the queue so that core1 can apply the change.
+    uint8_t off_threshold = app_regs.off_threshold;
+    queue_try_add(&off_threshold_queue, &off_threshold);
+    // use a queue for this.
+    if (!HarpCore::is_muted())
+        HarpCore::send_harp_reply(WRITE, msg.header.address);
+}
 
 // Define register read-and-write handler functions.
 RegFnPair reg_handler_fns[reg_count]

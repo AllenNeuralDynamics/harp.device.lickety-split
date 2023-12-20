@@ -20,6 +20,8 @@
                                  // b.) a power of 2.
 #define BASELINE_AVG_WINDOW (128)
 #define CONSENSUS_WINDOW (64)
+#define DEFAULT_ON_THRESHOLD_PERCENT (85)
+#define DEFAULT_OFF_THRESHOLD_PERCENT (95)
 
 #define FILTER_WARMUP_ITERATION_COUNT (300ul)
 
@@ -43,7 +45,7 @@ class LickDetector
 {
 public:
 
-    // Finite State Machine states.
+    // Finite State Machine states (one-hot encoded).
     enum State
     {
         RESET = 0b0001,
@@ -53,8 +55,9 @@ public:
     };
 
     LickDetector(uint16_t* adc_vals, size_t samples_per_period,
-                 uint ttl_pin, uint led_pin, uint32_t on_threshold_percent = 85,
-                 uint32_t off_threshold_percent = 95);
+                 uint ttl_pin, uint led_pin,
+                 uint32_t on_threshold_percent = DEFAULT_ON_THRESHOLD_PERCENT,
+                 uint32_t off_threshold_percent = DEFAULT_OFF_THRESHOLD_PERCENT);
     ~LickDetector();
 
 /**
@@ -63,7 +66,8 @@ public:
  * \note should be less than the "off threshold."
  * \note value is an integer between 0 and 100. FIXME: enable more granularity.
  */
-    void set_on_threshold_percent(uint32_t percent);
+    void set_on_threshold_percent(uint32_t percent)
+    {on_threshold_percent_ = percent;}
 
 /**
  * \brief set the percent deviation from nominal that would clear a detected
@@ -71,7 +75,8 @@ public:
  * \note should be greater than the "on threshold."
  * \note value is an integer between 0 and 100. FIXME: enable more granularity.
  */
-    void set_off_threshold_percent(uint32_t percent);
+    void set_off_threshold_percent(uint32_t percent)
+    {off_threshold_percent_ = percent;}
 
 /**
  * \brief reset finite state machine for lick detection.
