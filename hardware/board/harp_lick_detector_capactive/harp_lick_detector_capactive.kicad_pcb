@@ -898,10 +898,10 @@
       (net 40 "GND2") (pintype "passive") (tstamp ad0a2f19-ee92-4e84-837f-4437a318fab5))
     (pad "3" thru_hole circle (at 4.7 3 90) (size 2.6 2.6) (drill 1.6) (layers "*.Cu" "*.Mask")
       (net 41 "unconnected-(J6-Pad3)") (pintype "passive+no_connect") (tstamp db016c9a-8fff-4e08-a93b-b58752845f2d))
-    (model "${KICAD6_3DMODEL_DIR}/Connector_BarrelJack.3dshapes/BarrelJack_CUI_PJ-102AH_Horizontal.wrl"
-      (offset (xyz 0 0 0))
+    (model "/home/poofjunior/projects/kicad_libraries/kicad_component_library/kicad_component_library.3dshapes/PJ-102AH.step"
+      (offset (xyz 0 -6.5 0))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz -90 0 90))
     )
   )
 
@@ -1246,6 +1246,11 @@
       (net 1 "GND") (pinfunction "Shield") (pintype "passive") (tstamp 149be6e3-3a86-4724-a0a1-77071743ae9b))
     (pad "3" thru_hole circle (at 3.2766 2.7432 90) (size 2.3 2.3) (drill 1.8) (layers "*.Cu" "*.Mask")
       (net 1 "GND") (pinfunction "Shield") (pintype "passive") (tstamp d93a412b-8713-4252-b065-6470703f4151))
+    (model "/home/poofjunior/projects/kicad_libraries/kicad_component_library/kicad_component_library.3dshapes/CBBJR79A.step"
+      (offset (xyz 0 0.5 0))
+      (scale (xyz 1 1 1))
+      (rotate (xyz 90 180 -90))
+    )
   )
 
   (footprint "Resistor_SMD:R_0402_1005Metric" (layer "F.Cu")
@@ -3037,10 +3042,10 @@
       (net 3 "GND1") (pinfunction "SHIELD") (pintype "passive") (tstamp 30df0614-b253-4384-9c55-ac0f725734e3))
     (pad "S1" thru_hole oval (at 4.32 1.15 90) (size 1.3 2.6) (drill oval 0.6 1.9) (layers "*.Cu" "*.Mask")
       (net 3 "GND1") (pinfunction "SHIELD") (pintype "passive") (tstamp e425a8d4-8abc-4427-9140-b38b7f94b0dd))
-    (model "${KICAD6_3DMODEL_DIR}/Connector_USB.3dshapes/USB_C_Receptacle_JAE_DX07S016JA1R1500.wrl"
-      (offset (xyz 0 0 0))
+    (model "/home/poofjunior/projects/kicad_libraries/kicad_component_library/kicad_component_library.3dshapes/DX07S016JA1R1500.step"
+      (offset (xyz 0 -0.15 0))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz -90 0 0))
     )
   )
 
@@ -7091,6 +7096,11 @@
       (net 1 "GND") (pinfunction "1") (pintype "input") (tstamp c7c1ad58-2f13-4e84-9bc4-c781cd47b31f))
     (pad "1" thru_hole circle (at 3.75 2.5 270) (size 2.75 2.75) (drill 1.85) (layers "*.Cu" "*.Mask")
       (net 1 "GND") (pinfunction "1") (pintype "input") (tstamp 15337013-6c60-44ad-890f-c3c1a213da88))
+    (model "/home/poofjunior/projects/kicad_libraries/kicad_component_library/kicad_component_library.3dshapes/7794.step"
+      (offset (xyz -7.15 -2.75 5.6))
+      (scale (xyz 1 1 1))
+      (rotate (xyz -90 0 0))
+    )
   )
 
   (footprint "Capacitor_SMD:C_0603_1608Metric" (layer "F.Cu")
@@ -12312,10 +12322,10 @@
       (net 1 "GND") (pintype "passive") (tstamp b78babfb-0dce-4fab-9418-edafff5d34cc))
     (pad "T" smd rect (at -3.7 -5.8 90) (size 2.8 2.8) (layers "B.Cu" "B.Paste" "B.Mask")
       (net 31 "/Harp Core RP2040 + Isolated USB/HARP_CLK_SYNC") (pintype "passive") (tstamp ebbbbc68-042f-4835-a872-57e5dbde626e))
-    (model "${KICAD6_3DMODEL_DIR}/Connector_Audio.3dshapes/Jack_3.5mm_CUI_SJ-3523-SMT_Horizontal.wrl"
-      (offset (xyz 0 0 0))
+    (model "/home/poofjunior/projects/kicad_libraries/kicad_component_library/kicad_component_library.3dshapes/SJ-3523-SMT-TR.step"
+      (offset (xyz 0 2.5 0))
       (scale (xyz 1 1 1))
-      (rotate (xyz 0 0 0))
+      (rotate (xyz -90 0 90))
     )
   )
 
