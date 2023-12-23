@@ -21,11 +21,8 @@ lick_event_t lick_event; // data to push into the queue upon detecting a lick
 uint8_t new_on_threshold;
 uint8_t new_off_threshold;
 
-// Create ADS70x9 instance for the ADS7049.
-PIO_ADS70x9 ads7049_0(pio0,   // pio instance
-                      0,      // program offset
-                      12,     // data bits
-                      ADS7049_CS_PIN, ADS7049_SCK_PIN, ADS7049_POCI_PIN);
+// Create instance for the ADS7049.
+PIO_ADS7049 ads7049_0(pio0, ADS7049_CS_PIN, ADS7049_SCK_PIN, ADS7049_POCI_PIN);
 
 // List of lick detectors (just 1 for now).
 //LickDetector __not_in_flash("instances")lick_detectors[1]

@@ -154,6 +154,7 @@ int main()
     app.set_synchronizer(&sync);
 
     // Setup Sine wave generator.
+    // Old way on v0.5.0
     ad9833.disable_output(); // aka: reset.
     sleep_ms(50);
     ad9833.set_frequency_hz(100e3);
@@ -162,8 +163,7 @@ int main()
     sleep_us(10);
     ad9833.enable_with_waveform(AD9833::waveform_t::SINE);
     sleep_ms(100);
-    // Setup 100KHz square wave output.
-    // Old way on v0.5.0
+    // Setup 100KHz square wave output. (New way on v0.6.0+)
     gpio_set_function(SQUARE_WAVE_PIN, GPIO_FUNC_PWM);
     uint pwm_slice_num = pwm_gpio_to_slice_num(SQUARE_WAVE_PIN);
     uint gpio_channel = pwm_gpio_to_channel(SQUARE_WAVE_PIN);

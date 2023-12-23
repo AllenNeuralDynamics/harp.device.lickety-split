@@ -8,7 +8,7 @@
 #include <stdio.h>
 #include <stdint.h>
 #include <hardware/irq.h>
-#include <pio_ads70x9.h>
+#include <pio_ads7049.h>
 #include <lick_detector.h>
 #include <lick_queue.h>
 #include <config.h>

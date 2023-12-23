@@ -13,8 +13,8 @@ set(CMAKE_CXX_STANDARD 17)
 
 # Compile for profiling/debugging/etc. Default: none enabled.
 add_definitions(-DDEBUG)
-add_definitions(-DDEBUG_HARP_MSG_IN)
-add_definitions(-DDEBUG_HARP_MSG_OUT)
+#add_definitions(-DDEBUG_HARP_MSG_IN)
+#add_definitions(-DDEBUG_HARP_MSG_OUT)
 #add_definitions(-DPROFILE_CPU)
 
 # initialize the Raspberry Pi Pico SDK
@@ -22,6 +22,7 @@ pico_sdk_init()
 
 # Add Harp Core as separate library.
 add_subdirectory(lib/harp.core.rp2040/firmware)
+add_subdirectory(lib/rp2040.pio-ads7049)
 
 add_executable(${PROJECT_NAME}
     src/main.cpp
@@ -43,13 +44,13 @@ add_library(lick_detector
     src/lick_detector.cpp
 )
 
-add_library(pio_ads70x9
-    src/pio_ads70x9.cpp
-)
+#add_library(pio_ads70x9
+#    src/pio_ads70x9.cpp
+#)
 
-pico_generate_pio_header(pio_ads70x9
-    ${CMAKE_CURRENT_LIST_DIR}/src/pio_ads70x9.pio
-)
+#pico_generate_pio_header(pio_ads70x9
+#    ${CMAKE_CURRENT_LIST_DIR}/src/pio_ads70x9.pio
+#)
 
 # Specify where to look for header files if they're not all in the same place.
 #target_include_directories(${PROJECT_NAME} PUBLIC inc)
@@ -62,10 +63,10 @@ include_directories(inc)
 
 target_link_libraries(ad9833 pico_stdlib hardware_spi)
 target_link_libraries(lick_detector hardware_dma pico_stdlib)
-target_link_libraries(pio_ads70x9 pico_stdlib hardware_pio hardware_irq
+target_link_libraries(pio_ads7049 pico_stdlib hardware_pio hardware_irq
                       hardware_dma)
 target_link_libraries(core1_lick_detection pico_stdlib hardware_irq
-                      lick_detector hardware_dma pico_multicore pio_ads70x9
+                      lick_detector hardware_dma pico_multicore pio_ads7049
                       hardware_pio)
 target_link_libraries(${PROJECT_NAME} pico_stdlib hardware_pwm ad9833
                       core1_lick_detection pico_multicore harp_sync harp_c_app)
