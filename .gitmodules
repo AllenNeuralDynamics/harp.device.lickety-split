@@ -1,6 +1,3 @@
-[submodule "firmware/lib/pico-sdk"]
-	path = firmware/lib/pico-sdk
-	url = git@github.com:raspberrypi/pico-sdk.git
 [submodule "firmware/lib/harp-core-rp2040"]
 	path = firmware/lib/harp.core.rp2040
 	url = git@github.com:AllenNeuralDynamics/harp-core-rp2040.git
