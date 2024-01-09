@@ -36,21 +36,9 @@ add_library(ad9833
     src/ad9833.cpp
 )
 
-#add_library(continuous_adc
-#    src/continuous_adc.cpp
-#)
-
 add_library(lick_detector
     src/lick_detector.cpp
 )
-
-#add_library(pio_ads70x9
-#    src/pio_ads70x9.cpp
-#)
-
-#pico_generate_pio_header(pio_ads70x9
-#    ${CMAKE_CURRENT_LIST_DIR}/src/pio_ads70x9.pio
-#)
 
 # Specify where to look for header files if they're not all in the same place.
 #target_include_directories(${PROJECT_NAME} PUBLIC inc)
