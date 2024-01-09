@@ -40,12 +40,6 @@
     (uuid fc896abd-09f1-494d-847c-570e84e7f610)
   )
 
-  (text "DONE: change J1 COAX signal probe to hook\nDONE: update bandpass filter to 4th order. U6B and U6D should be used as stage 1 and 2.\nDONE: increase R42, R43 to reduce the effect of the transient. \n    ~64 ohms each is safe for 2MHz sampling. Higher would be better.\nDONE: consolidate U6C and U6D into one op-amp that handles gain and offset in a single stage w/100x amplification.\nDONE: use REF2033 (dual: 1.65V, 3.3V) reference voltage output\nDONE: replace DDS chip with filtered square wave.\nDONE: update Bootsel button with aqueous wash-compatible version."
-    (at 99.695 139.7 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid adf7fc51-7128-4a8a-b671-a2eb20f1ca3e)
-  )
-
   (sheet (at 207.645 86.36) (size 13.97 14.605) (fields_autoplaced)
     (stroke (width 0.1524) (type solid))
     (fill (color 0 0 0 0.0000))
