@@ -92,7 +92,7 @@
       (mirror false)
       (drillshape 0)
       (scaleselection 1)
-      (outputdirectory "exports/lickety_split_r0.6/gerbers/")
+      (outputdirectory "exports/lickety_split_r0.6.1/gerbers/")
     )
   )
 
@@ -14136,6 +14136,9 @@
   (gr_text "GND" (at 158.1 82.7) (layer "F.SilkS") (tstamp 57910992-3fa3-45e5-a717-035db4dcf91c)
     (effects (font (size 1 1) (thickness 0.2) bold) (justify left bottom))
   )
+  (gr_text "Sonya Vasquez" (at 166.8 117) (layer "F.SilkS") (tstamp 703f0836-15a3-47b2-87bb-4decd08a4fc0)
+    (effects (font (size 1 1) (thickness 0.15)) (justify left bottom))
+  )
   (gr_text "TTL Lick Detection Signal ↘" (at 158.1 73.5) (layer "F.SilkS") (tstamp 8016083f-9d25-4187-96b1-c1223174bb7b)
     (effects (font (size 1 1) (thickness 0.2) bold) (justify left bottom))
   )
@@ -14147,9 +14150,6 @@
   )
   (gr_text "RX" (at 155.8 82.7) (layer "F.SilkS") (tstamp e23b1fbd-de1e-4d0b-aee6-ba150ebfbabe)
     (effects (font (size 1 1) (thickness 0.2) bold) (justify left bottom))
-  )
-  (gr_text "Sonya Vasquez" (at 166.8 117) (layer "F.Mask") (tstamp 703f0836-15a3-47b2-87bb-4decd08a4fc0)
-    (effects (font (size 1 1) (thickness 0.15)) (justify left bottom))
   )
 
   (segment (start 166.7875 104.3) (end 166.75 104.2625) (width 0.1524) (layer "F.Cu") (net 1) (tstamp 024f3e09-021d-4291-b2b2-7a7a0ed1d115))
