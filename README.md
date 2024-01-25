@@ -18,15 +18,15 @@ There are 3 configurations that will produce valid lick detection readings:
 
 Option A works well if your rig does not have large sources of 60Hz noise.
 
-<img src="notes/images/setup_a.png" width=70% height=70%>
+<img src="notes/images/setup_a.png" width=100% height=100%>
 
 Option B works well if your rig *does* have large sources of 60Hz noise.
 
-<img src="notes/images/setup_b.png" width=70% height=70%>
+<img src="notes/images/setup_b.png" width=100% height=100%>
 
 Option C works well if your rig *does* have large sources of 60Hz noise, but you cannot earth ground it.
 
-<img src="notes/images/setup_c.png" width=70% height=70%>
+<img src="notes/images/setup_c.png" width=100% height=100%>
 
 ### Device Pinout
 TODO
