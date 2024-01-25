@@ -14,9 +14,19 @@ An ephys-compliant lick detector based on measured change in capacitance.
 * isolated USB to prevent ground loops with the PC.
 
 ## Wiring Diagram
-It is critical that (1) both the device and mouse under test are grounded to a common ground and
-(2) the rig is earth-grounded (i.e: any exposed metal components are connected to earth ground).
-Otherwise, the device may introduce noise on the Neuropixel probes or produce spurious licks from outside electromagnetic interference.
+There are 3 configurations that will produce valid lick detection readings:
+
+Option A works well if your rig does not have large sources of 60Hz noise.
+
+<img src="notes/images/setup_a.png" width=70% height=70%>
+
+Option B works well if your rig *does* have large sources of 60Hz noise.
+
+<img src="notes/images/setup_b.png" width=70% height=70%>
+
+Option C works well if your rig *does* have large sources of 60Hz noise, but you cannot earth ground it.
+
+<img src="notes/images/setup_c.png" width=70% height=70%>
 
 ### Device Pinout
 TODO
