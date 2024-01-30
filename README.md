@@ -29,7 +29,7 @@ Option C works well if your rig *does* have large sources of 60Hz noise, but you
 <img src="notes/images/setup_c.png" width=70% height=70%>
 
 ### Device Pinout
-TODO
+<img src="notes/images/pinout.png" width=100% height=100%>
 
 ### Wiring Diagram
 TODO
