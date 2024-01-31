@@ -45,7 +45,7 @@ It is critical that (1) both the device and mouse under test are grounded to a c
 Otherwise, the device may introduce noise on the Neuropixel probes or produce spurious licks from outside electromagnetic interference.
 
 ### Multiple-Lick-Detector Crosstalk
-Multiple lick detectors can be used in the same setup provided that (1) they are grounded correctly (see *Electrical Setup*), and (2) the spacing between exposed lick tubes exceeds 4mm.
+Multiple lick detectors can be used in the same setup provided that (1) they are grounded correctly (see *Electrical Setup*), (2) the lick tubes are electrically insulated relative to each other, and (3) the spacing between exposed lick tubes exceeds 4mm.
 If the spacing between exposed metal lick tubes is less than 4mm, then the antenna noise from one lick detector may affect the other.
 This phenomenon is called *crosstalk*, and it can appear in 2 ways.
 
