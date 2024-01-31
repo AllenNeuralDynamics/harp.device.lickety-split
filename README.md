@@ -8,10 +8,13 @@ An ephys-compliant lick detector based on measured change in capacitance.
 * Harp-protocol compliant (serial num: 0x0578). Also dispatches timestamped Harp messages when lick state change has changed.
 * Fully supported in Bonsai with a dedicated [Bonsai package](https://www.nuget.org/packages/AllenNeuralDynamics.LicketySplitLickDetector)
 
-## Extra Features
+### Extra Features
 * 6-20VDC input (2.1 x 5.5mm barrel jack, positive center)
 * reverse-polarity protected
 * isolated USB to prevent ground loops with the PC.
+
+### Device Pinout
+<img src="notes/images/pinout.png" width=100% height=100%>
 
 ## Wiring Diagram
 There are 3 configurations that will produce valid lick detection readings:
@@ -27,12 +30,6 @@ Option B works well if your rig *does* have large sources of 60Hz noise.
 Option C works well if your rig *does* have large sources of 60Hz noise, but you cannot earth ground it.
 
 <img src="notes/images/setup_c.png" width=100% height=100%>
-
-### Device Pinout
-<img src="notes/images/pinout.png" width=100% height=100%>
-
-### Wiring Diagram
-TODO
 
 ### Cables
 This system uses a Triax cable and will work with cable lengths up to .8 meters (2.5 ft) long.
