@@ -8,10 +8,13 @@ An ephys-compliant lick detector based on measured change in capacitance.
 * Harp-protocol compliant (serial num: 0x0578). Also dispatches timestamped Harp messages when lick state change has changed.
 * Fully supported in Bonsai with a dedicated [Bonsai package](https://www.nuget.org/packages/AllenNeuralDynamics.LicketySplitLickDetector)
 
-## Extra Features
+### Extra Features
 * 6-20VDC input (2.1 x 5.5mm barrel jack, positive center)
 * reverse-polarity protected
 * isolated USB to prevent ground loops with the PC.
+
+### Device Pinout
+<img src="notes/images/pinout.png" width=100% height=100%>
 
 ## Wiring Diagram
 There are 3 configurations that will produce valid lick detection readings:
@@ -28,12 +31,6 @@ Option C works well if your rig *does* have large sources of 60Hz noise, but you
 
 <img src="notes/images/setup_c.png" width=100% height=100%>
 
-### Device Pinout
-<img src="notes/images/pinout.png" width=100% height=100%>
-
-### Wiring Diagram
-TODO
-
 ### Cables
 This system uses a Triax cable and will work with cable lengths up to .8 meters (2.5 ft) long.
 Triax cables can be purchased mostly-assembled from this eBay seller [here](https://www.ebay.com/itm/225796046481) and then modified slightly to connect to your lick port.
@@ -45,7 +42,7 @@ It is critical that (1) both the device and mouse under test are grounded to a c
 Otherwise, the device may introduce noise on the Neuropixel probes or produce spurious licks from outside electromagnetic interference.
 
 ### Multiple-Lick-Detector Crosstalk
-Multiple lick detectors can be used in the same setup provided that (1) they are grounded correctly (see *Electrical Setup*), and (2) the spacing between exposed lick tubes exceeds 4mm.
+Multiple lick detectors can be used in the same setup provided that (1) they are grounded correctly (see *Electrical Setup*), (2) the lick tubes are electrically insulated relative to each other, and (3) the spacing between exposed lick tubes exceeds 4mm.
 If the spacing between exposed metal lick tubes is less than 4mm, then the antenna noise from one lick detector may affect the other.
 This phenomenon is called *crosstalk*, and it can appear in 2 ways.
 
