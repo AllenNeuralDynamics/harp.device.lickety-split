@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Title>AllenNeuralDynamics.LicketySplitLickDetector</Title>
     <Authors></Authors>
-    <Copyright>Copyright © 2023 Allen Institute for Neural Dynamics</Copyright>
+    <Copyright>Copyright © 2024 Allen Institute for Neural Dynamics</Copyright>
     <PackageProjectUrl>https://github.com/AllenNeuralDynamics/bonsai.allen-neural-dynamics</PackageProjectUrl>
     <RepositoryUrl>https://github.com/AllenNeuralDynamics/harp.device.lickety-split</RepositoryUrl>
     <IncludeSymbols>true</IncludeSymbols>
@@ -18,12 +18,12 @@
     <PackageIcon>icon.png</PackageIcon>
     <PackageOutputPath></PackageOutputPath>
     <TargetFrameworks>net462;netstandard2.0</TargetFrameworks>
-    <VersionPrefix>0.1.0-preview20231010001</VersionPrefix>
+    <VersionPrefix>0.1.0-preview2024020101</VersionPrefix>
     <LangVersion>9.0</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Bonsai.Harp" Version="3.5.0" />
+    <PackageReference Include="Bonsai.Harp" Version="3.5.1" />
   </ItemGroup>
 
   <ItemGroup>
