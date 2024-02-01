@@ -11,6 +11,7 @@
 #include <harp_core.h>
 #include <harp_c_app.h>
 #include <harp_synchronizer.h>
+#include <hardware/structs/bus_ctrl.h>
 
 // Harp App Setup.
 const uint16_t who_am_i = LICKETY_SPLIT_HARP_DEVICE_ID;
@@ -173,6 +174,10 @@ int main()
     pwm_set_wrap(pwm_slice_num, 9);
     pwm_set_chan_level(pwm_slice_num, gpio_channel, 5); // 50% duty cycle.
     pwm_set_enabled(pwm_slice_num, true);
+
+    // Give core1 bus priority since it is running a timely control loop.
+    // This will drop cycle count by about 100 cycles.
+    bus_ctrl_hw->priority = 0x00000010; // PROC1 = 1; PROC0 = 1.
 
     // Init queues for communication of lick state across cores.
     // Queue needs to be much larger than expected such that device enumerates

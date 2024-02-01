@@ -106,7 +106,7 @@ void core1_main()
             {
                 lick_states = new_lick_states;
                 lick_event.state = lick_states;
-                lick_event.pico_timestamp = to_ms_since_boot(get_absolute_time());
+                lick_event.pico_time_us = time_us_64();
                 // Don't block if core0 is not responding, so TTL always works.
                 // FIXME: throw some sort of error if we fill up the queue.
                 queue_try_add(&lick_event_queue, &lick_event);
@@ -121,13 +121,16 @@ void core1_main()
             {
                 prev_print_time_ms = curr_time_ms;
                 // Print CPU cycles per loop.
-                //printf("cpu_cycles/loop: %u\r\n", cpu_cycles);
+                printf("core1 cycles/loop: %u\r\n", cpu_cycles);
+/*
                 // Print baseline and current amplitudes (both upscaled).
-                //printf("amplitude: %08d || baseline: %08d || "
-                //       "cpu_cycles/loop: %u\r\n",
-                //       lick_detectors[0].upscaled_amplitude_avg_,
-                //       lick_detectors[0].upscaled_baseline_avg_,
-                //       cpu_cycles);
+                printf("amplitude: %08d || baseline: %08d || "
+                       "cpu_cycles/loop: %u\r\n",
+                       lick_detectors[0].upscaled_amplitude_avg_,
+                       lick_detectors[0].upscaled_baseline_avg_,
+                       cpu_cycles);
+*/
+/*
                 // Print the sampled period.
                 printf("adc: [%04d, %04d, %04d, %04d, %04d,"
                        "%04d, %04d, %04d, %04d, %04d,"
@@ -138,6 +141,7 @@ void core1_main()
                        adc_vals[8], adc_vals[9], adc_vals[10], adc_vals[11],
                        adc_vals[12], adc_vals[13], adc_vals[14], adc_vals[15],
                        adc_vals[16], adc_vals[17], adc_vals[18], adc_vals[19]);
+*/
             }
 #endif
         }

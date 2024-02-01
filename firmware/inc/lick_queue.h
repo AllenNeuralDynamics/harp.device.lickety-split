@@ -6,7 +6,7 @@
 struct lick_event_t
 {
     uint8_t state; // current state of all lick detectors
-    uint32_t pico_timestamp; // when this state started.
+    uint64_t pico_time_us; // when this state started.
 };
 
 extern queue_t lick_event_queue;
