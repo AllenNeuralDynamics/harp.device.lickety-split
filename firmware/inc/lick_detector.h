@@ -56,27 +56,9 @@ public:
 
     LickDetector(uint16_t* adc_vals, size_t samples_per_period,
                  uint ttl_pin, uint led_pin,
-                 uint32_t on_threshold_percent = DEFAULT_ON_THRESHOLD_PERCENT,
-                 uint32_t off_threshold_percent = DEFAULT_OFF_THRESHOLD_PERCENT);
+                 uint8_t on_threshold_percent = DEFAULT_ON_THRESHOLD_PERCENT,
+                 uint8_t off_threshold_percent = DEFAULT_OFF_THRESHOLD_PERCENT);
     ~LickDetector();
-
-/**
- * \brief set the percent deviation from nominal that would trigger a detected
- *  lick.
- * \note should be less than the "off threshold."
- * \note value is an integer between 0 and 100. FIXME: enable more granularity.
- */
-    void set_on_threshold_percent(uint32_t percent)
-    {on_threshold_percent_ = percent;}
-
-/**
- * \brief set the percent deviation from nominal that would clear a detected
- *  lick.
- * \note should be greater than the "on threshold."
- * \note value is an integer between 0 and 100. FIXME: enable more granularity.
- */
-    void set_off_threshold_percent(uint32_t percent)
-    {off_threshold_percent_ = percent;}
 
 /**
  * \brief reset finite state machine for lick detection.
@@ -97,6 +79,10 @@ public:
     inline void clear_lick_detection_stop_flag()
         {lick_stop_detected_ = false;}
 
+// Public Data members.
+    uint8_t on_threshold_percent_; /// public access for speed.
+    uint8_t off_threshold_percent_; /// public access for speed.
+
 private:
 /**
  * \brief compute the raw amplitude from one period of waveform samples.
@@ -115,9 +101,6 @@ private:
  */
     inline void update_baseline_moving_avg();
 
-
-
-// Data members.
 private:
     uint ttl_pin_;
     uint led_pin_;
@@ -147,8 +130,6 @@ private:
     bool hysteresis_elapsed_;
 
 
-    uint32_t on_threshold_percent_;
-    uint32_t off_threshold_percent_;
     uint32_t detection_start_time_ms_;
     uint32_t detection_stop_time_ms_;
 };

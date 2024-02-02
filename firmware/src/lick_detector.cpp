@@ -1,8 +1,8 @@
 #include <lick_detector.h>
 
 LickDetector::LickDetector(uint16_t* adc_vals, size_t samples_per_period,
-                           uint ttl_pin, uint led_pin, uint32_t on_threshold_percent,
-                           uint32_t off_threshold_percent)
+                           uint ttl_pin, uint led_pin, uint8_t on_threshold_percent,
+                           uint8_t off_threshold_percent)
 :adc_vals_{adc_vals},
  samples_per_period_{samples_per_period},
  state_{RESET},
@@ -124,9 +124,9 @@ void LickDetector::update()
     }
     // Recompute trigger thresholds based on current baseline measurement and
     // current threshold percentage settings.
-    uint32_t on_threshold = __mul_instruction(on_threshold_percent_,
+    uint32_t on_threshold = __mul_instruction((uint32_t)on_threshold_percent_,
                                               upscaled_baseline_avg_) / 100;
-    uint32_t off_threshold = __mul_instruction(off_threshold_percent_,
+    uint32_t off_threshold = __mul_instruction((uint32_t)off_threshold_percent_,
                                                upscaled_baseline_avg_) / 100;
     if (state_ & ~(RESET | WARMUP))
     {
