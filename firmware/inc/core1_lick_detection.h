@@ -17,8 +17,8 @@
 // statistics to the serial port. Stats include (1) raw adc values, (2) how
 // many CPU cycles the update loop is taking.
 
-#ifdef PROFILE_CPU
-#define PRINT_LOOP_INTERVAL_MS (16)
+#if defined(PROFILE_CPU)
+#define PRINT_LOOP_INTERVAL_US (16666)
 
 #define SYST_CSR (*(volatile uint32_t*)(PPB_BASE + 0xe010))
 #define SYST_CVR (*(volatile uint32_t*)(PPB_BASE + 0xe018))

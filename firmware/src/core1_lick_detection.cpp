@@ -1,10 +1,11 @@
 #include <core1_lick_detection.h>
 
 #ifdef PROFILE_CPU
-uint32_t prev_print_time_ms;
-uint32_t curr_time_ms;
+uint32_t prev_print_time_us;
+uint32_t curr_time_us;
 uint32_t loop_start_cpu_cycle;
 uint32_t cpu_cycles;
+uint32_t max_cpu_cycles;
 #endif
 
 // Location to write one period of the ADC samples to.
@@ -27,6 +28,13 @@ LickDetector lick_detectors[1]
     {{adc_vals, SAMPLES_PER_PERIOD, TTL_PIN, LED_PIN}};
     // {adc2_vals, SAMPLES_PER_PERIOD, 13, 14}};
 
+/// Do not call this inside an interrupt
+uint64_t __not_in_flash_func(time_us_64_unsafe)()
+{
+    uint64_t time = timer_hw->timelr; // Locks until we read TIMEHR
+    return (uint64_t(timer_hw->timehr) << 32) | time;
+}
+
 void  __time_critical_func(flag_update)()
 {
     // Clear interrupt request.
@@ -36,12 +44,12 @@ void  __time_critical_func(flag_update)()
 
 void core1_main()
 {
-#ifdef PROFILE_CPU
+#if defined(PROFILE_CPU)
     // Configure SYSTICK register to tick with cpu clock (125MHz) and enable it.
     SYST_CSR |= (1 << 2) | (1 << 0);
     // init variable with valid states for periodic status printing.
-    curr_time_ms = to_ms_since_boot(get_absolute_time());
-    prev_print_time_ms = curr_time_ms;
+    curr_time_us = time_us_32();
+    prev_print_time_us = curr_time_us;
 #endif
     // Setup starting state.
     update_due = false;
@@ -66,7 +74,7 @@ void core1_main()
     {
 #ifdef PROFILE_CPU
     loop_start_cpu_cycle = SYST_CVR;
-    curr_time_ms = to_ms_since_boot(get_absolute_time());
+    curr_time_us = time_us_32();
 #endif
         // Check for new lick threshold settings.
         if (!queue_is_empty(&set_on_threshold_queue))
@@ -106,7 +114,7 @@ void core1_main()
             {
                 lick_states = new_lick_states;
                 lick_event.state = lick_states;
-                lick_event.pico_time_us = time_us_64();
+                lick_event.pico_time_us = time_us_64_unsafe();//time_us_64();
                 // Don't block if core0 is not responding, so TTL always works.
                 // FIXME: throw some sort of error if we fill up the queue.
                 queue_try_add(&lick_event_queue, &lick_event);
@@ -114,35 +122,37 @@ void core1_main()
                 //       lick_detectors[0].lick_history_.to_string().c_str());
             }
 #ifdef PROFILE_CPU
-            cpu_cycles = loop_start_cpu_cycle - SYST_CVR; // SYSTICK counts down.
-            // For debugging. Periodically print current measurements,
-            // adc values, and cycles per loop.
-            if (curr_time_ms - prev_print_time_ms >= PRINT_LOOP_INTERVAL_MS)
-            {
-                prev_print_time_ms = curr_time_ms;
-                // Print CPU cycles per loop.
-                printf("core1 cycles/loop: %u\r\n", cpu_cycles);
+// For debugging.
+// Periodically print current measurements, adc values, and cycles per loop.
+            // SYSTICK is 24-bit and counts down. Bitshift so subtraction works.
+            cpu_cycles = ((loop_start_cpu_cycle << 8) - (SYST_CVR << 8)) >> 8;
+            if (cpu_cycles > max_cpu_cycles)
+                max_cpu_cycles = cpu_cycles;
+            if (curr_time_us - prev_print_time_us < PRINT_LOOP_INTERVAL_US)
+                continue;
+            prev_print_time_us = curr_time_us;
+            // Print CPU cycles per loop.
+            printf("core1 max cycles/loop: %u\r\n", cpu_cycles);
 /*
-                // Print baseline and current amplitudes (both upscaled).
-                printf("amplitude: %08d || baseline: %08d || "
-                       "cpu_cycles/loop: %u\r\n",
-                       lick_detectors[0].upscaled_amplitude_avg_,
-                       lick_detectors[0].upscaled_baseline_avg_,
-                       cpu_cycles);
+            // Print baseline and current amplitudes (both upscaled).
+            printf("amplitude: %08d || baseline: %08d || "
+                   "cpu_cycles/loop: %u\r\n",
+                   lick_detectors[0].upscaled_amplitude_avg_,
+                   lick_detectors[0].upscaled_baseline_avg_,
+                   cpu_cycles);
 */
 /*
-                // Print the sampled period.
-                printf("adc: [%04d, %04d, %04d, %04d, %04d,"
-                       "%04d, %04d, %04d, %04d, %04d,"
-                       "%04d, %04d, %04d, %04d, %04d,"
-                       "%04d, %04d, %04d, %04d, %04d] \r\n",
-                       adc_vals[0], adc_vals[1], adc_vals[2], adc_vals[3],
-                       adc_vals[4], adc_vals[5], adc_vals[6], adc_vals[7],
-                       adc_vals[8], adc_vals[9], adc_vals[10], adc_vals[11],
-                       adc_vals[12], adc_vals[13], adc_vals[14], adc_vals[15],
-                       adc_vals[16], adc_vals[17], adc_vals[18], adc_vals[19]);
+            // Print the sampled period.
+            printf("adc: [%04d, %04d, %04d, %04d, %04d,"
+                   "%04d, %04d, %04d, %04d, %04d,"
+                   "%04d, %04d, %04d, %04d, %04d,"
+                   "%04d, %04d, %04d, %04d, %04d] \r\n",
+                   adc_vals[0], adc_vals[1], adc_vals[2], adc_vals[3],
+                   adc_vals[4], adc_vals[5], adc_vals[6], adc_vals[7],
+                   adc_vals[8], adc_vals[9], adc_vals[10], adc_vals[11],
+                   adc_vals[12], adc_vals[13], adc_vals[14], adc_vals[15],
+                   adc_vals[16], adc_vals[17], adc_vals[18], adc_vals[19]);
 */
-            }
 #endif
         }
     }

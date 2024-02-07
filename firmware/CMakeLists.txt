@@ -15,7 +15,7 @@ set(CMAKE_CXX_STANDARD 17)
 #add_definitions(-DDEBUG)
 #add_definitions(-DDEBUG_HARP_MSG_IN)
 #add_definitions(-DDEBUG_HARP_MSG_OUT)
-#add_definitions(-DPROFILE_CPU)
+add_definitions(-DPROFILE_CPU)
 
 
 
