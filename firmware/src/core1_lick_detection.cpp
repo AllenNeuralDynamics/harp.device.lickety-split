@@ -22,14 +22,15 @@ lick_event_t lick_event; // data to push into the queue upon detecting a lick
 // Create instance for the ADS7049.
 PIO_ADS7049 ads7049_0(pio0, ADS7049_CS_PIN, ADS7049_SCK_PIN, ADS7049_POCI_PIN);
 
-// List of lick detectors (just 1 for now).
-//LickDetector __not_in_flash("instances")lick_detectors[1]
-LickDetector lick_detectors[1]
-    {{adc_vals, SAMPLES_PER_PERIOD, TTL_PIN, LED_PIN}};
-    // {adc2_vals, SAMPLES_PER_PERIOD, 13, 14}};
+LickDetector __not_in_flash("lick_detector") lick_detector(adc_vals,
+                                                           SAMPLES_PER_PERIOD,
+                                                           TTL_PIN, LED_PIN);
+
+uint16_t detector_state;
+uint16_t new_detector_state;
 
 /// Do not call this inside an interrupt
-uint64_t __not_in_flash_func(time_us_64_unsafe)()
+uint64_t __time_critical_func(time_us_64_unsafe)()
 {
     uint64_t time = timer_hw->timelr; // Locks until we read TIMEHR
     return (uint64_t(timer_hw->timehr) << 32) | time;
@@ -40,6 +41,17 @@ void  __time_critical_func(flag_update)()
     // Clear interrupt request.
     dma_hw->ints0 = 1u << ads7049_0.samp_chan_; // ads7049.get_interrupting_dma_channel();
     update_due = true;
+}
+
+// push full lick detector state to core0
+inline void queue_initial_state()
+{
+    // Send initial threshold settings to core0.
+    queue_try_add(&get_on_threshold_queue, &lick_detector.on_threshold_percent_);
+    queue_try_add(&get_off_threshold_queue, &lick_detector.off_threshold_percent_);
+    // Send initial state.
+    detector_state = lick_detector.state();
+    queue_try_add(&get_detector_raw_state_queue, &detector_state);
 }
 
 void core1_main()
@@ -55,9 +67,8 @@ void core1_main()
     update_due = false;
     lick_states = 0; // Start with no licks detected.
     new_lick_states = 0;
-    // Send initial threshold settings to core0.
-    queue_try_add(&get_on_threshold_queue, &lick_detectors[0].on_threshold_percent_);
-    queue_try_add(&get_off_threshold_queue, &lick_detectors[0].off_threshold_percent_);
+    // Setup queues with starting values for core0.
+    queue_initial_state();
     // Note: the core that attaches interrupt is the core that will handle it.
     // Connect ads7049 dma stream interrupt handler to lick detector.
     ads7049_0.setup_dma_stream_to_memory_with_interrupt(
@@ -76,16 +87,22 @@ void core1_main()
     loop_start_cpu_cycle = SYST_CVR;
     curr_time_us = time_us_32();
 #endif
-        // Check for new lick threshold settings.
+        // Check for new commands from core0 (reset, threshold changes, etc.).
+        if (!queue_is_empty(&set_reset_queue))
+        {
+            lick_detector.reset();
+            // Send data to core0 to update Harp registers.
+            queue_initial_state();
+        }
         if (!queue_is_empty(&set_on_threshold_queue))
         {
             queue_remove_blocking(&set_on_threshold_queue,
-                                  &lick_detectors[0].on_threshold_percent_);
+                                  &lick_detector.on_threshold_percent_);
         }
         if (!queue_is_empty(&set_off_threshold_queue))
         {
             queue_remove_blocking(&set_off_threshold_queue,
-                                  &lick_detectors[0].off_threshold_percent_);
+                                  &lick_detector.off_threshold_percent_);
         }
         // Check if any licks were detected.
         // Timestamp them and queue a harp message.
@@ -94,34 +111,34 @@ void core1_main()
             update_due = false; // Clear update flag.
             new_lick_states = lick_states;
             // Update lick detector finite state machine.
-            for (uint8_t i = 0; i < count_of(lick_detectors); ++i)
+            lick_detector.update();
+            new_detector_state = lick_detector.state();
+            if (new_detector_state == detector_state)
+#if defined(PROFILE_CPU)
+                goto profile_cpu;
+#else
+                continue;
+#endif
+            // Push new state to core0 if it has changed.
+            queue_try_add(&get_detector_raw_state_queue, &new_detector_state);
+            switch (new_detector_state)
             {
-                lick_detectors[i].update();
-                if (lick_detectors[i].lick_start_detected())
-                {
-                    lick_detectors[i].clear_lick_detection_start_flag();
-                    new_lick_states |= 1u << i; // set bit field.
-                }
-                else if (lick_detectors[i].lick_stop_detected())
-                {
-                    lick_detectors[i].clear_lick_detection_stop_flag();
-                    new_lick_states &= ~(1u << i); // clear bit field.
-                }
+                case LickDetector::State::TRIGGERED:
+                case LickDetector::State::UNTRIGGERED:
+                    // push the new state.
+                    lick_states = (((uint8_t)new_detector_state) >> 3); // FIXME: should be "UNTRIGGERED BASE"
+                    lick_event.state = lick_states;
+                    lick_event.pico_time_us = time_us_64_unsafe();
+                    queue_try_add(&lick_event_queue, &lick_event);
+                    //printf("lick hist: %s\r\n",
+                    //       lick_detector.lick_history_.to_string().c_str());
+                    break;
+                default:
+                    break;
             }
-            // If previous lick detection state differs from the new one,
-            // push the new state into the queue.
-            if (new_lick_states != lick_states)
-            {
-                lick_states = new_lick_states;
-                lick_event.state = lick_states;
-                lick_event.pico_time_us = time_us_64_unsafe();//time_us_64();
-                // Don't block if core0 is not responding, so TTL always works.
-                // FIXME: throw some sort of error if we fill up the queue.
-                queue_try_add(&lick_event_queue, &lick_event);
-                //printf("lick hist: %s\r\n",
-                //       lick_detectors[0].lick_history_.to_string().c_str());
-            }
+            detector_state = new_detector_state;
 #ifdef PROFILE_CPU
+profile_cpu:
 // For debugging.
 // Periodically print current measurements, adc values, and cycles per loop.
             // SYSTICK is 24-bit and counts down. Bitshift so subtraction works.
@@ -137,8 +154,8 @@ void core1_main()
             // Print baseline and current amplitudes (both upscaled).
             printf("amplitude: %08d || baseline: %08d || "
                    "cpu_cycles/loop: %u\r\n",
-                   lick_detectors[0].upscaled_amplitude_avg_,
-                   lick_detectors[0].upscaled_baseline_avg_,
+                   lick_detector.upscaled_amplitude_avg_,
+                   lick_detector.upscaled_baseline_avg_,
                    cpu_cycles);
 */
 /*

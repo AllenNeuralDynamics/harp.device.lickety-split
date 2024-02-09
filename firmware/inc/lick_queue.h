@@ -12,6 +12,8 @@ struct lick_event_t
 extern queue_t lick_event_queue;
 
 // Additional queues for adjusting lick detector thresholds from Harp registers.
+extern queue_t set_reset_queue;
+extern queue_t get_detector_raw_state_queue;
 extern queue_t set_on_threshold_queue;
 extern queue_t set_off_threshold_queue;
 extern queue_t get_on_threshold_queue;

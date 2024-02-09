@@ -29,6 +29,8 @@ const uint16_t serial_number = 0;
 queue_t lick_event_queue;
 lick_event_t new_lick_state;
 
+queue_t set_reset_queue;
+queue_t get_detector_raw_state_queue;
 queue_t set_on_threshold_queue;
 queue_t set_off_threshold_queue;
 queue_t get_on_threshold_queue;
@@ -47,7 +49,14 @@ void set_led_state(bool enabled)
 }
 
 // Setup for Harp App
-const size_t reg_count = 3;
+const size_t reg_count = 5;
+
+//struct status_mask_bits_t
+//{
+//    unsigned BUSY                   : 1;  // bit0 on Arm
+//    unsigned THRESHOLD_OUT_OF_RANGE : 1;
+//    unsigned                        : 14;
+//};
 
 // Define Harp app registers.
 #pragma pack(push, 1)
@@ -56,6 +65,13 @@ struct app_regs_t
     uint8_t lick_state;  // app register 0
     uint8_t on_threshold;  // app register 1
     uint8_t off_threshold;  // app register 2
+    uint8_t reset;          // write >0 to reset the lick detector.
+    uint16_t raw_state; // Lick detector FSM state.
+    //uint16_t status_mask;    // {UNUSED[15:3],
+    //                         //  THRESHOLD_OUT_OF_RANGE[1],
+    //                         //  BUSY[0]}
+    //uint32_t threshold_voltage; // most recent adaptive excitation amplitude threshold [volts].
+    //uint32_t setpoint_voltage; // most recent excitation amplitude setpoint [volts].
 } app_regs;
 #pragma pack(pop)
 
@@ -64,7 +80,9 @@ RegSpecs app_reg_specs[reg_count]
 {
     {(uint8_t*)&app_regs.lick_state, sizeof(app_regs.lick_state), U8},
     {(uint8_t*)&app_regs.on_threshold, sizeof(app_regs.on_threshold), U8},
-    {(uint8_t*)&app_regs.off_threshold, sizeof(app_regs.off_threshold), U8}
+    {(uint8_t*)&app_regs.off_threshold, sizeof(app_regs.off_threshold), U8},
+    {(uint8_t*)&app_regs.reset, sizeof(app_regs.reset), U8},
+    {(uint8_t*)&app_regs.raw_state, sizeof(app_regs.raw_state), U16}
 };
 
 void update_on_threshold(msg_t& msg)
@@ -85,22 +103,36 @@ void update_off_threshold(msg_t& msg)
         HarpCore::send_harp_reply(WRITE, msg.header.address);
 }
 
+void reset_detector(msg_t& msg)
+{
+    // reset lick detector.
+    bool reset_val = true;
+    queue_try_add(&set_reset_queue, &reset_val);
+    if (!HarpCore::is_muted())
+        HarpCore::send_harp_reply(WRITE, msg.header.address);
+}
+
 // Define register read-and-write handler functions.
 RegFnPair reg_handler_fns[reg_count]
 {
-    {&HarpCore::read_reg_generic, &HarpCore::write_to_read_only_reg_error},
-    {&HarpCore::read_reg_generic, &update_on_threshold},
-    {&HarpCore::read_reg_generic, &update_off_threshold}
+    {HarpCore::read_reg_generic, HarpCore::write_to_read_only_reg_error},
+    {HarpCore::read_reg_generic, update_on_threshold},
+    {HarpCore::read_reg_generic, update_off_threshold},
+    {HarpCore::read_reg_generic, reset_detector},
+    {HarpCore::read_reg_generic, HarpCore::write_reg_generic}
+
 };
 
 void update_app_state()
 {
-    // Update starting (or latest) values of the lick detector thresholds.
+    // Update local Harp registers with information from core1.
+    if (!queue_is_empty(&get_detector_raw_state_queue))
+        queue_remove_blocking(&get_detector_raw_state_queue, &app_regs.raw_state);
     if (!queue_is_empty(&get_on_threshold_queue))
         queue_remove_blocking(&get_on_threshold_queue, &app_regs.on_threshold);
     if (!queue_is_empty(&get_off_threshold_queue))
         queue_remove_blocking(&get_off_threshold_queue, &app_regs.off_threshold);
-    // Check multicore queue for new lick state and timestamp.
+    // Check for new licks from core1.
     if (queue_is_empty(&lick_event_queue))
         return;
     queue_remove_blocking(&lick_event_queue, &new_lick_state);
@@ -113,15 +145,16 @@ void update_app_state()
     const RegSpecs& reg_specs = app_reg_specs[0];
     //if (!HarpCApp::events_enabled())
     //    return;
+    // FIXME: send the timestamp that was taken with the detected lick state.
     HarpCApp::send_harp_reply(EVENT, APP_REG_START_ADDRESS, reg_specs.base_ptr,
                               reg_specs.num_bytes, reg_specs.payload_type);
-    // FIXME: send the timestamp that was taken with the detected lick state.
 }
 
 void reset_app()
 {
-    // TODO: reset lick detectors.
-    // use a queue for this.
+    // reset lick detector.
+    bool reset_val = true;
+    queue_try_add(&set_reset_queue, &reset_val);
 }
 
 // Create Harp "App."
@@ -186,6 +219,8 @@ int main()
     // Queue needs to be much larger than expected such that device enumerates
     // over USB.
     queue_init(&lick_event_queue, sizeof(lick_event_t), 32);
+    queue_init(&set_reset_queue, sizeof(bool), 32);
+    queue_init(&get_detector_raw_state_queue, sizeof(uint16_t), 32);
     queue_init(&set_on_threshold_queue, sizeof(uint8_t), 32);
     queue_init(&set_off_threshold_queue, sizeof(uint8_t), 32);
     queue_init(&get_on_threshold_queue, sizeof(uint8_t), 32);

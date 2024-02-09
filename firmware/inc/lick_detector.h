@@ -46,12 +46,13 @@ class LickDetector
 public:
 
     // Finite State Machine states (one-hot encoded).
-    enum State
+    enum State: uint16_t
     {
-        RESET = 0b0001,
-        WARMUP = 0b0010,
-        UNTRIGGERED = 0b0100,
-        TRIGGERED = 0b1000
+        RESET = 0b00001,
+        WARMUP = 0b00010,
+        DETECTION_THRESHOLD_OUT_OF_RANGE = 0b00100,
+        UNTRIGGERED = 0b01000,
+        TRIGGERED = 0b10000
     };
 
     LickDetector(uint16_t* adc_vals, size_t samples_per_period,
@@ -63,21 +64,19 @@ public:
 /**
  * \brief reset finite state machine for lick detection.
  */
-    void reset();
+    inline void reset()
+    {
+        state_ = RESET;
+        update();
+    }
 
 /**
  * \brief update finite state machine.
  */
     void update();
 
-    inline bool lick_start_detected()
-        {return lick_start_detected_;}
-    inline void clear_lick_detection_start_flag()
-        {lick_start_detected_ = false;}
-    inline bool lick_stop_detected()
-        {return lick_stop_detected_;}
-    inline void clear_lick_detection_stop_flag()
-        {lick_stop_detected_ = false;}
+    inline const uint16_t state()
+        {return state_;}
 
 // Public Data members.
     uint8_t on_threshold_percent_; /// public access for speed.
