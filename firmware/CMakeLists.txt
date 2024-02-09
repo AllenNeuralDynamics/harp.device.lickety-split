@@ -15,7 +15,7 @@ set(CMAKE_CXX_STANDARD 17)
 #add_definitions(-DDEBUG)
 #add_definitions(-DDEBUG_HARP_MSG_IN)
 #add_definitions(-DDEBUG_HARP_MSG_OUT)
-add_definitions(-DPROFILE_CPU)
+#add_definitions(-DPROFILE_CPU)
 
 
 
@@ -67,7 +67,7 @@ pico_add_extra_outputs(${PROJECT_NAME})
 # USB serial. Enable this for every library/executable that uses it.
 #pico_enable_stdio_usb(${PROJECT_NAME} 1)
 
-if(DEBUG)
+if (DEFINED DEBUG)
     message(WARNING "Debug printf() messages enabled from harp core to UART \
             with baud rate 921600.")
     pico_enable_stdio_uart(${PROJECT_NAME} 1)

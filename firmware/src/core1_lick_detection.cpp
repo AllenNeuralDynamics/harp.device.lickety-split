@@ -126,7 +126,7 @@ void core1_main()
                 case LickDetector::State::TRIGGERED:
                 case LickDetector::State::UNTRIGGERED:
                     // push the new state.
-                    lick_states = (((uint8_t)new_detector_state) >> 3); // FIXME: should be "UNTRIGGERED BASE"
+                    lick_states = (((uint8_t)new_detector_state) >> 4); // FIXME: should be "UNTRIGGERED BASE"
                     lick_event.state = lick_states;
                     lick_event.pico_time_us = time_us_64_unsafe();
                     queue_try_add(&lick_event_queue, &lick_event);

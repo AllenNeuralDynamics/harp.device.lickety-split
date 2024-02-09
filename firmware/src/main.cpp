@@ -119,7 +119,7 @@ RegFnPair reg_handler_fns[reg_count]
     {HarpCore::read_reg_generic, update_on_threshold},
     {HarpCore::read_reg_generic, update_off_threshold},
     {HarpCore::read_reg_generic, reset_detector},
-    {HarpCore::read_reg_generic, HarpCore::write_reg_generic}
+    {HarpCore::read_reg_generic, HarpCore::write_to_read_only_reg_error}
 
 };
 
@@ -155,6 +155,9 @@ void reset_app()
     // reset lick detector.
     bool reset_val = true;
     queue_try_add(&set_reset_queue, &reset_val);
+    // Update app reg values.
+    app_regs.reset = 0;
+    // Remaining app regs are update by core1 in the update_app loop.
 }
 
 // Create Harp "App."
@@ -231,10 +234,8 @@ int main()
     // handle DMA-triggered interrupts.
     multicore_launch_core1(core1_main);
 
+    // Run Harp app.
     while(true)
-    {
-        // Run Harp app.
         app.run();
-    }
     // No need to free the queues since we loop forever.
 }
