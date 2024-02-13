@@ -13,7 +13,7 @@ An ephys-compliant lick detector based on measured change in capacitance.
 * reverse-polarity protected
 * isolated USB to prevent ground loops with the PC.
 
-### Device Pinout
+## Device Pinout
 <img src="notes/images/pinout.png" width=100% height=100%>
 
 ## Wiring Diagram
