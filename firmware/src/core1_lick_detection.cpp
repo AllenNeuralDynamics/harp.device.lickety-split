@@ -18,9 +18,6 @@ uint8_t new_lick_states;
 lick_event_t lick_event; // data to push into the queue upon detecting a lick
                          // state change.
 
-uint8_t new_on_threshold;
-uint8_t new_off_threshold;
-
 // Create instance for the ADS7049.
 PIO_ADS7049 ads7049_0(pio0, ADS7049_CS_PIN, ADS7049_SCK_PIN, ADS7049_POCI_PIN);
 
@@ -50,6 +47,9 @@ void core1_main()
     update_due = false;
     lick_states = 0; // Start with no licks detected.
     new_lick_states = 0;
+    // Send initial threshold settings to core0.
+    queue_try_add(&get_on_threshold_queue, &lick_detectors[0].on_threshold_percent_);
+    queue_try_add(&get_off_threshold_queue, &lick_detectors[0].off_threshold_percent_);
     // Note: the core that attaches interrupt is the core that will handle it.
     // Connect ads7049 dma stream interrupt handler to lick detector.
     ads7049_0.setup_dma_stream_to_memory_with_interrupt(
@@ -69,15 +69,15 @@ void core1_main()
     curr_time_ms = to_ms_since_boot(get_absolute_time());
 #endif
         // Check for new lick threshold settings.
-        if (!queue_is_empty(&on_threshold_queue))
+        if (!queue_is_empty(&set_on_threshold_queue))
         {
-            queue_remove_blocking(&on_threshold_queue, &new_on_threshold);
-            lick_detectors[0].set_on_threshold_percent(new_on_threshold);
+            queue_remove_blocking(&set_on_threshold_queue,
+                                  &lick_detectors[0].on_threshold_percent_);
         }
-        if (!queue_is_empty(&off_threshold_queue))
+        if (!queue_is_empty(&set_off_threshold_queue))
         {
-            queue_remove_blocking(&off_threshold_queue, &new_off_threshold);
-            lick_detectors[0].set_off_threshold_percent(new_off_threshold);
+            queue_remove_blocking(&set_off_threshold_queue,
+                                  &lick_detectors[0].off_threshold_percent_);
         }
         // Check if any licks were detected.
         // Timestamp them and queue a harp message.

@@ -29,8 +29,10 @@ const uint16_t serial_number = 0;
 queue_t lick_event_queue;
 lick_event_t new_lick_state;
 
-queue_t on_threshold_queue;
-queue_t off_threshold_queue;
+queue_t set_on_threshold_queue;
+queue_t set_off_threshold_queue;
+queue_t get_on_threshold_queue;
+queue_t get_off_threshold_queue;
 
 void set_led_state(bool enabled)
 {
@@ -51,9 +53,9 @@ const size_t reg_count = 3;
 #pragma pack(push, 1)
 struct app_regs_t
 {
-    volatile uint8_t lick_state;  // app register 0
-    volatile uint8_t on_threshold;  // app register 1
-    volatile uint8_t off_threshold;  // app register 2
+    uint8_t lick_state;  // app register 0
+    uint8_t on_threshold;  // app register 1
+    uint8_t off_threshold;  // app register 2
 } app_regs;
 #pragma pack(pop)
 
@@ -69,9 +71,7 @@ void update_on_threshold(msg_t& msg)
 {
     HarpCore::copy_msg_payload_to_register(msg);
     // Push new value into the queue so that core1 can apply the change.
-    uint8_t on_threshold = app_regs.on_threshold;
-    queue_try_add(&on_threshold_queue, &on_threshold);
-    // use a queue for this.
+    queue_try_add(&set_on_threshold_queue, &app_regs.on_threshold);
     if (!HarpCore::is_muted())
         HarpCore::send_harp_reply(WRITE, msg.header.address);
 }
@@ -80,9 +80,7 @@ void update_off_threshold(msg_t& msg)
 {
     HarpCore::copy_msg_payload_to_register(msg);
     // Push new value into the queue so that core1 can apply the change.
-    uint8_t off_threshold = app_regs.off_threshold;
-    queue_try_add(&off_threshold_queue, &off_threshold);
-    // use a queue for this.
+    queue_try_add(&set_off_threshold_queue, &app_regs.off_threshold);
     if (!HarpCore::is_muted())
         HarpCore::send_harp_reply(WRITE, msg.header.address);
 }
@@ -97,6 +95,11 @@ RegFnPair reg_handler_fns[reg_count]
 
 void update_app_state()
 {
+    // Update starting (or latest) values of the lick detector thresholds.
+    if (!queue_is_empty(&get_on_threshold_queue))
+        queue_remove_blocking(&get_on_threshold_queue, &app_regs.on_threshold);
+    if (!queue_is_empty(&get_off_threshold_queue))
+        queue_remove_blocking(&get_off_threshold_queue, &app_regs.off_threshold);
     // Check multicore queue for new lick state and timestamp.
     if (queue_is_empty(&lick_event_queue))
         return;
@@ -183,19 +186,20 @@ int main()
     // Queue needs to be much larger than expected such that device enumerates
     // over USB.
     queue_init(&lick_event_queue, sizeof(lick_event_t), 32);
+    queue_init(&set_on_threshold_queue, sizeof(uint8_t), 32);
+    queue_init(&set_off_threshold_queue, sizeof(uint8_t), 32);
+    queue_init(&get_on_threshold_queue, sizeof(uint8_t), 32);
+    queue_init(&get_off_threshold_queue, sizeof(uint8_t), 32);
 
     // Launch Core1, which will process incoming adc samples and detect licks.
     // Core1 will also setup periodic ADC sampling, writing to memory, and
     // handle DMA-triggered interrupts.
     multicore_launch_core1(core1_main);
 
-    bool pwm_state = true;
-    uint32_t prev_time = time_us_32();
-    uint32_t curr_time = prev_time;
     while(true)
     {
         // Run Harp app.
         app.run();
     }
-    // No need to free the queue since we loop forever.
+    // No need to free the queues since we loop forever.
 }
