@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <Title>AllenNeuralDynamics.LicketySplitLickDetector</Title>
+    <Title>AllenNeuralDynamics.LicketySplit</Title>
     <Authors></Authors>
     <Copyright>Copyright © 2023 Allen Institute for Neural Dynamics</Copyright>
     <PackageProjectUrl>https://github.com/AllenNeuralDynamics/bonsai.allen-neural-dynamics</PackageProjectUrl>
@@ -9,9 +9,9 @@
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <GeneratePackageOnBuild Condition="'$(Configuration)'=='Release'">true</GeneratePackageOnBuild>
-    <Description>Bonsai Library containing interfaces for data acquisition and control of AllenNeuralDynamics LicketySplitLickDetector devices.</Description>
+    <Description>Bonsai Library containing interfaces for data acquisition and control of AllenNeuralDynamics LicketySplit devices.</Description>
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    <PackageTags>AllenNeuralDynamics LicketySplitLickDetector Bonsai Rx</PackageTags>
+    <PackageTags>AllenNeuralDynamics LicketySplit Bonsai Rx</PackageTags>
     <PackageProjectUrl>https://github.com/AllenNeuralDynamics/harp.device.lickety-split</PackageProjectUrl>
     <PackageLicenseExpression></PackageLicenseExpression>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
