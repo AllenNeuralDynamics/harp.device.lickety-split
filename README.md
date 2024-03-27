@@ -14,22 +14,22 @@ An ephys-compliant lick detector based on measured change in capacitance.
 * isolated USB to prevent ground loops with the PC.
 
 ## Device Pinout
-<img src="notes/images/pinout.png" width=100% height=100%>
+![Pinout](./notes/images/pinout.png)
 
 ## Wiring Diagram
 There are 3 configurations that will produce valid lick detection readings:
 
 Option A works well if your rig does not have large sources of 60Hz noise.
 
-<img src="notes/images/setup_a.png" width=100% height=100%>
+![SetupA](./notes/images/setup_a.png)
 
 Option B works well if your rig *does* have large sources of 60Hz noise.
 
-<img src="notes/images/setup_b.png" width=100% height=100%>
+![SetupB](./notes/images/setup_b.png)
 
 Option C works well if your rig *does* have large sources of 60Hz noise, but you cannot earth ground it.
 
-<img src="notes/images/setup_c.png" width=100% height=100%>
+![SetupC](./notes/images/setup_c.png)
 
 ### Cables
 This system uses a Triax cable and will work with cable lengths up to .8 meters (2.5 ft) long.
@@ -88,8 +88,3 @@ The four parameters are:
   * lick-detection "stop" threshold
     * a signal value above threshold will untrigger a detected lick (i.e: the output signal will be set to 0V.)
     * constraint: "start" < "stop" threshold
-
-
-## Harp Register Map
-[List of Registers](./firmware/docs/register_map.csv)
-
