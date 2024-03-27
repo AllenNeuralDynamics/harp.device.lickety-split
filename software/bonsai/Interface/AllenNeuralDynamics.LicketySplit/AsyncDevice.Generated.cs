@@ -2,14 +2,14 @@ using Bonsai.Harp;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace AllenNeuralDynamics.LicketySplitLickDetector
+namespace AllenNeuralDynamics.LicketySplit
 {
     /// <inheritdoc/>
     public partial class Device
     {
         /// <summary>
         /// Initializes a new instance of the asynchronous API to configure and interface
-        /// with LicketySplitLickDetector devices on the specified serial port.
+        /// with LicketySplit devices on the specified serial port.
         /// </summary>
         /// <param name="portName">
         /// The name of the serial port used to communicate with the Harp device.
@@ -26,7 +26,7 @@ namespace AllenNeuralDynamics.LicketySplitLickDetector
             if (whoAmI != Device.WhoAmI)
             {
                 var errorMessage = string.Format(
-                    "The device ID {1} on {0} was unexpected. Check whether a LicketySplitLickDetector device is connected to the specified serial port.",
+                    "The device ID {1} on {0} was unexpected. Check whether a LicketySplit device is connected to the specified serial port.",
                     portName, whoAmI);
                 throw new HarpException(errorMessage);
             }
@@ -36,7 +36,7 @@ namespace AllenNeuralDynamics.LicketySplitLickDetector
     }
 
     /// <summary>
-    /// Represents an asynchronous API to configure and interface with LicketySplitLickDetector devices.
+    /// Represents an asynchronous API to configure and interface with LicketySplit devices.
     /// </summary>
     public partial class AsyncDevice : Bonsai.Harp.AsyncDevice
     {

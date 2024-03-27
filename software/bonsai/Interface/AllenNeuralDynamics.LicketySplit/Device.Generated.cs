@@ -7,19 +7,19 @@ using System.Linq;
 using System.Reactive.Linq;
 using System.Xml.Serialization;
 
-namespace AllenNeuralDynamics.LicketySplitLickDetector
+namespace AllenNeuralDynamics.LicketySplit
 {
     /// <summary>
-    /// Generates events and processes commands for the LicketySplitLickDetector device connected
+    /// Generates events and processes commands for the LicketySplit device connected
     /// at the specified serial port.
     /// </summary>
     [Combinator(MethodName = nameof(Generate))]
     [WorkflowElementCategory(ElementCategory.Source)]
-    [Description("Generates events and processes commands for the LicketySplitLickDetector device.")]
+    [Description("Generates events and processes commands for the LicketySplit device.")]
     public partial class Device : Bonsai.Harp.Device, INamedElement
     {
         /// <summary>
-        /// Represents the unique identity class of the <see cref="LicketySplitLickDetector"/> device.
+        /// Represents the unique identity class of the <see cref="LicketySplit"/> device.
         /// This field is constant.
         /// </summary>
         public const int WhoAmI = 1400;
@@ -29,7 +29,7 @@ namespace AllenNeuralDynamics.LicketySplitLickDetector
         /// </summary>
         public Device() : base(WhoAmI) { }
 
-        string INamedElement.Name => nameof(LicketySplitLickDetector);
+        string INamedElement.Name => nameof(LicketySplit);
 
         /// <summary>
         /// Gets a read-only mapping from address to register type.
@@ -44,19 +44,19 @@ namespace AllenNeuralDynamics.LicketySplitLickDetector
     }
 
     /// <summary>
-    /// Represents an operator that groups the sequence of <see cref="LicketySplitLickDetector"/>" messages by register type.
+    /// Represents an operator that groups the sequence of <see cref="LicketySplit"/>" messages by register type.
     /// </summary>
-    [Description("Groups the sequence of LicketySplitLickDetector messages by register type.")]
+    [Description("Groups the sequence of LicketySplit messages by register type.")]
     public partial class GroupByRegister : Combinator<HarpMessage, IGroupedObservable<Type, HarpMessage>>
     {
         /// <summary>
-        /// Groups an observable sequence of <see cref="LicketySplitLickDetector"/> messages
+        /// Groups an observable sequence of <see cref="LicketySplit"/> messages
         /// by register type.
         /// </summary>
         /// <param name="source">The sequence of Harp device messages.</param>
         /// <returns>
         /// A sequence of observable groups, each of which corresponds to a unique
-        /// <see cref="LicketySplitLickDetector"/> register.
+        /// <see cref="LicketySplit"/> register.
         /// </returns>
         public override IObservable<IGroupedObservable<Type, HarpMessage>> Process(IObservable<HarpMessage> source)
         {
@@ -66,7 +66,7 @@ namespace AllenNeuralDynamics.LicketySplitLickDetector
 
     /// <summary>
     /// Represents an operator that filters register-specific messages
-    /// reported by the <see cref="LicketySplitLickDetector"/> device.
+    /// reported by the <see cref="LicketySplit"/> device.
     /// </summary>
     /// <seealso cref="LickState"/>
     /// <seealso cref="Channel0TriggerThreshold"/>
@@ -74,7 +74,7 @@ namespace AllenNeuralDynamics.LicketySplitLickDetector
     [XmlInclude(typeof(LickState))]
     [XmlInclude(typeof(Channel0TriggerThreshold))]
     [XmlInclude(typeof(Channel0UntriggerThreshold))]
-    [Description("Filters register-specific messages reported by the LicketySplitLickDetector device.")]
+    [Description("Filters register-specific messages reported by the LicketySplit device.")]
     public class FilterRegister : FilterRegisterBuilder, INamedElement
     {
         /// <summary>
@@ -87,13 +87,13 @@ namespace AllenNeuralDynamics.LicketySplitLickDetector
 
         string INamedElement.Name
         {
-            get => $"{nameof(LicketySplitLickDetector)}.{GetElementDisplayName(Register)}";
+            get => $"{nameof(LicketySplit)}.{GetElementDisplayName(Register)}";
         }
     }
 
     /// <summary>
     /// Represents an operator which filters and selects specific messages
-    /// reported by the LicketySplitLickDetector device.
+    /// reported by the LicketySplit device.
     /// </summary>
     /// <seealso cref="LickState"/>
     /// <seealso cref="Channel0TriggerThreshold"/>
@@ -104,7 +104,7 @@ namespace AllenNeuralDynamics.LicketySplitLickDetector
     [XmlInclude(typeof(TimestampedLickState))]
     [XmlInclude(typeof(TimestampedChannel0TriggerThreshold))]
     [XmlInclude(typeof(TimestampedChannel0UntriggerThreshold))]
-    [Description("Filters and selects specific messages reported by the LicketySplitLickDetector device.")]
+    [Description("Filters and selects specific messages reported by the LicketySplit device.")]
     public partial class Parse : ParseBuilder, INamedElement
     {
         /// <summary>
@@ -115,12 +115,12 @@ namespace AllenNeuralDynamics.LicketySplitLickDetector
             Register = new LickState();
         }
 
-        string INamedElement.Name => $"{nameof(LicketySplitLickDetector)}.{GetElementDisplayName(Register)}";
+        string INamedElement.Name => $"{nameof(LicketySplit)}.{GetElementDisplayName(Register)}";
     }
 
     /// <summary>
     /// Represents an operator which formats a sequence of values as specific
-    /// LicketySplitLickDetector register messages.
+    /// LicketySplit register messages.
     /// </summary>
     /// <seealso cref="LickState"/>
     /// <seealso cref="Channel0TriggerThreshold"/>
@@ -128,7 +128,7 @@ namespace AllenNeuralDynamics.LicketySplitLickDetector
     [XmlInclude(typeof(LickState))]
     [XmlInclude(typeof(Channel0TriggerThreshold))]
     [XmlInclude(typeof(Channel0UntriggerThreshold))]
-    [Description("Formats a sequence of values as specific LicketySplitLickDetector register messages.")]
+    [Description("Formats a sequence of values as specific LicketySplit register messages.")]
     public partial class Format : FormatBuilder, INamedElement
     {
         /// <summary>
@@ -139,7 +139,7 @@ namespace AllenNeuralDynamics.LicketySplitLickDetector
             Register = new LickState();
         }
 
-        string INamedElement.Name => $"{nameof(LicketySplitLickDetector)}.{GetElementDisplayName(Register)}";
+        string INamedElement.Name => $"{nameof(LicketySplit)}.{GetElementDisplayName(Register)}";
     }
 
     /// <summary>
@@ -433,7 +433,7 @@ namespace AllenNeuralDynamics.LicketySplitLickDetector
 
     /// <summary>
     /// Represents an operator which creates standard message payloads for the
-    /// LicketySplitLickDetector device.
+    /// LicketySplit device.
     /// </summary>
     /// <seealso cref="CreateLickStatePayload"/>
     /// <seealso cref="CreateChannel0TriggerThresholdPayload"/>
@@ -444,7 +444,7 @@ namespace AllenNeuralDynamics.LicketySplitLickDetector
     [XmlInclude(typeof(CreateTimestampedLickStatePayload))]
     [XmlInclude(typeof(CreateTimestampedChannel0TriggerThresholdPayload))]
     [XmlInclude(typeof(CreateTimestampedChannel0UntriggerThresholdPayload))]
-    [Description("Creates standard message payloads for the LicketySplitLickDetector device.")]
+    [Description("Creates standard message payloads for the LicketySplit device.")]
     public partial class CreateMessage : CreateMessageBuilder, INamedElement
     {
         /// <summary>
@@ -455,7 +455,7 @@ namespace AllenNeuralDynamics.LicketySplitLickDetector
             Payload = new CreateLickStatePayload();
         }
 
-        string INamedElement.Name => $"{nameof(LicketySplitLickDetector)}.{GetElementDisplayName(Payload)}";
+        string INamedElement.Name => $"{nameof(LicketySplit)}.{GetElementDisplayName(Payload)}";
     }
 
     /// <summary>
@@ -488,7 +488,7 @@ namespace AllenNeuralDynamics.LicketySplitLickDetector
         /// <returns>A new message for the LickState register.</returns>
         public HarpMessage GetMessage(MessageType messageType)
         {
-            return AllenNeuralDynamics.LicketySplitLickDetector.LickState.FromPayload(messageType, GetPayload());
+            return AllenNeuralDynamics.LicketySplit.LickState.FromPayload(messageType, GetPayload());
         }
     }
 
@@ -508,7 +508,7 @@ namespace AllenNeuralDynamics.LicketySplitLickDetector
         /// <returns>A new timestamped message for the LickState register.</returns>
         public HarpMessage GetMessage(double timestamp, MessageType messageType)
         {
-            return AllenNeuralDynamics.LicketySplitLickDetector.LickState.FromPayload(timestamp, messageType, GetPayload());
+            return AllenNeuralDynamics.LicketySplit.LickState.FromPayload(timestamp, messageType, GetPayload());
         }
     }
 
@@ -542,7 +542,7 @@ namespace AllenNeuralDynamics.LicketySplitLickDetector
         /// <returns>A new message for the Channel0TriggerThreshold register.</returns>
         public HarpMessage GetMessage(MessageType messageType)
         {
-            return AllenNeuralDynamics.LicketySplitLickDetector.Channel0TriggerThreshold.FromPayload(messageType, GetPayload());
+            return AllenNeuralDynamics.LicketySplit.Channel0TriggerThreshold.FromPayload(messageType, GetPayload());
         }
     }
 
@@ -562,7 +562,7 @@ namespace AllenNeuralDynamics.LicketySplitLickDetector
         /// <returns>A new timestamped message for the Channel0TriggerThreshold register.</returns>
         public HarpMessage GetMessage(double timestamp, MessageType messageType)
         {
-            return AllenNeuralDynamics.LicketySplitLickDetector.Channel0TriggerThreshold.FromPayload(timestamp, messageType, GetPayload());
+            return AllenNeuralDynamics.LicketySplit.Channel0TriggerThreshold.FromPayload(timestamp, messageType, GetPayload());
         }
     }
 
@@ -596,7 +596,7 @@ namespace AllenNeuralDynamics.LicketySplitLickDetector
         /// <returns>A new message for the Channel0UntriggerThreshold register.</returns>
         public HarpMessage GetMessage(MessageType messageType)
         {
-            return AllenNeuralDynamics.LicketySplitLickDetector.Channel0UntriggerThreshold.FromPayload(messageType, GetPayload());
+            return AllenNeuralDynamics.LicketySplit.Channel0UntriggerThreshold.FromPayload(messageType, GetPayload());
         }
     }
 
@@ -616,7 +616,7 @@ namespace AllenNeuralDynamics.LicketySplitLickDetector
         /// <returns>A new timestamped message for the Channel0UntriggerThreshold register.</returns>
         public HarpMessage GetMessage(double timestamp, MessageType messageType)
         {
-            return AllenNeuralDynamics.LicketySplitLickDetector.Channel0UntriggerThreshold.FromPayload(timestamp, messageType, GetPayload());
+            return AllenNeuralDynamics.LicketySplit.Channel0UntriggerThreshold.FromPayload(timestamp, messageType, GetPayload());
         }
     }
 
