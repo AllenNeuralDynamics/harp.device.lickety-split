@@ -305,6 +305,11 @@
     (uuid f8d26057-9325-4243-8d11-1b2123bff49e)
   )
 
+  (text "Use 2.2K for R1 in 125KHz configuration." (at 88.265 149.225 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 91d1fc55-f3e7-4422-a2ad-8b92aa4b7866)
+  )
+
   (global_label "OUT" (shape input) (at 178.435 112.395 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid abdccf5b-a942-4e3f-9394-3af0c1eef8b9)
@@ -415,8 +420,8 @@
     (property "Datasheet" "~" (at 145.415 112.395 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 0d098d1f-ae8a-4f78-a345-1260b963f727))
-    (pin "2" (uuid ae94d04c-c89d-4077-977d-7061ed4d0d85))
+    (pin "1" (uuid 51b0afd2-9ef4-4c46-9408-c66d235e9e16))
+    (pin "2" (uuid 97db4a91-e477-4e1e-a79e-04d7a3ee68a0))
     (instances
       (project "lick_detector_sim"
         (path "/7cc8ef94-7a5e-4faa-aeb4-3bb1548223bc"
@@ -455,7 +460,7 @@
     (property "Sim.Device" "V" (at 80.645 120.015 0)
       (effects (font (size 1.27 1.27)) (justify left) hide)
     )
-    (property "Sim.Params" "y1=0 y2=3.3 td=2n tr=2n tf=2n tw=5u per=10u" (at 54.61 134.62 0)
+    (property "Sim.Params" "y1=0 y2=3.3 td=2n tr=2n tf=2n tw=4u per=8u" (at 54.61 134.62 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (pin "1" (uuid 0c4d85be-4f1c-4641-b452-54c7f0c25a81))
@@ -540,8 +545,8 @@
     (property "Datasheet" "~" (at 130.175 112.395 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid e943fb1c-9b77-4428-8afd-4fdb5775c35f))
-    (pin "2" (uuid d9bb9702-1986-4943-83e3-933239644c27))
+    (pin "1" (uuid 632661df-7f55-4c75-975b-21dbf409b436))
+    (pin "2" (uuid 2a020eb8-5ee9-4bc8-8658-d29c5d7edd67))
     (instances
       (project "lick_detector_sim"
         (path "/7cc8ef94-7a5e-4faa-aeb4-3bb1548223bc"
@@ -795,8 +800,8 @@
     (property "Datasheet" "~" (at 114.3 112.395 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 85f577b1-a0fe-4e18-8e25-d308d8955094))
-    (pin "2" (uuid 13a5214f-59f7-46b8-9f6a-32c903f792c3))
+    (pin "1" (uuid d9619eba-0b6b-459d-af32-28973b9abecc))
+    (pin "2" (uuid d7be27c1-de1e-443c-a288-958d903f886d))
     (instances
       (project "lick_detector_sim"
         (path "/7cc8ef94-7a5e-4faa-aeb4-3bb1548223bc"

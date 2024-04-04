@@ -1995,7 +1995,6 @@
   (no_connect (at 245.11 130.175) (uuid 024fde8f-926d-4ece-a1db-6ad47f60ad61))
   (no_connect (at 245.11 89.535) (uuid 0342ac88-463f-4117-ae2b-7e21d3ec6001))
   (no_connect (at 245.11 94.615) (uuid 03d522de-fd18-4e91-af45-b6e6823362e0))
-  (no_connect (at 245.11 114.935) (uuid 1e6c92a3-ac97-43e9-ae64-3c2ab931ef99))
   (no_connect (at 245.11 109.855) (uuid 2e1f1624-2218-46b5-a0b2-6627986a2205))
   (no_connect (at 245.11 112.395) (uuid 352fab2c-7864-4c47-ad04-089d5cc299c4))
   (no_connect (at 245.11 102.235) (uuid 440e29a8-9656-4f70-96ed-7d4612909b60))
@@ -2010,11 +2009,9 @@
   (no_connect (at 181.61 114.935) (uuid 95f04bf9-5d6c-4c3a-9671-05c015b6a9e5))
   (no_connect (at 245.11 104.775) (uuid a59792d7-c8b2-4033-83b5-5827e73dd997))
   (no_connect (at 245.11 84.455) (uuid a64ab353-3c5f-479c-8897-224f58fcfd47))
-  (no_connect (at 245.11 81.915) (uuid af8310ad-7bf8-4366-a536-37bb44b1592f))
   (no_connect (at 245.11 97.155) (uuid bbda092e-d8c1-49ad-97f8-4d2a997e9207))
   (no_connect (at 43.18 52.705) (uuid bdfcf20f-2f72-499f-b1cc-853628bf45ad))
   (no_connect (at 181.61 139.065) (uuid c9bfe4f1-a1d1-4c6f-bb6d-466a692bb77a))
-  (no_connect (at 245.11 117.475) (uuid dcc9d1d9-85bd-4cc3-b10b-d3d8dd52a2d8))
   (no_connect (at 245.11 99.695) (uuid dffa803b-5f40-4c38-81dd-792d74ef397d))
   (no_connect (at 181.61 141.605) (uuid e0cde7f3-1215-402c-a605-68fefc11f386))
   (no_connect (at 245.11 92.075) (uuid f2459989-74bc-4d5b-b14c-9d0e25133b6d))
@@ -2155,6 +2152,10 @@
   (wire (pts (xy 29.21 123.825) (xy 40.64 123.825))
     (stroke (width 0) (type default))
     (uuid 237ab5a9-fc21-4724-ba26-ef0a2de8a5d7)
+  )
+  (wire (pts (xy 245.11 114.935) (xy 255.27 114.935))
+    (stroke (width 0) (type default))
+    (uuid 23e4731c-8e5a-4a94-ab15-c850fabf3599)
   )
   (wire (pts (xy 125.73 180.975) (xy 125.73 179.705))
     (stroke (width 0) (type default))
@@ -2347,6 +2348,10 @@
   (wire (pts (xy 50.8 179.705) (xy 59.69 179.705))
     (stroke (width 0) (type default))
     (uuid 595c5371-a492-490c-9e10-7dc37cef68d8)
+  )
+  (wire (pts (xy 245.11 81.915) (xy 247.65 81.915))
+    (stroke (width 0) (type default))
+    (uuid 59622969-8b8d-4308-b5db-9c9576d1e109)
   )
   (wire (pts (xy 255.27 135.255) (xy 255.27 133.35))
     (stroke (width 0) (type default))
@@ -2883,6 +2888,10 @@
   (wire (pts (xy 57.15 144.145) (xy 48.26 144.145))
     (stroke (width 0) (type default))
     (uuid e7fa205c-e544-4b99-b676-074f01f81e85)
+  )
+  (wire (pts (xy 245.11 117.475) (xy 255.27 117.475))
+    (stroke (width 0) (type default))
+    (uuid e7fb2639-e9f1-4ec8-928c-285b8062c9b1)
   )
   (wire (pts (xy 45.72 43.815) (xy 70.485 43.815))
     (stroke (width 0) (type default))
@@ -5558,13 +5567,32 @@
     (uuid f4740a21-d58b-4904-88eb-385f105c0890)
   )
 
+  (global_label "GAIN_SEL" (shape input) (at 255.27 117.475 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 1497c254-5dd3-4302-997e-8f960aacfca9)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 266.9033 117.475 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
+  (global_label "FILTER_SEL" (shape input) (at 255.27 114.935 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid b25839fe-e93b-4efc-9af9-94f0b99b61c9)
+    (property "Intersheetrefs" "${INTERSHEET_REFS}" (at 268.7175 114.935 0)
+      (effects (font (size 1.27 1.27)) (justify left) hide)
+    )
+  )
+
   (hierarchical_label "PIO_SCK" (shape input) (at 255.27 125.095 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 34492172-1ea8-47ec-aafe-88125a797417)
   )
-  (hierarchical_label "100KHZ_SQ_WAVE_OUT" (shape input) (at 247.65 79.375 0) (fields_autoplaced)
+  (hierarchical_label "100KHZ_OUT" (shape input) (at 247.65 79.375 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
     (uuid 7d5b2e65-44c0-446b-b7ce-1aa5d15ae524)
+  )
+  (hierarchical_label "125KHZ_OUT" (shape input) (at 247.65 81.915 0) (fields_autoplaced)
+    (effects (font (size 1.27 1.27)) (justify left))
+    (uuid 87eee8aa-7bef-45eb-853d-ea9a822bc44d)
   )
   (hierarchical_label "TTL_OUT" (shape input) (at 255.27 128.905 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left))
@@ -5634,8 +5662,8 @@
     (property "PCBWay Link" "https://www.pcbway.com/components/detail/RT0402FRE075K1L/449762/" (at 49.53 32.385 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 9c1f5854-3b8a-4e35-93fc-f92a66d782e3))
-    (pin "2" (uuid 4173b969-ff28-4015-b02b-53f1981340ce))
+    (pin "1" (uuid 9411202b-431d-498b-b529-ce9d928b5366))
+    (pin "2" (uuid 64e4f9f8-9a01-4ed5-ae22-fa789a1cebc4))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -5755,8 +5783,8 @@
     (property "Notes" "" (at 243.84 27.305 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 462d33bb-27c1-4892-8709-76143eb77427))
-    (pin "2" (uuid 88a5f98c-3ba7-46a4-99de-884c515d6c88))
+    (pin "1" (uuid fb54f761-2244-4a3a-b4f3-c1decc198b62))
+    (pin "2" (uuid c8b1d46a-bf59-4100-a221-e41101e626f9))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -5793,8 +5821,8 @@
     (property "Tolerance" "1%" (at 116.84 45.085 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 2806d58e-097e-4722-9c58-1eccbee12e73))
-    (pin "2" (uuid 6d7deac9-e17d-4270-b757-71656e5beb68))
+    (pin "1" (uuid 366bb456-f8bb-406e-aa73-717fae2e836e))
+    (pin "2" (uuid 50f903e2-908e-4554-815b-9a549b446234))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -5831,14 +5859,14 @@
     (property "PCBWay Link" "https://www.pcbway.com/components" (at 257.81 36.195 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 346b612f-c94c-4ad7-ab95-96a0beac39f7))
-    (pin "2" (uuid ad369dc1-b487-41e6-b04d-362575b5a56b))
-    (pin "3" (uuid ffe6dda8-a553-4f54-b39c-6c13fdd47ce6))
-    (pin "4" (uuid 86f1551e-7d0c-4c44-83c3-342a03490436))
-    (pin "5" (uuid 0137e35f-7607-4710-af1f-35e7d5299da6))
-    (pin "6" (uuid e4c64dfc-14e2-4f2f-a60f-a36117941173))
-    (pin "7" (uuid 7e88aecc-11bc-47c4-a25b-0c089647e98d))
-    (pin "8" (uuid 628c575c-53af-4e26-966d-f313c9141faf))
+    (pin "1" (uuid dd22eee2-d460-4455-afa5-767b5cc0460c))
+    (pin "2" (uuid 712edf3b-8498-49ff-b6de-5a6a83310d29))
+    (pin "3" (uuid c7b55619-731d-4ea8-9de1-2806c06d5e52))
+    (pin "4" (uuid 97a9fb7f-7c1c-4500-8af3-bf15dd140c30))
+    (pin "5" (uuid 3641c8cb-fd6c-4bca-baad-d194cc2a9605))
+    (pin "6" (uuid ffe09301-731c-4409-8140-6be5b5a21612))
+    (pin "7" (uuid 4ff49cc9-3af2-4da5-a244-4189c417cfd6))
+    (pin "8" (uuid 5c05cfc3-6d0b-4eae-8ca0-d85ecefb2a0e))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -5884,8 +5912,8 @@
     (property "PCBWay Link" "https://www.pcbway.com/components/detail/0402B104K160CT/307171/" (at 41.91 184.785 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 020c4032-ca1b-45a2-8048-fa5cd3ac0e57))
-    (pin "2" (uuid 6bfee102-b20c-4378-a3b5-d25418ea1107))
+    (pin "1" (uuid cf8b063f-d14b-4744-9be4-9788f5aa1e6f))
+    (pin "2" (uuid 8e529965-5472-436c-aa6d-57b5cbce5e02))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -5986,8 +6014,8 @@
     (property "Tolerance" "10%" (at 31.75 184.785 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 8ed214c1-7354-492a-983e-d1a47b2a74f3))
-    (pin "2" (uuid 08ce63c1-0df5-4b9f-b797-1c73bdb92200))
+    (pin "1" (uuid d0c3b55f-df97-4aa2-bdf3-031ab0a3f224))
+    (pin "2" (uuid a6227d30-5f23-4c40-bf03-2faf8b32188c))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
@@ -6139,8 +6167,8 @@
     (property "PCBWay Link" "https://www.pcbway.com/components/detail/0402B104K160CT/307171/" (at 48.26 149.225 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid ae6d9f30-4e19-4049-a5b7-6bd748c5c1c1))
-    (pin "2" (uuid f40da75c-3c8f-4227-ad85-3fe25d5c27f8))
+    (pin "1" (uuid 160f7762-9876-41ca-a794-bc4d7896d0d4))
+    (pin "2" (uuid ba118d42-bd80-4559-8d2f-773f695dca54))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -6211,8 +6239,8 @@
     (property "PCBWay Link" "https://www.pcbway.com/components/detail/0402B104K160CT/307171/" (at 134.62 184.785 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 9f910c3d-0903-4817-bd23-515741051143))
-    (pin "2" (uuid 607d9c84-aaac-4e3b-9f93-920201bfc304))
+    (pin "1" (uuid fa08a3f2-a3ab-4565-9e65-9822aa61feb4))
+    (pin "2" (uuid 229ec4c7-f4a3-4df8-b58b-6658544a5d6b))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -6374,8 +6402,8 @@
     (property "Manufacturer Number" "XZCDGK53W-1VF" (at 269.24 139.7 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid a39bce1b-1217-4aa9-b4b8-01d6d156d08d))
-    (pin "2" (uuid 4b693cb5-b170-4268-94ff-f19d0a81a4aa))
+    (pin "1" (uuid 9c0f6cb2-e26a-45c4-95d3-8c9ffcdd1dee))
+    (pin "2" (uuid ab353362-a967-44e6-b737-87e7b363995d))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -6465,8 +6493,8 @@
     (property "PCBWay Link" "https://www.pcbway.com/components/detail/RC0402FR0727RL/656670/" (at 250.19 64.135 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid aae6b8c5-9f2c-4612-98a2-959bf3296702))
-    (pin "2" (uuid 7dddd6c2-0040-43cd-9176-dac0d5a82d9f))
+    (pin "1" (uuid 03b216d1-c0a1-4b4a-af2f-c44126f09f4f))
+    (pin "2" (uuid 48af4148-ad85-4853-a342-d6c3d183af76))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -6503,9 +6531,9 @@
     (property "Manufacturer Number" "TPD2EUSB30DRTR" (at 57.15 53.975 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 18b3f2cd-319e-439a-8d0d-315e64606ac3))
-    (pin "2" (uuid 71d0a234-13d6-40f3-9b98-d04bd9f11288))
-    (pin "3" (uuid 6f853d83-0473-4fc1-ba96-e0f8cc720839))
+    (pin "1" (uuid 14e779e4-f779-4374-9fd5-0e2993b503b4))
+    (pin "2" (uuid 0d55d7dc-0281-446a-bd94-099bfc12297a))
+    (pin "3" (uuid ad6ea796-9e1f-4220-8b04-a44590c0440a))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -6626,8 +6654,8 @@
     (property "PCBWay Link" "https://www.pcbway.com/components/detail/0402B104K160CT/307171/" (at 116.84 184.785 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 57ce1894-4231-4389-9415-ccfa83c6d88b))
-    (pin "2" (uuid a152805b-f4ee-468f-91f4-5901ad93e7f3))
+    (pin "1" (uuid be2f02d3-5126-4ca8-b6b4-e8ec51e7037b))
+    (pin "2" (uuid 80f339e0-570c-476f-a1ea-c7f3751b1c8f))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -6717,8 +6745,8 @@
     (property "PCBWay Link" "https://www.pcbway.com/components/detail/RT0402FRE075K1L/449762/" (at 49.53 29.845 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 65ddd1c2-aa55-4f04-b089-f5388e3f8803))
-    (pin "2" (uuid 3e50e1f5-dee1-4155-b06c-3377b4467ec2))
+    (pin "1" (uuid 5144b4b5-e8f3-49d7-8303-cbdb023a92b6))
+    (pin "2" (uuid 10e1d3a7-55e9-4f05-98c0-7805c8483567))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -6783,8 +6811,8 @@
     (property "PCBWay Link" "https://www.pcbway.com/components/detail/RC0402FR0727RL/656670/" (at 250.19 66.675 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 9228eb06-2b18-48d3-9658-ee236b70fed0))
-    (pin "2" (uuid c65be3cc-ec9c-4759-a5ed-7a04fda08bd6))
+    (pin "1" (uuid 79567a26-382b-47f3-bbfa-caaa0cda2abc))
+    (pin "2" (uuid c905a6bd-6302-4fe5-8511-80906328549b))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -6855,8 +6883,8 @@
     (property "PCBWay Link" "https://www.pcbway.com/components/detail/0402B104K160CT/307171/" (at 143.51 184.785 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f3b7b53c-26f7-4cb7-81be-259da427b30f))
-    (pin "2" (uuid 17b17cc5-f7e8-4ce3-ad05-cc625d54db50))
+    (pin "1" (uuid c4e8fb80-0bb5-46e3-8949-cac1d2b87a27))
+    (pin "2" (uuid 5b316817-977b-4a8b-9b65-c470cfef8915))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -6896,9 +6924,9 @@
     (property "Manufacturer Number" "n/a" (at 19.05 89.535 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 77f946c1-f9f7-477c-baba-7562c54408bb))
-    (pin "2" (uuid 7f28ea71-2699-44af-927f-55511412c0b9))
-    (pin "3" (uuid 6b6f6cf4-645a-4955-a417-89e27620933c))
+    (pin "1" (uuid a981cbce-ed28-4f48-b98e-1c3923ecd523))
+    (pin "2" (uuid 0d5ac190-e2ea-4342-9b15-b5d59e83aa85))
+    (pin "3" (uuid bd6894f1-02b9-4578-9464-0af7d062508d))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -6935,63 +6963,63 @@
     (property "Manufacturer" "Raspberry Pi" (at 213.36 107.315 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 6b94755e-1c9a-4291-a82c-13f4a9fbd7d4))
-    (pin "10" (uuid 3fc9dfcc-c754-4cdf-9a8d-72e3a784b0ee))
-    (pin "11" (uuid 5bee2f63-55ec-40c6-9062-d466ec2a4759))
-    (pin "12" (uuid fc42b4f4-3d31-4f0f-aab6-5142ac149a5f))
-    (pin "13" (uuid 84fef182-47e4-4d86-9851-a0e2d471d0be))
-    (pin "14" (uuid 5319ac01-0fd3-4eef-8430-10fa2704f0ca))
-    (pin "15" (uuid 8c1edd24-38af-4810-89fe-3d4c60ca0fbb))
-    (pin "16" (uuid 03426526-f9c6-44d8-b1f3-1467e88ac0e6))
-    (pin "17" (uuid f5b177ba-2101-4bf0-9c9b-94a52ecedca6))
-    (pin "18" (uuid 489462ab-886f-4614-8b3d-acf3b9584276))
-    (pin "19" (uuid d07e23df-a2c2-46eb-926a-5897bf8a9fe7))
-    (pin "2" (uuid a7dd0729-67c4-4eb9-89e7-8d6d89b47ce5))
-    (pin "20" (uuid 16e05283-a535-4305-9574-c638ace268cc))
-    (pin "21" (uuid 46afbdbf-c8ea-4809-9d75-79c5690da342))
-    (pin "22" (uuid ed3a7bb1-3f4d-4a7d-8b89-66e9cbf6c496))
-    (pin "23" (uuid 3869e3c4-1ca7-4aba-a949-8e44609384bf))
-    (pin "24" (uuid 2b19494a-b676-460a-90d3-fa589ad8256b))
-    (pin "25" (uuid 20c5fa5a-f675-4616-9d60-02a058345680))
-    (pin "26" (uuid a06e520e-d29a-4046-8426-c004c1a228c0))
-    (pin "27" (uuid 1fb14c91-d8ad-4192-bb63-ac27a901a61e))
-    (pin "28" (uuid be385ebe-1081-4a67-ab01-b2eb336e85d1))
-    (pin "29" (uuid 80513404-f16f-4e11-8c65-336c11c50361))
-    (pin "3" (uuid 999e01b6-aa54-4b86-8461-66819c2c83f6))
-    (pin "30" (uuid d5580f4e-45da-40fd-9012-77c4391c4a69))
-    (pin "31" (uuid 1000d112-9e80-48bb-a4be-1359e99bfbc2))
-    (pin "32" (uuid a4847e42-c5dc-413d-9716-db609d6736c3))
-    (pin "33" (uuid 83eab5d7-1e4f-4950-9467-f53741348f62))
-    (pin "34" (uuid a4a38228-9bf3-4fec-bf7d-7b210ef191e5))
-    (pin "35" (uuid 8edc3ead-134b-41b4-a883-45a6f2c84af0))
-    (pin "36" (uuid dca1bae1-9d75-49d5-8d76-21daac38e16b))
-    (pin "37" (uuid 5dd68467-b3fa-4841-b696-236de4280584))
-    (pin "38" (uuid a886bca9-6f76-488c-944c-75135906c560))
-    (pin "39" (uuid 7902f5f1-d9a3-4540-8c92-fd137d7191a8))
-    (pin "4" (uuid 088c6127-d47f-436b-be4e-d4d18d63679c))
-    (pin "40" (uuid 6e40e482-3f69-4f5a-b4bc-401946726ec8))
-    (pin "41" (uuid b5d62be3-327d-483d-85c6-2d13a2de8308))
-    (pin "42" (uuid b4218edb-37bf-4418-9594-961a815db1c9))
-    (pin "43" (uuid b4348bbd-a716-466a-a69b-40a9df75b2a0))
-    (pin "44" (uuid 6aa897bb-6976-46ab-a431-3d113e5502ae))
-    (pin "45" (uuid 702b3147-4471-4e0d-a92b-4e4ffd1a4ab5))
-    (pin "46" (uuid 9b61f19d-e3f6-4fb2-8100-6985d48893e6))
-    (pin "47" (uuid 685fa552-f8e7-4d36-b32f-13c837d64d6b))
-    (pin "48" (uuid f0027cd8-5acb-4047-a7cf-7ecfff14d4b3))
-    (pin "49" (uuid 698c19bd-4109-4663-99ae-ac4896aa89ca))
-    (pin "5" (uuid 76732d81-6b35-48db-8d0e-4749134bc569))
-    (pin "50" (uuid 8ca37175-e099-4d38-8fb0-36872ed03d6b))
-    (pin "51" (uuid cca0e6af-a566-4c06-9f70-9af51f9ba9e9))
-    (pin "52" (uuid 768ac10d-4f65-4a7e-bbb3-a1c33e2b3ca9))
-    (pin "53" (uuid 1adc9152-8d8f-40c4-8fc4-ba0de2c75ea2))
-    (pin "54" (uuid a5393f0a-d339-48a1-944c-adb19613f34d))
-    (pin "55" (uuid ac74de51-95b3-4c46-bf26-91e5bacd492e))
-    (pin "56" (uuid 29bcd775-f827-44dc-9dc5-048c27020b89))
-    (pin "57" (uuid fa55f824-c9b3-460f-9713-c74adf4dd0c1))
-    (pin "6" (uuid c28a3c5a-a26d-4730-94f8-46ec25c9e157))
-    (pin "7" (uuid 0cc95b19-c1bb-412d-bcd2-deed95c0bee8))
-    (pin "8" (uuid 9ff3a0df-7358-4305-bdec-0f835b456cd5))
-    (pin "9" (uuid 46358cac-3f34-41b6-859d-d2edcde51f13))
+    (pin "1" (uuid 6cf036ed-51e0-406f-99db-8eb0e96f6574))
+    (pin "10" (uuid 2ca04ba3-43b9-41c6-bf0d-29e44dc43d51))
+    (pin "11" (uuid e5319727-e484-4707-911f-640b0838a8b7))
+    (pin "12" (uuid 5b35dfd3-a7b9-4e06-82c8-a54a460a4f21))
+    (pin "13" (uuid f50f9701-bb3e-4b3f-a0ff-b17f12d1add1))
+    (pin "14" (uuid 4160d118-7ddd-478b-8e58-5cdd3384b959))
+    (pin "15" (uuid 2ac5a619-2813-4ee5-972f-d66136919d71))
+    (pin "16" (uuid b9dcab22-9523-4609-b6ca-17b029b6bd1a))
+    (pin "17" (uuid 4bb41a86-65eb-4679-a428-780b11a9ca89))
+    (pin "18" (uuid 7b5e18f5-921b-4ebd-b085-bca6ef8887d2))
+    (pin "19" (uuid 8d832c5e-a558-4769-bbc4-042dd1472863))
+    (pin "2" (uuid e43415b5-0dab-4926-9147-de5fe0185561))
+    (pin "20" (uuid 95385b6f-eef3-4e17-b730-62673626b842))
+    (pin "21" (uuid a2df3dbd-424c-4cfe-992f-8c35a9679910))
+    (pin "22" (uuid 183ec0da-679d-4eb3-9a26-5d8275bd5c21))
+    (pin "23" (uuid 184a41a3-2afb-4e38-b194-d674c3f91e0e))
+    (pin "24" (uuid 552575ec-7a11-49b9-87cd-66dcd408a7fb))
+    (pin "25" (uuid 0c5ca609-2cd8-425d-9d87-6e45bc06b8a9))
+    (pin "26" (uuid fd7b2e42-c771-4d2f-b1c2-078450f38fc9))
+    (pin "27" (uuid 8ecfd20c-bce6-4b93-aca0-fe3f17b5e8b0))
+    (pin "28" (uuid 7261bcb4-3be2-4ac5-bda7-b5c49e475302))
+    (pin "29" (uuid c3a8b6e4-e9d0-4e78-84d6-872969e5a04a))
+    (pin "3" (uuid a05cd7ac-d077-437f-9f2c-c0a9e6b023d4))
+    (pin "30" (uuid 89faae42-f25f-44de-baf7-1b15bf40b076))
+    (pin "31" (uuid d53573a6-18ba-4f71-adaa-5c35e735fbe7))
+    (pin "32" (uuid c7aedf4a-e2a2-4b0c-9f23-e80f3509917d))
+    (pin "33" (uuid e9d12a93-8a4b-40f9-93fa-e7fbcae9410e))
+    (pin "34" (uuid 3bc680de-082e-478b-b31b-c455d70a379d))
+    (pin "35" (uuid 4b5ac831-1a9d-4928-b738-adab8e5024e0))
+    (pin "36" (uuid 373827ac-d9c4-4a7e-afdc-46c0cb02c15c))
+    (pin "37" (uuid d1a02304-3785-4f0b-b297-d17f0b792bdc))
+    (pin "38" (uuid 708fd099-0656-4c3b-94ac-2db77f0f7395))
+    (pin "39" (uuid 89fdee6b-3f26-4ed8-8dfc-a238ae80f7a0))
+    (pin "4" (uuid 74345137-1e6d-46f1-ba98-1abd85b2a0c5))
+    (pin "40" (uuid caff721e-f2b9-403e-971c-065fd64afeeb))
+    (pin "41" (uuid 4c68ffdd-493b-43df-8a63-2d598707409d))
+    (pin "42" (uuid b1c80b64-311e-4daa-aa41-1d4d4e5bc141))
+    (pin "43" (uuid 29353032-e3f9-41e2-b4bc-a3103a62a879))
+    (pin "44" (uuid b574b583-3ffd-409c-833d-7a8bbbbd9dcc))
+    (pin "45" (uuid 9f943c6b-3202-4c7e-8f7a-ba33e166d830))
+    (pin "46" (uuid a23d21a7-70e6-43c3-8418-d57b7f306561))
+    (pin "47" (uuid f4ae80d1-262b-487a-8298-4ffe0f2d4c5a))
+    (pin "48" (uuid 4ec67cc2-c0e1-46ee-bebb-c27c73fe7fee))
+    (pin "49" (uuid 0bd7fb50-04c6-47f1-ba31-1c81a73e010e))
+    (pin "5" (uuid 7acde17c-ac35-4c32-8129-d77ffd278ea6))
+    (pin "50" (uuid 4a4c4204-d897-4e07-aa97-79f6c70ea2b1))
+    (pin "51" (uuid 3bd24eba-df03-4e8d-8cb2-cbe8cba6b703))
+    (pin "52" (uuid c93974f6-4b3f-4a12-ba34-e8d69b592fe6))
+    (pin "53" (uuid 2fc31ebe-39a6-41bf-9280-929fbc18cca5))
+    (pin "54" (uuid c0dec9d9-6cb3-44cf-9eb1-9a29aed3645c))
+    (pin "55" (uuid 79f0f1d2-b838-4b61-bcc6-8bdcfb1d333b))
+    (pin "56" (uuid ad131875-d860-43ea-a6cc-97ba48f58f8c))
+    (pin "57" (uuid e9e99ba5-1bf4-4435-ba9e-cdabfed1f0b8))
+    (pin "6" (uuid cf9cfde3-5c88-4ef3-a288-8b380cce88e4))
+    (pin "7" (uuid e098d6b8-7934-40be-aa64-6c1d6e3538cb))
+    (pin "8" (uuid 79aac2ce-a0f7-4d8d-b8ad-03a4ed486893))
+    (pin "9" (uuid 3e3a13d9-5ef7-401d-ac8b-f03397d3ae4b))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -7078,23 +7106,23 @@
     (property "PCBWay Link" "https://www.pcbway.com/components/detail/DX07S016JA1R1500/10895/" (at 27.94 40.005 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "A1" (uuid db6910b6-a18b-487c-a6fd-1185603c2acb))
-    (pin "A12" (uuid 38706bf9-0c1f-4c6b-b544-125f2430cba7))
-    (pin "A4" (uuid fc5c9d8f-7a38-4abd-923e-57a51de77332))
-    (pin "A5" (uuid 92ab3ecb-f470-4d3c-a718-29951e321341))
-    (pin "A6" (uuid 6c5787d7-7593-489e-b96b-d806e3e6a159))
-    (pin "A7" (uuid fdaf276c-3d18-434a-99b7-67e252b2c711))
-    (pin "A8" (uuid fac9f2f5-71f1-41fa-986d-7e9dfe550702))
-    (pin "A9" (uuid ec6b98c0-edb3-4555-b8b7-c4a14c273db6))
-    (pin "B1" (uuid 6ae13c7c-2fa0-4f7a-88dd-496130559f90))
-    (pin "B12" (uuid 4525330f-5c84-404c-8610-9ab98ce015e0))
-    (pin "B4" (uuid 52829e40-4c8b-43b8-94cb-896d5162605f))
-    (pin "B5" (uuid b811cfbe-75b2-46a9-8d8e-83f9e05ea26f))
-    (pin "B6" (uuid 305a7ac7-3040-4099-ba7f-0c7092d07c45))
-    (pin "B7" (uuid 95ed018a-e0cc-428a-bdf5-1c385f2b544b))
-    (pin "B8" (uuid 3421c271-6b04-4471-9228-a46c71f14921))
-    (pin "B9" (uuid 70ede3e1-9445-4191-bc5e-f0ce74cd59ba))
-    (pin "S1" (uuid 299761de-921d-400c-b6f6-ce0b8bfe955d))
+    (pin "A1" (uuid 68469917-61cc-456d-ac87-4ac9ce54c211))
+    (pin "A12" (uuid bfe85f5e-4921-4334-8ffc-dc64a55a34bc))
+    (pin "A4" (uuid ff295751-bd99-496c-833d-84e5760b358e))
+    (pin "A5" (uuid 8d728744-f238-4dd7-bd84-c81ec3fe8be9))
+    (pin "A6" (uuid d1518c94-a43a-476f-8cb8-0d5987b67f96))
+    (pin "A7" (uuid a95bc7c4-ec79-4dc2-83a6-c0260a80c622))
+    (pin "A8" (uuid d16f5747-2edd-40c6-aa59-9c66f2a61afe))
+    (pin "A9" (uuid 41c62b76-dcad-4147-a7e9-3eceab8917f0))
+    (pin "B1" (uuid f3f4dd2f-8d72-49b2-9ca1-cc66b9b19938))
+    (pin "B12" (uuid f2d42a38-6510-49db-961e-0ac0fc83f692))
+    (pin "B4" (uuid 37fbca54-88c8-484a-bfd0-a0f73fc58ba6))
+    (pin "B5" (uuid d27d8c3b-27ae-4eab-b737-a8b55fec680f))
+    (pin "B6" (uuid 327ed7f1-fb72-4c5a-9714-5426cde4a67a))
+    (pin "B7" (uuid eb8b38ad-3c83-475c-8068-8fe21c71e919))
+    (pin "B8" (uuid d3d81d9d-645d-4961-9fcc-27f2ab6f2508))
+    (pin "B9" (uuid f7898bc4-b150-4832-94e9-391f40ded19a))
+    (pin "S1" (uuid 88c68e6e-95a6-4f08-a8c0-911169cb22bf))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -7140,8 +7168,8 @@
     (property "PCBWay Link" "https://www.pcbway.com/components/detail/0402B104K160CT/307171/" (at 161.29 184.785 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid afa1018b-a73a-4cc8-bc26-5184b66ba7fd))
-    (pin "2" (uuid 77eb9342-8858-46d9-8c75-ba23a02ce76a))
+    (pin "1" (uuid a6971219-808a-4f5e-afe5-242c9070133f))
+    (pin "2" (uuid 1720e76e-e471-4aae-ba7d-26c7e6fb70e9))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -7203,8 +7231,8 @@
     (property "Tolerance" "1%" (at 116.84 42.545 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 796f739e-b3c8-4397-b7b1-87aeb5054957))
-    (pin "2" (uuid 6ee4a525-139f-4b73-9255-66c7f14bd6b3))
+    (pin "1" (uuid 5f2bb1c9-cb83-4e29-9694-d597657b33f3))
+    (pin "2" (uuid f878c618-ea3d-4c7d-8367-c5e56a40a39d))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -7325,8 +7353,8 @@
     (property "PCBWay Link" "https://www.pcbway.com/components/detail/0402B104K160CT/307171/" (at 57.15 149.225 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid ffeea215-63df-4257-a953-8962107008a1))
-    (pin "2" (uuid 392d2497-694d-4151-b908-b7f518c9714f))
+    (pin "1" (uuid c891c082-2a57-44ee-8a3c-28ef516bb6ae))
+    (pin "2" (uuid 505588d7-35f5-4d54-82bd-c08703e1ccc6))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -7372,8 +7400,8 @@
     (property "PCBWay Link" "" (at 59.69 184.785 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid fc4ff085-9c17-41b8-ab98-e6d0f510993d))
-    (pin "2" (uuid d970faa0-75d3-48cf-8f40-5337bd2cbaa0))
+    (pin "1" (uuid c78fc998-c159-4cc5-a4ba-e8b485fe47fd))
+    (pin "2" (uuid 5e6acae2-b5c9-4156-8d8a-c28045957218))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -7419,8 +7447,8 @@
     (property "PCBWay Link" "" (at 74.295 149.225 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 9eac48e0-71b6-4a42-a895-2f9927398ccd))
-    (pin "2" (uuid 7bee9cd5-3d1e-428e-91c9-72ff5a6658b3))
+    (pin "1" (uuid 89cd60a1-8e7f-4089-96fb-a75222a4ca46))
+    (pin "2" (uuid 563ad36e-0e5a-482b-a19b-ddf8051fe91d))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -7510,8 +7538,8 @@
     (property "Notes" "not polarized" (at 84.455 149.225 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 37555676-0742-4b11-b2f0-eb13f1e67437))
-    (pin "2" (uuid 0bc45602-893c-47b0-a96e-04b2b53eec7b))
+    (pin "1" (uuid 0626fde4-d6db-44bc-812c-5a9482ed497a))
+    (pin "2" (uuid ea51af6c-ad94-46de-aae7-8f32ea87aee3))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -7573,8 +7601,8 @@
     (property "Tolerance" "1%" (at 260.35 133.35 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid ba026fb7-3544-434a-b3aa-a64176825e73))
-    (pin "2" (uuid 2015a0bb-aff7-4805-9a96-38def4b16aaa))
+    (pin "1" (uuid 46aa147f-6980-4d44-8f2f-ee65e043fed7))
+    (pin "2" (uuid 59d3edbc-70c2-4818-977d-bc087ed3b91f))
     (instances
       (project "ttl_io"
         (path "/de782c9d-fd54-45ed-aa91-6297331e40f6/1fe1f8ff-b1f9-48b6-8256-97b16d4120ca"
@@ -7625,8 +7653,8 @@
     (property "PCBWay Link" "https://www.pcbway.com/components/detail/0402B104K160CT/307171/" (at 170.18 184.785 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 88982832-03bf-4d13-83dc-be53bd16aa52))
-    (pin "2" (uuid 22a0e6b6-3d50-4cb2-b581-b39828538150))
+    (pin "1" (uuid 46169cba-68af-48bd-9096-e6ddb3a63896))
+    (pin "2" (uuid 8d91045b-55d8-4d70-a0b9-cd236bc4393a))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -7672,8 +7700,8 @@
     (property "PCBWay Link" "https://www.pcbway.com/components/detail/0402B104K160CT/307171/" (at 125.73 184.785 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 1066d7ff-5ac1-4260-87ae-8d3bd9e20dd0))
-    (pin "2" (uuid 037fa06e-d11a-4f2a-a974-cd6d0ac0ceee))
+    (pin "1" (uuid f28bb535-0d65-4282-a21d-327159db74cf))
+    (pin "2" (uuid ae5bf0f3-a993-4899-b888-1f079afbb2e5))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -7710,8 +7738,8 @@
     (property "Tolerance" "1%" (at 260.35 139.7 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f3c07f3f-4164-464e-a103-6fafcc9b3a75))
-    (pin "2" (uuid 7817a8d9-e1ff-4b92-aaba-61c9affa33d2))
+    (pin "1" (uuid e5e65650-d62e-4e3e-afde-39df1ad77051))
+    (pin "2" (uuid 0e5e5858-94ba-4ec9-ba81-85ed0220c8fe))
     (instances
       (project "ttl_io"
         (path "/de782c9d-fd54-45ed-aa91-6297331e40f6/1fe1f8ff-b1f9-48b6-8256-97b16d4120ca"
@@ -7795,8 +7823,8 @@
     (property "PCBWay Link" "https://www.pcbway.com/components/detail/0402B104K160CT/307171/" (at 152.4 184.785 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 98a3c08e-c9ae-4abd-9bc7-d80054a2b820))
-    (pin "2" (uuid adbf36a0-420d-4342-a01f-eec20ebd498c))
+    (pin "1" (uuid 7f1df2c8-16b7-4dd7-aaa6-ba4bc0af830a))
+    (pin "2" (uuid 0cae2f59-83ed-4f35-a399-6dcc1c96fdb9))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -7886,8 +7914,8 @@
     (property "Notes" "not polarized" (at 80.645 24.765 90)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid efeb4683-6294-419b-8f05-15878f0acb34))
-    (pin "2" (uuid 1935c737-43dd-4e7b-b04a-159882946e07))
+    (pin "1" (uuid c52f6964-4e7d-4bae-9bef-b4d5701e06ae))
+    (pin "2" (uuid 604087c4-c36a-4d91-8ff9-a2f6fc626466))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -7924,9 +7952,9 @@
     (property "Manufacturer" "CUI Devices" (at 24.13 121.285 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "R" (uuid f98c36b1-efa4-4aa2-9429-f57d78566974))
-    (pin "S" (uuid 44d0fdf0-d224-46ba-b6ab-c8d2d641804b))
-    (pin "T" (uuid 8b176a9e-a626-4d5f-9c81-0fad2ca527e7))
+    (pin "R" (uuid 5d6ca3a6-5b45-4a47-b29e-efbbfc6aa03a))
+    (pin "S" (uuid b77007ca-ea7b-4dee-b1af-8d21a9f614e6))
+    (pin "T" (uuid 6868fad8-35f6-4b46-a17a-e9ee7b6fc7b5))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -7972,8 +8000,8 @@
     (property "PCBWay Link" "https://www.pcbway.com/components/detail/0402B104K160CT/307171/" (at 17.78 184.785 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 5528eeaf-4bfd-448d-9090-d1e5dcb59f25))
-    (pin "2" (uuid 3e5fc144-8303-496c-aefd-01e767371cec))
+    (pin "1" (uuid a6110d2c-3cad-46b7-8cb6-577c7e51e5ac))
+    (pin "2" (uuid d1f56250-39ad-45bc-933a-fa62116f66cf))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -8044,8 +8072,8 @@
     (property "PCBWay Link" "https://www.pcbway.com/components/detail/0402B104K160CT/307171/" (at 107.95 184.785 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 3ed77535-c64b-4d7a-b2b9-fdff60a37eb3))
-    (pin "2" (uuid 7f075ada-0dae-4c70-8429-582e4981a918))
+    (pin "1" (uuid 862b9e03-b2b0-42bd-af4c-5fe22a2e67d1))
+    (pin "2" (uuid 4c2d80be-f567-4abc-bdad-3e75091bce6d))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -8110,8 +8138,8 @@
     (property "PCBWay Link" "" (at 46.99 103.505 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 87ab9004-2d8b-4a31-a209-969ea60c644b))
-    (pin "2" (uuid c05a1914-f10b-43b6-b8dc-5165329d3ec3))
+    (pin "1" (uuid 3d23c920-31f7-47ab-b418-f8eb98e306e4))
+    (pin "2" (uuid e8e403a0-2cd9-4714-837b-fa6bfd81c20d))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -8226,11 +8254,11 @@
     (property "Notes" "washable" (at 25.4 103.505 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid d71682d3-b367-4ec1-ae8b-20bd4ac8c82f))
-    (pin "2" (uuid df21cefe-ca96-4ff7-9754-487131f794f7))
-    (pin "3" (uuid 86875fec-6556-404c-8897-ee863e147b91))
-    (pin "4" (uuid e4b65da1-3fe7-420d-8d58-2f4f23a12a45))
-    (pin "SH" (uuid e38a056c-9d2d-4932-b1f7-11fe650f539a))
+    (pin "1" (uuid c864e65f-56da-4f3c-8357-be087bff90e8))
+    (pin "2" (uuid 46027ec0-d0f7-45b1-8e66-bfff377d6a53))
+    (pin "3" (uuid 339cf50e-43fe-4013-89a6-0d9b9831f6bb))
+    (pin "4" (uuid aa7c5b2b-9d5b-42b8-91cc-3ace982d2488))
+    (pin "SH" (uuid 6442b573-832f-45b5-99f7-91006adb084c))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -8276,8 +8304,8 @@
     (property "PCBWay Link" "https://www.pcbway.com/components/detail/0402B104K160CT/307171/" (at 39.37 149.225 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid e61a4066-5f26-46e8-afa0-95479ad8c838))
-    (pin "2" (uuid d84bbf6c-171d-4c8b-9968-587db2c5994e))
+    (pin "1" (uuid 5bab93f5-eac8-4f50-8ae1-922856bfedfd))
+    (pin "2" (uuid ffda22a7-b981-4b2e-b8e7-b8508fe38904))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -8314,22 +8342,22 @@
     (property "Manufacturer" "Analog Devices Inc." (at 137.16 45.085 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid c5ab6165-c6da-456b-b7d2-166848e7ddbc))
-    (pin "10" (uuid e2579cf9-1126-4457-95df-f171d3647777))
-    (pin "11" (uuid 8e06071c-decd-4917-97ab-c5811dae18c0))
-    (pin "12" (uuid 534da1d7-5a35-4f2d-95be-26426748eb76))
-    (pin "13" (uuid 9fd6a526-e081-482b-973c-af09f90b3ff1))
-    (pin "14" (uuid 0342b3c0-29cb-4095-be4d-2b0fe530a245))
-    (pin "15" (uuid c46be20a-f484-498c-b598-f5703b737e6e))
-    (pin "16" (uuid e245e1e4-659f-4b7e-967e-76d8420c721d))
-    (pin "2" (uuid 3e7bf85c-c5db-45b3-a019-d85e804b5dcd))
-    (pin "3" (uuid c648ef9e-d5f4-4e7a-bbae-39c298817a91))
-    (pin "4" (uuid c53ce783-b035-4720-8bac-5842b00aa3d4))
-    (pin "5" (uuid fe8e28dc-0169-428f-90ad-8aa95dfe69ba))
-    (pin "6" (uuid bc8ea357-f5b6-42e9-afa3-390aec174514))
-    (pin "7" (uuid 420aba52-4a7f-4337-85f6-d4e5b342ad15))
-    (pin "8" (uuid dc79c936-c197-481e-80a1-d3895e823af1))
-    (pin "9" (uuid 45675bda-c65a-45d1-bba8-7ff34755c580))
+    (pin "1" (uuid 980309bd-b353-4e51-913d-a9c14d0c5276))
+    (pin "10" (uuid c87f25cf-841d-4639-93f7-fc449b40b083))
+    (pin "11" (uuid ec94099b-c921-4102-8605-90ff7cb174a7))
+    (pin "12" (uuid 5aaaef90-2d87-4bde-a6d0-b6ca31db9389))
+    (pin "13" (uuid 2502b278-4a8a-4acb-bb2e-a57104a914d7))
+    (pin "14" (uuid b77022a6-05f4-4eb9-ac49-69f009d269e5))
+    (pin "15" (uuid c3fc86f6-e5be-4229-9ce5-394d6a5ba9b1))
+    (pin "16" (uuid 7c76bd50-28a1-4ad2-bab0-64c1331c335a))
+    (pin "2" (uuid 0f289304-723f-4730-91c2-37d577fea99a))
+    (pin "3" (uuid c4776a91-7137-42a4-b97d-19501548cea4))
+    (pin "4" (uuid c18660df-ccde-4bba-8525-80e8cf9b2bbb))
+    (pin "5" (uuid c68471fa-cde3-47d5-a86e-b6abc93aac66))
+    (pin "6" (uuid 19455c5a-393a-4ddc-ab54-7d57fc4feeb9))
+    (pin "7" (uuid a9539905-22e0-4f89-9b1f-bacae08e0a89))
+    (pin "8" (uuid 99f92072-21eb-4a5c-80c3-0e26dbd600cd))
+    (pin "9" (uuid 21f5c2d4-e655-46e4-9d11-f7bd98762cda))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -8375,8 +8403,8 @@
     (property "PCBWay Link" "https://www.pcbway.com/components/detail/0402B104K160CT/307171/" (at 50.8 184.785 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 2542bed5-69f5-4c0d-9c2b-2b36ebd02a60))
-    (pin "2" (uuid e92c4d1f-717a-409a-8c64-e8555a0cfdb1))
+    (pin "1" (uuid 0b82c6e6-8460-45b3-b2b6-9cd8d7fbc5c9))
+    (pin "2" (uuid f6f3cc0b-bdf6-4f37-96d7-0eb6ee86568d))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -8441,8 +8469,8 @@
     (property "PCBWay Link" "https://www.pcbway.com/components/detail/XZCDGK53W1VF/501988/" (at 269.24 133.35 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 4179ae68-8731-42eb-bafa-6a581d8b9701))
-    (pin "2" (uuid 97880d31-92a3-4767-8592-10ae9b463954))
+    (pin "1" (uuid cc0ea787-b19c-4644-af4d-8128ba44bdc8))
+    (pin "2" (uuid e146904b-5c24-460d-b68f-adead158b4b3))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -8513,8 +8541,8 @@
     (property "PCBWay Link" "" (at 78.74 184.785 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 16e9c870-a43f-4883-92a6-3e7c635551a5))
-    (pin "2" (uuid 9c5d73d5-6511-4056-8f56-15df1d011cb6))
+    (pin "1" (uuid 9880f7fc-9c4d-4d9d-8293-f1fd26500921))
+    (pin "2" (uuid 84836f03-bf19-45c7-931f-8a6cc8cf6c87))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -8560,8 +8588,8 @@
     (property "PCBWay Link" "https://www.pcbway.com/components/detail/0402B104K160CT/307171/" (at 29.21 149.225 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 217f03dc-b24c-4231-b59f-54d32de28f5a))
-    (pin "2" (uuid 682d29ed-1223-48f0-884f-487d3854b317))
+    (pin "1" (uuid 113c9df2-bce7-4ae5-9ddf-cd7729c140eb))
+    (pin "2" (uuid 0453bf68-404e-4213-b126-c2f02b3f20fa))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -8629,10 +8657,10 @@
     (property "PCBWay Link" "https://www.pcbway.com/components/detail/ECSTXO201633120TR/348903/" (at 149.86 109.855 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid d0271f50-fd96-421f-aff1-8d62f8e6e82e))
-    (pin "2" (uuid 3bc7e17a-c26c-4c7f-a621-fdbaab330b71))
-    (pin "3" (uuid d7f55c04-917e-47d6-a850-f77091866916))
-    (pin "4" (uuid 83c7b66c-37ad-4caf-ba64-f18bb9682844))
+    (pin "1" (uuid e73d84a6-e2c7-4267-8862-9d54a88c6b12))
+    (pin "2" (uuid 9135669f-e764-4195-b5c8-cbe43a324c0c))
+    (pin "3" (uuid 08140f5c-b9c9-4167-a5aa-aff39aa68dad))
+    (pin "4" (uuid cf9b1fd6-4b7e-4215-ae43-3cbdfe580181))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -8700,8 +8728,8 @@
     (property "Alternate" "CL21B106KOQNNNE" (at 99.06 184.785 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 6899e36c-79e2-4e35-9dc6-2be88d83239e))
-    (pin "2" (uuid 9a9555c0-e757-4c38-ade7-d08d5b74d512))
+    (pin "1" (uuid 327726d9-d9ed-46ee-abbe-5141f2a0d2b7))
+    (pin "2" (uuid 7954592c-c9d4-420a-900c-0682cf106f4a))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -8822,8 +8850,8 @@
     (property "PCBWay Link" "" (at 18.415 149.225 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid a0a0caa9-bf68-4178-88b5-310df9a9bf13))
-    (pin "2" (uuid 13651a6f-60eb-46dd-a220-bf556588b484))
+    (pin "1" (uuid b79de21f-a5d0-426a-848e-c52f08aca3e4))
+    (pin "2" (uuid 2f626c26-0ec1-44d0-bb7e-b4edd0145938))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -8860,8 +8888,8 @@
     (property "Tolerance" "1%" (at 157.48 45.085 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 988ad357-f81c-4838-a193-fd82cd4b94fe))
-    (pin "2" (uuid 69da3cf5-a9a4-41c9-8de8-3bda6d6acfb0))
+    (pin "1" (uuid a79b7a2e-629f-4f6c-9a71-56d1d8644df7))
+    (pin "2" (uuid 4d43788b-49b0-465c-9c73-8ffe429f35e1))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -8898,8 +8926,8 @@
     (property "Tolerance" "1%" (at 157.48 42.545 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 48818d77-0ec8-42b9-a46f-ebb220a037aa))
-    (pin "2" (uuid 16f31ee5-aa84-4818-b0a7-0b471478145b))
+    (pin "1" (uuid 103f9bc9-972b-41f2-a0e1-cc85c0b34ff8))
+    (pin "2" (uuid 26963d1b-1a47-4ea5-8307-574376ae5592))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"

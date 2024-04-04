@@ -636,8 +636,8 @@
     (property "PCBWay Link" "" (at 141.605 179.07 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid d8b304f2-3a8c-4aa8-a3a7-a9b1f9bb1e44))
-    (pin "2" (uuid 75c01120-2e52-4e9d-b885-42ff6971bbdc))
+    (pin "1" (uuid 2476704d-bb71-4cbb-926a-82203e6cdf83))
+    (pin "2" (uuid e8cef2ab-1e01-4940-8952-70fede4a3bde))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -842,8 +842,8 @@
     (property "Alternate" "CL21B106KOQNNNE" (at 154.94 179.07 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid 4f41bc88-b078-41bf-8e77-82af27e067a1))
-    (pin "2" (uuid 61a88e60-58ea-4710-a5b5-47a5a50f40b0))
+    (pin "1" (uuid a4071bd1-7b0d-4e42-a384-a5f910f6a8c8))
+    (pin "2" (uuid 337ce739-0e2d-475a-a415-813d8124bde9))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/36c9ca84-29d9-443b-8905-497529bf4302"
@@ -970,14 +970,14 @@
     (property "Manufacturer Number" "74LVCH2T45DC,125" (at 140.97 91.44 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid aa655e73-e6a5-498b-8ca6-ec353ffde5e0))
-    (pin "2" (uuid 223b268f-4feb-4595-a899-90b28e64a7e3))
-    (pin "3" (uuid 2c34f2b1-9a5a-495a-af96-202faef0a3c8))
-    (pin "4" (uuid 42504614-ef45-4c96-ae3d-9c9e4d35448c))
-    (pin "5" (uuid d2b4048d-80ca-4e0c-b4b8-ee2e45fee480))
-    (pin "6" (uuid fda5ee90-9153-4648-ab3c-272af615a17a))
-    (pin "7" (uuid f3995115-4c4c-4be9-b9b4-597106e532a0))
-    (pin "8" (uuid f2611903-870a-4599-9ddc-b38373a58eda))
+    (pin "1" (uuid 874b9ef2-bc89-4c64-8973-0da7d846f7f6))
+    (pin "2" (uuid 0f161f7b-697b-4f6b-91b7-4343f7a9c742))
+    (pin "3" (uuid c2425ce8-ca85-4477-bd6a-72abcddeb71f))
+    (pin "4" (uuid 86c16515-b2e8-4eb9-87c1-05b41c67e8a3))
+    (pin "5" (uuid b0bfba45-21d3-4835-b202-5a3391bbeb90))
+    (pin "6" (uuid 52851f3e-9ffc-4a9b-8822-0f0cf78355c9))
+    (pin "7" (uuid 3e51d8e1-9b56-488b-b410-82d2d03cb7c4))
+    (pin "8" (uuid ded8b28d-446f-441f-b3e9-a9a9ae462737))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/36c9ca84-29d9-443b-8905-497529bf4302"
@@ -1048,8 +1048,8 @@
     (property "PCBWay Link" "https://www.pcbway.com/components/detail/0402B104K160CT/307171/" (at 133.35 179.07 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid fbc8e51b-884e-4137-804f-a3b176c7df1f))
-    (pin "2" (uuid 550b1dff-915d-416c-9bab-d326f8747fca))
+    (pin "1" (uuid 7d1b895b-aec6-4ce4-8e11-afc9fd8c3a2e))
+    (pin "2" (uuid 6b4ef004-9abe-4213-a29c-c51933b67a47))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -1086,8 +1086,8 @@
     (property "Manufacturer Number" "CONSMA002-SMD-G-T" (at 168.275 91.44 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid aba86f6d-a065-4b4e-bb8e-c95e950b836c))
-    (pin "2" (uuid b12f79fc-2f1f-48b5-995e-2c69627f1305))
+    (pin "1" (uuid acb5fc88-b99b-4588-8234-b6f33ea6f97b))
+    (pin "2" (uuid 3d307d26-4083-4895-90fc-b7b09658e6a9))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/36c9ca84-29d9-443b-8905-497529bf4302"
@@ -1177,8 +1177,8 @@
     (property "Tolerance" "1%" (at 157.48 93.98 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid f8f3d9c1-1850-47d8-9a60-8ca5b604450a))
-    (pin "2" (uuid 1601b35a-54ca-44e2-8437-9bedcf77c3d1))
+    (pin "1" (uuid 52b23d4b-1c35-48b6-9551-2ca3499dbb23))
+    (pin "2" (uuid 697b5b7e-2b3e-4182-b57b-dda5f7dda54e))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/36c9ca84-29d9-443b-8905-497529bf4302"
@@ -1224,8 +1224,8 @@
     (property "PCBWay Link" "https://www.pcbway.com/components/detail/0402B104K160CT/307171/" (at 165.1 179.07 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid a17a06e6-0c55-4994-95cc-b5fba4c1a258))
-    (pin "2" (uuid 05f6b83d-f0d1-4791-8d7f-db1de9a7b9e6))
+    (pin "1" (uuid b02c66ea-9400-48e4-ae38-ca5705004fbc))
+    (pin "2" (uuid 698241fd-e268-4936-96e2-af61f38eb07c))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
@@ -1299,8 +1299,8 @@
     (property "Tolerance" "1%" (at 157.48 88.9 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "1" (uuid d6e514de-718a-4a84-bf41-5f178390993d))
-    (pin "2" (uuid 4f86dcab-2abc-459f-9673-f21c5d0fd8ee))
+    (pin "1" (uuid 4b882d26-7841-4912-bcde-b6c45f3b620d))
+    (pin "2" (uuid 4540e914-193e-4a2a-a98a-024e9afd1522))
     (instances
       (project "harp_lick_detector_capactive"
         (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/36c9ca84-29d9-443b-8905-497529bf4302"
