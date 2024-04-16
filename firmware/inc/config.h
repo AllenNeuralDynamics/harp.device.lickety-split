@@ -14,14 +14,20 @@
                                 // sampled @ 2MHz.
 
 #define UART_TX_PIN (0)
+
+#define SQUARE_WAVE_PIN_100KHZ (2)
+#define SQUARE_WAVE_PIN_125KHZ (3)
+
 #define HARP_SYNC_RX_PIN (5)
+
+#define FREQ_SEL_PIN (6)
+#define GAIN_SEL_PIN (7)
 
 #define AD9833_SPI_CS_PIN (1)
 #define AD9833_SPI_SCK_PIN (2)
 #define AD9833_SPI_TX_PIN (3)
 #define AD9833_SPI_RX_PIN (4)
 
-#define SQUARE_WAVE_PIN (2)
 
 #define LICKETY_SPLIT_HARP_DEVICE_ID (0x0578)
 

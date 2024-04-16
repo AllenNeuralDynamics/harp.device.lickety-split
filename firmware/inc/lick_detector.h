@@ -63,7 +63,7 @@ public:
 /**
  * \brief reset finite state machine for lick detection.
  */
-    void reset();
+    inline void reset() {state_ = RESET;}
 
 /**
  * \brief update finite state machine.
@@ -78,6 +78,9 @@ public:
         {return lick_stop_detected_;}
     inline void clear_lick_detection_stop_flag()
         {lick_stop_detected_ = false;}
+
+    inline void set_samples_per_period(size_t samples_per_period)
+    {samples_per_period_ = samples_per_period;}
 
 // Public Data members.
     uint8_t on_threshold_percent_; /// public access for speed.
@@ -101,12 +104,12 @@ private:
  */
     inline void update_baseline_moving_avg();
 
-private:
     uint ttl_pin_;
     uint led_pin_;
     uint16_t* adc_vals_;
     size_t samples_per_period_;
     State state_;
+
 #ifdef PROFILE_CPU
 public:
 #endif

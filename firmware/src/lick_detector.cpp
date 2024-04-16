@@ -98,7 +98,7 @@ void LickDetector::update()
         upscaled_amplitude_avg_ = upscaled_amplitude_;
         upscaled_baseline_avg_ = upscaled_amplitude_;
         // Reset outputs and internal state logic.
-        gpio_put(ttl_pin_, 0);
+        gpio_put_masked((1u << ttl_pin_) | (1u << led_pin_), 0);
         sample_count_ = 0;
         lick_start_detected_ = false;
         lick_stop_detected_ = false;

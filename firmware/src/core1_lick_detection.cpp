@@ -30,7 +30,7 @@ LickDetector lick_detectors[1]
 void  __time_critical_func(flag_update)()
 {
     // Clear interrupt request.
-    dma_hw->ints0 = 1u << ads7049_0.samp_chan_; // ads7049.get_interrupting_dma_channel();
+    ads7049_0.clear_interrupt();
     update_due = true;
 }
 
@@ -68,6 +68,18 @@ void core1_main()
     loop_start_cpu_cycle = SYST_CVR;
     curr_time_ms = to_ms_since_boot(get_absolute_time());
 #endif
+        // Check for new configuration settings (also applies a reset).
+        if (!queue_is_empty(&detector_settings_queue))
+        {
+            uint8_t settings;
+            queue_remove_blocking(&detector_settings_queue, &settings);
+            size_t samples_per_period = bool(settings & 0x01)? 20: 16;
+            lick_detectors[0].reset(); lick_detectors[0].set_samples_per_period(samples_per_period);
+            ads7049_0.reset(); // Clear existing dma stream-to-memory config.
+            ads7049_0.setup_dma_stream_to_memory_with_interrupt(
+                adc_vals, samples_per_period, DMA_IRQ_0, flag_update);
+            update_due = false; // Clear update signal if it was previously set.
+        }
         // Check for new lick threshold settings.
         if (!queue_is_empty(&set_on_threshold_queue))
         {
