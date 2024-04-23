@@ -93,3 +93,5 @@ Here the inner braid carries of low-impedance copy of the signal, and the outer 
 * * [Demo Manual DC2414A](https://www.analog.com/media/en/technical-documentation/user-guides/DC2414AF.PDF)
   * LTC6268 evaluation board
 * [LT3030 Demo Circtuit](https://www.analog.com/media/en/technical-documentation/eval-board-schematic/DC1855A-2-SCH.pdf)
+* [Programmable Gain Amplifiers](https://www.analog.com/media/en/training-seminars/design-handbooks/system-applications-guide/Section3.pdf)
+  * Figure 3.6
