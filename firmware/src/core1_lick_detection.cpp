@@ -30,7 +30,7 @@ LickDetector lick_detectors[1]
 void  __time_critical_func(flag_update)()
 {
     // Clear interrupt request.
-    dma_hw->ints0 = 1u << ads7049_0.samp_chan_; // ads7049.get_interrupting_dma_channel();
+    ads7049_0.clear_interrupt();
     update_due = true;
 }
 
