@@ -66,6 +66,7 @@ struct app_regs_t
                       //      1 ? --> 20mVpp detection signal amplitude
                       // Note: writing to this register will reset the lick
                       //       detector with the written settings.
+    // FIXME: add a "busy" register.
 } app_regs;
 #pragma pack(pop)
 
@@ -129,10 +130,13 @@ void update_app_state()
  */
 void configure_signal_chain(bool freq_setting, bool amplitude_setting)
 {
-    // Setup 20mVpp or 2Vpp signal.
+    // Setup 20mVpp or 2Vpp excitation signal.
     // Setup 100-or-125KHz square wave output. (New way on v0.6.0+)
-    uint idle_pin = freq_setting? SQUARE_WAVE_PIN_125KHZ: SQUARE_WAVE_PIN_100KHZ;
     uint pwm_pin = freq_setting? SQUARE_WAVE_PIN_100KHZ: SQUARE_WAVE_PIN_125KHZ;
+    uint idle_pin = freq_setting? SQUARE_WAVE_PIN_125KHZ: SQUARE_WAVE_PIN_100KHZ;
+#if defined(DEBUG)
+    printf("Idle pin: %d | PWM pin: %d\r\n", idle_pin, pwm_pin);
+#endif
     if (!first_reset) // Disable the previously-enabled pwm slice.
         pwm_set_enabled(pwm_slice_num, false);
     // Disable idle pin and its pullups.
@@ -141,7 +145,7 @@ void configure_signal_chain(bool freq_setting, bool amplitude_setting)
     // Enable pwm pin.
     gpio_init(pwm_pin);
     gpio_set_function(pwm_pin, GPIO_FUNC_PWM);
-    uint slice_num = pwm_gpio_to_slice_num(pwm_pin);
+    pwm_slice_num = pwm_gpio_to_slice_num(pwm_pin); // update global.
     uint gpio_channel = pwm_gpio_to_channel(pwm_pin);
     // Set period of 10 cycles (0 through 9) for 100KHz.
     // Set period of 8 cycles (0 through 7) for 125KHz.
@@ -151,6 +155,15 @@ void configure_signal_chain(bool freq_setting, bool amplitude_setting)
     pwm_set_wrap(pwm_slice_num, pwm_wrap);
     pwm_set_chan_level(pwm_slice_num, gpio_channel, pwm_chan_level);
     pwm_set_enabled(pwm_slice_num, true);
+    // Init GPIO output pins for configuring analog front-end.
+    gpio_init(FILTER_SEL_PIN);
+    gpio_init(GAIN_SEL_PIN);
+    gpio_set_dir_out_masked((1u << FILTER_SEL_PIN) | (1u << GAIN_SEL_PIN));
+    // Setup analog front-end filter and measured signal gain.
+    // FILTER_SEL_PIN = 1? --> 125KHz bandpass filter.
+    // GAIN_SEL_PIN = 1? --> 100x measured signal gain (to read 20mVpp signal).
+    gpio_put(FILTER_SEL_PIN, !freq_setting);
+    gpio_put(GAIN_SEL_PIN, !amplitude_setting);
 }
 
 void configure_lick_detector()
@@ -172,7 +185,11 @@ void write_settings(msg_t& msg)
 void reset_app()
 {
     // Apply settings specified by hardware state (DIP switches) and apply them.
-    app_regs.settings = (gpio_get(FREQ_SEL_PIN) << 1u) | gpio_get(GAIN_SEL_PIN);
+    app_regs.settings = (gpio_get(GAIN_SEL_DIP_PIN) << 1u) |
+                         gpio_get(FREQ_SEL_DIP_PIN);
+#if defined(DEBUG)
+    printf("Starting DIP switch settings: %d\r\n", app_regs.settings);
+#endif
     bool apply_100khz = bool(app_regs.settings & 0x01);
     bool apply_millivolts = bool((app_regs.settings >> 1u) & 0x01);
     configure_signal_chain(apply_100khz, apply_millivolts);
@@ -250,9 +267,10 @@ int main()
     queue_init(&detector_settings_queue, sizeof(app_regs.settings), 32);
 
     // Init GPIO pins to evaluate device state.
-    gpio_init(FREQ_SEL_PIN);
-    gpio_init(GAIN_SEL_PIN);
-    // Reset to configure square wave based on hardware switch settings.
+    gpio_init(FREQ_SEL_DIP_PIN); // DIP switch input pin.
+    gpio_init(GAIN_SEL_DIP_PIN); // DIP switch input pin.
+    // Reset to configure square wave output and analog front-end switches
+    // based on hardware switch settings.
     reset_app();
 
     // Launch Core1, which will process incoming adc samples and detect licks.

@@ -11,7 +11,7 @@
 
 #include <bitset>
 
-#define BASELINE_SAMPLE_INTERVAL (1000ul) // number of periods between
+#define BASELINE_SAMPLE_INTERVAL (3000ul) // number of periods between
                                           // updating the baseline threshold.
                                           // 100KHz/1000 periods = 100Hz update rate.
 #define UPSCALE_FACTOR (128) // Factor by which to multiply incoming

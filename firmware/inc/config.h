@@ -20,8 +20,11 @@
 
 #define HARP_SYNC_RX_PIN (5)
 
-#define FREQ_SEL_PIN (6)
-#define GAIN_SEL_PIN (7)
+#define FREQ_SEL_DIP_PIN (6)
+#define GAIN_SEL_DIP_PIN (7)
+
+#define FILTER_SEL_PIN (16)
+#define GAIN_SEL_PIN (17)
 
 #define AD9833_SPI_CS_PIN (1)
 #define AD9833_SPI_SCK_PIN (2)

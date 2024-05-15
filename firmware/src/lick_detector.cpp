@@ -151,6 +151,8 @@ void LickDetector::update()
         {
             if (warmup_iterations_ > FILTER_WARMUP_ITERATION_COUNT)
                 next_state = UNTRIGGERED;
+            // FIXME: update a Harp register here to indicate we are
+            //  not "busy" warming up.
             break;
         }
         case UNTRIGGERED:
