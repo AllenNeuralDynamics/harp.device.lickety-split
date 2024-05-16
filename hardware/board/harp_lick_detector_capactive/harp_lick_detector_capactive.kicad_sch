@@ -44,8 +44,8 @@
     (uuid fc896abd-09f1-494d-847c-570e84e7f610)
   )
 
-  (text "Device Functionality Options:\n\n* 100 or 125KHz excitation signal frequency.\n  * for multiple lick detectors with lick tubes spaced <10mm apart.\n* 20mVpp or 2Vpp excitation signal amplitude\n  * (1) for Ephys and (2) general purpose setups."
-    (at 16.51 191.77 0)
+  (text "Device Functionality Options:\n\n* 100 or 125KHz excitation signal frequency.\n  * for multiple lick detectors with lick tubes spaced <5mm apart.\n* 20mVpp or 2Vpp excitation signal amplitude\n  * (1) 20mVpp for Ephys-compliant lick detection with the device grounded to the Neuropixels Probe\n    and\n    (2) general purpose setups where a well-defined ground may not be available."
+    (at 15.24 194.31 0)
     (effects (font (size 2 2) (thickness 0.254) bold) (justify left bottom))
     (uuid 31c5d367-ec4c-47a0-994b-0527556999c4)
   )
