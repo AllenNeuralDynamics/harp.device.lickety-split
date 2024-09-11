@@ -1,7 +1,7 @@
 An ephys-compliant lick detector based on measured change in capacitance.
 
 ## Features
-* High Frequency (100 [KHz]), low current (200[nA]) excitation signal makes this device invisible to [Neuropixel Probes](https://www.neuropixels.org/) used in electrophysiology recordings.
+* High Frequency (100 or 125 [KHz]), low current (200[nA]) excitation signal makes this device invisible to [Neuropixel Probes](https://www.neuropixels.org/) used in electrophysiology recordings.
 * Fast. < 1[ms] response time.
 * Contact-based. Device triggers when mouse tongue contacts either the dispensing tube *or* dangling reward liquid.
 * TTL output triggers when a lick is detected.
@@ -12,11 +12,15 @@ An ephys-compliant lick detector based on measured change in capacitance.
 * 6-20VDC input (2.1 x 5.5mm barrel jack, positive center)
 * reverse-polarity protected
 * isolated USB to prevent ground loops with the PC.
+* Two frequency options: 100 and 125[KHz] signal frequency to eliminate crosstalk between two closely-spaced lick tubes.
+* Two amplitude options:
+  * The 0.02[Vpp] option with proper grounding is intended for Ephys recordings as it introduces negligible noise artifacts.
+  * The 2[Vpp] option can be used outside of an Ephys context without a ground connection
 
 ## Device Pinout
 ![Pinout](./notes/images/pinout.png)
 
-## Wiring Diagram
+## Ephys Wiring Diagram
 There are 3 configurations that will produce valid lick detection readings:
 
 Option A works well if your rig does not have large sources of 60Hz noise.
@@ -50,6 +54,7 @@ This phenomenon is called *crosstalk*, and it can appear in 2 ways.
   1. The amplitudes of the two AC signals will constructively interfere with each other, causing the excitation signals to saturate to their maximum values. The system cannot be used to detect licks this way.
 
 To fix this issue,
+  1. Put each lick detector on a different frequency (100KHz and 125KHz).
   1. Space the lick detection tubes farther apart.
   1. Reduce the length of exposed metal on the lick tube.
 
