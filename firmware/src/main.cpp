@@ -14,14 +14,9 @@
 #include <hardware/structs/bus_ctrl.h>
 
 // Harp App Setup.
-const uint16_t who_am_i = LICKETY_SPLIT_HARP_DEVICE_ID;
-const uint8_t hw_version_major = 0;
-const uint8_t hw_version_minor = 0;
 const uint8_t assembly_version = 0;
 const uint8_t harp_version_major = 0;
 const uint8_t harp_version_minor = 0;
-const uint8_t fw_version_major = 0;
-const uint8_t fw_version_minor = 0;
 const uint16_t serial_number = 0;
 
 
@@ -206,10 +201,11 @@ RegFnPair reg_handler_fns[reg_count]
 };
 
 // Create Harp "App."
-HarpCApp& app = HarpCApp::init(who_am_i, hw_version_major, hw_version_minor,
+HarpCApp& app = HarpCApp::init(HARP_DEVICE_ID,
+                               HW_VERSION_MAJOR, HW_VERSION_MINOR,
                                assembly_version,
                                harp_version_major, harp_version_minor,
-                               fw_version_major, fw_version_minor,
+                               FW_VERSION_MAJOR, FW_VERSION_MINOR,
                                serial_number, "Lickety Split",
                                (uint8_t*)GIT_HASH,
                                &app_regs, app_reg_specs,

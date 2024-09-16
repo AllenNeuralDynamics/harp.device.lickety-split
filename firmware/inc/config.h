@@ -1,6 +1,13 @@
 #ifndef CONFIG_H
 #define CONFIG_H
 
+#define HW_VERSION_MAJOR (0)
+#define HW_VERSION_MINOR (9)
+#define HW_VERSION_PATCH (0)
+
+#define FW_VERSION_MAJOR (0)
+#define FW_VERSION_MINOR (9)
+#define FW_VERSION_PATCH (1)
 
 #define TTL_PIN (23)
 #define LED_PIN (24)
@@ -32,7 +39,7 @@
 #define AD9833_SPI_RX_PIN (4)
 
 
-#define LICKETY_SPLIT_HARP_DEVICE_ID (0x0578)
+#define HARP_DEVICE_ID (0x0578)
 
 // Doesnt work yet:
 //#define USBD_MANUFACTURER "The Allen Institute for Neural Dynamics"
