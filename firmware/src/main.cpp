@@ -115,11 +115,9 @@ void update_app_state()
     printf("lick state: %02b\r\n", new_lick_state.state);
 #endif
     const RegSpecs& reg_specs = app_reg_specs[0];
-    //if (!HarpCApp::events_enabled())
-    //    return;
-    HarpCApp::send_harp_reply(EVENT, APP_REG_START_ADDRESS, reg_specs.base_ptr,
-                              reg_specs.num_bytes, reg_specs.payload_type);
-    // FIXME: send the timestamp that was taken with the detected lick state.
+    // Package data with timestamp taken with the detected lick state.
+    uint64_t lick_harp_time_us = HarpCore::system_to_harp_us_64(new_lick_state.pico_time_us);
+    HarpCApp::send_harp_reply(EVENT, APP_REG_START_ADDRESS, lick_harp_time_us);
 }
 
 /**
@@ -213,6 +211,7 @@ HarpCApp& app = HarpCApp::init(who_am_i, hw_version_major, hw_version_minor,
                                harp_version_major, harp_version_minor,
                                fw_version_major, fw_version_minor,
                                serial_number, "Lickety Split",
+                               (uint8_t*)GIT_HASH,
                                &app_regs, app_reg_specs,
                                reg_handler_fns, reg_count, update_app_state,
                                reset_app);
