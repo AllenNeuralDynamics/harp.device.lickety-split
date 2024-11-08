@@ -7,15 +7,16 @@
     <OutputPath>bin</OutputPath>
   </PropertyGroup>
   <PropertyGroup>
-    <DeviceMetadata>..\device.yml</DeviceMetadata>
+    <DeviceMetadata>..\..\..\device.yml</DeviceMetadata>
     <IOMetadata>..\ios.yml</IOMetadata>
   </PropertyGroup>
   <PropertyGroup>
+
     <InterfacePath>..\Interface\AllenNeuralDynamics.LicketySplit</InterfacePath>
     <FirmwarePath>..\Firmware\AllenNeuralDynamics.LicketySplit</FirmwarePath>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Harp.Generators" Version="0.1.0" GeneratePathProperty="true" />
+    <PackageReference Include="Harp.Generators" Version="0.3.0" GeneratePathProperty="true" />
   </ItemGroup>
   <Target Name="TextTransform" BeforeTargets="AfterBuild">
     <PropertyGroup>
