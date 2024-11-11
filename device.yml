@@ -1,6 +1,6 @@
 %YAML 1.1
 ---
-# yaml-language-server: $schema=https://raw.githubusercontent.com/harp-tech/reflex-generator/main/schema/device.json
+# yaml-language-server: $schema=https://harp-tech.org/draft-02/schema/device.json
 device: LicketySplit
 whoAmI: 1400
 firmwareVersion: "0.0"
