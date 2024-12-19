@@ -4,6 +4,9 @@ execute_process(COMMAND "${GIT_EXECUTABLE}" rev-parse --short HEAD OUTPUT_VARIAB
 message(STATUS "Computed Git Hash: ${COMMIT_ID}")
 add_definitions(-DGIT_HASH="${COMMIT_ID}") # Usable in source code.
 
+add_definitions(-DUSBD_MANUFACTURER="Allen Institute")
+add_definitions(-DUSBD_PRODUCT="lickety-split")
+
 include(${PICO_SDK_PATH}/pico_sdk_init.cmake)
 
 project(lickety_split)
