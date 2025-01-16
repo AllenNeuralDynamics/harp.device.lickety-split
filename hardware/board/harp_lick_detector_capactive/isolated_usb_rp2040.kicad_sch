@@ -18161,6 +18161,15 @@
 				(hide yes)
 			)
 		)
+		(property "Alternate" "PESD5V0F1BLD,315"
+			(at 70.485 23.495 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c52f6964-4e7d-4bae-9bef-b4d5701e06ae")
 		)

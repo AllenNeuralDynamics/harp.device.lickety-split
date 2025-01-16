@@ -3834,6 +3834,12 @@
 		(uuid "48f6dc12-725b-4d1c-900f-2b7efa504ec4")
 	)
 	(junction
+		(at 47.625 94.615)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4c4291c9-67c4-450b-aa3b-13ba5bd8af00")
+	)
+	(junction
 		(at 70.485 106.045)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -4024,12 +4030,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ed0ae14e-19d1-4630-b26c-b039773a9f3b")
-	)
-	(junction
-		(at 47.625 94.615)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "f2aeb76a-cb1b-4725-9c06-4ffac5118f47")
 	)
 	(junction
 		(at 109.22 58.42)
@@ -4321,7 +4321,7 @@
 	)
 	(wire
 		(pts
-			(xy 47.625 74.93) (xy 47.625 85.09)
+			(xy 47.625 52.07) (xy 47.625 55.88)
 		)
 		(stroke
 			(width 0)
@@ -4378,16 +4378,6 @@
 			(type default)
 		)
 		(uuid "18596f25-b7ce-4264-a0f6-bff106d60131")
-	)
-	(wire
-		(pts
-			(xy 47.625 92.71) (xy 47.625 94.615)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "191e9168-9300-442a-9655-a70e4e4a9090")
 	)
 	(wire
 		(pts
@@ -5401,6 +5391,16 @@
 	)
 	(wire
 		(pts
+			(xy 47.625 63.5) (xy 47.625 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5cb25a4b-3ccd-4e36-b448-461b3bae57a1")
+	)
+	(wire
+		(pts
 			(xy 134.62 58.42) (xy 133.35 58.42)
 		)
 		(stroke
@@ -6321,6 +6321,16 @@
 	)
 	(wire
 		(pts
+			(xy 47.625 73.66) (xy 47.625 94.615)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a9080371-ef23-425b-abb9-b88b90e81ea4")
+	)
+	(wire
+		(pts
 			(xy 143.51 104.775) (xy 143.51 106.045)
 		)
 		(stroke
@@ -6478,6 +6488,16 @@
 			(type default)
 		)
 		(uuid "b45277ca-1d15-40d6-b668-7710c27ebac2")
+	)
+	(wire
+		(pts
+			(xy 47.625 94.615) (xy 78.105 94.615)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b4baaf0b-8c4f-490b-aa81-bc712c21176c")
 	)
 	(wire
 		(pts
@@ -6798,16 +6818,6 @@
 			(type default)
 		)
 		(uuid "cc7b3884-e06f-4ce8-bca8-2f884a80b5bc")
-	)
-	(wire
-		(pts
-			(xy 47.625 94.615) (xy 78.105 94.615)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cd4773c6-3e83-4de9-aff7-f10b44e205c0")
 	)
 	(wire
 		(pts
@@ -7441,7 +7451,7 @@
 	)
 	(wire
 		(pts
-			(xy 40.64 74.93) (xy 47.625 74.93)
+			(xy 40.64 52.07) (xy 47.625 52.07)
 		)
 		(stroke
 			(width 0)
@@ -7789,7 +7799,7 @@
 	)
 	(text "20mV/100KOhm = 200nA"
 		(exclude_from_sim no)
-		(at 24.13 71.755 0)
+		(at 15.875 49.53 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -7929,6 +7939,17 @@
 			(justify left bottom)
 		)
 		(uuid "ee70ee9c-5e10-4106-957e-5d07bf0e5058")
+	)
+	(text "Use 0-Ohm Jumper\nfor \"C78\" -->"
+		(exclude_from_sim no)
+		(at 23.495 71.12 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fb296bae-800d-4b8b-a8e6-2ef33c024752")
 	)
 	(text "Mouse body:\n< 100pF"
 		(exclude_from_sim no)
@@ -8253,7 +8274,7 @@
 	)
 	(hierarchical_label "VSINE"
 		(shape input)
-		(at 40.64 74.93 180)
+		(at 40.64 52.07 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13067,6 +13088,15 @@
 				(hide yes)
 			)
 		)
+		(property "Alternate" "CBBJR79"
+			(at 38.735 94.615 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9ae70a22-5945-4742-b98c-245f8ccebcb7")
 		)
@@ -15274,6 +15304,102 @@
 			(project "harp_lick_detector_capactive"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/8b2c79bc-d662-4528-ac6e-e4616ba8e8ad"
 					(reference "#PWR0133")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 47.625 69.85 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8416f773-3078-4b60-aabe-08e998a25731")
+		(property "Reference" "C78"
+			(at 43.18 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1nF"
+			(at 43.18 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
+			(at 48.5902 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf"
+			(at 47.625 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "0-Ohm Resistor."
+			(at 47.625 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Number" "KGM31BCG1H102FT"
+			(at 47.625 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 47.625 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Notes" "Short w/0-Ohm Resistor by default. Use KGM31BCG1H102FT if required."
+			(at 47.625 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d7084ba2-5fd1-47a7-83ab-1454a9b26271")
+		)
+		(pin "1"
+			(uuid "37820a57-cf5b-4bf5-ad39-bc30a9e399fc")
+		)
+		(instances
+			(project ""
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/8b2c79bc-d662-4528-ac6e-e4616ba8e8ad"
+					(reference "C78")
 					(unit 1)
 				)
 			)
@@ -18928,7 +19054,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 47.625 88.9 0)
+		(at 47.625 59.69 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18936,7 +19062,7 @@
 		(dnp no)
 		(uuid "cdc38a91-9d9a-41ab-8fbc-355b2c3c4863")
 		(property "Reference" "R14"
-			(at 48.895 88.9 0)
+			(at 43.18 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18945,7 +19071,7 @@
 			)
 		)
 		(property "Value" "100K"
-			(at 47.625 91.44 90)
+			(at 47.625 62.23 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18954,7 +19080,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_1206_3216Metric"
-			(at 45.847 88.9 90)
+			(at 45.847 59.69 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18963,7 +19089,7 @@
 			)
 		)
 		(property "Datasheet" "n/a"
-			(at 47.625 88.9 0)
+			(at 47.625 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18972,7 +19098,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 47.625 88.9 0)
+			(at 47.625 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18981,7 +19107,7 @@
 			)
 		)
 		(property "Link" "https://www.digikey.com/en/products/detail/yageo/RT1206FRE07100KL/1082857"
-			(at 47.625 88.9 0)
+			(at 47.625 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18990,7 +19116,7 @@
 			)
 		)
 		(property "Manufacturer" "Yageo"
-			(at 47.625 88.9 0)
+			(at 47.625 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18999,7 +19125,7 @@
 			)
 		)
 		(property "Manufacturer Number" "RT1206FRE07100KL"
-			(at 47.625 88.9 0)
+			(at 47.625 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19008,7 +19134,7 @@
 			)
 		)
 		(property "Tolerance" "1%"
-			(at 47.625 88.9 0)
+			(at 47.625 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19017,7 +19143,7 @@
 			)
 		)
 		(property "Notes" ""
-			(at 47.625 88.9 0)
+			(at 47.625 59.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
