@@ -1,0 +1,24 @@
+G04 #@! TF.GenerationSoftware,KiCad,Pcbnew,7.0.6-7.0.6~ubuntu20.04.1*
+G04 #@! TF.CreationDate,2024-04-09T16:12:21-07:00*
+G04 #@! TF.ProjectId,harp_lick_detector_capactive,68617270-5f6c-4696-936b-5f6465746563,rev?*
+G04 #@! TF.SameCoordinates,PX640a5a0PY7088980*
+G04 #@! TF.FileFunction,Paste,Bot*
+G04 #@! TF.FilePolarity,Positive*
+%FSLAX46Y46*%
+G04 Gerber Fmt 4.6, Leading zero omitted, Abs format (unit mm)*
+G04 Created by KiCad (PCBNEW 7.0.6-7.0.6~ubuntu20.04.1) date 2024-04-09 16:12:21*
+%MOMM*%
+%LPD*%
+G01*
+G04 APERTURE LIST*
+%ADD10R,2.200000X2.800000*%
+%ADD11R,2.800000X2.800000*%
+G04 APERTURE END LIST*
+D10*
+G04 #@! TO.C,J4*
+X76100000Y43300000D03*
+X78100000Y35900000D03*
+D11*
+X68700000Y35900000D03*
+G04 #@! TD*
+M02*
