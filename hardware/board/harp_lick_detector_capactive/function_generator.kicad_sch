@@ -1,1126 +1,5638 @@
-(kicad_sch (version 20230121) (generator eeschema)
-
-  (uuid e8779523-f4fe-4b5d-84fc-84a79f6ae497)
-
-  (paper "A4")
-
-  (title_block
-    (title "Lickety Split Capacitive Lick Detector")
-    (date "2023-09-01")
-    (rev "0.6")
-    (company "The Allen Institute for Neural Dynamics")
-  )
-
-  (lib_symbols
-    (symbol "Device:C" (pin_numbers hide) (pin_names (offset 0.254)) (in_bom yes) (on_board yes)
-      (property "Reference" "C" (at 0.635 2.54 0)
-        (effects (font (size 1.27 1.27)) (justify left))
-      )
-      (property "Value" "C" (at 0.635 -2.54 0)
-        (effects (font (size 1.27 1.27)) (justify left))
-      )
-      (property "Footprint" "" (at 0.9652 -3.81 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "~" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "cap capacitor" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Unpolarized capacitor" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "C_*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "C_0_1"
-        (polyline
-          (pts
-            (xy -2.032 -0.762)
-            (xy 2.032 -0.762)
-          )
-          (stroke (width 0.508) (type default))
-          (fill (type none))
-        )
-        (polyline
-          (pts
-            (xy -2.032 0.762)
-            (xy 2.032 0.762)
-          )
-          (stroke (width 0.508) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "C_1_1"
-        (pin passive line (at 0 3.81 270) (length 2.794)
-          (name "~" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 0 -3.81 90) (length 2.794)
-          (name "~" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "Device:R" (pin_numbers hide) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "R" (at 2.032 0 90)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Value" "R" (at 0 0 90)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at -1.778 0 90)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "~" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "R res resistor" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Resistor" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_fp_filters" "R_*" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "R_0_1"
-        (rectangle (start -1.016 -2.54) (end 1.016 2.54)
-          (stroke (width 0.254) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "R_1_1"
-        (pin passive line (at 0 3.81 270) (length 1.27)
-          (name "~" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin passive line (at 0 -3.81 90) (length 1.27)
-          (name "~" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "kicad_component_library:LTC6263" (in_bom yes) (on_board yes)
-      (property "Reference" "U" (at 2.54 -3.81 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Value" "LTC6263" (at 6.35 3.81 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "Package_SO:MSOP-16_3x4mm_P0.5mm" (at 22.225 -6.35 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/626123fa.pdf" (at 47.625 -8.255 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "LTC6263_1_1"
-        (polyline
-          (pts
-            (xy -2.54 5.08)
-            (xy 7.62 0)
-            (xy -2.54 -5.08)
-            (xy -2.54 5.08)
-          )
-          (stroke (width 0.254) (type default))
-          (fill (type background))
-        )
-        (pin output line (at 10.16 0 180) (length 2.54)
-          (name "~" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-        (pin input line (at -5.08 -2.54 0) (length 2.54)
-          (name "-" (effects (font (size 1.27 1.27))))
-          (number "2" (effects (font (size 1.27 1.27))))
-        )
-        (pin input line (at -5.08 2.54 0) (length 2.54)
-          (name "+" (effects (font (size 1.27 1.27))))
-          (number "3" (effects (font (size 1.27 1.27))))
-        )
-      )
-      (symbol "LTC6263_2_1"
-        (polyline
-          (pts
-            (xy -2.54 5.08)
-            (xy 7.62 0)
-            (xy -2.54 -5.08)
-            (xy -2.54 5.08)
-          )
-          (stroke (width 0.254) (type default))
-          (fill (type background))
-        )
-        (pin input line (at -5.08 2.54 0) (length 2.54)
-          (name "+" (effects (font (size 1.27 1.27))))
-          (number "5" (effects (font (size 1.27 1.27))))
-        )
-        (pin input line (at -5.08 -2.54 0) (length 2.54)
-          (name "-" (effects (font (size 1.27 1.27))))
-          (number "6" (effects (font (size 1.27 1.27))))
-        )
-        (pin output line (at 10.16 0 180) (length 2.54)
-          (name "~" (effects (font (size 1.27 1.27))))
-          (number "7" (effects (font (size 1.27 1.27))))
-        )
-      )
-      (symbol "LTC6263_3_1"
-        (polyline
-          (pts
-            (xy -2.54 5.08)
-            (xy 7.62 0)
-            (xy -2.54 -5.08)
-            (xy -2.54 5.08)
-          )
-          (stroke (width 0.254) (type default))
-          (fill (type background))
-        )
-        (pin output line (at 10.16 0 180) (length 2.54)
-          (name "~" (effects (font (size 1.27 1.27))))
-          (number "10" (effects (font (size 1.27 1.27))))
-        )
-        (pin input line (at -5.08 -2.54 0) (length 2.54)
-          (name "-" (effects (font (size 1.27 1.27))))
-          (number "11" (effects (font (size 1.27 1.27))))
-        )
-        (pin input line (at -5.08 2.54 0) (length 2.54)
-          (name "+" (effects (font (size 1.27 1.27))))
-          (number "12" (effects (font (size 1.27 1.27))))
-        )
-      )
-      (symbol "LTC6263_4_1"
-        (polyline
-          (pts
-            (xy -2.54 -5.08)
-            (xy 7.62 0)
-            (xy -2.54 5.08)
-            (xy -2.54 -5.08)
-          )
-          (stroke (width 0.254) (type default))
-          (fill (type background))
-        )
-        (pin input line (at -5.08 2.54 0) (length 2.54)
-          (name "+" (effects (font (size 1.27 1.27))))
-          (number "14" (effects (font (size 1.27 1.27))))
-        )
-        (pin input line (at -5.08 -2.54 0) (length 2.54)
-          (name "-" (effects (font (size 1.27 1.27))))
-          (number "15" (effects (font (size 1.27 1.27))))
-        )
-        (pin output line (at 10.16 0 180) (length 2.54)
-          (name "~" (effects (font (size 1.27 1.27))))
-          (number "16" (effects (font (size 1.27 1.27))))
-        )
-      )
-      (symbol "LTC6263_5_1"
-        (pin power_in line (at 0 -7.62 90) (length 3.81)
-          (name "V-" (effects (font (size 1.27 1.27))))
-          (number "13" (effects (font (size 1.27 1.27))))
-        )
-        (pin power_in line (at 0 7.62 270) (length 3.81)
-          (name "V+" (effects (font (size 1.27 1.27))))
-          (number "4" (effects (font (size 1.27 1.27))))
-        )
-        (pin no_connect line (at 0 -0.635 0) (length 2.54) hide
-          (name "NC" (effects (font (size 1.27 1.27))))
-          (number "8" (effects (font (size 1.27 1.27))))
-        )
-        (pin no_connect line (at 0 0.635 0) (length 2.54) hide
-          (name "NC" (effects (font (size 1.27 1.27))))
-          (number "9" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-    (symbol "power:GND" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
-      (property "Reference" "#PWR" (at 0 -6.35 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Value" "GND" (at 0 -3.81 0)
-        (effects (font (size 1.27 1.27)))
-      )
-      (property "Footprint" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "Datasheet" "" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_keywords" "power-flag" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (property "ki_description" "Power symbol creates a global label with name \"GND\" , ground" (at 0 0 0)
-        (effects (font (size 1.27 1.27)) hide)
-      )
-      (symbol "GND_0_1"
-        (polyline
-          (pts
-            (xy 0 0)
-            (xy 0 -1.27)
-            (xy 1.27 -1.27)
-            (xy 0 -2.54)
-            (xy -1.27 -1.27)
-            (xy 0 -1.27)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
-      )
-      (symbol "GND_1_1"
-        (pin power_in line (at 0 0 270) (length 0) hide
-          (name "GND" (effects (font (size 1.27 1.27))))
-          (number "1" (effects (font (size 1.27 1.27))))
-        )
-      )
-    )
-  )
-
-  (junction (at 119.38 96.52) (diameter 0) (color 0 0 0 0)
-    (uuid 0ac51c36-7dad-4db3-b957-0cbe0d7cb9d0)
-  )
-  (junction (at 99.06 96.52) (diameter 0) (color 0 0 0 0)
-    (uuid 2cd1b462-9e3f-47bb-826e-12413bd03b26)
-  )
-  (junction (at 109.22 96.52) (diameter 0) (color 0 0 0 0)
-    (uuid 3a30b0df-481d-4299-a53c-758483a2683a)
-  )
-  (junction (at 180.975 99.06) (diameter 0) (color 0 0 0 0)
-    (uuid 3f4c2716-1764-40ab-a4c7-507f42f44160)
-  )
-  (junction (at 150.495 96.52) (diameter 0) (color 0 0 0 0)
-    (uuid 8381dd49-466f-4b8b-b4a2-decee58f3985)
-  )
-  (junction (at 129.54 96.52) (diameter 0) (color 0 0 0 0)
-    (uuid c9477c4d-50ba-4091-a28d-b88fde11ef2c)
-  )
-
-  (wire (pts (xy 180.975 99.06) (xy 180.975 106.68))
-    (stroke (width 0) (type default))
-    (uuid 0d0390ad-1bea-4de2-bc34-6f6243c0df38)
-  )
-  (wire (pts (xy 119.38 97.79) (xy 119.38 96.52))
-    (stroke (width 0) (type default))
-    (uuid 0ff69f41-2fb3-4083-a48f-299d425d53f2)
-  )
-  (wire (pts (xy 129.54 96.52) (xy 128.27 96.52))
-    (stroke (width 0) (type default))
-    (uuid 23df5cc5-efa7-447b-94fa-bb72071ab370)
-  )
-  (wire (pts (xy 148.59 96.52) (xy 150.495 96.52))
-    (stroke (width 0) (type default))
-    (uuid 2db6169b-f9a6-43b6-bfd5-eb904c9b2f45)
-  )
-  (wire (pts (xy 99.06 96.52) (xy 97.79 96.52))
-    (stroke (width 0) (type default))
-    (uuid 315ca152-261a-4f28-81f4-ddb3f0260a37)
-  )
-  (wire (pts (xy 129.54 96.52) (xy 140.97 96.52))
-    (stroke (width 0) (type default))
-    (uuid 43aa51bd-6652-4c0a-a9f0-08c3dc05551a)
-  )
-  (wire (pts (xy 99.06 105.41) (xy 99.06 106.68))
-    (stroke (width 0) (type default))
-    (uuid 4f0e57d4-fc46-4ab0-bf32-1c862b40cf4b)
-  )
-  (wire (pts (xy 119.38 96.52) (xy 120.65 96.52))
-    (stroke (width 0) (type default))
-    (uuid 778a9faf-b8f0-4933-b278-7dcd6bd11b81)
-  )
-  (polyline (pts (xy 163.195 79.375) (xy 163.195 95.885))
-    (stroke (width 0) (type default))
-    (uuid 7faa14ef-8714-40ef-ac28-35c887b18c3d)
-  )
-
-  (wire (pts (xy 150.495 96.52) (xy 164.465 96.52))
-    (stroke (width 0) (type default))
-    (uuid 80693ea1-5768-4f52-8d98-18c510525aad)
-  )
-  (wire (pts (xy 163.195 101.6) (xy 163.195 106.68))
-    (stroke (width 0) (type default))
-    (uuid 861fc3a3-7585-4b38-bcfa-c0c5c220341b)
-  )
-  (wire (pts (xy 99.06 96.52) (xy 100.33 96.52))
-    (stroke (width 0) (type default))
-    (uuid 8f2eb677-499c-4136-9b52-ab2e9eb2de65)
-  )
-  (wire (pts (xy 119.38 96.52) (xy 118.11 96.52))
-    (stroke (width 0) (type default))
-    (uuid 9d830a2e-75fc-4f80-a895-671fb3954186)
-  )
-  (wire (pts (xy 109.22 96.52) (xy 107.95 96.52))
-    (stroke (width 0) (type default))
-    (uuid a12f8f2c-1a9a-42c8-b3b3-1d6d1d2ce0c0)
-  )
-  (wire (pts (xy 119.38 105.41) (xy 119.38 106.68))
-    (stroke (width 0) (type default))
-    (uuid a3b8b8b9-d246-4611-94c4-a23f23821ff1)
-  )
-  (wire (pts (xy 163.195 106.68) (xy 180.975 106.68))
-    (stroke (width 0) (type default))
-    (uuid a7459b2a-5787-40e0-bedf-e97848ab61b6)
-  )
-  (wire (pts (xy 99.06 97.79) (xy 99.06 96.52))
-    (stroke (width 0) (type default))
-    (uuid ab7c5886-2b86-4876-bd25-24fb7a6c81de)
-  )
-  (wire (pts (xy 150.495 96.52) (xy 150.495 98.425))
-    (stroke (width 0) (type default))
-    (uuid b09b188f-c7e1-49bd-9d6c-c7e4a44941b8)
-  )
-  (wire (pts (xy 180.975 99.06) (xy 190.5 99.06))
-    (stroke (width 0) (type default))
-    (uuid bf840a1f-ce33-4676-a72d-3ccee539acd0)
-  )
-  (wire (pts (xy 109.22 96.52) (xy 110.49 96.52))
-    (stroke (width 0) (type default))
-    (uuid c5a30376-2f7f-480a-92b9-bf3e79b34c92)
-  )
-  (wire (pts (xy 164.465 101.6) (xy 163.195 101.6))
-    (stroke (width 0) (type default))
-    (uuid c80cdca5-cb61-4d3c-8638-8c42a5f11b6f)
-  )
-  (wire (pts (xy 109.22 97.79) (xy 109.22 96.52))
-    (stroke (width 0) (type default))
-    (uuid cc2d3144-775b-4073-afe8-10c4a6a4841f)
-  )
-  (wire (pts (xy 180.975 99.06) (xy 179.705 99.06))
-    (stroke (width 0) (type default))
-    (uuid ccae7a4d-9379-4c1d-bf12-06412a7d34e9)
-  )
-  (wire (pts (xy 150.495 106.045) (xy 150.495 107.315))
-    (stroke (width 0) (type default))
-    (uuid d7c21f64-e9f1-4f64-929a-d41ede8627ca)
-  )
-  (wire (pts (xy 129.54 97.79) (xy 129.54 96.52))
-    (stroke (width 0) (type default))
-    (uuid dba7cb9a-1d47-4af2-a52d-9dc1378463f9)
-  )
-  (wire (pts (xy 88.9 96.52) (xy 90.17 96.52))
-    (stroke (width 0) (type default))
-    (uuid e596dc14-7c95-4345-9259-78c1ded1f670)
-  )
-  (wire (pts (xy 109.22 105.41) (xy 109.22 106.68))
-    (stroke (width 0) (type default))
-    (uuid f3b1370f-fcb1-4a8a-b9ab-5c27644f87a0)
-  )
-  (wire (pts (xy 129.54 105.41) (xy 129.54 106.68))
-    (stroke (width 0) (type default))
-    (uuid fcd9b523-9b49-4482-bd48-08ac1f4740e7)
-  )
-
-  (text "RC High Pass Filter\nDC Offset Removal" (at 137.795 89.535 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 2e7e675a-3c63-4864-a42b-bbb05bff26d2)
-  )
-  (text "Reduce 3.3V, 100KHz square wave from the RP2040 to approximate a 20mV, 100KHz sine wave."
-    (at 86.995 61.595 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 50e818d9-e3a5-4eef-87c0-eb554aee6bd8)
-  )
-  (text "V_{out} = 20[mVpp] @ 100[KHz]" (at 163.195 79.375 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid 7bece419-0bbd-43b9-a4ea-407860b50361)
-  )
-  (text "Buffer" (at 168.275 90.805 0)
-    (effects (font (size 1.27 1.27)) (justify left bottom))
-    (uuid d69f3519-f207-4d05-95c2-11d63c1c47ed)
-  )
-
-  (hierarchical_label "VSINE" (shape input) (at 190.5 99.06 0) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify left))
-    (uuid f7aed93a-2a17-4451-b322-ed0d8e14aa32)
-  )
-  (hierarchical_label "100KHZ_SQ_WAVE_IN" (shape input) (at 88.9 96.52 180) (fields_autoplaced)
-    (effects (font (size 1.27 1.27)) (justify right))
-    (uuid f9526f46-0312-499b-9a8d-db5e6b6d3e47)
-  )
-
-  (symbol (lib_id "Device:R") (at 104.14 96.52 90) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 28f89c61-2499-4804-b03e-dd801dabafa4)
-    (property "Reference" "R16" (at 105.41 93.98 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "4K7" (at 105.41 96.52 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 104.14 98.298 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "https://www.koaspeer.com/pdfs/RN73R.pdf" (at 104.14 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Link" "https://www.digikey.com/en/products/detail/koa-speer-electronics-inc/RN73R1ETTP4701B25/9991850" (at 104.14 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Manufacturer" "KOA Speer Electronics, Inc." (at 104.14 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Manufacturer Number" "RN73R1ETTP4701B25" (at 104.14 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Tolerance" "0.1%" (at 104.14 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Vendor Number" "2019-RN73R1ETTP4701B25DKR-ND" (at 104.14 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 8bc3c92b-3cbc-4799-86cc-c81ba9fdb924))
-    (pin "2" (uuid ada84c90-f660-4263-bbdf-163ffe72b7fa))
-    (instances
-      (project "harp_lick_detector_capactive"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
-          (reference "R16") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R") (at 124.46 96.52 90) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 51b8d92b-38a4-4acb-a7be-6298cb6ad1cf)
-    (property "Reference" "R45" (at 125.73 93.98 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "4K7" (at 125.73 96.52 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 124.46 98.298 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "https://www.koaspeer.com/pdfs/RN73R.pdf" (at 124.46 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Link" "https://www.digikey.com/en/products/detail/koa-speer-electronics-inc/RN73R1ETTP4701B25/9991850" (at 124.46 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Manufacturer" "KOA Speer Electronics, Inc." (at 124.46 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Manufacturer Number" "RN73R1ETTP4701B25" (at 124.46 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Tolerance" "0.1%" (at 124.46 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Vendor Number" "2019-RN73R1ETTP4701B25DKR-ND" (at 124.46 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 47dcc004-1264-4fbf-bf1b-f05cd486117c))
-    (pin "2" (uuid 08dbaad2-3f8b-4e46-a166-b2f6946410d0))
-    (instances
-      (project "harp_lick_detector_capactive"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
-          (reference "R45") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:C") (at 144.78 96.52 90) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 55093bfa-3e39-44f3-b8ed-b0daff8296e6)
-    (property "Reference" "C10" (at 146.685 92.71 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "1nF" (at 149.86 95.25 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 148.59 95.5548 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GCM1555C1H102FA16-01.pdf" (at 144.78 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Notes" "" (at 144.78 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Link" "https://www.digikey.com/en/products/detail/murata-electronics/GCM1555C1H102FA16D/7363205" (at 144.78 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Manufacturer Number" "GCM1555C1H102FA16D" (at 144.78 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Manufacturer" "Murata Electronics" (at 144.78 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Rated Voltage" "50V" (at 144.78 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Temperature Coefficient" "COG/NP0" (at 144.78 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "PCBWay Link" "" (at 144.78 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Vendor Number" "490-16461-6-ND" (at 144.78 96.52 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Tolerance" "1%" (at 144.78 96.52 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 990965de-a758-4714-b91f-a5547e5c7e60))
-    (pin "2" (uuid fac25a67-9f5b-4fa3-bb71-2ea25e3f9758))
-    (instances
-      (project "harp_lick_detector_capactive"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
-          (reference "C10") (unit 1)
-        )
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
-          (reference "C32") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "kicad_component_library:LTC6263") (at 169.545 99.06 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 570ebf15-c1c6-4e28-91ff-1372a0ba9361)
-    (property "Reference" "U6" (at 173.355 95.25 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Value" "LTC6263" (at 174.625 104.14 0)
-      (effects (font (size 1.27 1.27)))
-    )
-    (property "Footprint" "Package_SO:MSOP-16_3x4mm_P0.5mm" (at 191.77 105.41 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/626123fa.pdf" (at 217.17 107.315 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Link" "https://www.digikey.com/en/products/detail/analog-devices-inc/LTC6263IMS-PBF/6596388" (at 169.545 99.06 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Manufacturer" "Analog Devices Inc." (at 169.545 99.06 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Manufacturer Number" "LTC6263IMS#PBF" (at 169.545 99.06 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 1a0e2038-b77d-42aa-b6a0-852516016fc1))
-    (pin "2" (uuid 639a5632-e01b-4d82-9321-f5ebc63b42a5))
-    (pin "3" (uuid 923b16cd-057e-4c0d-a99f-af109822d01d))
-    (pin "5" (uuid fd171cde-a487-45e5-847a-9aa99d987624))
-    (pin "6" (uuid 0c9b4629-e9d7-4741-b245-386df9fe24dd))
-    (pin "7" (uuid 483caa46-f087-42ed-90a5-6977ec2e1aec))
-    (pin "10" (uuid a06e83f0-c9f5-46e5-a010-2c2369cbdd0b))
-    (pin "11" (uuid 4ac277d6-cdd6-490e-a18d-2c16627f9506))
-    (pin "12" (uuid d69241df-7a54-452f-baa0-8506fb2e06e4))
-    (pin "14" (uuid 799b106c-7c83-49f9-b574-33364c76b19e))
-    (pin "15" (uuid 11d65ff2-f82b-4db6-9258-dcf51034f171))
-    (pin "16" (uuid ca170281-6b00-4b52-a20f-59b79c1faad9))
-    (pin "13" (uuid 05bd073d-33ab-4029-8a0b-27e2d0c16f06))
-    (pin "4" (uuid f4a8ab17-2a40-4b8f-b162-70799ca9f03f))
-    (pin "8" (uuid 952c1b31-321c-4d76-bfb1-eb5143fcdbb6))
-    (pin "9" (uuid de7e754e-6eef-4534-a1bf-1c21df8b1e5b))
-    (instances
-      (project "harp_lick_detector_capactive"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/8b2c79bc-d662-4528-ac6e-e4616ba8e8ad"
-          (reference "U6") (unit 1)
-        )
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
-          (reference "U6") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R") (at 114.3 96.52 90) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 587fffb6-c830-4af9-ba27-11b054f0ddb9)
-    (property "Reference" "R17" (at 115.57 93.98 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "4K7" (at 115.57 96.52 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 114.3 98.298 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "https://www.koaspeer.com/pdfs/RN73R.pdf" (at 114.3 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Link" "https://www.digikey.com/en/products/detail/koa-speer-electronics-inc/RN73R1ETTP4701B25/9991850" (at 114.3 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Manufacturer" "KOA Speer Electronics, Inc." (at 114.3 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Manufacturer Number" "RN73R1ETTP4701B25" (at 114.3 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Tolerance" "0.1%" (at 114.3 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Vendor Number" "2019-RN73R1ETTP4701B25DKR-ND" (at 114.3 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 72058a87-a176-438e-9ac0-26d864fa24f9))
-    (pin "2" (uuid ad3c4065-5c26-42f5-871b-fd4ad57fd2fc))
-    (instances
-      (project "harp_lick_detector_capactive"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
-          (reference "R17") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 99.06 106.68 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 5e1216b9-a1d4-4529-b9a1-e105bbe1cc7e)
-    (property "Reference" "#PWR0103" (at 99.06 113.03 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 97.155 110.49 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "" (at 99.06 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 99.06 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 7dc0e795-1081-4f71-9a83-f50e51c05b85))
-    (instances
-      (project "harp_lick_detector_capactive"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-          (reference "#PWR0103") (unit 1)
-        )
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/b51b21ef-b374-4f9f-a058-7db9b64fdf4a"
-          (reference "#PWR0110") (unit 1)
-        )
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
-          (reference "#PWR070") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:C") (at 99.06 101.6 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 6f64a513-a5f2-450c-a96e-95a91b7d3288)
-    (property "Reference" "C10" (at 99.695 99.06 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "1nF" (at 99.695 104.14 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 100.0252 105.41 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GCM1555C1H102FA16-01.pdf" (at 99.06 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Notes" "" (at 99.06 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Link" "https://www.digikey.com/en/products/detail/murata-electronics/GCM1555C1H102FA16D/7363205" (at 99.06 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Manufacturer Number" "GCM1555C1H102FA16D" (at 99.06 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Manufacturer" "Murata Electronics" (at 99.06 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Rated Voltage" "50V" (at 99.06 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Temperature Coefficient" "COG/NP0" (at 99.06 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "PCBWay Link" "" (at 99.06 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Vendor Number" "490-16461-6-ND" (at 99.06 101.6 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Tolerance" "1%" (at 99.06 101.6 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid d9b3c188-e24b-4980-9164-32ade2bcf37a))
-    (pin "2" (uuid 16293447-8e6f-41c6-a27c-cb576a65b9c1))
-    (instances
-      (project "harp_lick_detector_capactive"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
-          (reference "C10") (unit 1)
-        )
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
-          (reference "C35") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 150.495 107.315 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 72613fea-e655-43d1-9d47-77eb6612a633)
-    (property "Reference" "#PWR0103" (at 150.495 113.665 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 148.59 111.125 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "" (at 150.495 107.315 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 150.495 107.315 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 2d6add76-5392-49bf-912a-924530ecac48))
-    (instances
-      (project "harp_lick_detector_capactive"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-          (reference "#PWR0103") (unit 1)
-        )
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/b51b21ef-b374-4f9f-a058-7db9b64fdf4a"
-          (reference "#PWR0110") (unit 1)
-        )
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
-          (reference "#PWR047") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R") (at 93.98 96.52 90) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 891bc7fe-232e-4c61-a991-3470b4cb464d)
-    (property "Reference" "R8" (at 95.25 93.98 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "4K7" (at 95.25 96.52 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 93.98 98.298 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "https://www.koaspeer.com/pdfs/RN73R.pdf" (at 93.98 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Link" "https://www.digikey.com/en/products/detail/koa-speer-electronics-inc/RN73R1ETTP4701B25/9991850" (at 93.98 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Manufacturer" "KOA Speer Electronics, Inc." (at 93.98 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Manufacturer Number" "RN73R1ETTP4701B25" (at 93.98 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Tolerance" "0.1%" (at 93.98 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Vendor Number" "2019-RN73R1ETTP4701B25DKR-ND" (at 93.98 96.52 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 5f802511-bfa5-46df-8ebd-6b8dd7036c04))
-    (pin "2" (uuid b71cd206-a5b5-47a2-9939-f9cad4b0aa0b))
-    (instances
-      (project "harp_lick_detector_capactive"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
-          (reference "R8") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:R") (at 150.495 102.235 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 8f4b54c5-f43f-4c74-ac55-70c943c962d4)
-    (property "Reference" "R25" (at 151.765 100.33 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "4K7" (at 150.495 104.14 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 148.717 102.235 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "https://www.koaspeer.com/pdfs/RN73R.pdf" (at 150.495 102.235 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Link" "https://www.digikey.com/en/products/detail/koa-speer-electronics-inc/RN73R1ETTP4701B25/9991850" (at 150.495 102.235 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Manufacturer" "KOA Speer Electronics, Inc." (at 150.495 102.235 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Manufacturer Number" "RN73R1ETTP4701B25" (at 150.495 102.235 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Tolerance" "0.1%" (at 150.495 102.235 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Vendor Number" "2019-RN73R1ETTP4701B25DKR-ND" (at 150.495 102.235 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid d9052ce4-b5c3-4ce6-87c7-af8bf72c1772))
-    (pin "2" (uuid 298b5d34-adcf-4386-8cd4-9cffb8d69da9))
-    (instances
-      (project "harp_lick_detector_capactive"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
-          (reference "R25") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 129.54 106.68 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 984b7051-314d-4ba5-87ad-04316fe45a7a)
-    (property "Reference" "#PWR0103" (at 129.54 113.03 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 127.635 110.49 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "" (at 129.54 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 129.54 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 53eb42f1-e9fc-443a-a518-e6d1ef813c27))
-    (instances
-      (project "harp_lick_detector_capactive"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-          (reference "#PWR0103") (unit 1)
-        )
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/b51b21ef-b374-4f9f-a058-7db9b64fdf4a"
-          (reference "#PWR0110") (unit 1)
-        )
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
-          (reference "#PWR090") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:C") (at 119.38 101.6 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid 9da71e23-018e-4969-bc3c-3476c7ce3b02)
-    (property "Reference" "C10" (at 120.015 99.06 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "1nF" (at 120.015 104.14 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 120.3452 105.41 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GCM1555C1H102FA16-01.pdf" (at 119.38 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Notes" "" (at 119.38 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Link" "https://www.digikey.com/en/products/detail/murata-electronics/GCM1555C1H102FA16D/7363205" (at 119.38 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Manufacturer Number" "GCM1555C1H102FA16D" (at 119.38 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Manufacturer" "Murata Electronics" (at 119.38 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Rated Voltage" "50V" (at 119.38 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Temperature Coefficient" "COG/NP0" (at 119.38 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "PCBWay Link" "" (at 119.38 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Vendor Number" "490-16461-6-ND" (at 119.38 101.6 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Tolerance" "1%" (at 119.38 101.6 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid ca6eabbe-5e13-4d3e-b2a2-0b22bd13b86e))
-    (pin "2" (uuid 67b12ae4-9ba2-4f95-939e-43266a8ed6a8))
-    (instances
-      (project "harp_lick_detector_capactive"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
-          (reference "C10") (unit 1)
-        )
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
-          (reference "C57") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:C") (at 129.54 101.6 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid a1537bf4-a71d-484f-8522-0f1771600cb8)
-    (property "Reference" "C10" (at 130.175 99.06 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "1nF" (at 130.175 104.14 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 130.5052 105.41 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GCM1555C1H102FA16-01.pdf" (at 129.54 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Notes" "" (at 129.54 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Link" "https://www.digikey.com/en/products/detail/murata-electronics/GCM1555C1H102FA16D/7363205" (at 129.54 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Manufacturer Number" "GCM1555C1H102FA16D" (at 129.54 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Manufacturer" "Murata Electronics" (at 129.54 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Rated Voltage" "50V" (at 129.54 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Temperature Coefficient" "COG/NP0" (at 129.54 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "PCBWay Link" "" (at 129.54 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Vendor Number" "490-16461-6-ND" (at 129.54 101.6 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Tolerance" "1%" (at 129.54 101.6 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid ca9c26f9-83b4-4852-b142-0b8f0cc61f1a))
-    (pin "2" (uuid aed8d281-ca97-4fa4-a9d7-d6d09b7f2040))
-    (instances
-      (project "harp_lick_detector_capactive"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
-          (reference "C10") (unit 1)
-        )
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
-          (reference "C58") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 109.22 106.68 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid bc17d7c4-99bb-4760-aa20-c31a57384aa0)
-    (property "Reference" "#PWR0103" (at 109.22 113.03 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 107.315 110.49 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "" (at 109.22 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 109.22 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid eb9db44f-7daf-4786-82d2-60a6eecb3e7c))
-    (instances
-      (project "harp_lick_detector_capactive"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-          (reference "#PWR0103") (unit 1)
-        )
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/b51b21ef-b374-4f9f-a058-7db9b64fdf4a"
-          (reference "#PWR0110") (unit 1)
-        )
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
-          (reference "#PWR072") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "Device:C") (at 109.22 101.6 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid dc4456e3-b723-4c53-9578-ca3f28d32949)
-    (property "Reference" "C10" (at 109.855 99.06 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Value" "1nF" (at 109.855 104.14 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 110.1852 105.41 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GCM1555C1H102FA16-01.pdf" (at 109.22 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Notes" "" (at 109.22 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Link" "https://www.digikey.com/en/products/detail/murata-electronics/GCM1555C1H102FA16D/7363205" (at 109.22 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Manufacturer Number" "GCM1555C1H102FA16D" (at 109.22 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Manufacturer" "Murata Electronics" (at 109.22 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Rated Voltage" "50V" (at 109.22 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Temperature Coefficient" "COG/NP0" (at 109.22 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "PCBWay Link" "" (at 109.22 101.6 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Vendor Number" "490-16461-6-ND" (at 109.22 101.6 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Tolerance" "1%" (at 109.22 101.6 90)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 1d0f70d8-e495-4894-aac7-3ea5b8ac4325))
-    (pin "2" (uuid 1342fdaf-1e50-487d-a76f-9c3c46aedc62))
-    (instances
-      (project "harp_lick_detector_capactive"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
-          (reference "C10") (unit 1)
-        )
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
-          (reference "C36") (unit 1)
-        )
-      )
-    )
-  )
-
-  (symbol (lib_id "power:GND") (at 119.38 106.68 0) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no)
-    (uuid e267254e-f84f-4d51-ad08-6d3e6d957b65)
-    (property "Reference" "#PWR0103" (at 119.38 113.03 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "GND" (at 117.475 110.49 0)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "" (at 119.38 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 119.38 106.68 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 77b7fbad-dfd7-4f70-b50a-2238c0e3b136))
-    (instances
-      (project "harp_lick_detector_capactive"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-          (reference "#PWR0103") (unit 1)
-        )
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/b51b21ef-b374-4f9f-a058-7db9b64fdf4a"
-          (reference "#PWR0110") (unit 1)
-        )
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
-          (reference "#PWR073") (unit 1)
-        )
-      )
-    )
-  )
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "e8779523-f4fe-4b5d-84fc-84a79f6ae497")
+	(paper "A4")
+	(title_block
+		(title "Lickety Split Capacitive Lick Detector")
+		(date "2023-09-01")
+		(rev "0.9")
+		(company "The Allen Institute for Neural Dynamics")
+	)
+	(lib_symbols
+		(symbol "Device:C"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "C"
+				(at 0.635 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "C"
+				(at 0.635 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" ""
+				(at 0.9652 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Unpolarized capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "cap capacitor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "C_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "C_0_1"
+				(polyline
+					(pts
+						(xy -2.032 -0.762) (xy 2.032 -0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -2.032 0.762) (xy 2.032 0.762)
+					)
+					(stroke
+						(width 0.508)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "C_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 2.794)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "Device:R"
+			(pin_numbers hide)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "R"
+				(at 2.032 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "R"
+				(at 0 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at -1.778 0 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "R res resistor"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "R_*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "R_0_1"
+				(rectangle
+					(start -1.016 -2.54)
+					(end 1.016 2.54)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "R_1_1"
+				(pin passive line
+					(at 0 3.81 270)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 0 -3.81 90)
+					(length 1.27)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "kicad_component_library:ADA4891-1"
+			(pin_names
+				(offset 0.127)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "ADA4891-1"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/ADA4891-1_4891-2_4891-3_4891-4.PDF"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "single opamp"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TSOT*23*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "ADA4891-1_0_1"
+				(polyline
+					(pts
+						(xy -5.08 5.08) (xy 5.08 0) (xy -5.08 -5.08) (xy -5.08 5.08)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(pin power_in line
+					(at -2.54 -7.62 90)
+					(length 3.81)
+					(name "V-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at -2.54 7.62 270)
+					(length 3.81)
+					(name "V+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "ADA4891-1_1_1"
+				(pin output line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 2.54 0)
+					(length 2.54)
+					(name "+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at -7.62 -2.54 0)
+					(length 2.54)
+					(name "-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "kicad_component_library:MAX4564EKA+T"
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -5.715 8.128 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Value" "MAX4564EKA"
+				(at -15.24 6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23-8"
+				(at 2.54 -15.24 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/MAX4564.pdf"
+				(at 1.27 -17.78 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Single SPDT Analog Switch, Dual Supply"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "Analog Switch"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "SOT?23*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MAX4564EKA+T_1_1"
+				(rectangle
+					(start -3.81 5.08)
+					(end 3.81 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(circle
+					(center -2.159 0)
+					(radius 0.508)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -5.08 0) (xy -2.794 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.651 0.127) (xy 2.54 1.905)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -5.08) (xy 0 -4.572)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -4.318) (xy 0 -4.064)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -3.81) (xy 0 -3.556)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -3.302) (xy 0 -3.048)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.794) (xy 0 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -2.286) (xy 0 -2.032)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.778) (xy 0 -1.524)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -1.27) (xy 0 -1.016)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -0.762) (xy 0 -0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 -0.254) (xy 0 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0.254) (xy 0 0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0.254) (xy 0 0.508)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 -2.54) (xy 2.794 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 5.08 2.54) (xy 2.794 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.159 -2.54)
+					(radius 0.508)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.159 2.54)
+					(radius 0.508)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at 7.62 2.54 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin input line
+					(at 0 7.62 270)
+					(length 2.54)
+					(name "~{EN}"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "7"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "8"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "MAX4564EKA+T_2_0"
+				(pin power_in line
+					(at 0 6.35 270)
+					(length 2.54)
+					(name "V+"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 2.54 0 180)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -6.35 90)
+					(length 2.54)
+					(name "V-"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "power:+2V5"
+			(power)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+2V5"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+2V5\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+2V5_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+2V5_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0) hide
+					(name "+2V5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+		(symbol "power:-2V5"
+			(power)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "-2V5"
+				(at 0 3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"-2V5\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "-2V5_0_0"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0) hide
+					(name "-2V5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(symbol "-2V5_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 1.27) (xy 0.762 1.27) (xy 0 2.54) (xy -0.762 1.27) (xy 0 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
+					)
+				)
+			)
+		)
+		(symbol "power:GND"
+			(power)
+			(pin_names
+				(offset 0)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -6.35 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "GND"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "GND_0_1"
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 -1.27) (xy 1.27 -1.27) (xy 0 -2.54) (xy -1.27 -1.27) (xy 0 -1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "GND_1_1"
+				(pin power_in line
+					(at 0 0 270)
+					(length 0) hide
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
+	)
+	(junction
+		(at 119.38 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "0ac51c36-7dad-4db3-b957-0cbe0d7cb9d0")
+	)
+	(junction
+		(at 134.62 179.07)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "12687373-fe5a-4276-b1c6-f59708ef9e45")
+	)
+	(junction
+		(at 99.06 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1bc406e1-7c3f-4d5e-a716-8b90e4dc36b6")
+	)
+	(junction
+		(at 125.73 186.055)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1e1457ec-634b-4698-a5b3-c8afbea0a345")
+	)
+	(junction
+		(at 125.73 172.085)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2fcc67b4-997c-4a76-bce0-e960c76daf29")
+	)
+	(junction
+		(at 109.22 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "3a30b0df-481d-4299-a53c-758483a2683a")
+	)
+	(junction
+		(at 154.305 179.07)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "518b4098-744a-4e87-acfe-f186aeb47bea")
+	)
+	(junction
+		(at 91.44 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6d05d13d-70dd-498c-8abc-b22f88c33c5b")
+	)
+	(junction
+		(at 180.34 99.06)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a081ac2f-135a-4ff2-9741-5aef01f90ee8")
+	)
+	(junction
+		(at 180.34 120.015)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ae5d3232-f856-4632-8911-515bade1a0c7")
+	)
+	(junction
+		(at 147.32 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ba391c6c-8c35-46e2-bf4e-49a0807455b0")
+	)
+	(junction
+		(at 129.54 96.52)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c9477c4d-50ba-4091-a28d-b88fde11ef2c")
+	)
+	(junction
+		(at 170.815 125.095)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cb72d4f9-4e73-496a-8069-6fbb65080462")
+	)
+	(wire
+		(pts
+			(xy 82.55 99.06) (xy 78.74 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "065d2a62-f56b-45fd-b491-e9017002cd23")
+	)
+	(wire
+		(pts
+			(xy 119.38 97.79) (xy 119.38 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ff69f41-2fb3-4083-a48f-299d425d53f2")
+	)
+	(wire
+		(pts
+			(xy 180.34 125.095) (xy 180.34 120.015)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "113e1cc6-9a1e-4879-aae4-963df3b23d35")
+	)
+	(wire
+		(pts
+			(xy 133.985 186.055) (xy 134.62 186.055)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "14e82cfa-0a4a-4e9f-87c8-d858080af1f6")
+	)
+	(wire
+		(pts
+			(xy 128.27 179.07) (xy 134.62 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1ae9783e-7d96-4121-9104-fb12f746c90b")
+	)
+	(wire
+		(pts
+			(xy 154.305 168.91) (xy 154.305 170.18)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1c162a56-97a1-49b4-a012-7f8f9837f8fb")
+	)
+	(wire
+		(pts
+			(xy 134.62 172.085) (xy 133.985 172.085)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "22ac5fd5-f07d-4371-8e48-778e54220515")
+	)
+	(wire
+		(pts
+			(xy 129.54 96.52) (xy 128.27 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "23df5cc5-efa7-447b-94fa-bb72071ab370")
+	)
+	(wire
+		(pts
+			(xy 90.17 93.98) (xy 91.44 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2677d65f-370d-4ebf-b9df-250a60507429")
+	)
+	(wire
+		(pts
+			(xy 154.94 122.555) (xy 153.67 122.555)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "27caa1b9-1146-4487-82ae-d3b13ef31b91")
+	)
+	(wire
+		(pts
+			(xy 145.415 96.52) (xy 147.32 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2db6169b-f9a6-43b6-bfd5-eb904c9b2f45")
+	)
+	(wire
+		(pts
+			(xy 153.67 101.6) (xy 153.67 122.555)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2f34697d-1c4a-4fa1-85b0-469ffe6273d9")
+	)
+	(wire
+		(pts
+			(xy 91.44 96.52) (xy 99.06 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "37bff176-98a1-414e-92f8-2c98fac46c09")
+	)
+	(wire
+		(pts
+			(xy 179.07 120.015) (xy 180.34 120.015)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3bb93b01-55a4-453f-a3f1-2768f97d0cae")
+	)
+	(wire
+		(pts
+			(xy 179.07 125.095) (xy 180.34 125.095)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3cb28eec-322e-436b-b0bb-874f95d31dfb")
+	)
+	(wire
+		(pts
+			(xy 134.62 179.07) (xy 134.62 172.085)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3d7bc54b-96ed-4464-a1d0-277e9902f4cc")
+	)
+	(wire
+		(pts
+			(xy 125.73 186.055) (xy 125.73 186.69)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4041f870-83a8-4b53-9f26-d0559e94d2d1")
+	)
+	(wire
+		(pts
+			(xy 125.73 172.085) (xy 126.365 172.085)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42763e37-c8bb-4008-943e-e020d4f728db")
+	)
+	(wire
+		(pts
+			(xy 164.465 113.03) (xy 162.56 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "42d89849-fc26-4a18-aecf-1dfabf4114bb")
+	)
+	(wire
+		(pts
+			(xy 129.54 96.52) (xy 137.795 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "43aa51bd-6652-4c0a-a9f0-08c3dc05551a")
+	)
+	(wire
+		(pts
+			(xy 99.06 105.41) (xy 99.06 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f0e57d4-fc46-4ab0-bf32-1c862b40cf4b")
+	)
+	(wire
+		(pts
+			(xy 125.73 171.45) (xy 125.73 172.085)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e2200f2-24e6-4c68-a41f-94c17a5e4b1e")
+	)
+	(wire
+		(pts
+			(xy 125.73 172.085) (xy 125.73 172.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "605d3486-87ed-45f1-b0f8-adb90d79a93f")
+	)
+	(wire
+		(pts
+			(xy 154.305 179.07) (xy 158.115 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6337d5ff-6b4a-43bb-b900-988f002ca2e7")
+	)
+	(wire
+		(pts
+			(xy 154.305 179.07) (xy 154.305 180.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "64ed6490-0ce0-4c04-842c-b1117eaa71a7")
+	)
+	(wire
+		(pts
+			(xy 125.73 185.42) (xy 125.73 186.055)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "73ab9d5c-4721-4cde-8443-c18e6eeedd41")
+	)
+	(wire
+		(pts
+			(xy 125.73 186.055) (xy 126.365 186.055)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "757b2ed1-0941-4bb8-a53c-f0a676c8338f")
+	)
+	(wire
+		(pts
+			(xy 91.44 96.52) (xy 91.44 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "765993f6-0f43-4efc-b0ad-5c8e86c06a14")
+	)
+	(wire
+		(pts
+			(xy 119.38 96.52) (xy 120.65 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "778a9faf-b8f0-4933-b278-7dcd6bd11b81")
+	)
+	(polyline
+		(pts
+			(xy 153.035 79.375) (xy 153.035 95.885)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7faa14ef-8714-40ef-ac28-35c887b18c3d")
+	)
+	(wire
+		(pts
+			(xy 170.815 125.095) (xy 171.45 125.095)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7fb8612a-a9fe-43fe-a90c-96d412c34ecc")
+	)
+	(wire
+		(pts
+			(xy 180.34 99.06) (xy 182.245 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8a10a0f2-9d03-4d76-81e2-c420406c690b")
+	)
+	(wire
+		(pts
+			(xy 99.06 96.52) (xy 100.33 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8f2eb677-499c-4136-9b52-ab2e9eb2de65")
+	)
+	(wire
+		(pts
+			(xy 119.38 96.52) (xy 118.11 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9d830a2e-75fc-4f80-a895-671fb3954186")
+	)
+	(wire
+		(pts
+			(xy 157.48 132.08) (xy 162.56 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9de1db2b-d285-4a44-9d44-00d2b7407d4e")
+	)
+	(wire
+		(pts
+			(xy 170.18 125.095) (xy 170.815 125.095)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9f68e13b-1f92-46c0-b5a5-acc963cafec1")
+	)
+	(wire
+		(pts
+			(xy 109.22 96.52) (xy 107.95 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a12f8f2c-1a9a-42c8-b3b3-1d6d1d2ce0c0")
+	)
+	(wire
+		(pts
+			(xy 119.38 105.41) (xy 119.38 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a3b8b8b9-d246-4611-94c4-a23f23821ff1")
+	)
+	(wire
+		(pts
+			(xy 147.32 96.52) (xy 154.94 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a47b4962-4c5d-4ee4-b98a-cfbd56462599")
+	)
+	(wire
+		(pts
+			(xy 99.06 97.79) (xy 99.06 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ab7c5886-2b86-4876-bd25-24fb7a6c81de")
+	)
+	(wire
+		(pts
+			(xy 160.02 90.805) (xy 160.02 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "af3edd1d-9e66-408a-8904-6af75bb3fe08")
+	)
+	(wire
+		(pts
+			(xy 147.32 96.52) (xy 147.32 98.425)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b09b188f-c7e1-49bd-9d6c-c7e4a44941b8")
+	)
+	(wire
+		(pts
+			(xy 160.02 106.68) (xy 160.02 107.315)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b5ec775b-4b39-48de-82c9-8f56b532aaa9")
+	)
+	(wire
+		(pts
+			(xy 78.74 93.98) (xy 82.55 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b5ff85d6-7038-4861-8e3f-2aa0aa85db50")
+	)
+	(wire
+		(pts
+			(xy 180.34 99.06) (xy 180.34 120.015)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c0ac3390-9541-453c-a08c-560a33f7095d")
+	)
+	(wire
+		(pts
+			(xy 109.22 96.52) (xy 110.49 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c5a30376-2f7f-480a-92b9-bf3e79b34c92")
+	)
+	(wire
+		(pts
+			(xy 154.94 101.6) (xy 153.67 101.6)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c80cdca5-cb61-4d3c-8638-8c42a5f11b6f")
+	)
+	(wire
+		(pts
+			(xy 109.22 97.79) (xy 109.22 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cc2d3144-775b-4073-afe8-10c4a6a4841f")
+	)
+	(wire
+		(pts
+			(xy 162.56 130.175) (xy 162.56 132.08)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ce6cd31f-7836-4100-a1aa-72570ba3f933")
+	)
+	(wire
+		(pts
+			(xy 170.18 99.06) (xy 180.34 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d0eb1e5b-63e5-4683-bad5-74c9165e5973")
+	)
+	(wire
+		(pts
+			(xy 134.62 179.07) (xy 135.255 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d66a21fb-9184-4084-b251-71dfef4adf4a")
+	)
+	(wire
+		(pts
+			(xy 147.32 106.045) (xy 147.32 107.315)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d7c21f64-e9f1-4f64-929a-d41ede8627ca")
+	)
+	(wire
+		(pts
+			(xy 162.56 113.03) (xy 162.56 114.935)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dba22af0-082a-49b8-b941-61417d9e00f5")
+	)
+	(wire
+		(pts
+			(xy 129.54 97.79) (xy 129.54 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dba7cb9a-1d47-4af2-a52d-9dc1378463f9")
+	)
+	(wire
+		(pts
+			(xy 134.62 186.055) (xy 134.62 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df5438e7-5d19-4631-9557-88dfef61157c")
+	)
+	(wire
+		(pts
+			(xy 91.44 93.98) (xy 91.44 96.52)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e0ba5b18-68f4-4b62-ac70-59a3a8fcd371")
+	)
+	(wire
+		(pts
+			(xy 154.305 177.8) (xy 154.305 179.07)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e1712a69-ae27-4856-966e-abf03e3facc8")
+	)
+	(wire
+		(pts
+			(xy 170.815 133.985) (xy 170.815 135.255)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ebcc7ea7-b812-4e0b-8377-a612a6b18f61")
+	)
+	(wire
+		(pts
+			(xy 90.17 99.06) (xy 91.44 99.06)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ee3250ec-3a0e-4b19-8c86-5e293138b74f")
+	)
+	(wire
+		(pts
+			(xy 109.22 105.41) (xy 109.22 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f3b1370f-fcb1-4a8a-b9ab-5c27644f87a0")
+	)
+	(wire
+		(pts
+			(xy 154.305 187.96) (xy 154.305 189.23)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f7277982-54b2-43c8-988f-c8bc60d128b9")
+	)
+	(wire
+		(pts
+			(xy 170.815 125.095) (xy 170.815 126.365)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f83b9a96-a892-44a7-9432-cc64209f7265")
+	)
+	(wire
+		(pts
+			(xy 170.18 120.015) (xy 171.45 120.015)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f9cb94a6-922d-4924-b38c-6d525b20a1a8")
+	)
+	(wire
+		(pts
+			(xy 129.54 105.41) (xy 129.54 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fcd9b523-9b49-4482-bd48-08ac1f4740e7")
+	)
+	(text "100KHz or 125KHz Square-to-Sine wave\nFront-End with 20mVpp amplitude."
+		(exclude_from_sim no)
+		(at 102.235 67.945 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "082117ec-9d8a-45aa-b452-4cd7a6e740c0")
+	)
+	(text "3.3V, 100KHz or 125KHz\ninput square wave from RP2040.\n\nOnly one option is enabled at a time\nwhile the other option is set to input.\n(note: rp2040 gpio pins do not support\ntri-state option.)"
+		(exclude_from_sim no)
+		(at 59.055 86.995 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "17d59d27-300e-4992-9ee2-ea58d026c076")
+	)
+	(text "RC High Pass Filter\nDC Offset Removal"
+		(exclude_from_sim no)
+		(at 132.08 89.535 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "2e7e675a-3c63-4864-a42b-bbb05bff26d2")
+	)
+	(text "V_{out} = 20[mVpp] @ 100[KHz]"
+		(exclude_from_sim no)
+		(at 153.035 79.375 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7bece419-0bbd-43b9-a4ea-407860b50361")
+	)
+	(text "U18 Bypass Caps"
+		(exclude_from_sim no)
+		(at 120.015 162.56 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "7cbc0275-18a5-4fda-9630-794bacf92e4d")
+	)
+	(text "1x-or-101x Gain"
+		(exclude_from_sim no)
+		(at 162.56 91.44 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d69f3519-f207-4d05-95c2-11d63c1c47ed")
+	)
+	(text "U17 Bypass Caps"
+		(exclude_from_sim no)
+		(at 146.685 162.56 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "ef7c6eb8-e47a-41c7-bba2-e01ce69af0c4")
+	)
+	(global_label "GAIN_SEL_2V5"
+		(shape input)
+		(at 157.48 132.08 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "b486807b-d948-41a4-8cde-39a95dd13b25")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 141.3715 132.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+				(hide yes)
+			)
+		)
+	)
+	(hierarchical_label "125KHZ_IN"
+		(shape input)
+		(at 78.74 99.06 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "2cb0077c-b31e-4006-8e86-8b9598468951")
+	)
+	(hierarchical_label "VSINE"
+		(shape input)
+		(at 182.245 99.06 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "f7aed93a-2a17-4451-b322-ed0d8e14aa32")
+	)
+	(hierarchical_label "100KHZ_IN"
+		(shape input)
+		(at 78.74 93.98 180)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify right)
+		)
+		(uuid "f9526f46-0312-499b-9a8d-db5e6b6d3e47")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 158.115 179.07 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "035ad291-1199-4bba-9ec2-df16c3257ca7")
+		(property "Reference" "#PWR0130"
+			(at 164.465 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 160.02 180.975 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 158.115 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 158.115 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 158.115 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f2f99eb9-ecd3-4b40-b063-9099b92cf6b5")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "#PWR0130")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+2V5")
+		(at 160.02 90.805 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "15b36d06-dd93-46e3-a2c7-e1bc8b2093dd")
+		(property "Reference" "#PWR0122"
+			(at 160.02 94.615 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+2V5"
+			(at 160.02 86.995 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 160.02 90.805 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 90.805 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 160.02 90.805 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "94fa9ed4-6bf2-408e-9313-65899c4cd92d")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "#PWR0122")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 154.305 173.99 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "178f8372-877d-45ba-b65b-298cf5b1cbc9")
+		(property "Reference" "C61"
+			(at 158.115 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 160.655 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 153.3398 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.passivecomponent.com/wp-content/uploads/datasheet/WTC_MLCC_General_Purpose.pdf"
+			(at 154.305 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 154.305 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.digikey.com/en/products/detail/walsin-technology-corporation/0402B104K160CT/6707534"
+			(at 154.305 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Walson Technology Corporation"
+			(at 154.305 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Number" "0402B104K160CT"
+			(at 154.305 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Rated Voltage" "16V"
+			(at 154.305 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Temperature Coefficient" "X7R"
+			(at 154.305 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 154.305 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b41f7d91-19c5-4a43-8ce5-7a63dd22bd71")
+		)
+		(pin "2"
+			(uuid "f74dd779-9e8a-4444-8f43-b27a4a03e975")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "C61")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 130.175 172.085 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1a943af5-94cf-4ece-818f-ec2fbb300654")
+		(property "Reference" "C63"
+			(at 128.27 168.91 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 128.27 175.26 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 126.365 173.0502 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.passivecomponent.com/wp-content/uploads/datasheet/WTC_MLCC_General_Purpose.pdf"
+			(at 130.175 172.085 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 130.175 172.085 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.digikey.com/en/products/detail/walsin-technology-corporation/0402B104K160CT/6707534"
+			(at 130.175 172.085 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Walson Technology Corporation"
+			(at 130.175 172.085 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Number" "0402B104K160CT"
+			(at 130.175 172.085 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Rated Voltage" "16V"
+			(at 130.175 172.085 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Temperature Coefficient" "X7R"
+			(at 130.175 172.085 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 130.175 172.085 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "6922a55f-6748-47d7-ac24-0c551f1b6ada")
+		)
+		(pin "2"
+			(uuid "91f31e8c-71c2-4a9d-b8f6-de811ada2ae0")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "C63")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 175.26 120.015 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1b3a8560-40d4-4f1f-853f-a0887f3e8030")
+		(property "Reference" "R56"
+			(at 175.26 118.11 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1K00"
+			(at 175.26 120.015 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 175.26 121.793 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/app/datasheet/rchip/pyu-rt_1-to-0.01_rohs_l.pdf"
+			(at 175.26 120.015 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 175.26 120.015 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "0.1%"
+			(at 175.26 120.015 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Notes" ""
+			(at 175.26 120.015 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.digikey.com/en/products/detail/yageo/RT0402BRB071KL/5925998"
+			(at 175.26 120.015 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 175.26 120.015 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Number" "RT0402BRB071KL"
+			(at 175.26 120.015 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ee329e35-efd0-4ee3-9111-757be4983bbd")
+		)
+		(pin "2"
+			(uuid "a2ddeb95-3380-415a-b1bb-c69b08fbd1d6")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "R56")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 104.14 96.52 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "28f89c61-2499-4804-b03e-dd801dabafa4")
+		(property "Reference" "R16"
+			(at 105.41 93.98 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4K7"
+			(at 105.41 96.52 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 104.14 98.298 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.koaspeer.com/pdfs/RN73R.pdf"
+			(at 104.14 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 104.14 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.digikey.com/en/products/detail/koa-speer-electronics-inc/RN73R1ETTP4701B25/9991850"
+			(at 104.14 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "KOA Speer Electronics, Inc."
+			(at 104.14 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Number" "RN73R1ETTP4701B25"
+			(at 104.14 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "0.1%"
+			(at 104.14 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Number" "2019-RN73R1ETTP4701B25DKR-ND"
+			(at 104.14 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "bce6252a-ca4f-4038-838d-e05eb0407b4e")
+		)
+		(pin "2"
+			(uuid "7d72cc20-268a-4cb6-aac5-0ca009fb202d")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "R16")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 130.175 186.055 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "31d7d31a-df29-44b6-9420-13a49389d623")
+		(property "Reference" "C71"
+			(at 128.27 182.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 128.27 189.23 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 126.365 187.0202 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.passivecomponent.com/wp-content/uploads/datasheet/WTC_MLCC_General_Purpose.pdf"
+			(at 130.175 186.055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 130.175 186.055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.digikey.com/en/products/detail/walsin-technology-corporation/0402B104K160CT/6707534"
+			(at 130.175 186.055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Walson Technology Corporation"
+			(at 130.175 186.055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Number" "0402B104K160CT"
+			(at 130.175 186.055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Rated Voltage" "16V"
+			(at 130.175 186.055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Temperature Coefficient" "X7R"
+			(at 130.175 186.055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 130.175 186.055 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1771f371-f9ca-449e-b2c7-ee37f6973815")
+		)
+		(pin "2"
+			(uuid "03aa8112-bb1e-4a3b-be13-af841d35f802")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "C71")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 124.46 96.52 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "51b8d92b-38a4-4acb-a7be-6298cb6ad1cf")
+		(property "Reference" "R45"
+			(at 125.73 93.98 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4K7"
+			(at 125.73 96.52 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 124.46 98.298 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.koaspeer.com/pdfs/RN73R.pdf"
+			(at 124.46 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 124.46 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.digikey.com/en/products/detail/koa-speer-electronics-inc/RN73R1ETTP4701B25/9991850"
+			(at 124.46 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "KOA Speer Electronics, Inc."
+			(at 124.46 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Number" "RN73R1ETTP4701B25"
+			(at 124.46 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "0.1%"
+			(at 124.46 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Number" "2019-RN73R1ETTP4701B25DKR-ND"
+			(at 124.46 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7c349fd7-35ad-4615-b1d3-3a5a2a8b069f")
+		)
+		(pin "2"
+			(uuid "1c562769-3535-447a-930a-70d9526efebf")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "R45")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 141.605 96.52 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "55093bfa-3e39-44f3-b8ed-b0daff8296e6")
+		(property "Reference" "C32"
+			(at 143.51 92.71 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1nF"
+			(at 146.685 95.25 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 145.415 95.5548 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GCM1555C1H102FA16-01.pdf"
+			(at 141.605 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 141.605 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Notes" ""
+			(at 141.605 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.digikey.com/en/products/detail/murata-electronics/GCM1555C1H102FA16D/7363205"
+			(at 141.605 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Number" "GCM1555C1H102FA16D"
+			(at 141.605 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata Electronics"
+			(at 141.605 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Rated Voltage" "50V"
+			(at 141.605 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Temperature Coefficient" "COG/NP0"
+			(at 141.605 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PCBWay Link" ""
+			(at 141.605 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Number" "490-16461-6-ND"
+			(at 141.605 96.52 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 141.605 96.52 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7c3bf8f2-6125-463f-b7fa-4a1c0e40b38f")
+		)
+		(pin "2"
+			(uuid "35d1b369-cb6c-428c-bc0c-77800fc5786c")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "C32")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 164.465 113.03 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "57f5c055-1f8e-47c8-82bb-52eab1e83477")
+		(property "Reference" "#PWR0131"
+			(at 170.815 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 167.005 113.03 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 164.465 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 164.465 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 164.465 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "20b0d865-2dd5-4b6c-b063-28a77ba0f31d")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "#PWR0131")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 114.3 96.52 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "587fffb6-c830-4af9-ba27-11b054f0ddb9")
+		(property "Reference" "R17"
+			(at 115.57 93.98 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4K7"
+			(at 115.57 96.52 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 114.3 98.298 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.koaspeer.com/pdfs/RN73R.pdf"
+			(at 114.3 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 114.3 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.digikey.com/en/products/detail/koa-speer-electronics-inc/RN73R1ETTP4701B25/9991850"
+			(at 114.3 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "KOA Speer Electronics, Inc."
+			(at 114.3 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Number" "RN73R1ETTP4701B25"
+			(at 114.3 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "0.1%"
+			(at 114.3 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Number" "2019-RN73R1ETTP4701B25DKR-ND"
+			(at 114.3 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f41d3922-2a9a-4b98-84da-8e3ee60cba07")
+		)
+		(pin "2"
+			(uuid "6799efaa-f148-4234-9efc-181e6b62d4d8")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "R17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 99.06 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5e1216b9-a1d4-4529-b9a1-e105bbe1cc7e")
+		(property "Reference" "#PWR070"
+			(at 99.06 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 97.155 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 99.06 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 99.06 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 99.06 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "7dc0e795-1081-4f71-9a83-f50e51c05b85")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "#PWR070")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 86.36 99.06 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "67ffe862-e304-4c54-a097-245498ef5578")
+		(property "Reference" "R50"
+			(at 88.265 101.6 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2K2"
+			(at 87.63 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 86.36 100.838 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/app/datasheet/rchip/pyu-rt_1-to-0.01_rohs_l.pdf"
+			(at 86.36 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 86.36 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.digikey.com/en/products/detail/yageo/RT0402BRE072K2L/1069637"
+			(at 86.36 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 86.36 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Number" "RT0402BRE072K2L"
+			(at 86.36 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "0.1%"
+			(at 86.36 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5923eee8-8166-4d9a-a9bf-90887785a51a")
+		)
+		(pin "2"
+			(uuid "06b7f8a5-c37c-4259-8a75-3cd0c2252090")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "R50")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 99.06 101.6 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6f64a513-a5f2-450c-a96e-95a91b7d3288")
+		(property "Reference" "C35"
+			(at 99.695 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1nF"
+			(at 99.695 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 100.0252 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GCM1555C1H102FA16-01.pdf"
+			(at 99.06 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 99.06 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Notes" ""
+			(at 99.06 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.digikey.com/en/products/detail/murata-electronics/GCM1555C1H102FA16D/7363205"
+			(at 99.06 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Number" "GCM1555C1H102FA16D"
+			(at 99.06 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata Electronics"
+			(at 99.06 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Rated Voltage" "50V"
+			(at 99.06 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Temperature Coefficient" "COG/NP0"
+			(at 99.06 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PCBWay Link" ""
+			(at 99.06 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Number" "490-16461-6-ND"
+			(at 99.06 101.6 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 99.06 101.6 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "4183287e-f4e5-474c-b95d-2e4c5b087754")
+		)
+		(pin "2"
+			(uuid "8138c4bf-6106-473a-83b2-b9ce4634ce05")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "C35")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 147.32 107.315 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "72613fea-e655-43d1-9d47-77eb6612a633")
+		(property "Reference" "#PWR047"
+			(at 147.32 113.665 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 145.415 111.125 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 147.32 107.315 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 147.32 107.315 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 147.32 107.315 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2ca77c9f-5b8e-4255-9218-e0927a7fedc5")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "#PWR047")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "kicad_component_library:ADA4891-1")
+		(at 162.56 99.06 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "74779e21-e1a5-4d77-85e4-12c9ac8f613c")
+		(property "Reference" "U17"
+			(at 163.83 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "ADA4891-1"
+			(at 166.37 94.615 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
+			(at 162.56 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/ADA4891-1_4891-2_4891-3_4891-4.PDF"
+			(at 162.56 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 162.56 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Analog Devices Inc."
+			(at 162.56 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Number" "ADA4891-1ARJZ-R7"
+			(at 162.56 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.digikey.com/en/products/detail/analog-devices-inc/ADA4891-1ARJZ-R7/2342630"
+			(at 162.56 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "ea4bc100-ab56-4c93-bd5a-10ff4a6da47c")
+		)
+		(pin "5"
+			(uuid "b3aef283-6cca-4353-9bff-572ea7228d3b")
+		)
+		(pin "1"
+			(uuid "1636eda0-54c5-46f1-957a-4269ee89a270")
+		)
+		(pin "3"
+			(uuid "fc1c74d8-3b19-4f59-a785-f1339d540003")
+		)
+		(pin "4"
+			(uuid "2a5c123f-0f1d-4407-a3a5-fecd568cbc28")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "U17")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 175.26 125.095 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "82d80771-a38d-4543-99dd-ac0515e9fd09")
+		(property "Reference" "R55"
+			(at 175.26 123.19 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "100K"
+			(at 175.26 125.095 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 175.26 126.873 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/app/datasheet/rchip/pyu-rt_1-to-0.01_rohs_l.pdf"
+			(at 175.26 125.095 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 175.26 125.095 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.digikey.com/en/products/detail/yageo/RT0402BRD07100KL/1068989"
+			(at 175.26 125.095 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 175.26 125.095 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Number" "RT0402BRD07100KL"
+			(at 175.26 125.095 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Notes" ""
+			(at 175.26 125.095 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "0.1%"
+			(at 175.26 125.095 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5a987127-6707-4394-a7bb-820885193bc4")
+		)
+		(pin "2"
+			(uuid "5131085b-4771-4012-a47e-10cc7fe36ee8")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "R55")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 86.36 93.98 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "891bc7fe-232e-4c61-a991-3470b4cb464d")
+		(property "Reference" "R8"
+			(at 87.63 91.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4K7"
+			(at 87.63 93.98 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 86.36 95.758 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.koaspeer.com/pdfs/RN73R.pdf"
+			(at 86.36 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 86.36 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.digikey.com/en/products/detail/koa-speer-electronics-inc/RN73R1ETTP4701B25/9991850"
+			(at 86.36 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "KOA Speer Electronics, Inc."
+			(at 86.36 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Number" "RN73R1ETTP4701B25"
+			(at 86.36 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "0.1%"
+			(at 86.36 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Number" "2019-RN73R1ETTP4701B25DKR-ND"
+			(at 86.36 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b6f39071-3198-4f27-920a-889de17b4c32")
+		)
+		(pin "2"
+			(uuid "aab91a32-47aa-499f-8498-ae3d4abc4404")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+2V5")
+		(at 125.73 171.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "89bd4ec4-39e2-4950-98d0-aa7699be29ff")
+		(property "Reference" "#PWR0126"
+			(at 125.73 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+2V5"
+			(at 125.73 167.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 125.73 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 125.73 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 125.73 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1b7a1cce-0f3b-40be-b1d1-9ca3891e03c5")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "#PWR0126")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 147.32 102.235 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8f4b54c5-f43f-4c74-ac55-70c943c962d4")
+		(property "Reference" "R25"
+			(at 148.59 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "4K7"
+			(at 147.32 104.14 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 145.542 102.235 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.koaspeer.com/pdfs/RN73R.pdf"
+			(at 147.32 102.235 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 147.32 102.235 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.digikey.com/en/products/detail/koa-speer-electronics-inc/RN73R1ETTP4701B25/9991850"
+			(at 147.32 102.235 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "KOA Speer Electronics, Inc."
+			(at 147.32 102.235 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Number" "RN73R1ETTP4701B25"
+			(at 147.32 102.235 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "0.1%"
+			(at 147.32 102.235 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Number" "2019-RN73R1ETTP4701B25DKR-ND"
+			(at 147.32 102.235 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "67d5b040-4064-4eab-920b-1415e0422c82")
+		)
+		(pin "2"
+			(uuid "52733c1c-5def-45d9-8ce0-95623f8801a3")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "R25")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 129.54 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "984b7051-314d-4ba5-87ad-04316fe45a7a")
+		(property "Reference" "#PWR090"
+			(at 129.54 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 127.635 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 129.54 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 129.54 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 129.54 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "53eb42f1-e9fc-443a-a518-e6d1ef813c27")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "#PWR090")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+2V5")
+		(at 154.305 168.91 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9cb8fa06-33de-40ca-96d0-3337a1c6a214")
+		(property "Reference" "#PWR0128"
+			(at 154.305 172.72 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+2V5"
+			(at 154.305 165.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 154.305 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 154.305 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 154.305 168.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3a4e4a35-625f-401c-ad7e-24b412f8ee70")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "#PWR0128")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:-2V5")
+		(at 154.305 189.23 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9d2dd8e3-dfb5-4513-9baa-9bc31c471a2f")
+		(property "Reference" "#PWR0129"
+			(at 154.305 191.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "-2V5"
+			(at 154.305 193.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 154.305 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 154.305 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 154.305 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5307b45d-8781-4983-9486-2ad14a09bed6")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "#PWR0129")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 119.38 101.6 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "9da71e23-018e-4969-bc3c-3476c7ce3b02")
+		(property "Reference" "C57"
+			(at 120.015 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1nF"
+			(at 120.015 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 120.3452 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GCM1555C1H102FA16-01.pdf"
+			(at 119.38 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 119.38 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Notes" ""
+			(at 119.38 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.digikey.com/en/products/detail/murata-electronics/GCM1555C1H102FA16D/7363205"
+			(at 119.38 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Number" "GCM1555C1H102FA16D"
+			(at 119.38 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata Electronics"
+			(at 119.38 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Rated Voltage" "50V"
+			(at 119.38 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Temperature Coefficient" "COG/NP0"
+			(at 119.38 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PCBWay Link" ""
+			(at 119.38 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Number" "490-16461-6-ND"
+			(at 119.38 101.6 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 119.38 101.6 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "92b96540-c3fa-4296-875c-12186737f9f5")
+		)
+		(pin "2"
+			(uuid "1c664bce-d20a-44d0-b543-be688cf7747f")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "C57")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 135.255 179.07 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a1002a43-8080-408a-8679-7dd4abc4f04c")
+		(property "Reference" "#PWR0151"
+			(at 141.605 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 138.43 179.07 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 135.255 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 135.255 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 135.255 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "07f3a1e0-7875-47ea-91e5-161a9c10dde5")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "#PWR0151")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 129.54 101.6 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a1537bf4-a71d-484f-8522-0f1771600cb8")
+		(property "Reference" "C58"
+			(at 130.175 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1nF"
+			(at 130.175 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 130.5052 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GCM1555C1H102FA16-01.pdf"
+			(at 129.54 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 129.54 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Notes" ""
+			(at 129.54 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.digikey.com/en/products/detail/murata-electronics/GCM1555C1H102FA16D/7363205"
+			(at 129.54 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Number" "GCM1555C1H102FA16D"
+			(at 129.54 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata Electronics"
+			(at 129.54 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Rated Voltage" "50V"
+			(at 129.54 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Temperature Coefficient" "COG/NP0"
+			(at 129.54 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PCBWay Link" ""
+			(at 129.54 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Number" "490-16461-6-ND"
+			(at 129.54 101.6 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 129.54 101.6 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "529570c5-199a-4445-9f59-b4b6f9e91441")
+		)
+		(pin "2"
+			(uuid "e0d8ed3e-1f5d-4a66-880a-495e40b51c3d")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "C58")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "kicad_component_library:MAX4564EKA+T")
+		(at 162.56 122.555 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "b61ac4f8-492d-4a33-8340-ec8fe18fb2c0")
+		(property "Reference" "U18"
+			(at 156.845 128.905 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "MAX4564EKA"
+			(at 164.465 116.205 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-8"
+			(at 165.1 137.795 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/MAX4564.pdf"
+			(at 163.83 140.335 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 162.56 122.555 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.digikey.com/en/products/detail/analog-devices-inc-maxim-integrated/MAX4564EKA-T/1781971"
+			(at 162.56 122.555 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Analog Devices Inc./Maxim Integrated"
+			(at 162.56 122.555 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Number" "MAX4564EKA+T"
+			(at 162.56 122.555 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d477e87c-0097-487a-91d9-fc0179dcceb2")
+		)
+		(pin "3"
+			(uuid "fbad3f6d-28b3-460a-bdee-38b1e5cf6fd7")
+		)
+		(pin "4"
+			(uuid "92de0a93-1a85-473e-9a46-5ed793e19084")
+		)
+		(pin "7"
+			(uuid "960b0a57-efa7-4669-bdb9-69fbfa03adb5")
+		)
+		(pin "8"
+			(uuid "e8a88f99-fd97-4303-9ec9-f45897050e52")
+		)
+		(pin "2"
+			(uuid "a8d02d08-898b-4172-b365-56f884379345")
+		)
+		(pin "5"
+			(uuid "157b95d5-22dd-4af4-92e0-ab2806bdd967")
+		)
+		(pin "6"
+			(uuid "e2931258-d5a6-425e-94ee-c1f89f132b01")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "U18")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 109.22 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bc17d7c4-99bb-4760-aa20-c31a57384aa0")
+		(property "Reference" "#PWR072"
+			(at 109.22 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 107.315 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 109.22 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 109.22 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 109.22 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "eb9db44f-7daf-4786-82d2-60a6eecb3e7c")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "#PWR072")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 170.815 130.175 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "bc7ea6ba-4609-4af6-aad4-1f5373eb33e6")
+		(property "Reference" "R54"
+			(at 167.64 130.175 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1K00"
+			(at 170.815 130.175 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 169.037 130.175 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/app/datasheet/rchip/pyu-rt_1-to-0.01_rohs_l.pdf"
+			(at 170.815 130.175 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 170.815 130.175 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "0.1%"
+			(at 170.815 130.175 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Notes" ""
+			(at 170.815 130.175 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.digikey.com/en/products/detail/yageo/RT0402BRB071KL/5925998"
+			(at 170.815 130.175 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 170.815 130.175 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Number" "RT0402BRB071KL"
+			(at 170.815 130.175 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e9589fb7-74ea-45ac-9353-f1ce0f210914")
+		)
+		(pin "2"
+			(uuid "35ea585f-44f8-4aa7-b519-7d8bae46ac9b")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "R54")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:-2V5")
+		(at 160.02 107.315 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "dc279c21-d619-4752-b0c8-c535f36ca20d")
+		(property "Reference" "#PWR0123"
+			(at 160.02 109.855 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "-2V5"
+			(at 159.385 111.125 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 160.02 107.315 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 160.02 107.315 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 160.02 107.315 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "67f5d47f-b87b-4c74-a96a-27c9125873ae")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "#PWR0123")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 109.22 101.6 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "dc4456e3-b723-4c53-9578-ca3f28d32949")
+		(property "Reference" "C36"
+			(at 109.855 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1nF"
+			(at 109.855 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 110.1852 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GCM1555C1H102FA16-01.pdf"
+			(at 109.22 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 109.22 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Notes" ""
+			(at 109.22 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.digikey.com/en/products/detail/murata-electronics/GCM1555C1H102FA16D/7363205"
+			(at 109.22 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Number" "GCM1555C1H102FA16D"
+			(at 109.22 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Murata Electronics"
+			(at 109.22 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Rated Voltage" "50V"
+			(at 109.22 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Temperature Coefficient" "COG/NP0"
+			(at 109.22 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PCBWay Link" ""
+			(at 109.22 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Number" "490-16461-6-ND"
+			(at 109.22 101.6 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "1%"
+			(at 109.22 101.6 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "b2171048-200f-44dc-bed1-f6db89b5fe49")
+		)
+		(pin "2"
+			(uuid "743f66a8-ac89-4c30-8863-fc234cfaffd9")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "C36")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 119.38 106.68 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e267254e-f84f-4d51-ad08-6d3e6d957b65")
+		(property "Reference" "#PWR073"
+			(at 119.38 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 117.475 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 119.38 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 119.38 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 119.38 106.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "77b7fbad-dfd7-4f70-b50a-2238c0e3b136")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "#PWR073")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 170.815 135.255 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e3211537-ac01-4fa3-ac1b-fde98f36e40e")
+		(property "Reference" "#PWR013"
+			(at 170.815 141.605 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 168.91 139.065 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 170.815 135.255 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 170.815 135.255 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 170.815 135.255 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "96146271-ec26-45b2-9126-bee19d6e92a1")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "#PWR013")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:-2V5")
+		(at 125.73 186.69 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "e430b547-2381-496d-a076-b78ceda77226")
+		(property "Reference" "#PWR0127"
+			(at 125.73 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "-2V5"
+			(at 125.73 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 125.73 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 125.73 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 125.73 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ba1b3098-2008-45d7-a284-2315ea445868")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "#PWR0127")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "kicad_component_library:MAX4564EKA+T")
+		(at 125.73 179.07 0)
+		(unit 2)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "e6473b44-954f-479c-ac79-d340c642d91b")
+		(property "Reference" "U18"
+			(at 124.46 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "MAX4564EKA"
+			(at 124.46 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-8"
+			(at 128.27 194.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.analog.com/media/en/technical-documentation/data-sheets/MAX4564.pdf"
+			(at 127 196.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 125.73 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.digikey.com/en/products/detail/analog-devices-inc-maxim-integrated/MAX4564EKA-T/1781971"
+			(at 125.73 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Analog Devices Inc./Maxim Integrated"
+			(at 125.73 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Number" "MAX4564EKA+T"
+			(at 125.73 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5a3fac19-8242-43d5-a674-16fdfe24f978")
+		)
+		(pin "3"
+			(uuid "e817280d-0b4f-4722-ad74-ce3550a51f86")
+		)
+		(pin "4"
+			(uuid "d3b7692e-5f0b-41ae-b7ee-fb8a26c5ec6c")
+		)
+		(pin "7"
+			(uuid "69ef183d-c854-421b-b200-033800718a24")
+		)
+		(pin "8"
+			(uuid "9984bf27-d315-421d-8e1c-679c463aae5b")
+		)
+		(pin "2"
+			(uuid "f46161f0-cbdd-4089-97a4-08fdb5474643")
+		)
+		(pin "5"
+			(uuid "ece90b9b-cbfa-4c88-be93-2cb8a0036de7")
+		)
+		(pin "6"
+			(uuid "9b7a3bd1-9819-41c1-ba33-94b5492d486c")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "U18")
+					(unit 2)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 154.305 184.15 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "f30c01f0-07eb-450e-9506-749b3d0369e8")
+		(property "Reference" "C62"
+			(at 158.115 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 160.655 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 153.3398 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.passivecomponent.com/wp-content/uploads/datasheet/WTC_MLCC_General_Purpose.pdf"
+			(at 154.305 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 154.305 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.digikey.com/en/products/detail/walsin-technology-corporation/0402B104K160CT/6707534"
+			(at 154.305 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Walson Technology Corporation"
+			(at 154.305 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Number" "0402B104K160CT"
+			(at 154.305 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Rated Voltage" "16V"
+			(at 154.305 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Temperature Coefficient" "X7R"
+			(at 154.305 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 154.305 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "ad1e86d9-6cf8-4e32-b65e-3aa58bf430e6")
+		)
+		(pin "2"
+			(uuid "02bb5a9b-b039-4bc5-a554-9c2ea4281dfb")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/4df88917-387d-4e6a-a0c2-9efea845a08d"
+					(reference "C62")
+					(unit 1)
+				)
+			)
+		)
+	)
 )

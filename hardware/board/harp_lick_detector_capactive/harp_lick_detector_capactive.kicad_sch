@@ -1,179 +1,437 @@
-(kicad_sch (version 20230121) (generator eeschema)
-
-  (uuid e63e39d7-6ac0-4ffd-8aa3-1841a4541b55)
-
-  (paper "A4")
-
-  (title_block
-    (title "Lickety Split Capacitive Lick Detector")
-    (date "2023-09-01")
-    (rev "0.6")
-    (company "The Allen Institute for Neural Dynamics")
-  )
-
-  (lib_symbols
-  )
-
-
-  (wire (pts (xy 118.745 100.965) (xy 133.35 100.965))
-    (stroke (width 0) (type default))
-    (uuid 146e9995-4d99-4f1b-8385-8949537123de)
-  )
-  (wire (pts (xy 153.67 104.14) (xy 169.545 104.14))
-    (stroke (width 0) (type default))
-    (uuid 17cb50dd-a89a-451a-8421-6b04b115aee6)
-  )
-  (wire (pts (xy 195.58 90.17) (xy 207.645 90.17))
-    (stroke (width 0) (type default))
-    (uuid 3ea93f64-c847-48c8-b764-112419df4b91)
-  )
-  (wire (pts (xy 153.67 101.6) (xy 169.545 101.6))
-    (stroke (width 0) (type default))
-    (uuid 76c7b997-06b6-4f33-b83b-04280149585a)
-  )
-  (wire (pts (xy 153.67 99.06) (xy 169.545 99.06))
-    (stroke (width 0) (type default))
-    (uuid dfadeea9-f205-47e7-8f67-6792f7e10dc9)
-  )
-  (wire (pts (xy 118.745 85.725) (xy 169.545 85.725))
-    (stroke (width 0) (type default))
-    (uuid fc896abd-09f1-494d-847c-570e84e7f610)
-  )
-
-  (sheet (at 207.645 86.36) (size 13.97 14.605) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid 36c9ca84-29d9-443b-8905-497529bf4302)
-    (property "Sheetname" "TTL Out" (at 207.645 85.6484 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "sma_ttl_out.kicad_sch" (at 207.645 101.5496 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (pin "IN" input (at 207.645 90.17 180)
-      (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 9a2865e5-2777-4599-ae08-5f4db45b7d02)
-    )
-    (instances
-      (project "harp_lick_detector_capactive"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55" (page "4"))
-      )
-    )
-  )
-
-  (sheet (at 94.615 81.28) (size 24.13 26.035) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid 4df88917-387d-4e6a-a0c2-9efea845a08d)
-    (property "Sheetname" "100KHz Sine Wave" (at 94.615 80.5684 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "function_generator.kicad_sch" (at 94.615 107.8996 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (pin "VSINE" input (at 118.745 100.965 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-      (uuid 174b2624-3254-4a43-b64a-0fbf38550173)
-    )
-    (pin "100KHZ_SQ_WAVE_IN" input (at 118.745 85.725 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-      (uuid 31f734b0-1ffd-4297-b3f7-65218dba87c7)
-    )
-    (instances
-      (project "harp_lick_detector_capactive"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55" (page "5"))
-      )
-    )
-  )
-
-  (sheet (at 133.35 95.25) (size 20.32 12.065) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid 8b2c79bc-d662-4528-ac6e-e4616ba8e8ad)
-    (property "Sheetname" "Lick Detection Analog Front End" (at 133.35 94.5384 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "lick_detection_afe.kicad_sch" (at 133.35 107.8996 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (pin "VSINE" input (at 133.35 100.965 180)
-      (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 1e80ca4f-8ae9-4572-93cf-e73646f8fb0e)
-    )
-    (pin "ADC_SCK" input (at 153.67 99.06 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-      (uuid 689a19b9-fbad-4e91-a03b-59475094bdb1)
-    )
-    (pin "ADC_CS" input (at 153.67 104.14 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-      (uuid c57c2f3d-05a4-4a47-8ade-a2596d80efba)
-    )
-    (pin "ADC_POCI" input (at 153.67 101.6 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-      (uuid 0b29f04b-2349-42fe-b329-27620a2abe57)
-    )
-    (instances
-      (project "harp_lick_detector_capactive"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55" (page "3"))
-      )
-    )
-  )
-
-  (sheet (at 64.77 81.28) (size 18.415 26.035) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid b51b21ef-b374-4f9f-a058-7db9b64fdf4a)
-    (property "Sheetname" "Power Supplies" (at 64.77 80.5684 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "board_power.kicad_sch" (at 64.77 107.8996 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (instances
-      (project "harp_lick_detector_capactive"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55" (page "6"))
-      )
-    )
-  )
-
-  (sheet (at 169.545 81.28) (size 26.035 26.035) (fields_autoplaced)
-    (stroke (width 0.1524) (type solid))
-    (fill (color 0 0 0 0.0000))
-    (uuid eb8325ca-9747-4676-8e08-1fb825a7219f)
-    (property "Sheetname" "Harp Core RP2040 + Isolated USB" (at 169.545 80.5684 0)
-      (effects (font (size 1.27 1.27)) (justify left bottom))
-    )
-    (property "Sheetfile" "isolated_usb_rp2040.kicad_sch" (at 169.545 107.8996 0)
-      (effects (font (size 1.27 1.27)) (justify left top) hide)
-    )
-    (pin "TTL_OUT" input (at 195.58 90.17 0)
-      (effects (font (size 1.27 1.27)) (justify right))
-      (uuid 2bd1f224-709c-4d01-a2d1-3b0cb7b5d51e)
-    )
-    (pin "PIO_SCK" input (at 169.545 99.06 180)
-      (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 7e70b3da-6fa4-4d63-9435-b599b4019b4c)
-    )
-    (pin "PIO_POCI" input (at 169.545 101.6 180)
-      (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 4a4ecc44-08c6-4a71-a5a0-bb5e1939b357)
-    )
-    (pin "PIO_CS" input (at 169.545 104.14 180)
-      (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 1578c60c-7ed3-4240-99ee-8df901b19c54)
-    )
-    (pin "100KHZ_SQ_WAVE_OUT" input (at 169.545 85.725 180)
-      (effects (font (size 1.27 1.27)) (justify left))
-      (uuid 0ed674c6-7951-48be-a7f9-b3ac22c7d89d)
-    )
-    (instances
-      (project "harp_lick_detector_capactive"
-        (path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55" (page "2"))
-      )
-    )
-  )
-
-  (sheet_instances
-    (path "/" (page "1"))
-  )
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "e63e39d7-6ac0-4ffd-8aa3-1841a4541b55")
+	(paper "A4")
+	(title_block
+		(title "Lickety Split Capacitive Lick Detector")
+		(date "2023-09-01")
+		(rev "0.9")
+		(company "The Allen Institute for Neural Dynamics")
+	)
+	(lib_symbols)
+	(wire
+		(pts
+			(xy 132.715 91.44) (xy 147.32 91.44)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "146e9995-4d99-4f1b-8385-8949537123de")
+	)
+	(wire
+		(pts
+			(xy 167.64 94.615) (xy 183.515 94.615)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "17cb50dd-a89a-451a-8421-6b04b115aee6")
+	)
+	(wire
+		(pts
+			(xy 209.55 80.645) (xy 221.615 80.645)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3ea93f64-c847-48c8-b764-112419df4b91")
+	)
+	(wire
+		(pts
+			(xy 167.64 92.075) (xy 183.515 92.075)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "76c7b997-06b6-4f33-b83b-04280149585a")
+	)
+	(wire
+		(pts
+			(xy 132.715 73.66) (xy 183.515 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ca07f8cc-ffa2-4bec-b06d-ee1fa8aa040f")
+	)
+	(wire
+		(pts
+			(xy 167.64 89.535) (xy 183.515 89.535)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dfadeea9-f205-47e7-8f67-6792f7e10dc9")
+	)
+	(wire
+		(pts
+			(xy 132.715 76.2) (xy 183.515 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fc896abd-09f1-494d-847c-570e84e7f610")
+	)
+	(text "Device Functionality Options:\n\n* 100 or 125KHz excitation signal frequency.\n  * for multiple lick detectors with lick tubes spaced <5mm apart.\n* 20mVpp or 2Vpp excitation signal amplitude\n  * (1) 20mVpp for Ephys-compliant lick detection with the device grounded to the Neuropixels Probe\n    and\n    (2) general purpose setups where a well-defined ground may not be available."
+		(exclude_from_sim no)
+		(at 15.24 194.31 0)
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "31c5d367-ec4c-47a0-994b-0527556999c4")
+	)
+	(sheet
+		(at 221.615 76.835)
+		(size 13.97 14.605)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "36c9ca84-29d9-443b-8905-497529bf4302")
+		(property "Sheetname" "TTL Out"
+			(at 221.615 76.1234 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "sma_ttl_out.kicad_sch"
+			(at 221.615 92.0246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "IN" input
+			(at 221.615 80.645 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "9a2865e5-2777-4599-ae08-5f4db45b7d02")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 108.585 70.485)
+		(size 24.13 27.305)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "4df88917-387d-4e6a-a0c2-9efea845a08d")
+		(property "Sheetname" "100KHz Sine Wave"
+			(at 108.585 69.7734 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "function_generator.kicad_sch"
+			(at 108.585 98.3746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "VSINE" input
+			(at 132.715 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "174b2624-3254-4a43-b64a-0fbf38550173")
+		)
+		(pin "125KHZ_IN" input
+			(at 132.715 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "a90335e9-bbfb-4a71-8a18-b892db622ff6")
+		)
+		(pin "100KHZ_IN" input
+			(at 132.715 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "f1d44e4e-3ca8-491d-bdaa-e7da3f95eae6")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 147.32 81.28)
+		(size 20.32 16.51)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "8b2c79bc-d662-4528-ac6e-e4616ba8e8ad")
+		(property "Sheetname" "Lick Detection Analog Front End"
+			(at 147.32 80.5684 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "lick_detection_afe.kicad_sch"
+			(at 147.32 98.3746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "VSINE" input
+			(at 147.32 91.44 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "1e80ca4f-8ae9-4572-93cf-e73646f8fb0e")
+		)
+		(pin "ADC_SCK" input
+			(at 167.64 89.535 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "689a19b9-fbad-4e91-a03b-59475094bdb1")
+		)
+		(pin "ADC_CS" input
+			(at 167.64 94.615 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "c57c2f3d-05a4-4a47-8ade-a2596d80efba")
+		)
+		(pin "ADC_POCI" input
+			(at 167.64 92.075 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "0b29f04b-2349-42fe-b329-27620a2abe57")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 78.74 71.755)
+		(size 18.415 26.035)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "b51b21ef-b374-4f9f-a058-7db9b64fdf4a")
+		(property "Sheetname" "Power Supplies"
+			(at 78.74 71.0434 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "board_power.kicad_sch"
+			(at 78.74 98.3746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 183.515 71.755)
+		(size 26.035 26.035)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "eb8325ca-9747-4676-8e08-1fb825a7219f")
+		(property "Sheetname" "Harp Core RP2040 + Isolated USB"
+			(at 183.515 71.0434 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "isolated_usb_rp2040.kicad_sch"
+			(at 183.515 98.3746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "TTL_OUT" input
+			(at 209.55 80.645 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "2bd1f224-709c-4d01-a2d1-3b0cb7b5d51e")
+		)
+		(pin "PIO_SCK" input
+			(at 183.515 89.535 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "7e70b3da-6fa4-4d63-9435-b599b4019b4c")
+		)
+		(pin "PIO_POCI" input
+			(at 183.515 92.075 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "4a4ecc44-08c6-4a71-a5a0-bb5e1939b357")
+		)
+		(pin "PIO_CS" input
+			(at 183.515 94.615 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "1578c60c-7ed3-4240-99ee-8df901b19c54")
+		)
+		(pin "100KHZ_OUT" input
+			(at 183.515 76.2 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "6cdafcc6-12f6-4899-813b-dec93ee6e27f")
+		)
+		(pin "125KHZ_OUT" input
+			(at 183.515 73.66 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "a714223a-3d5a-4bc8-98ed-b92c0173bd0c")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
 )
