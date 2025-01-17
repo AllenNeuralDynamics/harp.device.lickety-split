@@ -1,7 +1,0 @@
-### Footprint positions - created on Tue 09 Apr 2024 04:13:39 PM PDT ###
-### Printed by KiCad version 7.0.6-7.0.6~ubuntu20.04.1
-## Unit = mm, Angle = deg.
-## Side : bottom
-# Ref     Val         Package                                     PosX       PosY       Rot  Side
-J4        AudioJack3  Jack_3.5mm_CUI_SJ-3523-SMT_Horizontal    74.5000    39.6000   90.0000  bottom
-## End
