@@ -2579,7 +2579,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
 			(at 108.077 80.01 90)
 			(effects
 				(font
@@ -2854,31 +2854,31 @@
 			)
 		)
 		(pin "9"
-			(uuid "fd8a890b-81d6-451e-a3c3-0d6e5c3bec7d")
+			(uuid "fd8a890b-81d6-451e-a3c3-0d6e5c3bec7e")
 		)
 		(pin "8"
-			(uuid "95955dab-64af-4370-b2f4-d74d90b1f20d")
+			(uuid "95955dab-64af-4370-b2f4-d74d90b1f20e")
 		)
 		(pin "1"
-			(uuid "9c2d1a61-bcf4-47f3-aac1-d0bd5fd08fa4")
+			(uuid "9c2d1a61-bcf4-47f3-aac1-d0bd5fd08fa5")
 		)
 		(pin "5"
-			(uuid "39daf163-3038-460e-8524-09e7a3f07948")
+			(uuid "39daf163-3038-460e-8524-09e7a3f07949")
 		)
 		(pin "6"
-			(uuid "67ea7f43-005f-492d-add1-97e6b996ec10")
+			(uuid "67ea7f43-005f-492d-add1-97e6b996ec11")
 		)
 		(pin "7"
-			(uuid "8a7936fa-9eed-4d85-9adb-a9a6d574f3b1")
+			(uuid "8a7936fa-9eed-4d85-9adb-a9a6d574f3b2")
 		)
 		(pin "4"
-			(uuid "3c89f128-817c-4032-91da-f1586dd5a7cd")
+			(uuid "3c89f128-817c-4032-91da-f1586dd5a7ce")
 		)
 		(pin "3"
-			(uuid "54e9ae97-96b2-4328-a04d-0aa9a8901a6c")
+			(uuid "54e9ae97-96b2-4328-a04d-0aa9a8901a6d")
 		)
 		(pin "2"
-			(uuid "2093d808-9aba-43b7-ade8-316e0d70bd47")
+			(uuid "2093d808-9aba-43b7-ade8-316e0d70bd48")
 		)
 		(instances
 			(project ""
@@ -4181,31 +4181,31 @@
 			)
 		)
 		(pin "9"
-			(uuid "fd8a890b-81d6-451e-a3c3-0d6e5c3bec7d")
+			(uuid "fd8a890b-81d6-451e-a3c3-0d6e5c3bec7f")
 		)
 		(pin "8"
-			(uuid "95955dab-64af-4370-b2f4-d74d90b1f20d")
+			(uuid "95955dab-64af-4370-b2f4-d74d90b1f20f")
 		)
 		(pin "1"
-			(uuid "9c2d1a61-bcf4-47f3-aac1-d0bd5fd08fa4")
+			(uuid "9c2d1a61-bcf4-47f3-aac1-d0bd5fd08fa6")
 		)
 		(pin "5"
-			(uuid "39daf163-3038-460e-8524-09e7a3f07948")
+			(uuid "39daf163-3038-460e-8524-09e7a3f0794a")
 		)
 		(pin "6"
-			(uuid "67ea7f43-005f-492d-add1-97e6b996ec10")
+			(uuid "67ea7f43-005f-492d-add1-97e6b996ec12")
 		)
 		(pin "7"
-			(uuid "8a7936fa-9eed-4d85-9adb-a9a6d574f3b1")
+			(uuid "8a7936fa-9eed-4d85-9adb-a9a6d574f3b3")
 		)
 		(pin "4"
-			(uuid "3c89f128-817c-4032-91da-f1586dd5a7cd")
+			(uuid "3c89f128-817c-4032-91da-f1586dd5a7cf")
 		)
 		(pin "3"
-			(uuid "54e9ae97-96b2-4328-a04d-0aa9a8901a6c")
+			(uuid "54e9ae97-96b2-4328-a04d-0aa9a8901a6e")
 		)
 		(pin "2"
-			(uuid "2093d808-9aba-43b7-ade8-316e0d70bd47")
+			(uuid "2093d808-9aba-43b7-ade8-316e0d70bd49")
 		)
 		(instances
 			(project ""
