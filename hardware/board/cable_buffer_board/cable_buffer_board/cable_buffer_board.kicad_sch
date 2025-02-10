@@ -1313,6 +1313,10 @@
 		(color 0 0 0 0)
 		(uuid "b7d5d47e-b77c-4b26-ad19-bc06abd9cc72")
 	)
+	(no_connect
+		(at 213.36 86.36)
+		(uuid "ffa62fd9-946d-4f2d-8d10-f819e56bc882")
+	)
 	(wire
 		(pts
 			(xy 155.575 71.12) (xy 165.735 71.12)
@@ -1325,7 +1329,7 @@
 	)
 	(wire
 		(pts
-			(xy 109.855 73.66) (xy 139.7 73.66)
+			(xy 121.285 73.66) (xy 139.7 73.66)
 		)
 		(stroke
 			(width 0)
@@ -1553,16 +1557,6 @@
 		)
 		(uuid "5fc0b6f1-1462-43a5-b61f-d9928c22c99b")
 	)
-	(wire
-		(pts
-			(xy 109.855 83.82) (xy 109.855 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6a5df08e-3d59-447e-b91c-735c91afba70")
-	)
 	(polyline
 		(pts
 			(xy 82.55 113.665) (xy 82.55 114.935)
@@ -1572,6 +1566,16 @@
 			(type default)
 		)
 		(uuid "6eddeaec-2fd4-4cb6-98e0-b1163b084039")
+	)
+	(wire
+		(pts
+			(xy 113.665 73.66) (xy 109.855 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f966223-6dac-43c0-b939-40c2ab906c4f")
 	)
 	(polyline
 		(pts
@@ -1905,6 +1909,16 @@
 	)
 	(polyline
 		(pts
+			(xy 109.982 64.77) (xy 109.982 72.136)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cd480c58-fc2a-48ac-9003-630d73b6535c")
+	)
+	(polyline
+		(pts
 			(xy 78.74 113.665) (xy 78.74 114.935)
 		)
 		(stroke
@@ -1932,6 +1946,16 @@
 			(type default)
 		)
 		(uuid "de64efed-aa07-4716-9e28-9b630c112072")
+	)
+	(wire
+		(pts
+			(xy 109.855 73.66) (xy 109.855 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "df2e1a47-9382-4abe-a36a-a160dc73dc58")
 	)
 	(wire
 		(pts
@@ -2005,16 +2029,6 @@
 	)
 	(wire
 		(pts
-			(xy 109.855 73.66) (xy 109.855 76.2)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f9f18ccb-c67f-4305-b3cf-d9cadb09c782")
-	)
-	(wire
-		(pts
 			(xy 38.1 177.165) (xy 38.1 178.435)
 		)
 		(stroke
@@ -2056,7 +2070,7 @@
 	)
 	(text "LTC6268 Input Impedance: 10G||0.1pF\nNote: 0.1pF = 15M9 @ 100KHz"
 		(exclude_from_sim no)
-		(at 66.675 57.785 0)
+		(at 138.43 118.745 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2109,16 +2123,16 @@
 		)
 		(uuid "4ae93770-f4f8-4f23-bc66-ce51c0ace91b")
 	)
-	(text "Input Capacitance Summary:\n\n* LTC6268 input capacitance: 0.1pF\n* Triax Cable: ~19pF per ft \n  (cancelled via active guard)"
+	(text "R14 = 100K, Ctotal = 0.1pF, Vout = 99%Vin\nR14 = 100K, Ctotal = 1pF, Vout = 94%Vin\nR14 = 100K, Ctotal = 5pF, Vout = 76%Vin\nR14 = 100K, Ctotal = 10pF, Vout = 61%Vin\nR14 = 100K, Ctotal = 50pF, Vout = 24%Vin"
 		(exclude_from_sim no)
-		(at 67.945 50.8 0)
+		(at 109.855 64.135 0)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
 			(justify left bottom)
 		)
-		(uuid "59ceb976-d631-41e3-865d-ee8158972411")
+		(uuid "6dba997a-83a4-427c-b4d6-e34abd17ef51")
 	)
 	(text "o"
 		(exclude_from_sim no)
@@ -2207,6 +2221,39 @@
 			(justify left bottom)
 		)
 		(uuid "b2762a24-ef1b-447a-b295-cc7599a6f528")
+	)
+	(text "Note: R3 adds series resistance to increase opamp stability when driving the triax cable inner shield (capacitive load)."
+		(exclude_from_sim no)
+		(at 159.385 158.75 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "d00153e1-edd8-4794-a6a2-9f96f4b4c38c")
+	)
+	(text "20mV/100KOhm = 200nA"
+		(exclude_from_sim no)
+		(at 114.3 70.485 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "de5836dc-1bbf-483b-8123-f48bba4617e4")
+	)
+	(text "Note: LTC6268/9 input is ESD protected."
+		(exclude_from_sim no)
+		(at 159.385 156.21 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "dfb2f397-c260-489d-b5e2-de98bac27e59")
 	)
 	(text "o"
 		(exclude_from_sim no)
@@ -2554,7 +2601,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 109.855 80.01 0)
+		(at 117.475 73.66 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2562,7 +2609,7 @@
 		(dnp no)
 		(uuid "19e38fdc-c4d3-443e-b2e8-0504e14ba68f")
 		(property "Reference" "R1"
-			(at 110.49 76.2 0)
+			(at 121.285 74.295 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2571,7 +2618,7 @@
 			)
 		)
 		(property "Value" "100K"
-			(at 109.855 82.55 90)
+			(at 114.935 73.66 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2580,7 +2627,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 108.077 80.01 90)
+			(at 117.475 71.882 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2589,7 +2636,7 @@
 			)
 		)
 		(property "Datasheet" "n/a"
-			(at 109.855 80.01 0)
+			(at 117.475 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2598,7 +2645,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 109.855 80.01 0)
+			(at 117.475 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2607,7 +2654,7 @@
 			)
 		)
 		(property "Link" ""
-			(at 109.855 80.01 0)
+			(at 117.475 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2616,7 +2663,7 @@
 			)
 		)
 		(property "Manufacturer" "Yageo"
-			(at 109.855 80.01 0)
+			(at 117.475 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2625,7 +2672,7 @@
 			)
 		)
 		(property "Manufacturer Number" ""
-			(at 109.855 80.01 0)
+			(at 117.475 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2634,7 +2681,7 @@
 			)
 		)
 		(property "Tolerance" "1%"
-			(at 109.855 80.01 0)
+			(at 117.475 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2643,7 +2690,7 @@
 			)
 		)
 		(property "Notes" ""
-			(at 109.855 80.01 0)
+			(at 117.475 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3049,7 +3096,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
 			(at 99.695 88.5952 0)
 			(effects
 				(font

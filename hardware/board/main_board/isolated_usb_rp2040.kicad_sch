@@ -5,9 +5,9 @@
 	(uuid "c846b1cf-190b-4055-b7e5-11eac59c68c6")
 	(paper "A4")
 	(title_block
-		(title "Lickety Split Capacitive Lick Detector")
+		(title "Lickety Split Capacitive Lick Detector Main Board")
 		(date "2023-09-01")
-		(rev "0.9")
+		(rev "1.0.0")
 		(company "The Allen Institute for Neural Dynamics")
 	)
 	(lib_symbols
@@ -4690,7 +4690,7 @@
 				)
 			)
 		)
-		(symbol "power:+3.3V"
+		(symbol "power:+3V3"
 			(power)
 			(pin_names
 				(offset 0)
@@ -4707,7 +4707,7 @@
 					(hide yes)
 				)
 			)
-			(property "Value" "+3.3V"
+			(property "Value" "+3V3"
 				(at 0 3.556 0)
 				(effects
 					(font
@@ -4733,7 +4733,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(property "Description" "Power symbol creates a global label with name \"+3V3\""
 				(at 0 0 0)
 				(effects
 					(font
@@ -4742,7 +4742,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "global power"
+			(property "ki_keywords" "power-flag"
 				(at 0 0 0)
 				(effects
 					(font
@@ -4751,7 +4751,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "+3.3V_0_1"
+			(symbol "+3V3_0_1"
 				(polyline
 					(pts
 						(xy -0.762 1.27) (xy 0 2.54)
@@ -4789,11 +4789,11 @@
 					)
 				)
 			)
-			(symbol "+3.3V_1_1"
+			(symbol "+3V3_1_1"
 				(pin power_in line
 					(at 0 0 90)
 					(length 0) hide
-					(name "+3.3V"
+					(name "+3V3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -5226,7 +5226,7 @@
 		(uuid "01c8c7d0-63c8-4251-885e-41826d271a09")
 	)
 	(junction
-		(at 272.415 90.17)
+		(at 273.05 90.17)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "02e9d77d-5237-4871-800c-e5c9a882d0c6")
@@ -5280,7 +5280,7 @@
 		(uuid "21c365b3-13b7-4eac-bb3f-3f725347fafc")
 	)
 	(junction
-		(at 271.145 109.22)
+		(at 271.78 109.22)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "24518a5f-797c-4652-9814-459c98f69179")
@@ -5400,6 +5400,12 @@
 		(uuid "7ff00952-78aa-4d2b-9dda-b21fd168da85")
 	)
 	(junction
+		(at 271.78 81.28)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "89db0949-953c-4fa4-aa29-a5093657af57")
+	)
+	(junction
 		(at 116.84 179.705)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5478,6 +5484,12 @@
 		(uuid "c2203aca-db00-4d2d-8891-df82fb324041")
 	)
 	(junction
+		(at 186.69 55.88)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "cf18fe49-02d8-435d-aa96-d3df86d26f22")
+	)
+	(junction
 		(at 66.675 38.735)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -5494,12 +5506,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "df7947b7-136e-4559-8671-bee0991c8007")
-	)
-	(junction
-		(at 271.145 80.645)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e022ba73-588f-4f38-b584-06468a65d5f9")
 	)
 	(junction
 		(at 161.29 189.865)
@@ -5520,7 +5526,7 @@
 		(uuid "e74bc9cd-8249-4623-a054-c4575b07420a")
 	)
 	(junction
-		(at 269.875 92.71)
+		(at 270.51 92.71)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e7efe20d-3dd6-4133-8ffd-da9ff3b44495")
@@ -5650,7 +5656,7 @@
 		(uuid "e0cde7f3-1215-402c-a605-68fefc11f386")
 	)
 	(no_connect
-		(at 139.065 110.49)
+		(at 138.43 110.49)
 		(uuid "fb4ff204-73a9-4e1f-bb44-9d672d59a5db")
 	)
 	(wire
@@ -5675,7 +5681,7 @@
 	)
 	(wire
 		(pts
-			(xy 31.75 178.435) (xy 31.75 180.975)
+			(xy 31.75 177.8) (xy 31.75 180.975)
 		)
 		(stroke
 			(width 0)
@@ -5685,7 +5691,7 @@
 	)
 	(wire
 		(pts
-			(xy 269.875 88.9) (xy 269.875 92.71)
+			(xy 270.51 88.9) (xy 270.51 92.71)
 		)
 		(stroke
 			(width 0)
@@ -5955,7 +5961,7 @@
 	)
 	(wire
 		(pts
-			(xy 48.26 142.875) (xy 48.26 144.145)
+			(xy 48.26 142.24) (xy 48.26 144.145)
 		)
 		(stroke
 			(width 0)
@@ -6005,7 +6011,7 @@
 	)
 	(wire
 		(pts
-			(xy 29.21 123.825) (xy 40.64 123.825)
+			(xy 29.21 124.46) (xy 40.64 124.46)
 		)
 		(stroke
 			(width 0)
@@ -6052,16 +6058,6 @@
 			(type default)
 		)
 		(uuid "2772ebe1-5ad8-4232-8ef5-80267caaaa15")
-	)
-	(wire
-		(pts
-			(xy 269.875 80.645) (xy 269.875 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2819a078-7662-4845-91ed-22baf4e3667b")
 	)
 	(wire
 		(pts
@@ -6122,16 +6118,6 @@
 			(type default)
 		)
 		(uuid "30151ce2-c6b7-4ea8-abba-6d4a4167c014")
-	)
-	(wire
-		(pts
-			(xy 269.875 109.22) (xy 269.875 108.585)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "32f0cc34-8169-4348-85b1-1377e736d785")
 	)
 	(wire
 		(pts
@@ -6275,7 +6261,7 @@
 	)
 	(wire
 		(pts
-			(xy 188.595 55.88) (xy 183.515 55.88)
+			(xy 188.595 55.88) (xy 186.69 55.88)
 		)
 		(stroke
 			(width 0)
@@ -6312,16 +6298,6 @@
 			(type default)
 		)
 		(uuid "44bba80c-b8af-4dab-b124-47c51330a721")
-	)
-	(wire
-		(pts
-			(xy 188.595 55.88) (xy 191.135 55.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "44e91557-bf28-4344-bd9f-e5818ac4bc40")
 	)
 	(wire
 		(pts
@@ -6455,7 +6431,7 @@
 	)
 	(wire
 		(pts
-			(xy 271.145 109.22) (xy 271.145 109.855)
+			(xy 271.78 109.22) (xy 271.78 110.49)
 		)
 		(stroke
 			(width 0)
@@ -6535,16 +6511,6 @@
 	)
 	(wire
 		(pts
-			(xy 271.145 80.645) (xy 272.415 80.645)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "54a3e134-ecdb-45ab-a01f-69bb6966fa8b")
-	)
-	(wire
-		(pts
 			(xy 70.485 18.415) (xy 70.485 19.685)
 		)
 		(stroke
@@ -6555,7 +6521,7 @@
 	)
 	(wire
 		(pts
-			(xy 224.155 90.17) (xy 272.415 90.17)
+			(xy 224.155 90.17) (xy 273.05 90.17)
 		)
 		(stroke
 			(width 0)
@@ -6645,16 +6611,6 @@
 	)
 	(wire
 		(pts
-			(xy 271.145 80.645) (xy 269.875 80.645)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5c1e8de0-c5f9-4c90-a5aa-83b7abff29f5")
-	)
-	(wire
-		(pts
 			(xy 118.11 57.15) (xy 118.11 58.42)
 		)
 		(stroke
@@ -6665,7 +6621,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.295 144.145) (xy 74.295 145.415)
+			(xy 73.66 143.51) (xy 73.66 144.78)
 		)
 		(stroke
 			(width 0)
@@ -6795,7 +6751,7 @@
 	)
 	(wire
 		(pts
-			(xy 272.415 88.9) (xy 272.415 90.17)
+			(xy 273.05 88.9) (xy 273.05 90.17)
 		)
 		(stroke
 			(width 0)
@@ -6865,7 +6821,7 @@
 	)
 	(wire
 		(pts
-			(xy 159.385 128.27) (xy 160.655 128.27)
+			(xy 158.75 128.27) (xy 160.655 128.27)
 		)
 		(stroke
 			(width 0)
@@ -6905,7 +6861,7 @@
 	)
 	(wire
 		(pts
-			(xy 272.415 109.22) (xy 271.145 109.22)
+			(xy 273.05 109.22) (xy 271.78 109.22)
 		)
 		(stroke
 			(width 0)
@@ -6972,6 +6928,16 @@
 			(type default)
 		)
 		(uuid "780cda55-a158-4115-ab4f-0660245c1a58")
+	)
+	(wire
+		(pts
+			(xy 188.595 55.88) (xy 191.135 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "791b6a79-9aa2-4fe8-8300-6ae4d826af0e")
 	)
 	(wire
 		(pts
@@ -7075,7 +7041,17 @@
 	)
 	(wire
 		(pts
-			(xy 84.455 153.035) (xy 84.455 154.305)
+			(xy 271.78 81.28) (xy 273.05 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "828094fa-04d9-4781-b006-f82a3ebb7dfb")
+	)
+	(wire
+		(pts
+			(xy 83.82 152.4) (xy 83.82 153.67)
 		)
 		(stroke
 			(width 0)
@@ -7095,7 +7071,7 @@
 	)
 	(wire
 		(pts
-			(xy 188.595 54.61) (xy 188.595 55.88)
+			(xy 186.69 54.61) (xy 186.69 55.88)
 		)
 		(stroke
 			(width 0)
@@ -7205,7 +7181,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.225 118.11) (xy 149.225 119.38)
+			(xy 148.59 118.11) (xy 148.59 119.38)
 		)
 		(stroke
 			(width 0)
@@ -7295,7 +7271,7 @@
 	)
 	(wire
 		(pts
-			(xy 17.78 178.435) (xy 17.78 180.975)
+			(xy 17.78 177.8) (xy 17.78 180.975)
 		)
 		(stroke
 			(width 0)
@@ -7325,7 +7301,7 @@
 	)
 	(wire
 		(pts
-			(xy 159.385 110.49) (xy 160.655 110.49)
+			(xy 158.75 110.49) (xy 160.655 110.49)
 		)
 		(stroke
 			(width 0)
@@ -7375,7 +7351,7 @@
 	)
 	(wire
 		(pts
-			(xy 271.145 109.22) (xy 269.875 109.22)
+			(xy 271.78 109.22) (xy 270.51 109.22)
 		)
 		(stroke
 			(width 0)
@@ -7585,7 +7561,7 @@
 	)
 	(wire
 		(pts
-			(xy 29.21 118.745) (xy 30.48 118.745)
+			(xy 29.21 119.38) (xy 30.48 119.38)
 		)
 		(stroke
 			(width 0)
@@ -7662,16 +7638,6 @@
 			(type default)
 		)
 		(uuid "be0e9da7-1cbc-4f0e-bbf4-be02c9ee9b55")
-	)
-	(wire
-		(pts
-			(xy 272.415 80.645) (xy 272.415 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c06f138e-dc41-448f-832c-9b8ee8411209")
 	)
 	(wire
 		(pts
@@ -7785,7 +7751,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.295 153.035) (xy 74.295 154.305)
+			(xy 73.66 152.4) (xy 73.66 153.67)
 		)
 		(stroke
 			(width 0)
@@ -7795,7 +7761,7 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 178.435) (xy 78.74 180.975)
+			(xy 78.74 177.8) (xy 78.74 180.975)
 		)
 		(stroke
 			(width 0)
@@ -7805,7 +7771,7 @@
 	)
 	(wire
 		(pts
-			(xy 84.455 144.145) (xy 84.455 145.415)
+			(xy 83.82 143.51) (xy 83.82 144.78)
 		)
 		(stroke
 			(width 0)
@@ -7842,6 +7808,16 @@
 			(type default)
 		)
 		(uuid "d57f0df8-2c1a-42ee-8c01-68fb478a53f8")
+	)
+	(wire
+		(pts
+			(xy 270.51 81.28) (xy 271.78 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d61597b9-d8a4-44dd-96cb-0f88478e8e35")
 	)
 	(wire
 		(pts
@@ -7925,16 +7901,6 @@
 	)
 	(wire
 		(pts
-			(xy 272.415 108.585) (xy 272.415 109.22)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d996bcc6-885a-422f-a788-53956597fbca")
-	)
-	(wire
-		(pts
 			(xy 41.275 42.545) (xy 42.545 42.545)
 		)
 		(stroke
@@ -7965,7 +7931,7 @@
 	)
 	(wire
 		(pts
-			(xy 269.875 92.71) (xy 269.875 93.345)
+			(xy 270.51 92.71) (xy 270.51 93.98)
 		)
 		(stroke
 			(width 0)
@@ -8055,7 +8021,7 @@
 	)
 	(wire
 		(pts
-			(xy 272.415 90.17) (xy 272.415 93.345)
+			(xy 273.05 90.17) (xy 273.05 93.98)
 		)
 		(stroke
 			(width 0)
@@ -8065,7 +8031,7 @@
 	)
 	(wire
 		(pts
-			(xy 257.81 20.955) (xy 257.81 22.225)
+			(xy 257.81 20.32) (xy 257.81 22.225)
 		)
 		(stroke
 			(width 0)
@@ -8125,7 +8091,7 @@
 	)
 	(wire
 		(pts
-			(xy 29.21 121.285) (xy 30.48 121.285)
+			(xy 29.21 121.92) (xy 30.48 121.92)
 		)
 		(stroke
 			(width 0)
@@ -8135,7 +8101,7 @@
 	)
 	(wire
 		(pts
-			(xy 149.225 100.965) (xy 149.225 102.87)
+			(xy 148.59 100.33) (xy 148.59 102.87)
 		)
 		(stroke
 			(width 0)
@@ -8172,6 +8138,16 @@
 			(type default)
 		)
 		(uuid "efd628f1-12fe-4266-a731-0f7a698527c9")
+	)
+	(wire
+		(pts
+			(xy 186.69 55.88) (xy 183.515 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "f034a343-162f-4315-9dce-2a0285f06e08")
 	)
 	(wire
 		(pts
@@ -8245,7 +8221,7 @@
 	)
 	(wire
 		(pts
-			(xy 271.145 80.01) (xy 271.145 80.645)
+			(xy 271.78 78.74) (xy 271.78 81.28)
 		)
 		(stroke
 			(width 0)
@@ -8265,7 +8241,7 @@
 	)
 	(wire
 		(pts
-			(xy 99.06 178.435) (xy 99.06 179.705)
+			(xy 99.06 176.53) (xy 99.06 179.705)
 		)
 		(stroke
 			(width 0)
@@ -8275,7 +8251,7 @@
 	)
 	(wire
 		(pts
-			(xy 224.155 92.71) (xy 269.875 92.71)
+			(xy 224.155 92.71) (xy 270.51 92.71)
 		)
 		(stroke
 			(width 0)
@@ -10960,7 +10936,7 @@
 		(uuid "fa059ef9-bfea-4e81-bbf2-0dd9b8b4a705")
 	)
 	(label "HARP_CLK_SYNC"
-		(at 40.64 123.825 0)
+		(at 40.64 124.46 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11472,71 +11448,6 @@
 		(uuid "e9e21212-9d3c-486d-8796-46073e35e8ec")
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 135.89 27.94 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "0236c144-c5d2-4783-836a-8aacb566f4de")
-		(property "Reference" "#PWR029"
-			(at 135.89 31.75 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 135.89 24.13 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 135.89 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 135.89 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 135.89 27.94 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f39cff6e-e3ac-4483-bb2f-f004e7fc8d7a")
-		)
-		(instances
-			(project "harp_lick_detector_capactive"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
-					(reference "#PWR029")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
 		(at 47.625 32.385 90)
 		(unit 1)
@@ -11650,7 +11561,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 84.455 154.305 0)
+		(at 83.82 153.67 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -11658,7 +11569,7 @@
 		(dnp no)
 		(uuid "03fb90b0-2f9f-4fc5-a009-30cd307f136e")
 		(property "Reference" "#PWR095"
-			(at 84.455 160.655 0)
+			(at 83.82 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11667,7 +11578,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 83.185 158.115 0)
+			(at 82.55 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11676,7 +11587,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 84.455 154.305 0)
+			(at 83.82 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11685,7 +11596,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 84.455 154.305 0)
+			(at 83.82 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11694,7 +11605,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 84.455 154.305 0)
+			(at 83.82 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11865,6 +11776,71 @@
 			(project "harp_lick_detector_capactive"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
 					(reference "#PWR079")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 271.78 78.74 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "06d35e71-a80e-4e64-95f1-477a5cb4640f")
+		(property "Reference" "#PWR08"
+			(at 271.78 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 271.78 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 271.78 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 271.78 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 271.78 78.74 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c6095c9c-b4ae-45b8-886d-ea7d043b00f1")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
+					(reference "#PWR08")
 					(unit 1)
 				)
 			)
@@ -13034,71 +13010,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 31.75 178.435 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "1ef67c4e-62d5-416b-970d-25b77d3259b4")
-		(property "Reference" "#PWR064"
-			(at 31.75 182.245 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 35.56 175.895 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 31.75 178.435 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 31.75 178.435 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 31.75 178.435 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "e878cf26-c964-41c8-b493-af29c38f5f7b")
-		)
-		(instances
-			(project "harp_lick_detector_capactive"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
-					(reference "#PWR064")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 38.1 108.585 90)
 		(unit 1)
@@ -13495,16 +13406,16 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 257.81 20.955 0)
+		(lib_id "power:+3V3")
+		(at 30.48 121.92 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "28f605f3-1247-4001-8b6f-f707781aa212")
-		(property "Reference" "#PWR037"
-			(at 257.81 24.765 0)
+		(uuid "2100023e-d57f-4c49-86b6-78426e86d78f")
+		(property "Reference" "#PWR0100"
+			(at 26.67 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13512,8 +13423,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3.3V"
-			(at 257.81 17.145 0)
+		(property "Value" "+3V3"
+			(at 35.56 121.92 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13521,7 +13432,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 257.81 20.955 0)
+			(at 30.48 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13530,7 +13441,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 257.81 20.955 0)
+			(at 30.48 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13539,7 +13450,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 257.81 20.955 0)
+			(at 30.48 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13548,77 +13459,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "67849f19-a34e-48dd-9b42-5d7486e9523f")
+			(uuid "35b4702d-6414-4d94-a12e-658fd8f8e500")
 		)
 		(instances
 			(project "harp_lick_detector_capactive"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
-					(reference "#PWR037")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 48.26 142.875 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "2961bcc4-7ac5-46c3-90f5-5ce1e4c69731")
-		(property "Reference" "#PWR05"
-			(at 48.26 146.685 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 48.26 139.065 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 48.26 142.875 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 48.26 142.875 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 48.26 142.875 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "2f9b3c1d-26ff-4b8d-9fd0-dd778cfd7574")
-		)
-		(instances
-			(project "harp_lick_detector_capactive"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
-					(reference "#PWR05")
+					(reference "#PWR0100")
 					(unit 1)
 				)
 			)
@@ -13924,73 +13770,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 271.145 80.01 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "32b9ebc6-6673-4680-ab6f-229614e08629")
-		(property "Reference" "#PWR08"
-			(at 271.145 83.82 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 271.145 76.2 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 271.145 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 271.145 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 271.145 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "492753fd-b420-47e7-a90e-01389d2837c0")
-		)
-		(instances
-			(project "harp_lick_detector_capactive"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
-					(reference "#PWR08")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
-		(at 74.295 154.305 0)
+		(at 73.66 153.67 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13998,7 +13779,7 @@
 		(dnp no)
 		(uuid "3b2832ac-f9b5-4128-b906-548de4d5565b")
 		(property "Reference" "#PWR018"
-			(at 74.295 160.655 0)
+			(at 73.66 160.02 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14007,7 +13788,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 73.025 158.115 0)
+			(at 72.39 157.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14016,7 +13797,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 74.295 154.305 0)
+			(at 73.66 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14025,7 +13806,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 74.295 154.305 0)
+			(at 73.66 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14034,7 +13815,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 74.295 154.305 0)
+			(at 73.66 153.67 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14055,16 +13836,16 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 74.295 144.145 0)
+		(lib_id "power:+3V3")
+		(at 123.19 25.4 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "3ff83e86-6cbc-4f59-9b54-603853e6252b")
-		(property "Reference" "#PWR017"
-			(at 74.295 147.955 0)
+		(uuid "409576cb-4d4d-4a9e-aa9b-5a02d8a17b07")
+		(property "Reference" "#PWR029"
+			(at 123.19 29.21 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14072,8 +13853,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3.3V"
-			(at 74.295 140.335 0)
+		(property "Value" "+3V3"
+			(at 123.19 21.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14081,7 +13862,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 74.295 144.145 0)
+			(at 123.19 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14090,7 +13871,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 74.295 144.145 0)
+			(at 123.19 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14099,7 +13880,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 74.295 144.145 0)
+			(at 123.19 25.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14108,12 +13889,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "dcfaaf92-3425-4b18-a59e-a308b9772e5c")
+			(uuid "ef0a5ff0-74df-4ce4-84bc-fb2cb9dbb159")
 		)
 		(instances
 			(project "harp_lick_detector_capactive"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
-					(reference "#PWR017")
+					(reference "#PWR029")
 					(unit 1)
 				)
 			)
@@ -14338,16 +14119,16 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 99.06 178.435 0)
+		(lib_id "power:+3V3")
+		(at 257.81 20.32 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "49a776b0-59ce-4a58-9c23-961c38ab6b26")
-		(property "Reference" "#PWR023"
-			(at 99.06 182.245 0)
+		(uuid "4363d8cf-45e4-4a12-ab9a-ecbe0dca05e5")
+		(property "Reference" "#PWR037"
+			(at 257.81 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14355,8 +14136,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3.3V"
-			(at 99.06 174.625 0)
+		(property "Value" "+3V3"
+			(at 257.81 16.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14364,7 +14145,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 99.06 178.435 0)
+			(at 257.81 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14373,7 +14154,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 99.06 178.435 0)
+			(at 257.81 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14382,7 +14163,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 99.06 178.435 0)
+			(at 257.81 20.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14391,12 +14172,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "a5a8d5ba-2dad-41eb-801a-860a1a69f2f2")
+			(uuid "91f1ba49-2c0e-465a-9cb6-2c8fbd6dd795")
 		)
 		(instances
 			(project "harp_lick_detector_capactive"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
-					(reference "#PWR023")
+					(reference "#PWR037")
 					(unit 1)
 				)
 			)
@@ -14601,6 +14382,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3V3")
+		(at 78.74 177.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "54baa3b4-f0d5-4464-af75-8cd893fe68ad")
+		(property "Reference" "#PWR021"
+			(at 78.74 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 78.74 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 78.74 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 78.74 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 78.74 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "37263ba2-fd4e-4f2a-a793-a46ea355e7e8")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
+					(reference "#PWR021")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:VBUS")
 		(at 18.415 142.875 0)
 		(unit 1)
@@ -14666,16 +14512,16 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 123.19 25.4 0)
+		(lib_id "power:+3V3")
+		(at 135.89 27.94 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "56c7cfdb-07c0-4838-af9c-223d7d6ac33b")
+		(uuid "58568e6d-a177-43c8-93af-aac43c97cfb7")
 		(property "Reference" "#PWR027"
-			(at 123.19 29.21 0)
+			(at 135.89 31.75 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14683,8 +14529,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3.3V"
-			(at 123.19 21.59 0)
+		(property "Value" "+3V3"
+			(at 135.89 24.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14692,7 +14538,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 123.19 25.4 0)
+			(at 135.89 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14701,7 +14547,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 123.19 25.4 0)
+			(at 135.89 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14710,7 +14556,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 123.19 25.4 0)
+			(at 135.89 27.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14719,7 +14565,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "035ab7e5-e247-4f7b-b380-7b1b79fb8f5b")
+			(uuid "7edacdab-8fbc-4044-bfbd-c797961c3c99")
 		)
 		(instances
 			(project "harp_lick_detector_capactive"
@@ -14844,7 +14690,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 269.875 85.09 180)
+		(at 270.51 85.09 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -14852,7 +14698,7 @@
 		(dnp no)
 		(uuid "5c3d9ba0-8023-4a16-8a6e-7980700fe0b4")
 		(property "Reference" "R58"
-			(at 269.24 81.28 0)
+			(at 269.875 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14861,7 +14707,7 @@
 			)
 		)
 		(property "Value" "10K"
-			(at 269.875 83.82 90)
+			(at 270.51 83.82 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14870,7 +14716,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 271.653 85.09 90)
+			(at 272.288 85.09 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14879,7 +14725,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.koaspeer.com/pdfs/SG73P.pdf"
-			(at 269.875 85.09 0)
+			(at 270.51 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14888,7 +14734,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 269.875 85.09 0)
+			(at 270.51 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14897,7 +14743,7 @@
 			)
 		)
 		(property "Link" "https://www.digikey.com/en/products/detail/koa-speer-electronics-inc/SG73P1EWTTP1002F/14316756"
-			(at 269.875 85.09 90)
+			(at 270.51 85.09 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14906,7 +14752,7 @@
 			)
 		)
 		(property "Manufacturer" "KOA Speer Electronics, Inc."
-			(at 269.875 85.09 0)
+			(at 270.51 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14915,7 +14761,7 @@
 			)
 		)
 		(property "Manufacturer Number" "SG73P1EWTTP1002F"
-			(at 269.875 85.09 0)
+			(at 270.51 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14924,7 +14770,7 @@
 			)
 		)
 		(property "Notes" ""
-			(at 269.875 85.09 0)
+			(at 270.51 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -14942,71 +14788,6 @@
 			(project "harp_lick_detector_capactive"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
 					(reference "R58")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 78.74 178.435 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "5f143780-4e60-480c-ab6c-e751ea74e247")
-		(property "Reference" "#PWR021"
-			(at 78.74 182.245 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 78.74 174.625 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 78.74 178.435 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 78.74 178.435 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 78.74 178.435 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b7f7872f-a4d4-4916-a842-149b47ff9077")
-		)
-		(instances
-			(project "harp_lick_detector_capactive"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
-					(reference "#PWR021")
 					(unit 1)
 				)
 			)
@@ -15709,6 +15490,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3V3")
+		(at 31.75 177.8 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "6b0428db-99c0-4168-a0c8-e9495495d422")
+		(property "Reference" "#PWR064"
+			(at 31.75 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 31.75 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 31.75 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 31.75 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 31.75 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "162d6f99-67db-43c3-be3e-3c057797a585")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
+					(reference "#PWR064")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 31.75 92.075 90)
 		(unit 1)
@@ -15776,73 +15622,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 188.595 54.61 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "6d203e22-e5cc-4e05-bf32-9cd5bb1e12ce")
-		(property "Reference" "#PWR030"
-			(at 188.595 58.42 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 188.595 50.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 188.595 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 188.595 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 188.595 54.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d735c446-6be4-4823-8da9-12f4380b578f")
-		)
-		(instances
-			(project "harp_lick_detector_capactive"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
-					(reference "#PWR030")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
-		(at 149.225 119.38 0)
+		(at 148.59 119.38 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15850,7 +15631,7 @@
 		(dnp no)
 		(uuid "6efaab95-4ac0-48ff-8380-724a21cb4b44")
 		(property "Reference" "#PWR031"
-			(at 149.225 125.73 0)
+			(at 148.59 125.73 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15859,7 +15640,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 147.32 123.19 0)
+			(at 146.685 123.19 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15868,7 +15649,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 149.225 119.38 0)
+			(at 148.59 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15877,7 +15658,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 149.225 119.38 0)
+			(at 148.59 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15886,7 +15667,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 149.225 119.38 0)
+			(at 148.59 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16183,71 +15964,6 @@
 			(project "harp_lick_detector_capactive"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
 					(reference "C18")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 84.455 144.145 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "73986625-5bfe-4be3-a587-427135d7ea3d")
-		(property "Reference" "#PWR094"
-			(at 84.455 147.955 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 84.455 140.335 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 84.455 144.145 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 84.455 144.145 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 84.455 144.145 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "dbdae9dd-787a-4c78-8a35-375eecbb2b7a")
-		)
-		(instances
-			(project "harp_lick_detector_capactive"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
-					(reference "#PWR094")
 					(unit 1)
 				)
 			)
@@ -16932,7 +16648,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 74.295 149.225 0)
+		(at 73.66 148.59 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16940,7 +16656,7 @@
 		(dnp no)
 		(uuid "85ea31a0-df63-4187-9c40-984e1460a59e")
 		(property "Reference" "C8"
-			(at 74.295 146.685 0)
+			(at 73.66 146.05 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16949,7 +16665,7 @@
 			)
 		)
 		(property "Value" "1uF"
-			(at 75.565 151.765 0)
+			(at 74.93 151.13 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16958,7 +16674,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 75.2602 153.035 0)
+			(at 74.6252 152.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16967,7 +16683,7 @@
 			)
 		)
 		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM155R6YA105KE11-01.pdf"
-			(at 74.295 149.225 0)
+			(at 73.66 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16976,7 +16692,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 74.295 149.225 0)
+			(at 73.66 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16985,7 +16701,7 @@
 			)
 		)
 		(property "Notes" "must not be polarized"
-			(at 74.295 149.225 0)
+			(at 73.66 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16994,7 +16710,7 @@
 			)
 		)
 		(property "Link" "https://www.digikey.com/en/products/detail/murata-electronics/GRM155R6YA105KE11J/4905163"
-			(at 74.295 149.225 0)
+			(at 73.66 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17003,7 +16719,7 @@
 			)
 		)
 		(property "Manufacturer Number" "GRM155R6YA105KE11J"
-			(at 74.295 149.225 0)
+			(at 73.66 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17012,7 +16728,7 @@
 			)
 		)
 		(property "Manufacturer" "Murata Electronics"
-			(at 74.295 149.225 0)
+			(at 73.66 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17021,7 +16737,7 @@
 			)
 		)
 		(property "Rated Voltage" "35V"
-			(at 74.295 149.225 0)
+			(at 73.66 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17030,7 +16746,7 @@
 			)
 		)
 		(property "Temperature Coefficient" "X5R"
-			(at 74.295 149.225 0)
+			(at 73.66 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17039,7 +16755,7 @@
 			)
 		)
 		(property "PCBWay Link" ""
-			(at 74.295 149.225 0)
+			(at 73.66 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17130,7 +16846,7 @@
 	)
 	(symbol
 		(lib_id "Device:D_TVS")
-		(at 84.455 149.225 90)
+		(at 83.82 148.59 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -17138,7 +16854,7 @@
 		(dnp no)
 		(uuid "8f2a3b14-a319-4000-9e6a-c80d0c41e240")
 		(property "Reference" "D4"
-			(at 85.725 145.415 90)
+			(at 85.09 144.78 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17147,7 +16863,7 @@
 			)
 		)
 		(property "Value" "D_TVS"
-			(at 86.36 151.13 90)
+			(at 85.725 150.495 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17157,7 +16873,7 @@
 			)
 		)
 		(property "Footprint" "Diode_SMD:D_0402_1005Metric"
-			(at 84.455 149.225 0)
+			(at 83.82 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17166,7 +16882,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/esd7571-d.pdf"
-			(at 84.455 149.225 0)
+			(at 83.82 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17175,7 +16891,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 84.455 149.225 0)
+			(at 83.82 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17184,7 +16900,7 @@
 			)
 		)
 		(property "Link" "https://www.digikey.com/en/products/detail/onsemi/ESD7571N2T5G/7220690"
-			(at 84.455 149.225 0)
+			(at 83.82 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17193,7 +16909,7 @@
 			)
 		)
 		(property "Manufacturer" "onsemi"
-			(at 84.455 149.225 0)
+			(at 83.82 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17202,7 +16918,7 @@
 			)
 		)
 		(property "Manufacturer Number" "ESD7571N2T5G"
-			(at 84.455 149.225 0)
+			(at 83.82 148.59 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17211,7 +16927,7 @@
 			)
 		)
 		(property "Notes" "not polarized"
-			(at 84.455 149.225 90)
+			(at 83.82 148.59 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18187,7 +17903,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 271.145 109.855 0)
+		(at 271.78 110.49 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18195,7 +17911,7 @@
 		(dnp no)
 		(uuid "a0a09b43-6263-443a-b2cc-952b2046c5e1")
 		(property "Reference" "#PWR0138"
-			(at 271.145 116.205 0)
+			(at 271.78 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18204,7 +17920,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 269.24 113.665 0)
+			(at 269.875 114.3 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18213,7 +17929,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 271.145 109.855 0)
+			(at 271.78 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18222,7 +17938,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 271.145 109.855 0)
+			(at 271.78 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18231,7 +17947,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 271.145 109.855 0)
+			(at 271.78 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18246,6 +17962,71 @@
 			(project "harp_lick_detector_capactive"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
 					(reference "#PWR0138")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 148.59 100.33 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a1955b6c-1e1d-4439-b917-a9fc21ed4ff2")
+		(property "Reference" "#PWR0106"
+			(at 148.59 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 148.59 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 148.59 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 148.59 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 148.59 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fb3c80e1-716d-40ad-8714-e6ae1e097f3d")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
+					(reference "#PWR0106")
 					(unit 1)
 				)
 			)
@@ -18367,7 +18148,7 @@
 	)
 	(symbol
 		(lib_id "Connector:AudioJack3")
-		(at 24.13 121.285 0)
+		(at 24.13 121.92 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18375,7 +18156,7 @@
 		(dnp no)
 		(uuid "a445b8e0-8a2a-4c73-9a99-5c8b10a45b99")
 		(property "Reference" "J4"
-			(at 17.78 117.475 0)
+			(at 17.78 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18383,7 +18164,7 @@
 			)
 		)
 		(property "Value" "AudioJack3"
-			(at 22.225 114.935 0)
+			(at 22.225 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18392,7 +18173,7 @@
 			)
 		)
 		(property "Footprint" "Connector_Audio:Jack_3.5mm_CUI_SJ-3524-SMT_Horizontal"
-			(at 24.13 121.285 0)
+			(at 24.13 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18401,7 +18182,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.cuidevices.com/product/resource/sj-352x-smt.pdf"
-			(at 24.13 121.285 0)
+			(at 24.13 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18410,7 +18191,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 24.13 121.285 0)
+			(at 24.13 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18419,7 +18200,7 @@
 			)
 		)
 		(property "Link" "https://www.digikey.com/en/products/detail/cui-devices/SJ-3524-SMT-TR-BE/2295987"
-			(at 24.13 121.285 0)
+			(at 24.13 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18428,7 +18209,7 @@
 			)
 		)
 		(property "Manufacturer Number" "SJ-3524-SMT-TR-BE"
-			(at 24.13 121.285 0)
+			(at 24.13 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18437,7 +18218,7 @@
 			)
 		)
 		(property "Manufacturer" "CUI Devices"
-			(at 24.13 121.285 0)
+			(at 24.13 121.92 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18458,6 +18239,71 @@
 			(project "harp_lick_detector_capactive"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
 					(reference "J4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 83.82 143.51 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "a639a359-5bd9-4e98-a26e-486d0a541d2f")
+		(property "Reference" "#PWR094"
+			(at 83.82 147.32 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 83.82 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 83.82 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 83.82 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 83.82 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c28830a0-74a7-481c-8107-be4388efd810")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
+					(reference "#PWR094")
 					(unit 1)
 				)
 			)
@@ -18596,16 +18442,16 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 159.385 128.27 90)
+		(lib_id "power:+3V3")
+		(at 17.78 177.8 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "a8a59f73-a2fb-478b-ae37-6edf4de57ee2")
-		(property "Reference" "#PWR078"
-			(at 163.195 128.27 0)
+		(uuid "a6db9299-700e-499e-8f85-0ba52f6ad770")
+		(property "Reference" "#PWR01"
+			(at 17.78 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18613,8 +18459,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3.3V"
-			(at 153.67 128.27 90)
+		(property "Value" "+3V3"
+			(at 17.78 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18622,7 +18468,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 159.385 128.27 0)
+			(at 17.78 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18631,7 +18477,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 159.385 128.27 0)
+			(at 17.78 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18640,7 +18486,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 159.385 128.27 0)
+			(at 17.78 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18649,12 +18495,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "96209379-7753-457a-9abc-649a6e58d19d")
+			(uuid "66cd0172-aa68-4dc8-94f1-7c47a0c3d2bb")
 		)
 		(instances
 			(project "harp_lick_detector_capactive"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
-					(reference "#PWR078")
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
@@ -18924,6 +18770,136 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3V3")
+		(at 186.69 54.61 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ab84cd11-a9dd-4245-b039-1f46149b6052")
+		(property "Reference" "#PWR030"
+			(at 186.69 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 186.69 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 186.69 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 186.69 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 186.69 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "98e34d7f-b4b1-4699-86aa-3328b48325f6")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
+					(reference "#PWR030")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 158.75 128.27 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "abe52dee-bb87-4018-bf0b-793bb1f48838")
+		(property "Reference" "#PWR078"
+			(at 162.56 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 152.4 128.27 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 158.75 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 158.75 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 158.75 128.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "2c0ddec7-3c15-4ce4-a13c-f52b6034dfa5")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
+					(reference "#PWR078")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 46.99 103.505 90)
 		(unit 1)
@@ -19168,16 +19144,16 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 30.48 121.285 270)
+		(lib_id "power:+3V3")
+		(at 99.06 176.53 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "b8ec1a1d-0706-4191-869d-4bd1c8b0d97b")
-		(property "Reference" "#PWR0100"
-			(at 26.67 121.285 0)
+		(uuid "b9c00c37-7a1b-441c-becb-6e17434102bb")
+		(property "Reference" "#PWR023"
+			(at 99.06 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19185,8 +19161,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3.3V"
-			(at 36.195 121.285 90)
+		(property "Value" "+3V3"
+			(at 99.06 172.72 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19194,7 +19170,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 30.48 121.285 0)
+			(at 99.06 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19203,7 +19179,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 30.48 121.285 0)
+			(at 99.06 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19212,7 +19188,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 30.48 121.285 0)
+			(at 99.06 176.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19221,77 +19197,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "0448b82b-676a-4719-b641-cdda5207070a")
+			(uuid "3e563beb-4e87-4251-b4ad-92a5d2b3f687")
 		)
 		(instances
 			(project "harp_lick_detector_capactive"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
-					(reference "#PWR0100")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 17.78 178.435 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "c2068a18-cce8-4171-9b05-848f1da9e11e")
-		(property "Reference" "#PWR01"
-			(at 17.78 182.245 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 17.78 174.625 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 17.78 178.435 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 17.78 178.435 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 17.78 178.435 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "51d71559-d143-455d-adb0-14c14e434f7c")
-		)
-		(instances
-			(project "harp_lick_detector_capactive"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
-					(reference "#PWR01")
+					(reference "#PWR023")
 					(unit 1)
 				)
 			)
@@ -19299,7 +19210,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 272.415 85.09 180)
+		(at 273.05 85.09 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -19307,7 +19218,7 @@
 		(dnp no)
 		(uuid "c4ca9364-fd3a-41bd-91e1-dfd8388062de")
 		(property "Reference" "R57"
-			(at 276.86 81.28 0)
+			(at 277.495 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19316,7 +19227,7 @@
 			)
 		)
 		(property "Value" "10K"
-			(at 272.415 83.82 90)
+			(at 273.05 83.82 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19325,7 +19236,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 274.193 85.09 90)
+			(at 274.828 85.09 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19334,7 +19245,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.koaspeer.com/pdfs/SG73P.pdf"
-			(at 272.415 85.09 0)
+			(at 273.05 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19343,7 +19254,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 272.415 85.09 0)
+			(at 273.05 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19352,7 +19263,7 @@
 			)
 		)
 		(property "Link" "https://www.digikey.com/en/products/detail/koa-speer-electronics-inc/SG73P1EWTTP1002F/14316756"
-			(at 272.415 85.09 90)
+			(at 273.05 85.09 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19361,7 +19272,7 @@
 			)
 		)
 		(property "Manufacturer" "KOA Speer Electronics, Inc."
-			(at 272.415 85.09 0)
+			(at 273.05 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19370,7 +19281,7 @@
 			)
 		)
 		(property "Manufacturer Number" "SG73P1EWTTP1002F"
-			(at 272.415 85.09 0)
+			(at 273.05 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19379,7 +19290,7 @@
 			)
 		)
 		(property "Notes" ""
-			(at 272.415 85.09 0)
+			(at 273.05 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19397,6 +19308,71 @@
 			(project "harp_lick_detector_capactive"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
 					(reference "R57")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 48.26 142.24 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c5a27809-08ff-47a5-84ad-e221bff6cb95")
+		(property "Reference" "#PWR05"
+			(at 48.26 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 48.26 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 48.26 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 48.26 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 48.26 142.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c0eafa16-a9b6-4764-a988-325115fac49a")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
+					(reference "#PWR05")
 					(unit 1)
 				)
 			)
@@ -20509,7 +20485,7 @@
 	)
 	(symbol
 		(lib_id "kicad_component_library:ECS-TXO-2016")
-		(at 149.225 110.49 0)
+		(at 148.59 110.49 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -20517,7 +20493,7 @@
 		(dnp no)
 		(uuid "dec78cbf-6b6c-4935-8cf5-5e9048bd037e")
 		(property "Reference" "X1"
-			(at 142.875 104.14 0)
+			(at 142.24 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20525,7 +20501,7 @@
 			)
 		)
 		(property "Value" "ECS-TXO-2016"
-			(at 156.845 104.14 0)
+			(at 156.21 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20534,7 +20510,7 @@
 			)
 		)
 		(property "Footprint" "Crystal:Crystal_SMD_2016-4Pin_2.0x1.6mm"
-			(at 149.225 110.49 0)
+			(at 148.59 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20543,7 +20519,7 @@
 			)
 		)
 		(property "Datasheet" "https://ecsxtal.com/store/pdf/ECS-TXO-2016.pdf"
-			(at 149.225 110.49 0)
+			(at 148.59 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20552,7 +20528,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 149.225 110.49 0)
+			(at 148.59 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20561,7 +20537,7 @@
 			)
 		)
 		(property "Link" "https://www.digikey.com/en/products/detail/ecs-inc/ECS-TXO-2016-33-120-TR/10244135"
-			(at 149.225 110.49 0)
+			(at 148.59 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20570,7 +20546,7 @@
 			)
 		)
 		(property "Manufacturer" "ECS Inc."
-			(at 149.225 110.49 0)
+			(at 148.59 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20579,7 +20555,7 @@
 			)
 		)
 		(property "Manufacturer Number" "ECS-TXO-2016-33-120-TR"
-			(at 149.225 110.49 0)
+			(at 148.59 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20588,7 +20564,7 @@
 			)
 		)
 		(property "Notes" "HCMOS"
-			(at 149.225 110.49 0)
+			(at 148.59 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20597,7 +20573,7 @@
 			)
 		)
 		(property "Tolerance" "±2.5ppm"
-			(at 149.225 110.49 0)
+			(at 148.59 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20606,7 +20582,7 @@
 			)
 		)
 		(property "PCBWay Link" "https://www.pcbway.com/components/detail/ECSTXO201633120TR/348903/"
-			(at 149.225 110.49 0)
+			(at 148.59 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20957,17 +20933,16 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 30.48 118.745 90)
+		(lib_id "power:+3V3")
+		(at 73.66 143.51 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "eb775db9-5e86-4836-9ef6-699204a1e448")
-		(property "Reference" "#PWR07"
-			(at 36.83 118.745 0)
+		(uuid "e70b925b-aa75-4aea-85c0-0ac515a04892")
+		(property "Reference" "#PWR017"
+			(at 73.66 147.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20975,17 +20950,16 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
-			(at 34.29 118.7449 90)
+		(property "Value" "+3V3"
+			(at 73.66 139.7 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify right)
 			)
 		)
 		(property "Footprint" ""
-			(at 30.48 118.745 0)
+			(at 73.66 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20994,7 +20968,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 30.48 118.745 0)
+			(at 73.66 143.51 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21003,7 +20977,74 @@
 			)
 		)
 		(property "Description" ""
-			(at 30.48 118.745 0)
+			(at 73.66 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fe650bf1-781b-4a33-b8cf-76f96f252234")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
+					(reference "#PWR017")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 30.48 119.38 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "eb775db9-5e86-4836-9ef6-699204a1e448")
+		(property "Reference" "#PWR07"
+			(at 36.83 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 34.29 119.3799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" ""
+			(at 30.48 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 30.48 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 30.48 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21362,71 +21403,6 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 149.225 100.965 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "f948f81b-2015-4c78-800f-3155bb53229e")
-		(property "Reference" "#PWR0132"
-			(at 149.225 104.775 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 149.225 97.155 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 149.225 100.965 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 149.225 100.965 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 149.225 100.965 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "7454e795-149e-4d21-b40f-10cce94f308c")
-		)
-		(instances
-			(project "harp_lick_detector_capactive"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
-					(reference "#PWR0132")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 17.78 191.135 0)
 		(unit 1)
@@ -21559,7 +21535,7 @@
 	)
 	(symbol
 		(lib_id "Switch:SW_DIP_x02")
-		(at 269.875 100.965 270)
+		(at 270.51 101.6 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -21567,7 +21543,7 @@
 		(dnp no)
 		(uuid "fd73ad05-8e92-42ea-a0d3-defa0fee08aa")
 		(property "Reference" "SW2"
-			(at 273.05 93.98 90)
+			(at 273.685 94.615 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21576,7 +21552,7 @@
 			)
 		)
 		(property "Value" "SW_DIP_x02"
-			(at 276.86 102.235 90)
+			(at 277.495 102.87 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21586,7 +21562,7 @@
 			)
 		)
 		(property "Footprint" "Button_Switch_SMD:SW_DIP_SPSTx02_Slide_9.78x7.26mm_W8.61mm_P2.54mm"
-			(at 269.875 100.965 0)
+			(at 270.51 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21595,7 +21571,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.ctscorp.com/Files/DataSheets/Switches/DIP-Switches/CTS-Switches-DIP-204-Series-Datasheet.pdf"
-			(at 269.875 100.965 0)
+			(at 270.51 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21604,7 +21580,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 269.875 100.965 0)
+			(at 270.51 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21613,7 +21589,7 @@
 			)
 		)
 		(property "Manufacturer Number" "204-2ST"
-			(at 269.875 100.965 90)
+			(at 270.51 101.6 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21622,7 +21598,7 @@
 			)
 		)
 		(property "Vendor" "Digikey"
-			(at 269.875 100.965 90)
+			(at 270.51 101.6 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21631,7 +21607,7 @@
 			)
 		)
 		(property "Link" "https://www.digikey.com/en/products/detail/cts-electrocomponents/204-2ST/267298"
-			(at 269.875 100.965 90)
+			(at 270.51 101.6 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21640,7 +21616,7 @@
 			)
 		)
 		(property "Notes" "Washable (includes top tape)."
-			(at 269.875 100.965 90)
+			(at 270.51 101.6 90)
 			(effects
 				(font
 					(size 1.27 1.27)

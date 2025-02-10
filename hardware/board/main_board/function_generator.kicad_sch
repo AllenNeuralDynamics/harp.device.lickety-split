@@ -7,7 +7,7 @@
 	(title_block
 		(title "Lickety Split Capacitive Lick Detector Main Board")
 		(date "2023-09-01")
-		(rev "0.10")
+		(rev "1.0.0")
 		(company "The Allen Institute for Neural Dynamics")
 	)
 	(lib_symbols

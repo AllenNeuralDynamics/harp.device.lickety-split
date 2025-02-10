@@ -7,10 +7,130 @@
 	(title_block
 		(title "Lickety Split Capacitive Lick Detector Main Board")
 		(date "2023-09-01")
-		(rev "0.10")
+		(rev "1.0.0")
 		(company "The Allen Institute for Neural Dynamics")
 	)
 	(lib_symbols
+		(symbol "+5V_1"
+			(power)
+			(pin_numbers hide)
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "#PWR"
+				(at 0 -3.81 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Value" "+5V"
+				(at 0 3.556 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Power symbol creates a global label with name \"+5V\""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "global power"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "+5V_1_0_1"
+				(polyline
+					(pts
+						(xy -0.762 1.27) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 0) (xy 0 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0 2.54) (xy 0.762 1.27)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "+5V_1_1_1"
+				(pin power_in line
+					(at 0 0 90)
+					(length 0)
+					(name "~"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+		)
 		(symbol "Connector:Conn_Coaxial"
 			(pin_names
 				(offset 1.016) hide)
@@ -802,7 +922,7 @@
 				)
 			)
 		)
-		(symbol "power:+3.3V"
+		(symbol "power:+3V3"
 			(power)
 			(pin_names
 				(offset 0)
@@ -819,7 +939,7 @@
 					(hide yes)
 				)
 			)
-			(property "Value" "+3.3V"
+			(property "Value" "+3V3"
 				(at 0 3.556 0)
 				(effects
 					(font
@@ -845,7 +965,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(property "Description" "Power symbol creates a global label with name \"+3V3\""
 				(at 0 0 0)
 				(effects
 					(font
@@ -854,7 +974,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "global power"
+			(property "ki_keywords" "power-flag"
 				(at 0 0 0)
 				(effects
 					(font
@@ -863,7 +983,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "+3.3V_0_1"
+			(symbol "+3V3_0_1"
 				(polyline
 					(pts
 						(xy -0.762 1.27) (xy 0 2.54)
@@ -901,11 +1021,11 @@
 					)
 				)
 			)
-			(symbol "+3.3V_1_1"
+			(symbol "+3V3_1_1"
 				(pin power_in line
 					(at 0 0 90)
 					(length 0) hide
-					(name "+3.3V"
+					(name "+3V3"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1140,13 +1260,13 @@
 		)
 	)
 	(junction
-		(at 127.635 91.44)
+		(at 129.54 91.44)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7b00cbc2-e76c-4d40-a450-bc38c0fc0e03")
 	)
 	(junction
-		(at 161.29 91.44)
+		(at 162.56 91.44)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "ff5cea0c-2e4f-43bf-b269-e60edf925068")
@@ -1163,7 +1283,7 @@
 	)
 	(wire
 		(pts
-			(xy 127.635 88.9) (xy 127.635 91.44)
+			(xy 129.54 88.9) (xy 129.54 91.44)
 		)
 		(stroke
 			(width 0)
@@ -1173,7 +1293,7 @@
 	)
 	(wire
 		(pts
-			(xy 138.43 77.47) (xy 138.43 78.74)
+			(xy 139.7 77.47) (xy 139.7 78.74)
 		)
 		(stroke
 			(width 0)
@@ -1183,7 +1303,7 @@
 	)
 	(wire
 		(pts
-			(xy 127.635 91.44) (xy 127.635 93.98)
+			(xy 129.54 91.44) (xy 129.54 93.98)
 		)
 		(stroke
 			(width 0)
@@ -1193,7 +1313,7 @@
 	)
 	(wire
 		(pts
-			(xy 141.605 182.88) (xy 141.605 184.15)
+			(xy 142.24 182.88) (xy 142.24 184.15)
 		)
 		(stroke
 			(width 0)
@@ -1203,7 +1323,7 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 91.44) (xy 163.195 91.44)
+			(xy 162.56 91.44) (xy 165.1 91.44)
 		)
 		(stroke
 			(width 0)
@@ -1213,7 +1333,7 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 93.98) (xy 153.67 93.98)
+			(xy 152.4 93.98) (xy 154.94 93.98)
 		)
 		(stroke
 			(width 0)
@@ -1223,7 +1343,7 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 91.44) (xy 161.29 93.98)
+			(xy 162.56 91.44) (xy 162.56 93.98)
 		)
 		(stroke
 			(width 0)
@@ -1233,7 +1353,7 @@
 	)
 	(wire
 		(pts
-			(xy 123.825 91.44) (xy 127.635 91.44)
+			(xy 125.73 91.44) (xy 129.54 91.44)
 		)
 		(stroke
 			(width 0)
@@ -1243,7 +1363,7 @@
 	)
 	(wire
 		(pts
-			(xy 140.97 104.14) (xy 140.97 106.045)
+			(xy 142.24 104.14) (xy 142.24 105.41)
 		)
 		(stroke
 			(width 0)
@@ -1263,7 +1383,7 @@
 	)
 	(wire
 		(pts
-			(xy 130.81 88.9) (xy 127.635 88.9)
+			(xy 132.08 88.9) (xy 129.54 88.9)
 		)
 		(stroke
 			(width 0)
@@ -1273,7 +1393,7 @@
 	)
 	(wire
 		(pts
-			(xy 151.13 88.9) (xy 153.67 88.9)
+			(xy 152.4 88.9) (xy 154.94 88.9)
 		)
 		(stroke
 			(width 0)
@@ -1293,7 +1413,7 @@
 	)
 	(wire
 		(pts
-			(xy 129.54 99.06) (xy 130.81 99.06)
+			(xy 130.81 99.06) (xy 132.08 99.06)
 		)
 		(stroke
 			(width 0)
@@ -1303,7 +1423,7 @@
 	)
 	(wire
 		(pts
-			(xy 141.605 173.99) (xy 141.605 175.26)
+			(xy 142.24 173.99) (xy 142.24 175.26)
 		)
 		(stroke
 			(width 0)
@@ -1313,7 +1433,7 @@
 	)
 	(wire
 		(pts
-			(xy 127.635 93.98) (xy 130.81 93.98)
+			(xy 129.54 93.98) (xy 132.08 93.98)
 		)
 		(stroke
 			(width 0)
@@ -1323,7 +1443,7 @@
 	)
 	(wire
 		(pts
-			(xy 168.275 96.52) (xy 168.275 97.79)
+			(xy 170.18 96.52) (xy 170.18 97.79)
 		)
 		(stroke
 			(width 0)
@@ -1343,7 +1463,7 @@
 	)
 	(wire
 		(pts
-			(xy 143.51 77.47) (xy 143.51 78.74)
+			(xy 144.78 77.47) (xy 144.78 78.74)
 		)
 		(stroke
 			(width 0)
@@ -1373,7 +1493,7 @@
 	)
 	(wire
 		(pts
-			(xy 161.29 88.9) (xy 161.29 91.44)
+			(xy 162.56 88.9) (xy 162.56 91.44)
 		)
 		(stroke
 			(width 0)
@@ -1395,7 +1515,7 @@
 	)
 	(hierarchical_label "IN"
 		(shape input)
-		(at 123.825 91.44 180)
+		(at 125.73 91.44 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -1406,34 +1526,16 @@
 		(uuid "10a9ee4c-ac3d-471d-8a4f-ab6baf107666")
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 141.605 179.07 0)
+		(lib_id "power:+3V3")
+		(at 133.35 173.99 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "1183bffd-19a1-4ae4-a4be-ad18f233afc4")
-		(property "Reference" "C53"
-			(at 142.875 176.53 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1uF"
-			(at 142.875 181.61 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 142.5702 182.88 0)
+		(uuid "0ed15702-9f5a-4511-a454-9b6b353c5a5b")
+		(property "Reference" "#PWR0107"
+			(at 133.35 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1441,8 +1543,25 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM155R6YA105KE11-01.pdf"
-			(at 141.605 179.07 0)
+		(property "Value" "+3V3"
+			(at 133.35 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 133.35 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 133.35 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1451,7 +1570,73 @@
 			)
 		)
 		(property "Description" ""
-			(at 141.605 179.07 0)
+			(at 133.35 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "fec0a9ad-b74b-4276-b2d0-5fc9a220f333")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/36c9ca84-29d9-443b-8905-497529bf4302"
+					(reference "#PWR0107")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 142.24 179.07 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1183bffd-19a1-4ae4-a4be-ad18f233afc4")
+		(property "Reference" "C53"
+			(at 143.51 176.53 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1uF"
+			(at 143.51 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 143.2052 182.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM155R6YA105KE11-01.pdf"
+			(at 142.24 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 142.24 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1460,7 +1645,7 @@
 			)
 		)
 		(property "Notes" "must not be polarized"
-			(at 141.605 179.07 0)
+			(at 142.24 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1469,7 +1654,7 @@
 			)
 		)
 		(property "Link" "https://www.digikey.com/en/products/detail/murata-electronics/GRM155R6YA105KE11J/4905163"
-			(at 141.605 179.07 0)
+			(at 142.24 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1478,7 +1663,7 @@
 			)
 		)
 		(property "Manufacturer Number" "GRM155R6YA105KE11J"
-			(at 141.605 179.07 0)
+			(at 142.24 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1487,7 +1672,7 @@
 			)
 		)
 		(property "Manufacturer" "Murata Electronics"
-			(at 141.605 179.07 0)
+			(at 142.24 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1496,7 +1681,7 @@
 			)
 		)
 		(property "Rated Voltage" "35V"
-			(at 141.605 179.07 0)
+			(at 142.24 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1505,7 +1690,7 @@
 			)
 		)
 		(property "Temperature Coefficient" "X5R"
-			(at 141.605 179.07 0)
+			(at 142.24 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1514,7 +1699,7 @@
 			)
 		)
 		(property "PCBWay Link" ""
-			(at 141.605 179.07 0)
+			(at 142.24 179.07 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1532,6 +1717,71 @@
 			(project "harp_lick_detector_capactive"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/36c9ca84-29d9-443b-8905-497529bf4302"
 					(reference "C53")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 130.81 99.06 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "37bf2dbc-4492-4d1c-a693-50b8ab9043e6")
+		(property "Reference" "#PWR080"
+			(at 134.62 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 124.46 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 130.81 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 130.81 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 130.81 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c6573d80-8c09-4437-ab06-66e7008f5001")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/36c9ca84-29d9-443b-8905-497529bf4302"
+					(reference "#PWR080")
 					(unit 1)
 				)
 			)
@@ -1670,7 +1920,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 140.97 106.045 0)
+		(at 142.24 105.41 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1679,7 +1929,7 @@
 		(fields_autoplaced yes)
 		(uuid "52e6e8e2-1cee-49fd-9015-1d0e0d99de4a")
 		(property "Reference" "#PWR099"
-			(at 140.97 112.395 0)
+			(at 142.24 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1688,7 +1938,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 140.97 111.125 0)
+			(at 142.24 110.49 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1696,7 +1946,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 140.97 106.045 0)
+			(at 142.24 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1705,7 +1955,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 140.97 106.045 0)
+			(at 142.24 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1714,7 +1964,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 140.97 106.045 0)
+			(at 142.24 105.41 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1729,6 +1979,71 @@
 			(project "harp_lick_detector_capactive"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/36c9ca84-29d9-443b-8905-497529bf4302"
 					(reference "#PWR099")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 139.7 77.47 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "5b6c9e13-3e23-43b3-b86e-b2ef0f993bb1")
+		(property "Reference" "#PWR097"
+			(at 139.7 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 139.7 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 139.7 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 139.7 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 139.7 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "d441645c-19f1-4dd7-8c77-b9bbff37cab6")
+		)
+		(instances
+			(project "harp_lick_detector_capactive"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/36c9ca84-29d9-443b-8905-497529bf4302"
+					(reference "#PWR097")
 					(unit 1)
 				)
 			)
@@ -1801,16 +2116,16 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 129.54 99.06 90)
+		(lib_id "power:+3V3")
+		(at 142.24 173.99 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "6649cd8b-a68c-44f0-ae86-0328bc68d623")
-		(property "Reference" "#PWR080"
-			(at 133.35 99.06 0)
+		(uuid "5ed21654-c2de-472b-a372-291cdcc7d8f4")
+		(property "Reference" "#PWR0102"
+			(at 142.24 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1818,8 +2133,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "+3.3V"
-			(at 123.825 99.06 90)
+		(property "Value" "+3V3"
+			(at 142.24 170.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1827,7 +2142,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 129.54 99.06 0)
+			(at 142.24 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1836,7 +2151,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 129.54 99.06 0)
+			(at 142.24 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1845,7 +2160,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 129.54 99.06 0)
+			(at 142.24 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1854,29 +2169,29 @@
 			)
 		)
 		(pin "1"
-			(uuid "5f0b44c5-b114-48b9-86a6-aa8a873fe172")
+			(uuid "e0bdfe70-28a2-4da6-b829-240c1336528f")
 		)
 		(instances
 			(project "harp_lick_detector_capactive"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/36c9ca84-29d9-443b-8905-497529bf4302"
-					(reference "#PWR080")
+					(reference "#PWR0102")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 141.605 184.15 0)
+		(lib_name "+5V_1")
+		(lib_id "power:+5V")
+		(at 144.78 77.47 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "745056b4-ecda-4cae-8343-f04e38f14fd7")
-		(property "Reference" "#PWR081"
-			(at 141.605 190.5 0)
+		(uuid "69051997-aa8f-4b81-9e6f-5b90cab731c6")
+		(property "Reference" "#PWR098"
+			(at 144.78 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1884,8 +2199,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
-			(at 141.605 189.23 0)
+		(property "Value" "+5V"
+			(at 144.78 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1893,7 +2208,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 141.605 184.15 0)
+			(at 144.78 77.47 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1902,7 +2217,73 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 141.605 184.15 0)
+			(at 144.78 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
+			(at 144.78 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "8b4fa781-7b39-4f0b-b964-24e9eaf7de9d")
+		)
+		(instances
+			(project ""
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/36c9ca84-29d9-443b-8905-497529bf4302"
+					(reference "#PWR098")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 142.24 184.15 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "745056b4-ecda-4cae-8343-f04e38f14fd7")
+		(property "Reference" "#PWR081"
+			(at 142.24 190.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 142.24 189.23 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 142.24 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 142.24 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1911,7 +2292,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 141.605 184.15 0)
+			(at 142.24 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2055,203 +2436,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 138.43 77.47 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "8a3a9d42-2bb7-4fb8-965f-1cf6f9dd0fb3")
-		(property "Reference" "#PWR097"
-			(at 138.43 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 138.43 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 138.43 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 138.43 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 138.43 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "ae5671e9-329b-44ed-b43f-21de196f6e07")
-		)
-		(instances
-			(project "harp_lick_detector_capactive"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/36c9ca84-29d9-443b-8905-497529bf4302"
-					(reference "#PWR097")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 143.51 77.47 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "8db0efbb-f241-44b5-b24a-4b1f21eebb0c")
-		(property "Reference" "#PWR098"
-			(at 143.51 81.28 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+5V"
-			(at 143.51 73.66 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 143.51 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 143.51 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 143.51 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "786153e4-305d-47a2-a365-5899d95c4229")
-		)
-		(instances
-			(project "harp_lick_detector_capactive"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/36c9ca84-29d9-443b-8905-497529bf4302"
-					(reference "#PWR098")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+3.3V")
-		(at 141.605 173.99 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "9dc1d99b-3214-4c98-ba73-8b1a0c0c9c5c")
-		(property "Reference" "#PWR0102"
-			(at 141.605 177.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 141.605 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 141.605 173.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 141.605 173.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 141.605 173.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "95c8bcd4-35cb-478d-a7b7-f5867286fa26")
-		)
-		(instances
-			(project "harp_lick_detector_capactive"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/36c9ca84-29d9-443b-8905-497529bf4302"
-					(reference "#PWR0102")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Logic_LevelTranslator:74LVCH2T45DC")
-		(at 140.97 91.44 0)
+		(at 142.24 91.44 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2260,7 +2446,7 @@
 		(fields_autoplaced yes)
 		(uuid "a0060142-1063-4c60-9eea-b0358be5f6a6")
 		(property "Reference" "U1"
-			(at 143.1641 104.14 0)
+			(at 144.4341 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2269,7 +2455,7 @@
 			)
 		)
 		(property "Value" "74LVCH2T45DC"
-			(at 143.1641 106.68 0)
+			(at 144.4341 106.68 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2278,7 +2464,7 @@
 			)
 		)
 		(property "Footprint" "Package_SO:VSSOP-8_2.3x2mm_P0.5mm"
-			(at 140.97 113.03 0)
+			(at 142.24 113.03 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2287,7 +2473,7 @@
 			)
 		)
 		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74LVC_LVCH2T45.pdf"
-			(at 147.32 97.79 0)
+			(at 148.59 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2296,7 +2482,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 140.97 91.44 0)
+			(at 142.24 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2305,7 +2491,7 @@
 			)
 		)
 		(property "Link" "https://www.digikey.com/en/products/detail/nexperia-usa-inc/74LVCH2T45DC-125/2530613"
-			(at 140.97 91.44 0)
+			(at 142.24 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2314,7 +2500,7 @@
 			)
 		)
 		(property "Manufacturer" "Nexperia USA Inc."
-			(at 140.97 91.44 0)
+			(at 142.24 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2323,7 +2509,7 @@
 			)
 		)
 		(property "Manufacturer Number" "74LVCH2T45DC,125"
-			(at 140.97 91.44 0)
+			(at 142.24 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2366,7 +2552,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 168.275 97.79 0)
+		(at 170.18 97.79 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2375,7 +2561,7 @@
 		(fields_autoplaced yes)
 		(uuid "a829fe6a-e5a0-4412-9c04-1cd925521fe6")
 		(property "Reference" "#PWR084"
-			(at 168.275 104.14 0)
+			(at 170.18 104.14 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2384,7 +2570,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 168.275 102.87 0)
+			(at 170.18 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2392,7 +2578,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 168.275 97.79 0)
+			(at 170.18 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2401,7 +2587,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 168.275 97.79 0)
+			(at 170.18 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2410,7 +2596,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 168.275 97.79 0)
+			(at 170.18 97.79 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2564,7 +2750,7 @@
 	)
 	(symbol
 		(lib_id "Connector:Conn_Coaxial")
-		(at 168.275 91.44 0)
+		(at 170.18 91.44 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2573,7 +2759,7 @@
 		(fields_autoplaced yes)
 		(uuid "aacde0de-928a-4713-bcb6-bfc911cb12fd")
 		(property "Reference" "J7"
-			(at 171.45 90.4632 0)
+			(at 173.355 90.4632 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2582,7 +2768,7 @@
 			)
 		)
 		(property "Value" "Conn_Coaxial"
-			(at 171.45 93.0032 0)
+			(at 173.355 93.0032 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2591,7 +2777,7 @@
 			)
 		)
 		(property "Footprint" "kicad_component_library:SMA_TE_Connectivity_CONSMA002-SMD-G-T_Horizontal"
-			(at 168.275 91.44 0)
+			(at 170.18 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2600,7 +2786,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 168.275 91.44 0)
+			(at 170.18 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2609,7 +2795,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 168.275 91.44 0)
+			(at 170.18 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2618,7 +2804,7 @@
 			)
 		)
 		(property "Link" "https://www.digikey.com/en/products/detail/te-connectivity-linx/CONSMA002-SMD-G-T/10524518"
-			(at 168.275 91.44 0)
+			(at 170.18 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2627,7 +2813,7 @@
 			)
 		)
 		(property "Manufacturer" " TE Connectivity Linx"
-			(at 168.275 91.44 0)
+			(at 170.18 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2636,7 +2822,7 @@
 			)
 		)
 		(property "Manufacturer Number" "CONSMA002-SMD-G-T"
-			(at 168.275 91.44 0)
+			(at 170.18 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2792,7 +2978,7 @@
 	)
 	(symbol
 		(lib_id "Device:R")
-		(at 157.48 93.98 90)
+		(at 158.75 93.98 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2800,7 +2986,7 @@
 		(dnp no)
 		(uuid "d918b89b-32a0-4247-9df8-9a4c22b5b4ca")
 		(property "Reference" "R31"
-			(at 157.48 96.52 90)
+			(at 158.75 96.52 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2808,7 +2994,7 @@
 			)
 		)
 		(property "Value" "100"
-			(at 157.48 93.98 90)
+			(at 158.75 93.98 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2816,7 +3002,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 157.48 95.758 90)
+			(at 158.75 95.758 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2825,7 +3011,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-SR_20105_RoHS_L_10.pdf"
-			(at 157.48 93.98 0)
+			(at 158.75 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2834,7 +3020,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 157.48 93.98 0)
+			(at 158.75 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2843,7 +3029,7 @@
 			)
 		)
 		(property "Link" "https://www.digikey.com/en/products/detail/yageo/SR0603FR-7T100RL/9373096"
-			(at 157.48 93.98 0)
+			(at 158.75 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2852,7 +3038,7 @@
 			)
 		)
 		(property "Manufacturer" "Yageo"
-			(at 157.48 93.98 0)
+			(at 158.75 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2861,7 +3047,7 @@
 			)
 		)
 		(property "Manufacturer Number" "SR0603FR-7T100RL"
-			(at 157.48 93.98 0)
+			(at 158.75 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2870,7 +3056,7 @@
 			)
 		)
 		(property "Notes" "1/4W"
-			(at 157.48 93.98 0)
+			(at 158.75 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2879,7 +3065,7 @@
 			)
 		)
 		(property "Tolerance" "1%"
-			(at 157.48 93.98 0)
+			(at 158.75 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3035,73 +3221,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:+3.3V")
-		(at 133.35 173.99 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "f53c60e8-b999-4516-a218-557bc607d281")
-		(property "Reference" "#PWR0112"
-			(at 133.35 177.8 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+3.3V"
-			(at 133.35 170.18 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 133.35 173.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 133.35 173.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 133.35 173.99 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "2237678a-1392-4cab-8a12-005c0230a5a1")
-		)
-		(instances
-			(project "harp_lick_detector_capactive"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/36c9ca84-29d9-443b-8905-497529bf4302"
-					(reference "#PWR0112")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:R")
-		(at 157.48 88.9 90)
+		(at 158.75 88.9 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3109,7 +3230,7 @@
 		(dnp no)
 		(uuid "f887f62c-e759-4337-af68-2ee3f7124825")
 		(property "Reference" "R30"
-			(at 157.48 86.36 90)
+			(at 158.75 86.36 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3117,7 +3238,7 @@
 			)
 		)
 		(property "Value" "100"
-			(at 157.48 88.9 90)
+			(at 158.75 88.9 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3125,7 +3246,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric_Pad0.98x0.95mm_HandSolder"
-			(at 157.48 90.678 90)
+			(at 158.75 90.678 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3134,7 +3255,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/rchip/PYu-SR_20105_RoHS_L_10.pdf"
-			(at 157.48 88.9 0)
+			(at 158.75 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3143,7 +3264,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 157.48 88.9 0)
+			(at 158.75 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3152,7 +3273,7 @@
 			)
 		)
 		(property "Link" "https://www.digikey.com/en/products/detail/yageo/SR0603FR-7T100RL/9373096"
-			(at 157.48 88.9 0)
+			(at 158.75 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3161,7 +3282,7 @@
 			)
 		)
 		(property "Manufacturer" "Yageo"
-			(at 157.48 88.9 0)
+			(at 158.75 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3170,7 +3291,7 @@
 			)
 		)
 		(property "Manufacturer Number" "SR0603FR-7T100RL"
-			(at 157.48 88.9 0)
+			(at 158.75 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3179,7 +3300,7 @@
 			)
 		)
 		(property "Notes" "1/4W"
-			(at 157.48 88.9 0)
+			(at 158.75 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3188,7 +3309,7 @@
 			)
 		)
 		(property "Tolerance" "1%"
-			(at 157.48 88.9 0)
+			(at 158.75 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)

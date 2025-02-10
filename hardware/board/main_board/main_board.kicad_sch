@@ -7,23 +7,13 @@
 	(title_block
 		(title "Lickety Split Capacitive Lick Detector Main Board")
 		(date "2023-09-01")
-		(rev "0.10")
+		(rev "1.0.0")
 		(company "The Allen Institute for Neural Dynamics")
 	)
 	(lib_symbols)
 	(wire
 		(pts
-			(xy 132.715 91.44) (xy 147.32 91.44)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "146e9995-4d99-4f1b-8385-8949537123de")
-	)
-	(wire
-		(pts
-			(xy 167.64 94.615) (xy 183.515 94.615)
+			(xy 165.1 92.71) (xy 182.88 92.71)
 		)
 		(stroke
 			(width 0)
@@ -33,17 +23,7 @@
 	)
 	(wire
 		(pts
-			(xy 209.55 80.645) (xy 221.615 80.645)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3ea93f64-c847-48c8-b764-112419df4b91")
-	)
-	(wire
-		(pts
-			(xy 167.64 92.075) (xy 183.515 92.075)
+			(xy 165.1 90.17) (xy 182.88 90.17)
 		)
 		(stroke
 			(width 0)
@@ -53,7 +33,27 @@
 	)
 	(wire
 		(pts
-			(xy 132.715 73.66) (xy 183.515 73.66)
+			(xy 208.28 81.28) (xy 220.98 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "afd109f0-e52d-48b2-9ac9-8263b7379ebb")
+	)
+	(wire
+		(pts
+			(xy 144.78 93.98) (xy 133.35 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c1b5e8d1-c574-4c71-b04a-2fd8a9dc7fcb")
+	)
+	(wire
+		(pts
+			(xy 133.35 73.66) (xy 182.88 73.66)
 		)
 		(stroke
 			(width 0)
@@ -63,7 +63,7 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 89.535) (xy 183.515 89.535)
+			(xy 165.1 87.63) (xy 182.88 87.63)
 		)
 		(stroke
 			(width 0)
@@ -73,7 +73,7 @@
 	)
 	(wire
 		(pts
-			(xy 132.715 76.2) (xy 183.515 76.2)
+			(xy 133.35 76.2) (xy 182.88 76.2)
 		)
 		(stroke
 			(width 0)
@@ -95,7 +95,7 @@
 		(uuid "31c5d367-ec4c-47a0-994b-0527556999c4")
 	)
 	(sheet
-		(at 221.615 76.835)
+		(at 220.98 76.835)
 		(size 13.97 14.605)
 		(fields_autoplaced yes)
 		(stroke
@@ -107,7 +107,7 @@
 		)
 		(uuid "36c9ca84-29d9-443b-8905-497529bf4302")
 		(property "Sheetname" "TTL Out"
-			(at 221.615 76.1234 0)
+			(at 220.98 76.1234 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -116,7 +116,7 @@
 			)
 		)
 		(property "Sheetfile" "sma_ttl_out.kicad_sch"
-			(at 221.615 92.0246 0)
+			(at 220.98 92.0246 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -126,7 +126,7 @@
 			)
 		)
 		(pin "IN" input
-			(at 221.615 80.645 180)
+			(at 220.98 81.28 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -144,7 +144,7 @@
 		)
 	)
 	(sheet
-		(at 108.585 70.485)
+		(at 109.22 70.485)
 		(size 24.13 27.305)
 		(fields_autoplaced yes)
 		(stroke
@@ -156,7 +156,7 @@
 		)
 		(uuid "4df88917-387d-4e6a-a0c2-9efea845a08d")
 		(property "Sheetname" "100KHz Sine Wave"
-			(at 108.585 69.7734 0)
+			(at 109.22 69.7734 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -165,7 +165,7 @@
 			)
 		)
 		(property "Sheetfile" "function_generator.kicad_sch"
-			(at 108.585 98.3746 0)
+			(at 109.22 98.3746 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -175,7 +175,7 @@
 			)
 		)
 		(pin "VSINE" input
-			(at 132.715 91.44 0)
+			(at 133.35 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -185,7 +185,7 @@
 			(uuid "174b2624-3254-4a43-b64a-0fbf38550173")
 		)
 		(pin "125KHZ_IN" input
-			(at 132.715 73.66 0)
+			(at 133.35 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -195,7 +195,7 @@
 			(uuid "a90335e9-bbfb-4a71-8a18-b892db622ff6")
 		)
 		(pin "100KHZ_IN" input
-			(at 132.715 76.2 0)
+			(at 133.35 76.2 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -213,8 +213,8 @@
 		)
 	)
 	(sheet
-		(at 147.32 81.28)
-		(size 20.32 16.51)
+		(at 144.78 80.264)
+		(size 20.32 17.272)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -225,7 +225,7 @@
 		)
 		(uuid "8b2c79bc-d662-4528-ac6e-e4616ba8e8ad")
 		(property "Sheetname" "Lick Detection Analog Front End"
-			(at 147.32 80.5684 0)
+			(at 144.78 79.5524 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -234,7 +234,7 @@
 			)
 		)
 		(property "Sheetfile" "lick_detection_afe.kicad_sch"
-			(at 147.32 98.3746 0)
+			(at 144.78 98.1206 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -244,7 +244,7 @@
 			)
 		)
 		(pin "VSINE" input
-			(at 147.32 91.44 180)
+			(at 144.78 93.98 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -254,7 +254,7 @@
 			(uuid "1e80ca4f-8ae9-4572-93cf-e73646f8fb0e")
 		)
 		(pin "ADC_SCK" input
-			(at 167.64 89.535 0)
+			(at 165.1 87.63 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -264,7 +264,7 @@
 			(uuid "689a19b9-fbad-4e91-a03b-59475094bdb1")
 		)
 		(pin "ADC_CS" input
-			(at 167.64 94.615 0)
+			(at 165.1 92.71 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -274,7 +274,7 @@
 			(uuid "c57c2f3d-05a4-4a47-8ade-a2596d80efba")
 		)
 		(pin "ADC_POCI" input
-			(at 167.64 92.075 0)
+			(at 165.1 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -331,8 +331,8 @@
 		)
 	)
 	(sheet
-		(at 183.515 71.755)
-		(size 26.035 26.035)
+		(at 182.88 71.755)
+		(size 25.4 26.035)
 		(fields_autoplaced yes)
 		(stroke
 			(width 0.1524)
@@ -343,7 +343,7 @@
 		)
 		(uuid "eb8325ca-9747-4676-8e08-1fb825a7219f")
 		(property "Sheetname" "Harp Core RP2040 + Isolated USB"
-			(at 183.515 71.0434 0)
+			(at 182.88 71.0434 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -352,7 +352,7 @@
 			)
 		)
 		(property "Sheetfile" "isolated_usb_rp2040.kicad_sch"
-			(at 183.515 98.3746 0)
+			(at 182.88 98.3746 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -362,7 +362,7 @@
 			)
 		)
 		(pin "TTL_OUT" input
-			(at 209.55 80.645 0)
+			(at 208.28 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -372,7 +372,7 @@
 			(uuid "2bd1f224-709c-4d01-a2d1-3b0cb7b5d51e")
 		)
 		(pin "PIO_SCK" input
-			(at 183.515 89.535 180)
+			(at 182.88 87.63 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -382,7 +382,7 @@
 			(uuid "7e70b3da-6fa4-4d63-9435-b599b4019b4c")
 		)
 		(pin "PIO_POCI" input
-			(at 183.515 92.075 180)
+			(at 182.88 90.17 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -392,7 +392,7 @@
 			(uuid "4a4ecc44-08c6-4a71-a5a0-bb5e1939b357")
 		)
 		(pin "PIO_CS" input
-			(at 183.515 94.615 180)
+			(at 182.88 92.71 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -402,7 +402,7 @@
 			(uuid "1578c60c-7ed3-4240-99ee-8df901b19c54")
 		)
 		(pin "100KHZ_OUT" input
-			(at 183.515 76.2 180)
+			(at 182.88 76.2 180)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -412,7 +412,7 @@
 			(uuid "6cdafcc6-12f6-4899-813b-dec93ee6e27f")
 		)
 		(pin "125KHZ_OUT" input
-			(at 183.515 73.66 180)
+			(at 182.88 73.66 180)
 			(effects
 				(font
 					(size 1.27 1.27)
