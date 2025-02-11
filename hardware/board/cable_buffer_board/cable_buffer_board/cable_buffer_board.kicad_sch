@@ -4,6 +4,10 @@
 	(generator_version "8.0")
 	(uuid "fd521de5-671a-4a62-83c7-decfc193cfe9")
 	(paper "A4")
+	(title_block
+		(title "Lickety Split Capacitive Lick Detector: Buffer Board")
+		(rev "1.0.0")
+	)
 	(lib_symbols
 		(symbol "Amplifier_Operational:LTC6269xMS8E"
 			(exclude_from_sim no)
@@ -2007,16 +2011,6 @@
 		)
 		(uuid "f0d49b4b-4977-4b99-a7a5-7d0a4dca278e")
 	)
-	(polyline
-		(pts
-			(xy 83.82 90.17) (xy 92.075 90.17)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f71f9630-5f4c-4585-b2a5-99491c1b3214")
-	)
 	(wire
 		(pts
 			(xy 139.7 92.71) (xy 139.7 96.52)
@@ -2211,17 +2205,6 @@
 		)
 		(uuid "aabcd7a7-695b-444b-879a-473b8378c3b3")
 	)
-	(text "x"
-		(exclude_from_sim no)
-		(at 82.804 91.186 0)
-		(effects
-			(font
-				(size 1.5 1.5)
-			)
-			(justify left bottom)
-		)
-		(uuid "b2762a24-ef1b-447a-b295-cc7599a6f528")
-	)
 	(text "Note: R3 adds series resistance to increase opamp stability when driving the triax cable inner shield (capacitive load)."
 		(exclude_from_sim no)
 		(at 159.385 158.75 0)
@@ -2310,17 +2293,6 @@
 		)
 		(uuid "2f149d9f-8895-4dc2-afaf-f24b17da8d05")
 	)
-	(label "triax_core"
-		(at 111.125 87.63 0)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "429246cf-731c-4520-b26d-6a5a4d5e18b6")
-	)
 	(label "shield"
 		(at 120.65 92.71 180)
 		(fields_autoplaced yes)
@@ -2385,7 +2357,25 @@
 				(hide yes)
 			)
 		)
-		(property "Link" "https://www.digikey.com/en/products/detail/analog-devices-inc/LTC6269HDD-10-PBF/5253541"
+		(property "Link" "https://www.digikey.com/en/products/detail/analog-devices-inc/LTC6269IMS8E-PBF/5030347"
+			(at 147.955 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Analog Devices Inc."
+			(at 147.955 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Number" "LTC6269IMS8E#PBF"
 			(at 147.955 73.66 0)
 			(effects
 				(font
@@ -2891,7 +2881,25 @@
 				(hide yes)
 			)
 		)
-		(property "Link" "https://www.digikey.com/en/products/detail/analog-devices-inc/LTC6269HDD-10-PBF/5253541"
+		(property "Link" "https://www.digikey.com/en/products/detail/analog-devices-inc/LTC6269IMS8E-PBF/5030347"
+			(at 57.15 178.435 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Analog Devices Inc."
+			(at 57.15 178.435 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Number" "LTC6269IMS8E#PBF"
 			(at 57.15 178.435 0)
 			(effects
 				(font
@@ -4218,7 +4226,25 @@
 				(hide yes)
 			)
 		)
-		(property "Link" "https://www.digikey.com/en/products/detail/analog-devices-inc/LTC6269HDD-10-PBF/5253541"
+		(property "Link" "https://www.digikey.com/en/products/detail/analog-devices-inc/LTC6269IMS8E-PBF/5030347"
+			(at 147.955 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Analog Devices Inc."
+			(at 147.955 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Number" "LTC6269IMS8E#PBF"
 			(at 147.955 90.17 0)
 			(effects
 				(font

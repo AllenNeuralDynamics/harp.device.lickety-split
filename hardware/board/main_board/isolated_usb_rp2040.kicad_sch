@@ -5244,7 +5244,7 @@
 		(uuid "068b484a-0868-4af7-9df2-4654f05d1b1b")
 	)
 	(junction
-		(at 50.8 179.705)
+		(at 50.8 179.07)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "0fba5933-1c1f-4c6e-a8d9-af8ecbc7308a")
@@ -5292,13 +5292,13 @@
 		(uuid "266ed746-451f-413d-9dff-9f844ad9ed72")
 	)
 	(junction
-		(at 41.91 179.705)
+		(at 41.91 179.07)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "2d97884a-62eb-4afd-a4fa-c3f3f287165a")
 	)
 	(junction
-		(at 25.4 108.585)
+		(at 25.4 107.95)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "300eb1c3-e413-47bb-bc54-482129642d6c")
@@ -5394,7 +5394,7 @@
 		(uuid "7f823e67-93f9-4b38-b473-bb2ff8c688e0")
 	)
 	(junction
-		(at 41.91 189.865)
+		(at 41.91 189.23)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "7ff00952-78aa-4d2b-9dda-b21fd168da85")
@@ -5436,7 +5436,7 @@
 		(uuid "a994a4e6-a4d5-44e6-b383-4ecf1aba31dc")
 	)
 	(junction
-		(at 50.8 189.865)
+		(at 50.8 189.23)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "aa0e0c82-8475-432d-898f-236cb2cc1f55")
@@ -5600,7 +5600,7 @@
 		(uuid "60440a4a-6574-40f1-8c92-8855fecc469a")
 	)
 	(no_connect
-		(at 20.32 103.505)
+		(at 20.32 102.87)
 		(uuid "81957828-cc2c-4e2f-ae52-85e2131abd5b")
 	)
 	(no_connect
@@ -5620,7 +5620,7 @@
 		(uuid "91935027-4af0-40bb-a3e9-2fd273b83bde")
 	)
 	(no_connect
-		(at 30.48 106.045)
+		(at 30.48 105.41)
 		(uuid "936ecca7-3e17-4128-8e33-065682cd9452")
 	)
 	(no_connect
@@ -5681,7 +5681,7 @@
 	)
 	(wire
 		(pts
-			(xy 31.75 177.8) (xy 31.75 180.975)
+			(xy 31.75 177.165) (xy 31.75 180.34)
 		)
 		(stroke
 			(width 0)
@@ -5791,7 +5791,7 @@
 	)
 	(wire
 		(pts
-			(xy 25.4 107.315) (xy 25.4 108.585)
+			(xy 25.4 106.68) (xy 25.4 107.95)
 		)
 		(stroke
 			(width 0)
@@ -5801,7 +5801,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 179.705) (xy 50.8 179.705)
+			(xy 41.91 179.07) (xy 50.8 179.07)
 		)
 		(stroke
 			(width 0)
@@ -5901,7 +5901,7 @@
 	)
 	(wire
 		(pts
-			(xy 30.48 103.505) (xy 43.18 103.505)
+			(xy 30.48 102.87) (xy 43.18 102.87)
 		)
 		(stroke
 			(width 0)
@@ -5991,7 +5991,7 @@
 	)
 	(wire
 		(pts
-			(xy 19.05 108.585) (xy 19.05 106.045)
+			(xy 19.05 107.95) (xy 19.05 105.41)
 		)
 		(stroke
 			(width 0)
@@ -6331,7 +6331,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 189.865) (xy 41.91 191.135)
+			(xy 41.91 189.23) (xy 41.91 190.5)
 		)
 		(stroke
 			(width 0)
@@ -6341,7 +6341,7 @@
 	)
 	(wire
 		(pts
-			(xy 59.69 189.865) (xy 59.69 188.595)
+			(xy 59.69 189.23) (xy 59.69 187.96)
 		)
 		(stroke
 			(width 0)
@@ -6401,7 +6401,7 @@
 	)
 	(wire
 		(pts
-			(xy 19.05 108.585) (xy 25.4 108.585)
+			(xy 19.05 107.95) (xy 25.4 107.95)
 		)
 		(stroke
 			(width 0)
@@ -6541,7 +6541,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 179.705) (xy 59.69 179.705)
+			(xy 50.8 179.07) (xy 59.69 179.07)
 		)
 		(stroke
 			(width 0)
@@ -6641,7 +6641,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 180.975) (xy 50.8 179.705)
+			(xy 50.8 180.34) (xy 50.8 179.07)
 		)
 		(stroke
 			(width 0)
@@ -6721,7 +6721,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 188.595) (xy 41.91 189.865)
+			(xy 41.91 187.96) (xy 41.91 189.23)
 		)
 		(stroke
 			(width 0)
@@ -6911,7 +6911,7 @@
 	)
 	(wire
 		(pts
-			(xy 25.4 108.585) (xy 38.1 108.585)
+			(xy 25.4 107.95) (xy 38.1 107.95)
 		)
 		(stroke
 			(width 0)
@@ -6991,7 +6991,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 189.865) (xy 59.69 189.865)
+			(xy 50.8 189.23) (xy 59.69 189.23)
 		)
 		(stroke
 			(width 0)
@@ -7001,7 +7001,7 @@
 	)
 	(wire
 		(pts
-			(xy 17.78 188.595) (xy 17.78 191.135)
+			(xy 17.78 187.96) (xy 17.78 190.5)
 		)
 		(stroke
 			(width 0)
@@ -7161,7 +7161,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 189.865) (xy 50.8 189.865)
+			(xy 41.91 189.23) (xy 50.8 189.23)
 		)
 		(stroke
 			(width 0)
@@ -7271,7 +7271,7 @@
 	)
 	(wire
 		(pts
-			(xy 17.78 177.8) (xy 17.78 180.975)
+			(xy 17.78 177.165) (xy 17.78 180.34)
 		)
 		(stroke
 			(width 0)
@@ -7371,7 +7371,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 178.435) (xy 41.91 179.705)
+			(xy 41.91 177.8) (xy 41.91 179.07)
 		)
 		(stroke
 			(width 0)
@@ -7691,7 +7691,7 @@
 	)
 	(wire
 		(pts
-			(xy 41.91 179.705) (xy 41.91 180.975)
+			(xy 41.91 179.07) (xy 41.91 180.34)
 		)
 		(stroke
 			(width 0)
@@ -7791,7 +7791,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 189.865) (xy 50.8 188.595)
+			(xy 50.8 189.23) (xy 50.8 187.96)
 		)
 		(stroke
 			(width 0)
@@ -7871,7 +7871,7 @@
 	)
 	(wire
 		(pts
-			(xy 31.75 188.595) (xy 31.75 191.135)
+			(xy 31.75 187.96) (xy 31.75 190.5)
 		)
 		(stroke
 			(width 0)
@@ -7891,7 +7891,7 @@
 	)
 	(wire
 		(pts
-			(xy 19.05 106.045) (xy 20.32 106.045)
+			(xy 19.05 105.41) (xy 20.32 105.41)
 		)
 		(stroke
 			(width 0)
@@ -7971,7 +7971,7 @@
 	)
 	(wire
 		(pts
-			(xy 59.69 180.975) (xy 59.69 179.705)
+			(xy 59.69 180.34) (xy 59.69 179.07)
 		)
 		(stroke
 			(width 0)
@@ -8231,7 +8231,7 @@
 	)
 	(wire
 		(pts
-			(xy 50.8 103.505) (xy 53.34 103.505)
+			(xy 50.8 102.87) (xy 53.34 102.87)
 		)
 		(stroke
 			(width 0)
@@ -10761,7 +10761,7 @@
 	)
 	(text "Oscillator\nBypass Cap"
 		(exclude_from_sim no)
-		(at 27.94 172.085 0)
+		(at 27.94 171.45 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10794,7 +10794,7 @@
 	)
 	(text "RP2040 DVDD, & VREG_OUT \nBypass Caps"
 		(exclude_from_sim no)
-		(at 40.64 172.085 0)
+		(at 40.64 171.45 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10915,7 +10915,7 @@
 	)
 	(text "SPI Flash\nBypass Cap"
 		(exclude_from_sim no)
-		(at 13.97 172.085 0)
+		(at 13.97 171.45 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -10947,7 +10947,7 @@
 		(uuid "06b9e6ec-58ba-444c-b16e-d53a225f5b98")
 	)
 	(label "QSPI_CS"
-		(at 53.34 103.505 0)
+		(at 53.34 102.87 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11101,7 +11101,7 @@
 		(uuid "798ce1ff-1146-4336-bfb7-d73f56801c79")
 	)
 	(label "USB_Boot"
-		(at 31.75 103.505 0)
+		(at 31.75 102.87 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12357,7 +12357,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 41.91 184.785 180)
+		(at 41.91 184.15 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12365,7 +12365,7 @@
 		(dnp no)
 		(uuid "0f24981f-df51-4a8c-babb-61b37a85343e")
 		(property "Reference" "C6"
-			(at 45.72 182.245 0)
+			(at 45.72 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12374,7 +12374,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 48.26 187.325 0)
+			(at 48.26 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12383,7 +12383,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 40.9448 180.975 0)
+			(at 40.9448 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12392,7 +12392,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.passivecomponent.com/wp-content/uploads/datasheet/WTC_MLCC_General_Purpose.pdf"
-			(at 41.91 184.785 0)
+			(at 41.91 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12401,7 +12401,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 41.91 184.785 0)
+			(at 41.91 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12410,7 +12410,7 @@
 			)
 		)
 		(property "Link" "https://www.digikey.com/en/products/detail/walsin-technology-corporation/0402B104K160CT/6707534"
-			(at 41.91 184.785 0)
+			(at 41.91 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12419,7 +12419,7 @@
 			)
 		)
 		(property "Manufacturer" "Walson Technology Corporation"
-			(at 41.91 184.785 0)
+			(at 41.91 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12428,7 +12428,7 @@
 			)
 		)
 		(property "Manufacturer Number" "0402B104K160CT"
-			(at 41.91 184.785 0)
+			(at 41.91 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12437,7 +12437,7 @@
 			)
 		)
 		(property "Rated Voltage" "16V"
-			(at 41.91 184.785 0)
+			(at 41.91 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12446,7 +12446,7 @@
 			)
 		)
 		(property "Temperature Coefficient" "X7R"
-			(at 41.91 184.785 0)
+			(at 41.91 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12455,7 +12455,7 @@
 			)
 		)
 		(property "Tolerance" "10%"
-			(at 41.91 184.785 0)
+			(at 41.91 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12464,7 +12464,7 @@
 			)
 		)
 		(property "PCBWay Link" "https://www.pcbway.com/components/detail/0402B104K160CT/307171/"
-			(at 41.91 184.785 0)
+			(at 41.91 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12580,7 +12580,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 31.75 191.135 0)
+		(at 31.75 190.5 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12588,7 +12588,7 @@
 		(dnp no)
 		(uuid "14c9c6e9-5462-470c-95b5-f819dd45636a")
 		(property "Reference" "#PWR012"
-			(at 31.75 197.485 0)
+			(at 31.75 196.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12597,7 +12597,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 29.845 194.945 0)
+			(at 29.845 194.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12606,7 +12606,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 31.75 191.135 0)
+			(at 31.75 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12615,7 +12615,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 31.75 191.135 0)
+			(at 31.75 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12624,7 +12624,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 31.75 191.135 0)
+			(at 31.75 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12639,129 +12639,6 @@
 			(project "harp_lick_detector_capactive"
 				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
 					(reference "#PWR012")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 31.75 184.785 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "175003ac-8798-4742-9573-2385271f3d91")
-		(property "Reference" "C4"
-			(at 35.56 182.245 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10nF"
-			(at 38.1 187.325 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 30.7848 180.975 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "https://www.yageo.com/upload/media/product/productsearch/datasheet/mlcc/UPY-GPHC_X7R_6.3V-to-250V_23.pdf"
-			(at 31.75 184.785 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 31.75 184.785 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Link" "https://www.digikey.com/en/products/detail/yageo/CC0402KPX7R8BB103/11490384"
-			(at 31.75 184.785 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Yageo"
-			(at 31.75 184.785 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Number" "CC0402KPX7R8BB103"
-			(at 31.75 184.785 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Rated Voltage" "25V"
-			(at 31.75 184.785 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Temperature Coefficient" "X7R"
-			(at 31.75 184.785 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Tolerance" "10%"
-			(at 31.75 184.785 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d0c3b55f-df97-4aa2-bdf3-031ab0a3f224")
-		)
-		(pin "2"
-			(uuid "a6227d30-5f23-4c40-bf03-2faf8b32188c")
-		)
-		(instances
-			(project "harp_lick_detector_capactive"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
-					(reference "C4")
 					(unit 1)
 				)
 			)
@@ -13011,7 +12888,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 38.1 108.585 90)
+		(at 38.1 107.95 90)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13019,7 +12896,7 @@
 		(dnp no)
 		(uuid "1f2afc67-8f45-49c1-8418-67774a58aa40")
 		(property "Reference" "#PWR010"
-			(at 44.45 108.585 0)
+			(at 44.45 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13028,7 +12905,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 41.91 108.5849 90)
+			(at 41.91 107.9499 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13037,7 +12914,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 38.1 108.585 0)
+			(at 38.1 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13046,7 +12923,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 38.1 108.585 0)
+			(at 38.1 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13055,7 +12932,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 38.1 108.585 0)
+			(at 38.1 107.95 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13471,6 +13348,138 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 31.75 184.15 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "28665e37-9e0c-4476-9b12-f189f5b907f5")
+		(property "Reference" "C4"
+			(at 35.56 181.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100nF"
+			(at 38.1 186.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
+			(at 30.7848 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "http://www.passivecomponent.com/wp-content/uploads/datasheet/WTC_MLCC_General_Purpose.pdf"
+			(at 31.75 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 31.75 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.digikey.com/en/products/detail/walsin-technology-corporation/0402B104K160CT/6707534"
+			(at 31.75 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Walson Technology Corporation"
+			(at 31.75 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Number" "0402B104K160CT"
+			(at 31.75 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Rated Voltage" "16V"
+			(at 31.75 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Temperature Coefficient" "X7R"
+			(at 31.75 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "10%"
+			(at 31.75 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "PCBWay Link" "https://www.pcbway.com/components/detail/0402B104K160CT/307171/"
+			(at 31.75 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "1cca843c-c6a9-4570-a82c-5f2b15dbb63a")
+		)
+		(pin "2"
+			(uuid "3f41e1b9-b212-4a94-8e02-ef602078e5d4")
+		)
+		(instances
+			(project "main_board"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
+					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:VBUS")
 		(at 70.485 18.415 0)
 		(unit 1)
@@ -13537,7 +13546,7 @@
 	)
 	(symbol
 		(lib_id "power:+1V1")
-		(at 41.91 178.435 0)
+		(at 41.91 177.8 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13545,7 +13554,7 @@
 		(dnp no)
 		(uuid "2e25cfa6-158b-4dde-915d-06ea59bd7367")
 		(property "Reference" "#PWR014"
-			(at 41.91 182.245 0)
+			(at 41.91 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13554,7 +13563,7 @@
 			)
 		)
 		(property "Value" "+1V1"
-			(at 41.91 174.625 0)
+			(at 41.91 173.99 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13562,7 +13571,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 41.91 178.435 0)
+			(at 41.91 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13571,7 +13580,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 41.91 178.435 0)
+			(at 41.91 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13580,7 +13589,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 41.91 178.435 0)
+			(at 41.91 177.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13934,7 +13943,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "RC0402FR-0727RL"
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf"
 			(at 229.235 64.77 0)
 			(effects
 				(font
@@ -14827,7 +14836,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "RC0402FR-0727RL"
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf"
 			(at 229.235 67.31 0)
 			(effects
 				(font
@@ -15491,7 +15500,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 31.75 177.8 0)
+		(at 31.75 177.165 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -15499,7 +15508,7 @@
 		(dnp no)
 		(uuid "6b0428db-99c0-4168-a0c8-e9495495d422")
 		(property "Reference" "#PWR064"
-			(at 31.75 181.61 0)
+			(at 31.75 180.975 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15508,7 +15517,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 31.75 173.99 0)
+			(at 31.75 173.355 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15516,7 +15525,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 31.75 177.8 0)
+			(at 31.75 177.165 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15525,7 +15534,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 31.75 177.8 0)
+			(at 31.75 177.165 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15534,7 +15543,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 31.75 177.8 0)
+			(at 31.75 177.165 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16402,7 +16411,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 59.69 184.785 0)
+		(at 59.69 184.15 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16410,7 +16419,7 @@
 		(dnp no)
 		(uuid "81f07c0e-7de0-4878-9e55-337e6268e96c")
 		(property "Reference" "C9"
-			(at 60.96 182.245 0)
+			(at 60.96 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16419,7 +16428,7 @@
 			)
 		)
 		(property "Value" "1uF"
-			(at 60.96 187.325 0)
+			(at 60.96 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16428,7 +16437,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 60.6552 188.595 0)
+			(at 60.6552 187.96 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16437,7 +16446,7 @@
 			)
 		)
 		(property "Datasheet" "https://search.murata.co.jp/Ceramy/image/img/A01X/G101/ENG/GRM155R6YA105KE11-01.pdf"
-			(at 59.69 184.785 0)
+			(at 59.69 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16446,7 +16455,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 59.69 184.785 0)
+			(at 59.69 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16455,7 +16464,7 @@
 			)
 		)
 		(property "Notes" "must not be polarized"
-			(at 59.69 184.785 0)
+			(at 59.69 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16464,7 +16473,7 @@
 			)
 		)
 		(property "Link" "https://www.digikey.com/en/products/detail/murata-electronics/GRM155R6YA105KE11J/4905163"
-			(at 59.69 184.785 0)
+			(at 59.69 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16473,7 +16482,7 @@
 			)
 		)
 		(property "Manufacturer Number" "GRM155R6YA105KE11J"
-			(at 59.69 184.785 0)
+			(at 59.69 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16482,7 +16491,7 @@
 			)
 		)
 		(property "Manufacturer" "Murata Electronics"
-			(at 59.69 184.785 0)
+			(at 59.69 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16491,7 +16500,7 @@
 			)
 		)
 		(property "Rated Voltage" "35V"
-			(at 59.69 184.785 0)
+			(at 59.69 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16500,7 +16509,7 @@
 			)
 		)
 		(property "Temperature Coefficient" "X5R"
-			(at 59.69 184.785 0)
+			(at 59.69 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16509,7 +16518,7 @@
 			)
 		)
 		(property "PCBWay Link" ""
-			(at 59.69 184.785 0)
+			(at 59.69 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16780,7 +16789,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 41.91 191.135 0)
+		(at 41.91 190.5 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -16788,7 +16797,7 @@
 		(dnp no)
 		(uuid "886d9223-721c-4c7f-ae6a-5785a1e43b05")
 		(property "Reference" "#PWR015"
-			(at 41.91 197.485 0)
+			(at 41.91 196.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16797,7 +16806,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 40.005 194.945 0)
+			(at 40.005 194.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16806,7 +16815,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 41.91 191.135 0)
+			(at 41.91 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16815,7 +16824,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 41.91 191.135 0)
+			(at 41.91 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16824,7 +16833,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 41.91 191.135 0)
+			(at 41.91 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -16881,7 +16890,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/esd7571-d.pdf"
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PESD5V0F1BLD.pdf"
 			(at 83.82 148.59 0)
 			(effects
 				(font
@@ -16899,7 +16908,7 @@
 				(hide yes)
 			)
 		)
-		(property "Link" "https://www.digikey.com/en/products/detail/onsemi/ESD7571N2T5G/7220690"
+		(property "Link" "https://www.digikey.com/en/products/detail/nexperia-usa-inc/PESD5V0F1BLD-315/3679473"
 			(at 83.82 148.59 0)
 			(effects
 				(font
@@ -16908,7 +16917,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "onsemi"
+		(property "Manufacturer" "Nexperia USA Inc."
 			(at 83.82 148.59 0)
 			(effects
 				(font
@@ -16917,7 +16926,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer Number" "ESD7571N2T5G"
+		(property "Manufacturer Number" "PESD5V0F1BLD,315"
 			(at 83.82 148.59 0)
 			(effects
 				(font
@@ -17823,7 +17832,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/esd7571-d.pdf"
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/PESD5V0F1BLD.pdf"
 			(at 70.485 23.495 0)
 			(effects
 				(font
@@ -17841,7 +17850,7 @@
 				(hide yes)
 			)
 		)
-		(property "Link" "https://www.digikey.com/en/products/detail/onsemi/ESD7571N2T5G/7220690"
+		(property "Link" "https://www.digikey.com/en/products/detail/nexperia-usa-inc/PESD5V0F1BLD-315/3679473"
 			(at 70.485 23.495 0)
 			(effects
 				(font
@@ -17850,7 +17859,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer" "onsemi"
+		(property "Manufacturer" "Nexperia USA Inc."
 			(at 70.485 23.495 0)
 			(effects
 				(font
@@ -17859,7 +17868,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer Number" "ESD7571N2T5G"
+		(property "Manufacturer Number" "PESD5V0F1BLD,315"
 			(at 70.485 23.495 0)
 			(effects
 				(font
@@ -17877,7 +17886,7 @@
 				(hide yes)
 			)
 		)
-		(property "Alternate" "PESD5V0F1BLD,315"
+		(property "Alternate" ""
 			(at 70.485 23.495 90)
 			(effects
 				(font
@@ -18311,7 +18320,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 17.78 184.785 180)
+		(at 17.78 184.15 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18319,7 +18328,7 @@
 		(dnp no)
 		(uuid "a642dffc-d0da-412c-a91e-2edf9ae89bf2")
 		(property "Reference" "C1"
-			(at 21.59 182.245 0)
+			(at 21.59 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18328,7 +18337,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 24.13 187.325 0)
+			(at 24.13 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18337,7 +18346,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 16.8148 180.975 0)
+			(at 16.8148 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18346,7 +18355,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.passivecomponent.com/wp-content/uploads/datasheet/WTC_MLCC_General_Purpose.pdf"
-			(at 17.78 184.785 0)
+			(at 17.78 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18355,7 +18364,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 17.78 184.785 0)
+			(at 17.78 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18364,7 +18373,7 @@
 			)
 		)
 		(property "Link" "https://www.digikey.com/en/products/detail/walsin-technology-corporation/0402B104K160CT/6707534"
-			(at 17.78 184.785 0)
+			(at 17.78 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18373,7 +18382,7 @@
 			)
 		)
 		(property "Manufacturer" "Walson Technology Corporation"
-			(at 17.78 184.785 0)
+			(at 17.78 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18382,7 +18391,7 @@
 			)
 		)
 		(property "Manufacturer Number" "0402B104K160CT"
-			(at 17.78 184.785 0)
+			(at 17.78 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18391,7 +18400,7 @@
 			)
 		)
 		(property "Rated Voltage" "16V"
-			(at 17.78 184.785 0)
+			(at 17.78 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18400,7 +18409,7 @@
 			)
 		)
 		(property "Temperature Coefficient" "X7R"
-			(at 17.78 184.785 0)
+			(at 17.78 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18409,7 +18418,7 @@
 			)
 		)
 		(property "Tolerance" "10%"
-			(at 17.78 184.785 0)
+			(at 17.78 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18418,7 +18427,7 @@
 			)
 		)
 		(property "PCBWay Link" "https://www.pcbway.com/components/detail/0402B104K160CT/307171/"
-			(at 17.78 184.785 0)
+			(at 17.78 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18443,7 +18452,7 @@
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 17.78 177.8 0)
+		(at 17.78 177.165 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -18451,7 +18460,7 @@
 		(dnp no)
 		(uuid "a6db9299-700e-499e-8f85-0ba52f6ad770")
 		(property "Reference" "#PWR01"
-			(at 17.78 181.61 0)
+			(at 17.78 180.975 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18460,7 +18469,7 @@
 			)
 		)
 		(property "Value" "+3V3"
-			(at 17.78 173.99 0)
+			(at 17.78 173.355 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18468,7 +18477,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 17.78 177.8 0)
+			(at 17.78 177.165 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18477,7 +18486,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 17.78 177.8 0)
+			(at 17.78 177.165 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18486,7 +18495,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 17.78 177.8 0)
+			(at 17.78 177.165 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18900,118 +18909,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 46.99 103.505 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "b0e4d094-ac8a-4e7a-891a-694fcb5a1fcf")
-		(property "Reference" "R1"
-			(at 46.99 100.965 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "1K"
-			(at 46.99 103.505 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 46.99 105.283 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "n/a"
-			(at 46.99 103.505 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 46.99 103.505 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Tolerance" "1%"
-			(at 46.99 103.505 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Link" "https://www.digikey.com/en/products/detail/yageo/RT0402BRD071KL/1069118"
-			(at 46.99 103.505 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer" "Yageo"
-			(at 46.99 103.505 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Manufacturer Number" "RT0402BRD071KL"
-			(at 46.99 103.505 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "PCBWay Link" ""
-			(at 46.99 103.505 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3d23c920-31f7-47ab-b418-f8eb98e306e4")
-		)
-		(pin "2"
-			(uuid "e8e403a0-2cd9-4714-837b-fa6bfd81c20d")
-		)
-		(instances
-			(project "harp_lick_detector_capactive"
-				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
-					(reference "R1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
 		(at 124.46 59.69 0)
 		(unit 1)
@@ -19380,7 +19277,7 @@
 	)
 	(symbol
 		(lib_id "kicad_component_library:SW_Push_with_gnd")
-		(at 25.4 103.505 0)
+		(at 25.4 102.87 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -19388,7 +19285,7 @@
 		(dnp no)
 		(uuid "cd8bce79-c387-42ff-bfb9-d15eb090be9f")
 		(property "Reference" "SW1"
-			(at 22.225 100.33 0)
+			(at 22.225 99.695 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19396,7 +19293,7 @@
 			)
 		)
 		(property "Value" "~"
-			(at 25.4 103.505 0)
+			(at 25.4 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19404,7 +19301,7 @@
 			)
 		)
 		(property "Footprint" "kicad_component_library:SW_Push_1P1T-SH_NO_Vertical_Wuerth_WS-TASV"
-			(at 25.4 103.505 0)
+			(at 25.4 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19413,7 +19310,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.we-online.com/components/products/datasheet/435451019820.pdf"
-			(at 25.4 103.505 0)
+			(at 25.4 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19422,7 +19319,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 25.4 103.505 0)
+			(at 25.4 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19431,7 +19328,7 @@
 			)
 		)
 		(property "Manufacturer Number" "435451019820"
-			(at 25.4 103.505 0)
+			(at 25.4 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19440,7 +19337,7 @@
 			)
 		)
 		(property "Manufacturer" "Würth Elektronik"
-			(at 25.4 103.505 0)
+			(at 25.4 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19449,7 +19346,7 @@
 			)
 		)
 		(property "Link" "https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/435451019820/18735367"
-			(at 25.4 103.505 0)
+			(at 25.4 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19458,7 +19355,7 @@
 			)
 		)
 		(property "Alternate" "https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/435431019840/18735375"
-			(at 25.4 103.505 0)
+			(at 25.4 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19467,7 +19364,7 @@
 			)
 		)
 		(property "Notes" "washable"
-			(at 25.4 103.505 0)
+			(at 25.4 102.87 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19632,6 +19529,118 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 46.99 102.87 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "d1e463d3-48e4-4dae-a46b-813fa479a0d7")
+		(property "Reference" "R1"
+			(at 46.99 100.33 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1K05"
+			(at 46.99 102.87 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
+			(at 46.99 101.092 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/app/datasheet/rchip/pyu-rt_1-to-0.01_rohs_l.pdf"
+			(at 46.99 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 46.99 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Tolerance" "0.1%"
+			(at 46.99 102.87 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Notes" ""
+			(at 46.99 102.87 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.digikey.com/en/products/detail/yageo/RT0402BRD071K05L/1069088"
+			(at 46.99 102.87 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "Yageo"
+			(at 46.99 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Number" "RT0402BRD071K05L"
+			(at 46.99 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "866dde59-64da-46bf-ab35-09b1d9f21f78")
+		)
+		(pin "2"
+			(uuid "ffccd617-5b66-4ee5-824a-00f37ba5fe26")
+		)
+		(instances
+			(project "main_board"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55/eb8325ca-9747-4676-8e08-1fb825a7219f"
+					(reference "R1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Interface_USB:ADUM4160")
 		(at 120.65 41.91 0)
 		(unit 1)
@@ -19780,7 +19789,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 50.8 184.785 180)
+		(at 50.8 184.15 180)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -19788,7 +19797,7 @@
 		(dnp no)
 		(uuid "d820f329-b8b0-439f-812b-d1ab37a5d26a")
 		(property "Reference" "C7"
-			(at 54.61 182.245 0)
+			(at 54.61 181.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19797,7 +19806,7 @@
 			)
 		)
 		(property "Value" "100nF"
-			(at 57.15 187.325 0)
+			(at 57.15 186.69 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19806,7 +19815,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric"
-			(at 49.8348 180.975 0)
+			(at 49.8348 180.34 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19815,7 +19824,7 @@
 			)
 		)
 		(property "Datasheet" "http://www.passivecomponent.com/wp-content/uploads/datasheet/WTC_MLCC_General_Purpose.pdf"
-			(at 50.8 184.785 0)
+			(at 50.8 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19824,7 +19833,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 50.8 184.785 0)
+			(at 50.8 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19833,7 +19842,7 @@
 			)
 		)
 		(property "Link" "https://www.digikey.com/en/products/detail/walsin-technology-corporation/0402B104K160CT/6707534"
-			(at 50.8 184.785 0)
+			(at 50.8 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19842,7 +19851,7 @@
 			)
 		)
 		(property "Manufacturer" "Walson Technology Corporation"
-			(at 50.8 184.785 0)
+			(at 50.8 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19851,7 +19860,7 @@
 			)
 		)
 		(property "Manufacturer Number" "0402B104K160CT"
-			(at 50.8 184.785 0)
+			(at 50.8 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19860,7 +19869,7 @@
 			)
 		)
 		(property "Rated Voltage" "16V"
-			(at 50.8 184.785 0)
+			(at 50.8 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19869,7 +19878,7 @@
 			)
 		)
 		(property "Temperature Coefficient" "X7R"
-			(at 50.8 184.785 0)
+			(at 50.8 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19878,7 +19887,7 @@
 			)
 		)
 		(property "Tolerance" "10%"
-			(at 50.8 184.785 0)
+			(at 50.8 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19887,7 +19896,7 @@
 			)
 		)
 		(property "PCBWay Link" "https://www.pcbway.com/components/detail/0402B104K160CT/307171/"
-			(at 50.8 184.785 0)
+			(at 50.8 184.15 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20777,7 +20786,7 @@
 				(hide yes)
 			)
 		)
-		(property "Alternate" "CL21B106KOQNNNE"
+		(property "Alternate" ""
 			(at 99.06 184.785 0)
 			(effects
 				(font
@@ -21404,7 +21413,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 17.78 191.135 0)
+		(at 17.78 190.5 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -21412,7 +21421,7 @@
 		(dnp no)
 		(uuid "fba4eecc-5397-42ce-a875-454ec10afae5")
 		(property "Reference" "#PWR02"
-			(at 17.78 197.485 0)
+			(at 17.78 196.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21421,7 +21430,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 15.875 194.945 0)
+			(at 15.875 194.31 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21430,7 +21439,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 17.78 191.135 0)
+			(at 17.78 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21439,7 +21448,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 17.78 191.135 0)
+			(at 17.78 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -21448,7 +21457,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 17.78 191.135 0)
+			(at 17.78 190.5 0)
 			(effects
 				(font
 					(size 1.27 1.27)

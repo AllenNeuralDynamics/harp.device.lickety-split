@@ -48,7 +48,7 @@
         "silk_text_thickness": 0.075,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.2
+          "min_clearance": 0.0
         }
       },
       "diff_pair_dimensions": [
@@ -58,7 +58,13 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "copper_edge_clearance|158025000|77050000|2ffae3c3-1a6d-4bae-9a62-177cbda2bca3|c26149a9-013a-4592-9e2e-0b4490e361bd",
+        "copper_edge_clearance|158025000|84650000|0f456fbb-6c53-4cab-a647-de0a43500299|65f7b21a-d3c2-44c7-9d08-998a31960372",
+        "lib_footprint_mismatch|143400000|80500000|eba93d4d-0ffe-4e2a-b3a2-aa955c34b674|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|144000000|79000000|1b33511f-bfb5-41c4-804e-9a672bac9e88|00000000-0000-0000-0000-000000000000",
+        "silk_over_copper|158180003|82172528|2ab260cc-d9c9-418e-8820-cbe2656bd153|00000000-0000-0000-0000-000000000000"
+      ],
       "meta": {
         "version": 2
       },
@@ -574,11 +580,89 @@
           "label": "DNP",
           "name": "${DNP}",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Alternate",
+          "name": "Alternate",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Link",
+          "name": "Link",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer",
+          "name": "Manufacturer",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer Num",
+          "name": "Manufacturer Num",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer Number",
+          "name": "Manufacturer Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Notes",
+          "name": "Notes",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Rated Voltage",
+          "name": "Rated Voltage",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Temperature Coefficient",
+          "name": "Temperature Coefficient",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Tolerance",
+          "name": "Tolerance",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Vendor",
+          "name": "Vendor",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Vendor Num",
+          "name": "Vendor Num",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
-      "name": "Grouped By Value",
+      "name": "",
       "sort_asc": true,
       "sort_field": "Reference"
     },

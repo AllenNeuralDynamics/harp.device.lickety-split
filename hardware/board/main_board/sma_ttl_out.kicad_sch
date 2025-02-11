@@ -2411,7 +2411,7 @@
 				(hide yes)
 			)
 		)
-		(property "Alternate" "CL21B106KOQNNNE"
+		(property "Alternate" ""
 			(at 154.94 179.07 0)
 			(effects
 				(font

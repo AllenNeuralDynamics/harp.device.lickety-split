@@ -59,7 +59,27 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "copper_edge_clearance|105375000|88850000|c00f8ad6-2925-4517-a2f1-c5269e186f5e|1219a653-5b9b-470e-a858-fc9a2730003c",
+        "copper_edge_clearance|105375000|96450000|c00f8ad6-2925-4517-a2f1-c5269e186f5e|2c7b7c9b-eaba-4015-a386-7d8435c63f52",
+        "copper_edge_clearance|178700000|90125000|b1166e0c-469b-43dc-b757-41740db13a39|23ec05ab-e78b-4f36-b45f-1e54f50ccd5e",
+        "copper_edge_clearance|178700000|90125000|b1166e0c-469b-43dc-b757-41740db13a39|cdf0f1ac-181d-4469-8eae-30c97b793f62",
+        "copper_edge_clearance|178700000|90390000|b1166e0c-469b-43dc-b757-41740db13a39|4169ef4f-648e-42fe-ba14-d6ca54418717",
+        "copper_edge_clearance|178700000|90390000|b1166e0c-469b-43dc-b757-41740db13a39|4fb53e7c-7c07-4151-a829-fa0e26a1798b",
+        "copper_edge_clearance|179075000|88680000|b1166e0c-469b-43dc-b757-41740db13a39|30df0614-b253-4384-9c55-ac0f725734e3",
+        "lib_footprint_mismatch|113900000|114306728|8236e621-2351-4390-ac24-0d31fffff16a|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|122850000|92925000|38054de7-b8f1-4851-adfb-1a12ba12c48a|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|126420000|76125000|646a4134-0fe0-4df0-b120-11be91e0465b|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|128400000|93075000|b176fd01-d124-4bdd-a08c-273489ffb509|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|131132500|77900000|df544344-c531-4601-aca2-ddb9eed86317|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|137900000|104912500|f4e564d8-258a-495d-bc15-85715ab2dd45|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|139800000|93027500|c358b8ab-0d9e-459c-bd87-7865d696c2e7|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|143767500|101400000|adf98403-3802-49d4-a420-c990897e0ee3|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|170632500|78400000|5059a097-176e-480e-b86c-1b561987fa6b|00000000-0000-0000-0000-000000000000",
+        "lib_footprint_mismatch|181135000|93000000|5b74abb0-a78c-4207-9c01-20e6fa2adac3|00000000-0000-0000-0000-000000000000",
+        "silk_edge_clearance|184900000|75300000|2f2fbc68-e1be-47e1-851e-9962cfec380f|b64187f6-0904-48ae-9508-a23d69695f31",
+        "silk_edge_clearance|184900000|81500000|2f2fbc68-e1be-47e1-851e-9962cfec380f|2e65b9a3-d8e7-4339-b48d-6b65bc364d9f"
+      ],
       "meta": {
         "version": 2
       },
@@ -452,7 +472,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "harp_lick_detector_capactive.kicad_pro",
+    "filename": "main_board.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -566,7 +586,7 @@
           "show": true
         },
         {
-          "group_by": false,
+          "group_by": true,
           "label": "Footprint",
           "name": "Footprint",
           "show": true
@@ -582,13 +602,109 @@
           "label": "DNP",
           "name": "${DNP}",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Alternate",
+          "name": "Alternate",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "DC Resistance",
+          "name": "DC Resistance",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Link",
+          "name": "Link",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer",
+          "name": "Manufacturer",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer Num",
+          "name": "Manufacturer Num",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Manufacturer Number",
+          "name": "Manufacturer Number",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Notes",
+          "name": "Notes",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "PCBWay Link",
+          "name": "PCBWay Link",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Rated Voltage",
+          "name": "Rated Voltage",
+          "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Temperature Coefficient",
+          "name": "Temperature Coefficient",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Tolerance",
+          "name": "Tolerance",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Vendor",
+          "name": "Vendor",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Vendor Num",
+          "name": "Vendor Num",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Vendor Number",
+          "name": "Vendor Number",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
-      "name": "Grouped By Value",
+      "name": "",
       "sort_asc": true,
-      "sort_field": "Reference"
+      "sort_field": "Value"
     },
     "connection_grid_size": 50.0,
     "drawing": {
