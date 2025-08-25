@@ -2454,7 +2454,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "n/a"
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/app/datasheet/rchip/pyu-rt_1-to-0.01_rohs_l.pdf"
 			(at 135.255 92.71 0)
 			(effects
 				(font
@@ -2625,7 +2625,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "n/a"
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf"
 			(at 117.475 73.66 0)
 			(effects
 				(font
@@ -2643,7 +2643,7 @@
 				(hide yes)
 			)
 		)
-		(property "Link" ""
+		(property "Link" "https://www.digikey.com/en/products/detail/yageo/RC0402FR-07100KL/726526"
 			(at 117.475 73.66 0)
 			(effects
 				(font
@@ -2661,7 +2661,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer Number" ""
+		(property "Manufacturer Number" "RC0402FR-07100KL"
 			(at 117.475 73.66 0)
 			(effects
 				(font
@@ -3657,7 +3657,7 @@
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "a9474dd1-8cf6-4f54-a624-8c38bde66a3d")
 		(property "Reference" "J1"
@@ -3686,7 +3686,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "~"
+		(property "Datasheet" "n/a"
 			(at 92.075 87.63 0)
 			(effects
 				(font
@@ -4325,7 +4325,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.farnell.com/datasheets/2082363.pdf"
+		(property "Datasheet" "https://www.jst-mfg.com/product/pdf/eng/eSH.pdf"
 			(at 218.44 88.9 0)
 			(effects
 				(font
@@ -4343,7 +4343,7 @@
 				(hide yes)
 			)
 		)
-		(property "Link" "https://www.newark.com/jst-japan-solderless-terminals/sm06b-srss-tb-lf-sn/connector-header-6pos-1row-1mm/dp/33P8182?ost=sm06b-srss-tb%28lf%29%28sn%29"
+		(property "Link" "https://www.digikey.com/en/products/detail/jst-sales-america-inc/SM06B-SRSS-TB/926712"
 			(at 218.44 88.9 0)
 			(effects
 				(font
@@ -4371,6 +4371,24 @@
 			)
 		)
 		(property "Vendor Num" "33P8182"
+			(at 218.44 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer" "JST Sales America Inc."
+			(at 218.44 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Number" "SM06B-SRSS-TB"
 			(at 218.44 88.9 0)
 			(effects
 				(font

@@ -145,7 +145,7 @@
 			(mirror no)
 			(drillshape 0)
 			(scaleselection 1)
-			(outputdirectory "exports/lickety_split_r0.9.0/gerbers/")
+			(outputdirectory "exports/v1.0.0/gerbers/")
 		)
 	)
 	(net 0 "")
@@ -15084,7 +15084,7 @@
 		(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C24"
-			(at 0 0 270)
+			(at 0 0 -90)
 			(layer "B.SilkS")
 			(uuid "b63eddc0-1bf7-4d97-a4de-558dacf34355")
 			(effects
@@ -46477,7 +46477,7 @@
 		(descr "Capacitor SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator")
 		(tags "capacitor")
 		(property "Reference" "C21"
-			(at 2 0 270)
+			(at 2 0 -90)
 			(layer "F.SilkS")
 			(uuid "552dc3a9-94f6-4994-b5dc-1fb5d7d46694")
 			(effects
@@ -46537,7 +46537,7 @@
 				)
 			)
 		)
-		(property "Notes" "must not be polarized"
+		(property "Notes" ""
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -52980,7 +52980,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.farnell.com/datasheets/2082363.pdf"
+		(property "Datasheet" "https://www.jst-mfg.com/product/pdf/eng/eSH.pdf"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -53006,7 +53006,7 @@
 				)
 			)
 		)
-		(property "Link" "https://www.newark.com/jst-japan-solderless-terminals/sm06b-srss-tb-lf-sn/connector-header-6pos-1row-1mm/dp/33P8182?ost=sm06b-srss-tb%28lf%29%28sn%29"
+		(property "Link" "https://www.digikey.com/en/products/detail/jst-sales-america-inc/SM06B-SRSS-TB/926712"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
@@ -53019,12 +53019,12 @@
 				)
 			)
 		)
-		(property "Manufacturer Num" "SM06B-SRSS-TB(LF)(SN)"
+		(property "Manufacturer Number" "SM06B-SRSS-TB"
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "d982c1e1-bfe0-4387-863b-dd303da910f8")
+			(uuid "b637cfbf-ba7c-488d-9de8-4a8d90a6c25a")
 			(effects
 				(font
 					(size 1 1)
@@ -53032,25 +53032,12 @@
 				)
 			)
 		)
-		(property "Vendor" "Newark"
+		(property "Manufacturer" "JST Sales America Inc."
 			(at 0 0 -90)
 			(unlocked yes)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "59b50b8a-3dd1-4883-b09d-4267696ced88")
-			(effects
-				(font
-					(size 1 1)
-					(thickness 0.15)
-				)
-			)
-		)
-		(property "Vendor Num" "33P8182"
-			(at 0 0 -90)
-			(unlocked yes)
-			(layer "F.Fab")
-			(hide yes)
-			(uuid "4caa7b7b-a433-4356-80f9-47ce07ee5e0b")
+			(uuid "8575ded7-a05a-4d3c-ab10-5f6fe23f70f2")
 			(effects
 				(font
 					(size 1 1)
@@ -54080,7 +54067,7 @@
 			)
 		)
 		(property "Value" "1K05"
-			(at 0 1.17 360)
+			(at 0 1.17 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "68a1da41-561b-4406-b722-d909f7ca4ecf")
@@ -54092,7 +54079,7 @@
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0402_1005Metric"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "6b52eea8-d056-4e97-928a-f218e31c6e9c")
@@ -54104,7 +54091,7 @@
 			)
 		)
 		(property "Datasheet" "https://www.yageo.com/upload/media/product/app/datasheet/rchip/pyu-rt_1-to-0.01_rohs_l.pdf"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "47ec34fb-20cb-4c1f-b2d7-11dfb2c4aaee")
@@ -54116,7 +54103,7 @@
 			)
 		)
 		(property "Description" ""
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "fa5e9095-de93-4fdb-9acc-554af929b7f5")
@@ -54128,7 +54115,7 @@
 			)
 		)
 		(property "Link" "https://www.digikey.com/en/products/detail/yageo/RT0402BRD071K05L/1069088"
-			(at 325.6 171.4 360)
+			(at 325.6 171.4 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "c7e4ea35-52d4-477e-8d71-c05dd7641fc0")
@@ -54140,7 +54127,7 @@
 			)
 		)
 		(property "Manufacturer" "Yageo"
-			(at 325.6 171.4 360)
+			(at 325.6 171.4 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "f0abaca5-66a5-460c-8fdc-71e0f3947ef0")
@@ -54152,7 +54139,7 @@
 			)
 		)
 		(property "Manufacturer Number" "RT0402BRD071K05L"
-			(at 325.6 171.4 360)
+			(at 325.6 171.4 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "734dda81-8137-484f-b2de-8d38c648205f")
@@ -54164,7 +54151,7 @@
 			)
 		)
 		(property "Tolerance" "0.1%"
-			(at 325.6 171.4 360)
+			(at 325.6 171.4 0)
 			(layer "F.Fab")
 			(hide yes)
 			(uuid "e2d8a8a4-c7e4-4c6c-8950-3944956da957")
@@ -54294,7 +54281,7 @@
 			(uuid "d4a84196-ca86-489b-9243-4df2a9a631c8")
 		)
 		(fp_text user "${REFERENCE}"
-			(at 0 0 360)
+			(at 0 0 0)
 			(layer "F.Fab")
 			(uuid "eb0e0d15-c6e3-4122-9d0a-6864509502d8")
 			(effects

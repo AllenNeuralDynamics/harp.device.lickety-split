@@ -7434,6 +7434,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 175.26 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 175.26 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "6a0a0684-833b-49e2-94e3-5d1fb23a1cc4")
 		)
@@ -7662,6 +7680,24 @@
 			)
 		)
 		(property "Notes" "Recommended bypass capacitor size is 0508."
+			(at 120.65 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 120.65 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 120.65 111.76 0)
 			(effects
 				(font
@@ -7951,6 +7987,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 132.08 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 132.08 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "89c876dd-4ff4-4c45-b334-260d26458266")
 		)
@@ -8139,6 +8193,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 160.02 179.705 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 160.02 179.705 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "0bfbbab7-fe01-4617-aaf8-4ce8f2545169")
 		)
@@ -8255,7 +8327,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.farnell.com/datasheets/2082363.pdf"
+		(property "Datasheet" "https://www.jst-mfg.com/product/pdf/eng/eSH.pdf"
 			(at 36.195 96.52 0)
 			(effects
 				(font
@@ -8273,7 +8345,7 @@
 				(hide yes)
 			)
 		)
-		(property "Link" "https://www.newark.com/jst-japan-solderless-terminals/sm06b-srss-tb-lf-sn/connector-header-6pos-1row-1mm/dp/33P8182?ost=sm06b-srss-tb%28lf%29%28sn%29"
+		(property "Link" "https://www.digikey.com/en/products/detail/jst-sales-america-inc/SM06B-SRSS-TB/926712"
 			(at 36.195 96.52 0)
 			(effects
 				(font
@@ -8282,7 +8354,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer Num" "SM06B-SRSS-TB(LF)(SN)"
+		(property "Manufacturer Number" "SM06B-SRSS-TB"
 			(at 36.195 96.52 0)
 			(effects
 				(font
@@ -8291,7 +8363,7 @@
 				(hide yes)
 			)
 		)
-		(property "Vendor" "Newark"
+		(property "Manufacturer" "JST Sales America Inc."
 			(at 36.195 96.52 0)
 			(effects
 				(font
@@ -8300,7 +8372,16 @@
 				(hide yes)
 			)
 		)
-		(property "Vendor Num" "33P8182"
+		(property "Manufacturer Num" ""
+			(at 36.195 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 36.195 96.52 0)
 			(effects
 				(font
@@ -8433,6 +8514,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 102.235 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 102.235 58.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "8de7c6ec-e275-41c9-9e61-77afcbcb39eb")
 		)
@@ -8520,6 +8619,24 @@
 			)
 		)
 		(property "Link" "https://www.digikey.com/en/products/detail/analog-devices-inc/ADA4891-2ARMZ-R7/2342636"
+			(at 174.625 111.125 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 174.625 111.125 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 174.625 111.125 0)
 			(effects
 				(font
@@ -8790,6 +8907,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 132.08 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 132.08 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "5d4ee9ce-e7c9-492b-bfa6-cf8cf0c8c03d")
 		)
@@ -8888,6 +9023,24 @@
 			)
 		)
 		(property "Vendor Number" "296-45325-6-ND"
+			(at 223.52 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 223.52 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 223.52 91.44 0)
 			(effects
 				(font
@@ -9037,6 +9190,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 150.495 179.705 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 150.495 179.705 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "6ead5ca4-6235-4ae5-a8da-4f9feb7787c4")
 		)
@@ -9124,6 +9295,24 @@
 		)
 		(property "Manufacturer Number" "RC0402FR-7W49R9L"
 			(at 243.205 88.9 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 243.205 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 243.205 88.9 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -9293,6 +9482,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 198.12 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 198.12 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "4b9b29e6-31bd-4925-8919-b94e7fc7e357")
 		)
@@ -9407,6 +9614,24 @@
 			)
 		)
 		(property "Notes" "Recommended bypass capacitor size is 0508."
+			(at 86.36 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 86.36 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 86.36 66.04 0)
 			(effects
 				(font
@@ -9642,6 +9867,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 58.42 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 58.42 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "47ce7da4-d416-4869-aa0a-bcfb8af1d417")
 		)
@@ -9746,6 +9989,24 @@
 			)
 		)
 		(property "Tolerance" "0.1%"
+			(at 175.26 76.835 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 175.26 76.835 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 175.26 76.835 0)
 			(effects
 				(font
@@ -10063,6 +10324,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 114.3 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 114.3 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "0596fa48-2940-448e-8c4f-8366110b7bfc")
 		)
@@ -10159,6 +10438,24 @@
 			)
 		)
 		(property "Notes" "Recommended bypass capacitor size is 0508."
+			(at 120.65 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 120.65 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 120.65 66.04 0)
 			(effects
 				(font
@@ -10290,6 +10587,24 @@
 			)
 		)
 		(property "Link" "https://www.digikey.com/en/products/detail/analog-devices-inc/ADA4891-2ARMZ-R7/2342636"
+			(at 174.625 70.485 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 174.625 70.485 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 174.625 70.485 0)
 			(effects
 				(font
@@ -10431,6 +10746,24 @@
 			)
 		)
 		(property "Tolerance" "10%"
+			(at 219.075 155.575 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 219.075 155.575 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 219.075 155.575 0)
 			(effects
 				(font
@@ -10617,6 +10950,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 175.26 117.475 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 175.26 117.475 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "d1277a1e-cb73-4de2-9af5-c5e6f901f916")
 		)
@@ -10740,6 +11091,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 248.285 141.605 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 248.285 141.605 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "888927b3-9a2c-4e88-9910-1c64b9b641ce")
 		)
@@ -10838,6 +11207,24 @@
 			)
 		)
 		(property "Notes" "1.25V/2.5V dual voltage reference"
+			(at 271.78 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 271.78 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 271.78 38.1 0)
 			(effects
 				(font
@@ -10967,6 +11354,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 114.3 57.785 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 114.3 57.785 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "3600b272-b14c-494c-9c63-7f8a9840dbfb")
 		)
@@ -11071,6 +11476,24 @@
 			)
 		)
 		(property "Manufacturer Number" "RT0402BRB071KL"
+			(at 167.005 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 167.005 72.39 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 167.005 72.39 0)
 			(effects
 				(font
@@ -11241,6 +11664,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 158.115 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 158.115 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "4bcc1675-d8d1-4ff7-b213-8b6bf1d1a293")
 		)
@@ -11375,6 +11816,24 @@
 			)
 		)
 		(property "Tolerance" "10%"
+			(at 191.77 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 191.77 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 191.77 143.51 0)
 			(effects
 				(font
@@ -11553,6 +12012,24 @@
 			)
 		)
 		(property "Manufacturer Number" "RT0402BRD07976RL"
+			(at 69.85 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 69.85 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 69.85 68.58 0)
 			(effects
 				(font
@@ -11749,6 +12226,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 96.52 179.705 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 96.52 179.705 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "2fb58bd5-b59c-4166-b808-41dec8ad7ea5")
 		)
@@ -11838,6 +12333,24 @@
 			)
 		)
 		(property "Manufacturer Number" "MAX4564EKA+T"
+			(at 223.52 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 223.52 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 223.52 148.59 0)
 			(effects
 				(font
@@ -11976,6 +12489,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 97.79 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 97.79 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "4c9c667a-10ef-4789-9ccb-c42e2e1fdc7c")
 		)
@@ -12099,6 +12630,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 109.855 179.705 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 109.855 179.705 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "875eb3a6-5da7-40a4-91e8-27cc8204e65c")
 		)
@@ -12196,6 +12745,24 @@
 			)
 		)
 		(property "Notes" "Recommended bypass capacitor size is 0508."
+			(at 52.07 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 52.07 180.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 52.07 180.34 0)
 			(effects
 				(font
@@ -12437,6 +13004,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 27.94 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 27.94 175.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "ad1c4588-b2f2-4faa-89f7-7b88c5dc46c5")
 		)
@@ -12524,6 +13109,24 @@
 			)
 		)
 		(property "Manufacturer Number" "TS5A9411DCKR"
+			(at 193.675 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 193.675 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 193.675 88.9 0)
 			(effects
 				(font
@@ -12656,6 +13259,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 132.08 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 132.08 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "be71e40d-8b55-4667-bfec-59441b06d794")
 		)
@@ -12779,6 +13400,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 74.295 179.705 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 74.295 179.705 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "6f1c2635-f040-4769-8d87-be101b43fbe9")
 		)
@@ -12894,6 +13533,24 @@
 			)
 		)
 		(property "Tolerance" "10%"
+			(at 130.175 179.705 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 130.175 179.705 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 130.175 179.705 0)
 			(effects
 				(font
@@ -13146,6 +13803,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 206.375 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 206.375 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a061643c-1b6a-484e-9550-4caffd249281")
 		)
@@ -13344,6 +14019,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 27.94 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 27.94 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "92c679ff-9f74-4529-ba3b-bd99206cfd65")
 		)
@@ -13443,6 +14136,24 @@
 			)
 		)
 		(property "Notes" "Snap-in assembly to board. M4 thread"
+			(at 234.315 37.465 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 234.315 37.465 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 234.315 37.465 0)
 			(effects
 				(font
@@ -13701,6 +14412,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 109.22 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 109.22 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c314c698-52d0-4b81-b6d5-37a12cdb6eac")
 		)
@@ -13805,6 +14534,24 @@
 			)
 		)
 		(property "Manufacturer Number" "RT0402BRB071KL"
+			(at 175.26 122.555 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 175.26 122.555 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 175.26 122.555 0)
 			(effects
 				(font
@@ -14002,6 +14749,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 219.075 141.605 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 219.075 141.605 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "38cacd7f-3115-4a67-a869-91be60778b66")
 		)
@@ -14108,6 +14873,24 @@
 			)
 		)
 		(property "Tolerance" "1%"
+			(at 206.375 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 206.375 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 206.375 91.44 0)
 			(effects
 				(font
@@ -14302,6 +15085,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 109.22 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 109.22 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "4b95c98c-fc28-4435-bc6b-7f058bc078ef")
 		)
@@ -14391,6 +15192,24 @@
 			)
 		)
 		(property "Manufacturer Number" "MAX4564EKA+T"
+			(at 142.24 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 142.24 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 142.24 91.44 0)
 			(effects
 				(font
@@ -14532,6 +15351,24 @@
 			)
 		)
 		(property "Tolerance" "10%"
+			(at 165.1 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 165.1 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 165.1 148.59 0)
 			(effects
 				(font
@@ -14784,6 +15621,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 80.01 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 80.01 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "bc343e4d-77ee-4637-b15e-bbf38271d2fa")
 		)
@@ -14889,6 +15744,24 @@
 		)
 		(property "Temperature Coefficient" "25ppm/C"
 			(at 97.79 116.84 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 97.79 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 97.79 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15017,6 +15890,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 74.93 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 74.93 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "126a87f8-c0d3-431b-80e0-2ee4c0b74a99")
 		)
@@ -15129,6 +16020,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 167.005 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 167.005 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "2426f2f4-1973-4346-b260-5bce93b61b7d")
 		)
@@ -15218,6 +16127,24 @@
 			)
 		)
 		(property "Manufacturer Number" "TS5A9411DCKR"
+			(at 168.91 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 168.91 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 168.91 148.59 0)
 			(effects
 				(font
@@ -15343,6 +16270,24 @@
 		)
 		(property "Temperature Coefficient" "25ppm/C"
 			(at 132.08 116.84 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 132.08 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 132.08 116.84 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -15604,6 +16549,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 122.555 179.705 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 122.555 179.705 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "bd3f8402-8832-4cd8-b070-990330622e18")
 		)
@@ -15716,6 +16679,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 175.26 81.915 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 175.26 81.915 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "4f123887-b03b-497b-b9ed-0d99e7c1294f")
 		)
@@ -15820,6 +16801,24 @@
 			)
 		)
 		(property "Manufacturer Number" "RT0402BRD071K05L"
+			(at 69.85 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 69.85 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 69.85 114.3 0)
 			(effects
 				(font
@@ -15949,6 +16948,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 74.93 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 74.93 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a8b6168d-7036-4de6-8e3d-503231213ae1")
 		)
@@ -16062,6 +17079,24 @@
 			)
 		)
 		(property "Tolerance" "1%"
+			(at 74.93 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 74.93 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 74.93 109.22 0)
 			(effects
 				(font
@@ -16202,6 +17237,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 83.185 179.705 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 83.185 179.705 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a2e1ed01-77dd-47bd-b578-eeec85131131")
 		)
@@ -16315,6 +17368,24 @@
 			)
 		)
 		(property "Tolerance" "1%"
+			(at 109.22 52.705 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 109.22 52.705 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 109.22 52.705 0)
 			(effects
 				(font
@@ -16503,6 +17574,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 206.375 74.295 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 206.375 74.295 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "13afc517-d9b1-4aff-9387-677b1c302d25")
 		)
@@ -16604,6 +17693,24 @@
 			)
 		)
 		(property "Notes" ""
+			(at 66.675 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 66.675 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 66.675 104.14 0)
 			(effects
 				(font
@@ -16724,6 +17831,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 97.79 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 97.79 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "823d0969-a6e1-4971-8266-682c9d3c5711")
 		)
@@ -16828,6 +17953,24 @@
 			)
 		)
 		(property "Manufacturer Number" "RT0402BRD071K02L"
+			(at 104.14 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 104.14 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 104.14 68.58 0)
 			(effects
 				(font
@@ -17008,6 +18151,24 @@
 		)
 		(property "Temperature Coefficient" ""
 			(at 206.375 81.28 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 206.375 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 206.375 81.28 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17197,6 +18358,24 @@
 			)
 		)
 		(property "Tolerance" "10%"
+			(at 191.77 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 191.77 153.67 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 191.77 153.67 0)
 			(effects
 				(font
@@ -17515,6 +18694,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 104.14 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 104.14 114.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "cef16670-2d78-4f46-9c9a-dfc242f6b7cd")
 		)
@@ -17685,6 +18882,24 @@
 			)
 		)
 		(property "Manufacturer Number" "RT0402BRB071KL"
+			(at 175.26 103.505 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 175.26 103.505 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 175.26 103.505 0)
 			(effects
 				(font
@@ -18003,6 +19218,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 66.675 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 66.675 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "8cf659e4-7944-4361-93c1-ef51c363a6ee")
 		)
@@ -18180,6 +19413,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 102.235 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 102.235 104.14 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "52fdb7ae-9d29-4e75-9e28-5c294280456b")
 		)
@@ -18303,6 +19554,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 248.285 155.575 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 248.285 155.575 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "1fdb667e-e464-45d6-8909-015b4807f76c")
 		)
@@ -18390,6 +19659,24 @@
 		)
 		(property "Manufacturer Number" "RC0402FR-7W49R9L"
 			(at 243.205 91.44 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 243.205 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 243.205 91.44 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18501,6 +19788,24 @@
 			)
 		)
 		(property "Tolerance" "0.1%"
+			(at 80.01 57.785 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 80.01 57.785 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 80.01 57.785 0)
 			(effects
 				(font
@@ -18696,6 +20001,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 109.22 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 109.22 63.5 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "ee797997-d069-43c6-b060-388ed51d1aa1")
 		)
@@ -18783,6 +20106,24 @@
 		)
 		(property "Manufacturer Number" "RC0402FR-7W49R9L"
 			(at 243.205 93.98 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 243.205 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 243.205 93.98 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18911,6 +20252,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 74.93 52.705 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 74.93 52.705 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "619ea504-48fd-47f0-8d46-5b4a605fe25a")
 		)
@@ -19000,6 +20359,24 @@
 			)
 		)
 		(property "Link" "https://www.digikey.com/en/products/detail/analog-devices-inc-maxim-integrated/MAX4564EKA-T/1781971"
+			(at 252.73 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 252.73 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 252.73 148.59 0)
 			(effects
 				(font
@@ -19142,6 +20519,24 @@
 			)
 		)
 		(property "Tolerance" "10%"
+			(at 58.42 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 58.42 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 58.42 185.42 0)
 			(effects
 				(font
@@ -19450,6 +20845,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 86.36 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 86.36 111.76 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "40769313-b0b3-477a-848e-957829ea5320")
 		)
@@ -19590,6 +21003,24 @@
 			)
 		)
 		(property "Manufacturer Number" "RT0402BRD07133RL"
+			(at 97.79 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 97.79 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 97.79 81.28 0)
 			(effects
 				(font

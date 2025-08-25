@@ -519,10 +519,10 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
-      "pos_files": "",
+      "plot": "exports/gerbers/",
+      "pos_files": "exports/",
       "specctra_dsn": "",
-      "step": "",
+      "step": "cable_buffer_board.step",
       "svg": "",
       "vrml": ""
     },
@@ -530,7 +530,7 @@
   },
   "schematic": {
     "annotate_start_num": 0,
-    "bom_export_filename": "",
+    "bom_export_filename": "exports/cable_buffer_board.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
@@ -564,7 +564,7 @@
           "show": true
         },
         {
-          "group_by": false,
+          "group_by": true,
           "label": "Footprint",
           "name": "Footprint",
           "show": true
@@ -597,13 +597,13 @@
           "group_by": false,
           "label": "Link",
           "name": "Link",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
           "label": "Manufacturer",
           "name": "Manufacturer",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
@@ -615,7 +615,7 @@
           "group_by": false,
           "label": "Manufacturer Number",
           "name": "Manufacturer Number",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
@@ -627,19 +627,19 @@
           "group_by": false,
           "label": "Rated Voltage",
           "name": "Rated Voltage",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
           "label": "Temperature Coefficient",
           "name": "Temperature Coefficient",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
           "label": "Tolerance",
           "name": "Tolerance",
-          "show": false
+          "show": true
         },
         {
           "group_by": false,
@@ -657,7 +657,7 @@
           "group_by": false,
           "label": "Description",
           "name": "Description",
-          "show": false
+          "show": true
         }
       ],
       "filter_string": "",

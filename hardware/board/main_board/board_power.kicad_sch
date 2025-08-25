@@ -4953,6 +4953,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 121.92 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 121.92 130.81 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "afad4f9c-a583-4610-b40b-9eb9edcedc76")
 		)
@@ -5058,6 +5076,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 186.69 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 186.69 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "fa7187d2-d65f-4d0b-a6c0-c5d4ca14047b")
 		)
@@ -5146,6 +5182,24 @@
 			)
 		)
 		(property "Link" "https://www.digikey.com/en/products/detail/stackpole-electronics-inc/RMCF0603FT52K3/1714113?s=N4IgTCBcDaIEoFkDCAxADANjQZhQFQFYwBpbEAXQF8g"
+			(at 134.62 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 134.62 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 134.62 60.96 0)
 			(effects
 				(font
@@ -5277,6 +5331,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 181.61 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 181.61 133.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "6b2a5514-6b20-4e45-810f-2aec3f62dec7")
 		)
@@ -5374,6 +5446,24 @@
 			)
 		)
 		(property "Rated Voltage" "25V"
+			(at 91.44 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 91.44 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 91.44 55.88 0)
 			(effects
 				(font
@@ -5707,6 +5797,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 181.61 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 181.61 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "44fc879e-e201-4a83-8602-390bfa531d16")
 		)
@@ -5794,6 +5902,24 @@
 		)
 		(property "Link" "https://www.digikey.com/en/products/detail/w%C3%BCrth-elektronik/74408943150/3083180"
 			(at 129.54 55.88 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 129.54 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 129.54 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -6167,6 +6293,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 247.65 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 247.65 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "03b8447f-e65e-4515-bbea-4e969cf46667")
 		)
@@ -6299,6 +6443,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 123.19 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 123.19 50.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "7d5fff87-232e-4c13-a3ea-3f27b7cd5401")
 		)
@@ -6396,6 +6558,24 @@
 			)
 		)
 		(property "Tolerance" "0.1"
+			(at 176.53 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 176.53 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 176.53 125.73 0)
 			(effects
 				(font
@@ -6509,6 +6689,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 186.69 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 186.69 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c5db6913-b675-44ee-88fe-96a61d19fbb6")
 		)
@@ -6614,6 +6812,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 147.32 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 147.32 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "83324ca3-e43b-4fbd-ab01-0880272ca403")
 		)
@@ -6711,6 +6927,24 @@
 			)
 		)
 		(property "Rated Voltage" "25V"
+			(at 139.7 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 139.7 60.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 139.7 60.96 0)
 			(effects
 				(font
@@ -6917,6 +7151,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 153.67 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 153.67 138.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "3596f09d-2d81-4206-85b9-3fa6af80711b")
 		)
@@ -7005,6 +7257,24 @@
 			)
 		)
 		(property "Link" "https://www.digikey.com/en/products/detail/yageo/RC0603FR-0710KL/726880"
+			(at 134.62 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 134.62 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 134.62 69.85 0)
 			(effects
 				(font
@@ -7128,6 +7398,24 @@
 			)
 		)
 		(property "Vendor Number" "490-GRM155Z71A225KE01DDKR-ND"
+			(at 181.61 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 181.61 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 181.61 107.95 0)
 			(effects
 				(font
@@ -7437,6 +7725,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 138.43 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 138.43 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e1f2d78a-80ed-4217-8d5e-f32b59bc9a4c")
 		)
@@ -7557,6 +7863,24 @@
 			)
 		)
 		(property "Link" "https://www.digikey.com/en/products/detail/richtek-usa-inc/RT6150B-33GQW/6676709"
+			(at 232.41 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 232.41 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 232.41 54.61 0)
 			(effects
 				(font
@@ -7697,6 +8021,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 76.2 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 76.2 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9dc1a4ee-03ce-48fa-82db-bb6bb6212da4")
 		)
@@ -7803,6 +8145,24 @@
 			)
 		)
 		(property "Temperature Coefficient" "X5R"
+			(at 256.54 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 256.54 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 256.54 57.15 0)
 			(effects
 				(font
@@ -7974,6 +8334,24 @@
 			)
 		)
 		(property "Rated Voltage" "25V"
+			(at 41.91 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 41.91 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 41.91 53.34 0)
 			(effects
 				(font
@@ -8229,6 +8607,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 205.74 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 205.74 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "2ef8b213-67bf-4a65-a1be-efc56bf2ab51")
 		)
@@ -8280,7 +8676,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf"
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/app/datasheet/rchip/pyu-rt_1-to-0.01_rohs_l.pdf"
 			(at 217.17 57.15 0)
 			(effects
 				(font
@@ -8298,7 +8694,7 @@
 				(hide yes)
 			)
 		)
-		(property "Link" "https://www.digikey.com/en/products/detail/yageo/RC0402FR-07100KL/726526"
+		(property "Link" "https://www.digikey.com/en/products/detail/yageo/RT0402BRD07100KL/1068989"
 			(at 217.17 57.15 90)
 			(effects
 				(font
@@ -8316,7 +8712,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer Number" "RC0402FR-07100KL"
+		(property "Manufacturer Number" "RT0402BRD07100KL"
 			(at 217.17 57.15 0)
 			(effects
 				(font
@@ -8325,7 +8721,25 @@
 				(hide yes)
 			)
 		)
-		(property "Tolerance" "1%"
+		(property "Tolerance" "0.1%"
+			(at 217.17 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 217.17 57.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 217.17 57.15 0)
 			(effects
 				(font
@@ -8581,6 +8995,24 @@
 			)
 		)
 		(property "Manufacturer" "Samsung Electro-Mechanics"
+			(at 104.14 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 104.14 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 104.14 118.11 0)
 			(effects
 				(font
@@ -9044,6 +9476,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 181.61 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 181.61 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "651619f8-e841-4623-abee-ab3dc28d2c49")
 		)
@@ -9095,7 +9545,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.yageo.com/upload/media/product/products/datasheet/rchip/PYu-RC_Group_51_RoHS_L_12.pdf"
+		(property "Datasheet" "https://www.yageo.com/upload/media/product/app/datasheet/rchip/pyu-rt_1-to-0.01_rohs_l.pdf"
 			(at 217.17 59.69 0)
 			(effects
 				(font
@@ -9113,7 +9563,7 @@
 				(hide yes)
 			)
 		)
-		(property "Link" "https://www.digikey.com/en/products/detail/yageo/RC0402FR-07100KL/726526"
+		(property "Link" "https://www.digikey.com/en/products/detail/yageo/RT0402BRD07100KL/1068989"
 			(at 217.17 59.69 90)
 			(effects
 				(font
@@ -9131,7 +9581,7 @@
 				(hide yes)
 			)
 		)
-		(property "Manufacturer Number" "RC0402FR-07100KL"
+		(property "Manufacturer Number" "RT0402BRD07100KL"
 			(at 217.17 59.69 0)
 			(effects
 				(font
@@ -9140,7 +9590,25 @@
 				(hide yes)
 			)
 		)
-		(property "Tolerance" "1%"
+		(property "Tolerance" "0.1%"
+			(at 217.17 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 217.17 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 217.17 59.69 0)
 			(effects
 				(font
@@ -9237,6 +9705,24 @@
 			)
 		)
 		(property "Manufacturer Number" "ACP3225-102-2P-T000"
+			(at 54.61 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 54.61 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 54.61 53.34 0)
 			(effects
 				(font
@@ -9918,6 +10404,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 97.79 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 97.79 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "4ce6bec9-188b-43a1-9c42-22cd1b3f4e91")
 		)
@@ -10014,6 +10518,24 @@
 			)
 		)
 		(property "Manufacturer" "CUI Devices"
+			(at 26.67 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 26.67 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 26.67 53.34 0)
 			(effects
 				(font
@@ -10122,6 +10644,24 @@
 			)
 		)
 		(property "Tolerance" "0.1%"
+			(at 176.53 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 176.53 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 176.53 115.57 0)
 			(effects
 				(font
@@ -10284,6 +10824,15 @@
 			)
 		)
 		(property "Notes" "PWM-only version"
+			(at 110.49 55.88 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Link" "https://www.digikey.com/en/products/detail/microchip-technology/MCP16312T-E-MNY/4079993"
 			(at 110.49 55.88 0)
 			(effects
 				(font

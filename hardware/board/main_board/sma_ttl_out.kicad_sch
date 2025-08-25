@@ -1707,6 +1707,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 142.24 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 142.24 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "2476704d-bb71-4cbb-926a-82203e6cdf83")
 		)
@@ -2420,6 +2438,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 154.94 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 154.94 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a4071bd1-7b0d-4e42-a384-a5f910f6a8c8")
 		)
@@ -2509,6 +2545,24 @@
 			)
 		)
 		(property "Manufacturer Number" "74LVCH2T45DC,125"
+			(at 142.24 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 142.24 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 142.24 91.44 0)
 			(effects
 				(font
@@ -2733,6 +2787,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 133.35 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 133.35 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "7d1b895b-aec6-4ce4-8e11-afc9fd8c3a2e")
 		)
@@ -2822,6 +2894,24 @@
 			)
 		)
 		(property "Manufacturer Number" "CONSMA002-SMD-G-T"
+			(at 170.18 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 170.18 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 170.18 91.44 0)
 			(effects
 				(font
@@ -3073,6 +3163,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 158.75 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 158.75 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "52b23d4b-1c35-48b6-9551-2ca3499dbb23")
 		)
@@ -3205,6 +3313,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 165.1 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 165.1 179.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "b02c66ea-9400-48e4-ae38-ca5705004fbc")
 		)
@@ -3309,6 +3435,24 @@
 			)
 		)
 		(property "Tolerance" "1%"
+			(at 158.75 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 158.75 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 158.75 88.9 0)
 			(effects
 				(font

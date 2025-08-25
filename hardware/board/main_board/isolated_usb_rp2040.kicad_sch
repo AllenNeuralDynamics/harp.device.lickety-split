@@ -11544,6 +11544,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 47.625 32.385 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 47.625 32.385 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9411202b-431d-498b-b529-ce9d928b5366")
 		)
@@ -11699,6 +11717,24 @@
 			)
 		)
 		(property "Manufacturer Number" "n/a"
+			(at 269.24 163.195 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 269.24 163.195 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 269.24 163.195 0)
 			(effects
 				(font
@@ -11936,6 +11972,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 243.84 27.305 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 243.84 27.305 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "fb54f761-2244-4a3a-b4f3-c1decc198b62")
 		)
@@ -12031,6 +12085,24 @@
 			)
 		)
 		(property "Tolerance" "1%"
+			(at 100.33 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 100.33 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 100.33 41.91 0)
 			(effects
 				(font
@@ -12136,6 +12208,24 @@
 			)
 		)
 		(property "PCBWay Link" "https://www.pcbway.com/components"
+			(at 257.81 36.195 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 257.81 36.195 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 257.81 36.195 0)
 			(effects
 				(font
@@ -12340,6 +12430,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 235.585 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 235.585 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "b62210aa-c9a4-484a-9f72-a0da16795374")
 		)
@@ -12472,6 +12580,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 41.91 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 41.91 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "cf8b063f-d14b-4744-9be4-9788f5aa1e6f")
 		)
@@ -12561,6 +12687,24 @@
 			)
 		)
 		(property "Manufacturer Number" "n/a"
+			(at 274.955 163.195 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 274.955 163.195 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 274.955 163.195 0)
 			(effects
 				(font
@@ -12733,6 +12877,24 @@
 			)
 		)
 		(property "Manufacturer Number" "RT0402BRB071KL"
+			(at 235.585 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 235.585 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 235.585 115.57 0)
 			(effects
 				(font
@@ -13069,6 +13231,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 48.26 149.225 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 48.26 149.225 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "160f7762-9876-41ca-a794-bc4d7896d0d4")
 		)
@@ -13267,6 +13447,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 134.62 184.785 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 134.62 184.785 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "fa08a3f2-a3ab-4565-9e65-9822aa61feb4")
 		)
@@ -13456,6 +13654,24 @@
 			)
 		)
 		(property "PCBWay Link" "https://www.pcbway.com/components/detail/0402B104K160CT/307171/"
+			(at 31.75 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 31.75 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 31.75 184.15 0)
 			(effects
 				(font
@@ -13763,6 +13979,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 248.285 140.335 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 248.285 140.335 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "142b10f5-2d7e-43d4-9b4f-5d79554ba529")
 		)
@@ -14006,6 +14240,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 229.235 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 229.235 64.77 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "16918094-7a0c-4efb-abc9-442cfba3de34")
 		)
@@ -14101,6 +14353,24 @@
 			)
 		)
 		(property "Manufacturer Number" "TPD2EUSB30DRTR"
+			(at 55.245 53.975 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 55.245 53.975 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 55.245 53.975 0)
 			(effects
 				(font
@@ -14367,6 +14637,24 @@
 			)
 		)
 		(property "PCBWay Link" "https://www.pcbway.com/components/detail/0402B104K160CT/307171/"
+			(at 116.84 184.785 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 116.84 184.785 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 116.84 184.785 0)
 			(effects
 				(font
@@ -14682,6 +14970,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 47.625 29.845 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 47.625 29.845 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "5144b4b5-e8f3-49d7-8303-cbdb023a92b6")
 		)
@@ -14779,6 +15085,24 @@
 			)
 		)
 		(property "Notes" ""
+			(at 270.51 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 270.51 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 270.51 85.09 0)
 			(effects
 				(font
@@ -14891,6 +15215,24 @@
 			)
 		)
 		(property "PCBWay Link" "https://www.pcbway.com/components/detail/RC0402FR0727RL/656670/"
+			(at 229.235 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 229.235 67.31 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 229.235 67.31 0)
 			(effects
 				(font
@@ -15097,6 +15439,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 143.51 184.785 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 143.51 184.785 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c4e8fb80-0bb5-46e3-8949-cac1d2b87a27")
 		)
@@ -15210,6 +15570,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 19.05 89.535 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 19.05 89.535 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a981cbce-ed28-4f48-b98e-1c3923ecd523")
 		)
@@ -15310,6 +15688,24 @@
 			)
 		)
 		(property "Manufacturer" "Raspberry Pi"
+			(at 192.405 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 192.405 107.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 192.405 107.95 0)
 			(effects
 				(font
@@ -15786,6 +16182,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 26.035 40.005 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 26.035 40.005 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "A1"
 			(uuid "68469917-61cc-456d-ac87-4ac9ce54c211")
 		)
@@ -15963,6 +16377,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 161.29 184.785 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 161.29 184.785 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "a6971219-808a-4f5e-afe5-242c9070133f")
 		)
@@ -16058,6 +16490,24 @@
 			)
 		)
 		(property "Tolerance" "1%"
+			(at 100.33 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 100.33 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 100.33 39.37 0)
 			(effects
 				(font
@@ -16394,6 +16844,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 57.15 149.225 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 57.15 149.225 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c891c082-2a57-44ee-8a3c-28ef516bb6ae")
 		)
@@ -16526,6 +16994,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 59.69 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 59.69 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c78fc998-c159-4cc5-a4ba-e8b485fe47fd")
 		)
@@ -16632,6 +17118,24 @@
 			)
 		)
 		(property "Vendor Number" "2019-RN73R1ETTP4701B25DKR-ND"
+			(at 245.745 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 245.745 118.11 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 245.745 118.11 0)
 			(effects
 				(font
@@ -16764,6 +17268,24 @@
 			)
 		)
 		(property "PCBWay Link" ""
+			(at 73.66 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 73.66 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 73.66 148.59 0)
 			(effects
 				(font
@@ -16944,6 +17466,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 83.82 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 83.82 148.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "0626fde4-d6db-44bc-812c-5a9482ed497a")
 		)
@@ -17112,6 +17652,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 239.395 133.985 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 239.395 133.985 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e4c97b5b-79d3-42da-a428-4d4f7108ba07")
 		)
@@ -17242,6 +17800,24 @@
 			)
 		)
 		(property "PCBWay Link" "https://www.pcbway.com/components/detail/0402B104K160CT/307171/"
+			(at 170.18 184.785 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 170.18 184.785 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 170.18 184.785 0)
 			(effects
 				(font
@@ -17382,6 +17958,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 125.73 184.785 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 125.73 184.785 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "f28bb535-0d65-4282-a21d-327159db74cf")
 		)
@@ -17485,6 +18079,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 239.395 140.335 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 239.395 140.335 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "e61cbabe-d772-4ca4-8532-d5447fd4ed7d")
 		)
@@ -17580,6 +18192,24 @@
 			)
 		)
 		(property "Manufacturer Number" "n/a"
+			(at 280.67 163.195 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 280.67 163.195 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 280.67 163.195 0)
 			(effects
 				(font
@@ -17706,6 +18336,24 @@
 			)
 		)
 		(property "PCBWay Link" "https://www.pcbway.com/components/detail/0402B104K160CT/307171/"
+			(at 152.4 184.785 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 152.4 184.785 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 152.4 184.785 0)
 			(effects
 				(font
@@ -17888,6 +18536,24 @@
 		)
 		(property "Alternate" ""
 			(at 70.485 23.495 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 70.485 23.495 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 70.485 23.495 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -18140,6 +18806,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 245.745 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 245.745 115.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "cdceb341-9a5d-4061-b0ac-38452626978e")
 		)
@@ -18227,6 +18911,24 @@
 			)
 		)
 		(property "Manufacturer" "CUI Devices"
+			(at 24.13 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 24.13 121.92 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 24.13 121.92 0)
 			(effects
 				(font
@@ -18427,6 +19129,24 @@
 			)
 		)
 		(property "PCBWay Link" "https://www.pcbway.com/components/detail/0402B104K160CT/307171/"
+			(at 17.78 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 17.78 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 17.78 184.15 0)
 			(effects
 				(font
@@ -18690,6 +19410,24 @@
 			)
 		)
 		(property "PCBWay Link" "https://www.pcbway.com/components/detail/0402B104K160CT/307171/"
+			(at 107.95 184.785 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 107.95 184.785 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 107.95 184.785 0)
 			(effects
 				(font
@@ -19195,6 +19933,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 273.05 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 273.05 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "5ffecc5e-ae25-4b99-b5cc-40a51db1da22")
 		)
@@ -19372,6 +20128,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 25.4 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 25.4 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "c864e65f-56da-4f3c-8357-be087bff90e8")
 		)
@@ -19513,6 +20287,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 39.37 149.225 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 39.37 149.225 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "5bab93f5-eac8-4f50-8ae1-922856bfedfd")
 		)
@@ -19625,6 +20417,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 46.99 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 46.99 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "866dde59-64da-46bf-ab35-09b1d9f21f78")
 		)
@@ -19722,6 +20532,24 @@
 			)
 		)
 		(property "Manufacturer" "Analog Devices Inc."
+			(at 120.65 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 120.65 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 120.65 41.91 0)
 			(effects
 				(font
@@ -19904,6 +20732,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 50.8 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 50.8 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "0b82c6e6-8460-45b3-b2b6-9cd8d7fbc5c9")
 		)
@@ -20074,6 +20920,24 @@
 			)
 		)
 		(property "PCBWay Link" "https://www.pcbway.com/components/detail/XZCDGK53W1VF/501988/"
+			(at 248.285 133.985 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 248.285 133.985 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 248.285 133.985 0)
 			(effects
 				(font
@@ -20280,6 +21144,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 78.74 184.785 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 78.74 184.785 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "9880f7fc-9c4d-4d9d-8293-f1fd26500921")
 		)
@@ -20404,6 +21286,24 @@
 			)
 		)
 		(property "PCBWay Link" "https://www.pcbway.com/components/detail/0402B104K160CT/307171/"
+			(at 29.21 149.225 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 29.21 149.225 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 29.21 149.225 0)
 			(effects
 				(font
@@ -20591,6 +21491,24 @@
 			)
 		)
 		(property "PCBWay Link" "https://www.pcbway.com/components/detail/ECSTXO201633120TR/348903/"
+			(at 148.59 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 148.59 110.49 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 148.59 110.49 0)
 			(effects
 				(font
@@ -20787,6 +21705,24 @@
 			)
 		)
 		(property "Alternate" ""
+			(at 99.06 184.785 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 99.06 184.785 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 99.06 184.785 0)
 			(effects
 				(font
@@ -21190,6 +22126,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 18.415 149.225 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 18.415 149.225 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "b79de21f-a5d0-426a-848e-c52f08aca3e4")
 		)
@@ -21293,6 +22247,24 @@
 				(hide yes)
 			)
 		)
+		(property "Manufacturer Num" ""
+			(at 140.97 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 140.97 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "1"
 			(uuid "4363cb2d-fbc6-41d2-bc5c-9aed9bcca1c3")
 		)
@@ -21388,6 +22360,24 @@
 			)
 		)
 		(property "Tolerance" "1%"
+			(at 140.97 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 140.97 39.37 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
 			(at 140.97 39.37 0)
 			(effects
 				(font
@@ -21626,6 +22616,24 @@
 		)
 		(property "Notes" "Washable (includes top tape)."
 			(at 270.51 101.6 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Manufacturer Num" ""
+			(at 270.51 101.6 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Vendor Num" ""
+			(at 270.51 101.6 0)
 			(effects
 				(font
 					(size 1.27 1.27)
