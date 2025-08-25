@@ -1,6 +1,6 @@
 An ephys-compliant lick detector based on measured change in capacitance.
 
-## Ordering 💸 ➡ 🐭 💧
+## Ordering 💸 ➡ 🐭 💧⎍⎍⎍
 You can now order V1.0.0 from PCBWay:
 * [main board](https://www.pcbway.com/project/shareproject/harp_device_lickety_split_main_board_44590b29.html)
 * [cable buffer board](https://www.pcbway.com/project/shareproject/harp_device_lickety_split_cable_buffer_b3f82773.html)
