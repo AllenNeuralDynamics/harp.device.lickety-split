@@ -1,18 +1,5 @@
 An ephys-compliant lick detector based on measured change in capacitance.
 
-## Ordering 💸 ➡ 🐭 💧⎍⎍⎍
-You can now order V1.0.0 from PCBWay:
-* [main board](https://www.pcbway.com/project/shareproject/harp_device_lickety_split_main_board_44590b29.html)
-* [cable buffer board](https://www.pcbway.com/project/shareproject/harp_device_lickety_split_cable_buffer_b3f82773.html)
-
-These printed circuit boards are made on-demand.
-
-You will also need:
-* [Pololu 6-Pin SH Cable, 25cm long](https://www.pololu.com/product/4767)
-* [Stainless Steel Lick Tube, 18 Gauge](https://www.mcmaster.com/catalog/131/184/89875K27) (any conductive lick tube will work!)
-* [3D Printed Enclosure Walls and Laser Cut Lids](https://cad.onshape.com/documents/4d37413078aa7feab983c8d4/w/1e6d2691e0030a15f256b323/e/5b1509c6622fa0e5c430290f?renderMode=0&uiState=68acf0abd6913c55c6575b35)
-  * right click the component to export each part.
-
 ## Features
 * High Frequency (100 or 125 [KHz]), low current (200[nA]) excitation signal makes this device invisible to [Neuropixel Probes](https://www.neuropixels.org/) used in electrophysiology recordings.
 * Fast. < 1[ms] response time.
@@ -29,6 +16,19 @@ You will also need:
 * Two amplitude options:
   * The 0.02[Vpp] option with proper grounding is intended for Ephys recordings as it introduces negligible noise artifacts.
   * The 2[Vpp] option can be used outside of an Ephys context without a ground connection
+
+## Ordering 💸 ➡ 🐭 💧⎍⎍⎍
+You can now order V1.0.0 from PCBWay:
+* [main board](https://www.pcbway.com/project/shareproject/harp_device_lickety_split_main_board_44590b29.html)
+* [cable buffer board](https://www.pcbway.com/project/shareproject/harp_device_lickety_split_cable_buffer_b3f82773.html)
+
+These printed circuit boards are made on-demand.
+
+You will also need:
+* [Pololu 6-Pin SH Cable, 25cm long](https://www.pololu.com/product/4767)
+* [Stainless Steel Lick Tube, 18 Gauge](https://www.mcmaster.com/catalog/131/184/89875K27) (any conductive lick tube will work!)
+* [3D Printed Enclosure Walls and Laser Cut Lids](https://cad.onshape.com/documents/4d37413078aa7feab983c8d4/w/1e6d2691e0030a15f256b323/e/5b1509c6622fa0e5c430290f?renderMode=0&uiState=68acf0abd6913c55c6575b35)
+  * right click the component to export each part.
 
 ## Device Pinout
 ![Pinout](./notes/images/pinout.png)
