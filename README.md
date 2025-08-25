@@ -10,6 +10,8 @@ These printed circuit boards are made on-demand.
 You will also need:
 * [Pololu 6-Pin SH Cable, 25cm long](https://www.pololu.com/product/4767)
 * [Stainless Steel Lick Tube, 18 Gauge](https://www.mcmaster.com/catalog/131/184/89875K27) (any conductive lick tube will work!)
+* [3D Printed Enclosure Walls and Laser Cut Lids](https://cad.onshape.com/documents/4d37413078aa7feab983c8d4/w/1e6d2691e0030a15f256b323/e/5b1509c6622fa0e5c430290f?renderMode=0&uiState=68acf0abd6913c55c6575b35)
+  * right click the component to export each part.
 
 ## Features
 * High Frequency (100 or 125 [KHz]), low current (200[nA]) excitation signal makes this device invisible to [Neuropixel Probes](https://www.neuropixels.org/) used in electrophysiology recordings.
