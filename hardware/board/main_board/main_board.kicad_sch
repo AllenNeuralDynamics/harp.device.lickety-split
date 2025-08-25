@@ -1,0 +1,437 @@
+(kicad_sch
+	(version 20231120)
+	(generator "eeschema")
+	(generator_version "8.0")
+	(uuid "e63e39d7-6ac0-4ffd-8aa3-1841a4541b55")
+	(paper "A4")
+	(title_block
+		(title "Lickety Split Capacitive Lick Detector Main Board")
+		(date "2023-09-01")
+		(rev "1.0.0")
+		(company "The Allen Institute for Neural Dynamics")
+	)
+	(lib_symbols)
+	(wire
+		(pts
+			(xy 165.1 92.71) (xy 182.88 92.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "17cb50dd-a89a-451a-8421-6b04b115aee6")
+	)
+	(wire
+		(pts
+			(xy 165.1 90.17) (xy 182.88 90.17)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "76c7b997-06b6-4f33-b83b-04280149585a")
+	)
+	(wire
+		(pts
+			(xy 208.28 81.28) (xy 220.98 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "afd109f0-e52d-48b2-9ac9-8263b7379ebb")
+	)
+	(wire
+		(pts
+			(xy 144.78 93.98) (xy 133.35 93.98)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c1b5e8d1-c574-4c71-b04a-2fd8a9dc7fcb")
+	)
+	(wire
+		(pts
+			(xy 133.35 73.66) (xy 182.88 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ca07f8cc-ffa2-4bec-b06d-ee1fa8aa040f")
+	)
+	(wire
+		(pts
+			(xy 165.1 87.63) (xy 182.88 87.63)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dfadeea9-f205-47e7-8f67-6792f7e10dc9")
+	)
+	(wire
+		(pts
+			(xy 133.35 76.2) (xy 182.88 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fc896abd-09f1-494d-847c-570e84e7f610")
+	)
+	(text "Device Functionality Options:\n\n* 100 or 125KHz excitation signal frequency.\n  * for multiple lick detectors with lick tubes spaced <5mm apart.\n* 20mVpp or 2Vpp excitation signal amplitude\n  * (1) 20mVpp for Ephys-compliant lick detection with the device grounded to the Neuropixels Probe\n    and\n    (2) general purpose setups where a well-defined ground may not be available."
+		(exclude_from_sim no)
+		(at 15.24 194.31 0)
+		(effects
+			(font
+				(size 2 2)
+				(thickness 0.254)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "31c5d367-ec4c-47a0-994b-0527556999c4")
+	)
+	(sheet
+		(at 220.98 76.835)
+		(size 13.97 14.605)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "36c9ca84-29d9-443b-8905-497529bf4302")
+		(property "Sheetname" "TTL Out"
+			(at 220.98 76.1234 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "sma_ttl_out.kicad_sch"
+			(at 220.98 92.0246 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "IN" input
+			(at 220.98 81.28 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "9a2865e5-2777-4599-ae08-5f4db45b7d02")
+		)
+		(instances
+			(project "main_board"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 109.22 70.485)
+		(size 24.13 27.305)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "4df88917-387d-4e6a-a0c2-9efea845a08d")
+		(property "Sheetname" "100KHz Sine Wave"
+			(at 109.22 69.7734 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "function_generator.kicad_sch"
+			(at 109.22 98.3746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "VSINE" input
+			(at 133.35 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "174b2624-3254-4a43-b64a-0fbf38550173")
+		)
+		(pin "125KHZ_IN" input
+			(at 133.35 73.66 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "a90335e9-bbfb-4a71-8a18-b892db622ff6")
+		)
+		(pin "100KHZ_IN" input
+			(at 133.35 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "f1d44e4e-3ca8-491d-bdaa-e7da3f95eae6")
+		)
+		(instances
+			(project "main_board"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(page "5")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 144.78 80.264)
+		(size 20.32 17.272)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "8b2c79bc-d662-4528-ac6e-e4616ba8e8ad")
+		(property "Sheetname" "Lick Detection Analog Front End"
+			(at 144.78 79.5524 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "lick_detection_afe.kicad_sch"
+			(at 144.78 98.1206 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "VSINE" input
+			(at 144.78 93.98 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "1e80ca4f-8ae9-4572-93cf-e73646f8fb0e")
+		)
+		(pin "ADC_SCK" input
+			(at 165.1 87.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "689a19b9-fbad-4e91-a03b-59475094bdb1")
+		)
+		(pin "ADC_CS" input
+			(at 165.1 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "c57c2f3d-05a4-4a47-8ade-a2596d80efba")
+		)
+		(pin "ADC_POCI" input
+			(at 165.1 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "0b29f04b-2349-42fe-b329-27620a2abe57")
+		)
+		(instances
+			(project "main_board"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 78.74 71.755)
+		(size 18.415 26.035)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "b51b21ef-b374-4f9f-a058-7db9b64fdf4a")
+		(property "Sheetname" "Power Supplies"
+			(at 78.74 71.0434 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "board_power.kicad_sch"
+			(at 78.74 98.3746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(instances
+			(project "main_board"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 182.88 71.755)
+		(size 25.4 26.035)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.1524)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0.0000)
+		)
+		(uuid "eb8325ca-9747-4676-8e08-1fb825a7219f")
+		(property "Sheetname" "Harp Core RP2040 + Isolated USB"
+			(at 182.88 71.0434 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "isolated_usb_rp2040.kicad_sch"
+			(at 182.88 98.3746 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+				(hide yes)
+			)
+		)
+		(pin "TTL_OUT" input
+			(at 208.28 81.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+			(uuid "2bd1f224-709c-4d01-a2d1-3b0cb7b5d51e")
+		)
+		(pin "PIO_SCK" input
+			(at 182.88 87.63 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "7e70b3da-6fa4-4d63-9435-b599b4019b4c")
+		)
+		(pin "PIO_POCI" input
+			(at 182.88 90.17 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "4a4ecc44-08c6-4a71-a5a0-bb5e1939b357")
+		)
+		(pin "PIO_CS" input
+			(at 182.88 92.71 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "1578c60c-7ed3-4240-99ee-8df901b19c54")
+		)
+		(pin "100KHZ_OUT" input
+			(at 182.88 76.2 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "6cdafcc6-12f6-4899-813b-dec93ee6e27f")
+		)
+		(pin "125KHZ_OUT" input
+			(at 182.88 73.66 180)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+			(uuid "a714223a-3d5a-4bc8-98ed-b92c0173bd0c")
+		)
+		(instances
+			(project "main_board"
+				(path "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
