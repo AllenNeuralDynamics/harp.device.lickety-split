@@ -3,6 +3,7 @@ An ephys-compliant lick detector based on measured change in capacitance.
 You can now order V1.0.0 from PCBWay:
 * [main board](https://www.pcbway.com/project/shareproject/harp_device_lickety_split_main_board_44590b29.html)
 * [cable buffer board](https://www.pcbway.com/project/shareproject/harp_device_lickety_split_cable_buffer_b3f82773.html)
+
 You will also need:
 * [Pololu 6-Pin SH Cable, 25cm long](https://www.pololu.com/product/4767)
 * [Stainless Steel Lick Tube, 18 Gauge](https://www.mcmaster.com/catalog/131/184/89875K27) (any conductive lick tube will work!)
