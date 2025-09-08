@@ -35,7 +35,6 @@ You will also need:
 
 ## Switch Settings
 This device has two settings (frequency and amplitude) that are independent of each other.
-
 These settings can be set by external switches to designate the state of the board upon power-up.
 
 > [!WARNING]
