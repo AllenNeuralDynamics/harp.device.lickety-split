@@ -33,12 +33,42 @@ You will also need:
 ## Device Pinout
 ![Pinout](./notes/images/pinout.png)
 
+## Switch Settings
+This device has two settings (frequency and amplitude) that are independent of each other.
+
+These settings can be set by external switches to designate the state of the board upon power-up.
+
+> [!WARNING]
+> Settings can be overwritten through software commands over the Harp interface after the board powers up.
+
+### Low-Amplitude (Ephys) Setting
+This setting uses the low-amplitude option of the signal.
+
+<p align="center">
+  <img alt="" src="./notes/images/ephys_switch_settings.png" width="45%">
+</p>
+
+It is **necessary** to use this setting when interacting with a mouse in an electrophysiology context (i.e: probes inserted in its brain).
+
+Note that this setting, just like Neurpixels Probes, is highly susceptible to noise.
+Good wiring hygiene (see below) is necessary to eliminate false positives from external noise sources.
+
+### High Amplitude (Behavior) Setting
+<p align="center">
+  <img alt="" src="./notes/images/behavior_switch_settings.png" width="45%">
+</p>
+
+Outside of an electrophysiology context, this setting can be used.
+It makes the lick detector more immune to most common sources of EMI (valves, etc) because the signal is so much larger in comparison to the noise.
+This signal can also be run over a much longer cable. (We've used up to 2m!)
+
 ## Ephys Wiring Diagram
 There are 3 configurations that will produce valid lick detection readings:
 
 Option A works well if your rig does not have large sources of 60Hz noise.
 
 ![SetupA](./notes/images/setup_a.png)
+
 
 Option B works well if your rig *does* have large sources of 60Hz noise.
 
