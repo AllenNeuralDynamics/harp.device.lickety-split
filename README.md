@@ -30,6 +30,8 @@ You will also need:
 * [3D Printed Enclosure Walls and Laser Cut Lids](https://cad.onshape.com/documents/4d37413078aa7feab983c8d4/w/1e6d2691e0030a15f256b323/e/5b1509c6622fa0e5c430290f?renderMode=0&uiState=68acf0abd6913c55c6575b35)
   * right click the component to export each part.
 
+Once you receive boards, you will need to upload the firmware from the [latest release](https://github.com/AllenNeuralDynamics/harp.device.lickety-split/releases).
+
 ## Device Pinout
 ![Pinout](./notes/images/pinout.png)
 
