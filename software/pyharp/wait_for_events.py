@@ -1,33 +1,28 @@
-#!/usr/bin/env python3
-from pyharp.device import Device, DeviceMode
-from pyharp.messages import HarpMessage
-from pyharp.messages import MessageType
-from pyharp.messages import CommonRegisters as Regs
-from struct import *
-import os
-from time import sleep, perf_counter
+# /// script
+# requires-python = ">=3.12"
+# dependencies = [
+#     "harp>=0.5.0rc1",
+#     "numpy>=2.5.1",
+# ]
+#
+# [tool.uv]
+# prerelease = "allow"
+# ///
 
+from harp.device import Device, WhoAmI
+from harp.protocol import ParsedHarpMessage
+from harp.serial import open_serial_device
+from lickety_split import LickState
+import numpy as np
 
-# Open the device and print the info on screen
-# Open serial connection and save communication to a file
-if os.name == 'posix': # check for Linux.
-    #device = Device("/dev/harp_device_00", "ibl.bin")
-    device = Device("/dev/ttyACM0", "ibl.bin")
-else: # assume Windows.
-    device = Device("COM95", "ibl.bin")
+COM_PORT = "/dev/ttyACM0"
 
+def print_lick_state(msg: ParsedHarpMessage[np.uint8]) -> None:
+    print(f"new lick state: {msg.parsed}, time: {msg.timestamp}")
 
-print(f"Device mode is: {device.read_device_mode()}.")
-print("Waiting for events.")
-#reply = device.set_mode(DeviceMode.Active)
-start_time = perf_counter()
-try:
-    while True:
-        event_response = device._read()
-        if event_response is not None:
-            print()
-            print(event_response)
-except KeyboardInterrupt:
-    #reply = device.disable_alive_en()
-    # Close connection
-    device.disconnect()
+with open_serial_device(Device, port=COM_PORT, baudrate=1_000_000) as dev:
+    print(dev.read(WhoAmI).parsed)
+    lick_state_subscription = dev.subscribe(LickState, print_lick_state)
+
+    input("Listening for events. Press Enter to stop.\n")
+    lick_state_subscription.unsubscribe()
